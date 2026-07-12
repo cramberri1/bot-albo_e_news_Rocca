@@ -1,0 +1,51 @@
+name: Albo Pretorio Check
+
+on:
+  schedule:
+    - cron: '0 0,6,12,18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: albo-rocca-bot
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configura Python
+        uses: actions/setup-python@v5.6.0
+        with:
+          python-version: '3.12'
+
+      - name: Installa dipendenze
+        run: pip install -r requirements.txt
+
+      - name: Esegui bot
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_IDS: ${{ secrets.CHAT_IDS }}
+          STATE_ENCRYPTION_KEY: ${{ secrets.STATE_ENCRYPTION_KEY }}
+          INTERVAL_MINUTES: "15"
+        run: timeout 21300 python bot.py || true
+
+      - name: Salva database nel repository
+        run: |
+          git config user.name "AlboBot"
+          git config user.email "bot@alborocca"
+          git add data/seen_items.json data/subscribers.json data/user_seen.json data/last_check.txt data/seen_news.json data/subscribers_news.json || true
+          git diff --staged --quiet || git commit -m "aggiornamento database [skip ci]"
+          git push || true
