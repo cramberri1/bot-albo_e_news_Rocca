@@ -18,7 +18,7 @@ env:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 355
+    timeout-minutes: 360
 
     steps:
       - name: Checkout repository
@@ -30,6 +30,7 @@ jobs:
         uses: actions/setup-python@v5.6.0
         with:
           python-version: '3.12'
+          cache: 'pip'
 
       - name: Installa dipendenze
         run: pip install -r requirements.txt
@@ -40,12 +41,49 @@ jobs:
           CHAT_IDS: ${{ secrets.CHAT_IDS }}
           STATE_ENCRYPTION_KEY: ${{ secrets.STATE_ENCRYPTION_KEY }}
           INTERVAL_MINUTES: "15"
-        run: timeout 21300 python bot.py || true
+        run: |
+          set +e
+          timeout --signal=INT --kill-after=30s 21420 python bot.py
+          code=$?
 
-      - name: Salva database nel repository
+          if [ "$code" -eq 124 ]; then
+            echo "Timeout programmato di 357 minuti raggiunto: chiusura normale."
+            exit 0
+          fi
+
+          exit "$code"
+
+      - name: Salva eventuale stato residuo
+        if: always()
         run: |
           git config user.name "AlboBot"
           git config user.email "bot@alborocca"
-          git add data/seen_items.json data/subscribers.json data/user_seen.json data/last_check.txt data/seen_news.json data/subscribers_news.json || true
-          git diff --staged --quiet || git commit -m "aggiornamento database [skip ci]"
-          git push || true
+
+          files=(
+            data/seen_items.json
+            data/subscribers.json
+            data/user_seen.json
+            data/seen_news.json
+            data/subscribers_news.json
+          )
+
+          existing=()
+          for file in "${files[@]}"; do
+            if [ -e "$file" ]; then
+              existing+=("$file")
+            fi
+          done
+
+          if [ "${#existing[@]}" -eq 0 ]; then
+            echo "Nessun file di stato da salvare."
+            exit 0
+          fi
+
+          git add -- "${existing[@]}"
+          if git diff --staged --quiet; then
+            echo "Nessuna modifica residua da committare."
+            exit 0
+          fi
+
+          git commit -m "aggiornamento database finale [skip ci]"
+          git push
