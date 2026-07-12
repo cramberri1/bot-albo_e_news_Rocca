@@ -119,7 +119,11 @@
     "date_end": "30-09-2026",
     "expired": false
   },
-  "9152d1dce8bc639c": {},
+  "9152d1dce8bc639c": {
+    "date": "14-12-2016",
+    "date_end": "",
+    "expired": true
+  },
   "e8673f7e2a43b63c": {},
   "0033d21acac9b4ff": {},
   "c5598f5c6dda7810": {
