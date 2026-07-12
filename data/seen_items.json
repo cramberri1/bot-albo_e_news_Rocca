@@ -114,7 +114,11 @@
     "date_end": "16-07-2026",
     "expired": false
   },
-  "22bfeffd08a90135": {},
+  "22bfeffd08a90135": {
+    "date": "06-02-2014",
+    "date_end": "",
+    "expired": true
+  },
   "2ef29b09b8d68329": {
     "date": "03-07-2026",
     "date_end": "18-07-2026",
