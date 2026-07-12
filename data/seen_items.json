@@ -199,7 +199,11 @@
     "expired": true
   },
   "60a1e4591601a84f": {},
-  "9e52338843b023ff": {},
+  "9e52338843b023ff": {
+    "date": "13-06-2016",
+    "date_end": "",
+    "expired": true
+  },
   "af52ecef10c33a1e": {},
   "cf2590ae5fce99ef": {
     "date": "02-07-2026",
