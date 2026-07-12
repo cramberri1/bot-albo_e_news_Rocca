@@ -180,7 +180,11 @@
   "fcdc5133f1caa23d": {},
   "26ffc1ef6470a442": {},
   "718dfbdc511b6e5f": {},
-  "b0ecde6b8159898b": {},
+  "b0ecde6b8159898b": {
+    "date": "24-06-2016",
+    "date_end": "",
+    "expired": true
+  },
   "4f9283b41a750b59": {
     "date": "01-08-2016",
     "date_end": "",
