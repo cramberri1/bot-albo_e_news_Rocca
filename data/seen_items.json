@@ -101,7 +101,11 @@
     "expired": false
   },
   "6088b7d869d18c40": {},
-  "a52be400ec120a0d": {},
+  "a52be400ec120a0d": {
+    "date": "04-12-2014",
+    "date_end": "",
+    "expired": true
+  },
   "460da500fe6433a7": {
     "date": "06-07-2015",
     "date_end": "",
