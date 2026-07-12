@@ -215,7 +215,11 @@
     "date_end": "",
     "expired": true
   },
-  "1ae85ce62a7a8b7d": {},
+  "1ae85ce62a7a8b7d": {
+    "date": "13-06-2016",
+    "date_end": "",
+    "expired": true
+  },
   "45c868cee54b7f74": {},
   "63982c0ca270315e": {
     "date": "01-08-2019",
