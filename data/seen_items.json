@@ -4,7 +4,11 @@
     "date_end": "26-07-2026",
     "expired": false
   },
-  "e42192d8e4df5157": {},
+  "e42192d8e4df5157": {
+    "date": "10-10-2013",
+    "date_end": "",
+    "expired": true
+  },
   "b079c03360aa2b2e": {
     "date": "13-07-2015",
     "date_end": "",
