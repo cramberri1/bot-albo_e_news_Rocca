@@ -25,7 +25,11 @@
     "expired": false
   },
   "af9268b1dec14806": {},
-  "8dbf6c0d81950261": {},
+  "8dbf6c0d81950261": {
+    "date": "08-02-2018",
+    "date_end": "",
+    "expired": true
+  },
   "ec0817dbb4aa61e0": {},
   "5647659b0f85e0cd": {
     "date": "29-06-2026",
