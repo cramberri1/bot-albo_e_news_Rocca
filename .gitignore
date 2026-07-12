@@ -1,0 +1,23 @@
+# Config locale e segreti
+config.py
+.env
+.env.*
+STATE_ENCRYPTION_KEY.txt
+
+# File di debug/sviluppo
+debug_albo.html
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editor/IDE
+.idea/
+.vscode/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
