@@ -68,7 +68,11 @@
     "date_end": "30-09-2026",
     "expired": false
   },
-  "3eceea52f06c875f": {},
+  "3eceea52f06c875f": {
+    "date": "15-06-2026",
+    "date_end": "13-10-2026",
+    "expired": false
+  },
   "88b37d3be9a8a0e4": {},
   "3c09894afd2b897f": {},
   "91213de529bd0702": {},
