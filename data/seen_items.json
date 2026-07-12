@@ -323,7 +323,11 @@
     "date_end": "",
     "expired": true
   },
-  "5fa1d229f4f4666f": {},
+  "5fa1d229f4f4666f": {
+    "date": "02-07-2013",
+    "date_end": "",
+    "expired": true
+  },
   "1d57f32d623ba11c": {
     "date": "30-11-2015",
     "date_end": "",
