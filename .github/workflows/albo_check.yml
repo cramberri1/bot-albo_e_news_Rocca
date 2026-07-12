@@ -66,6 +66,9 @@ jobs:
             data/user_seen_news.json
             data/seen_news.json
             data/subscribers_news.json
+            data/public/albo-events.ndjson
+            data/public/albo-current.json
+            data/public/albo-manifest.json
           )
 
           existing=()
