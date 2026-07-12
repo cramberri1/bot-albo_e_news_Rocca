@@ -32,7 +32,11 @@
     "date_end": "14-07-2026",
     "expired": false
   },
-  "7c48d025c0cbe8a2": {},
+  "7c48d025c0cbe8a2": {
+    "date": "19-02-2018",
+    "date_end": "",
+    "expired": true
+  },
   "040cf285ca334179": {},
   "587e674dc0c08652": {
     "date": "08-03-2018",
