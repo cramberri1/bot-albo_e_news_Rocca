@@ -261,7 +261,11 @@
     "date_end": "",
     "expired": true
   },
-  "0033d21acac9b4ff": {},
+  "0033d21acac9b4ff": {
+    "date": "02-08-2012",
+    "date_end": "",
+    "expired": true
+  },
   "c5598f5c6dda7810": {
     "date": "01-02-2018",
     "date_end": "",
