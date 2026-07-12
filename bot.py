@@ -70,6 +70,21 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
+def validate_config():
+    """Verifica subito i secret/config essenziali, con errore chiaro.
+
+    Meglio fallire all'avvio in modo esplicito che far partire un runner
+    GitHub Actions apparentemente "verde" ma incapace di inviare notifiche.
+    """
+    if not CONFIG.get("BOT_TOKEN"):
+        raise RuntimeError("BOT_TOKEN mancante: imposta il secret GitHub Actions o config.py.")
+    if not CONFIG.get("ADMIN_IDS"):
+        raise RuntimeError("CHAT_IDS mancante o vuoto: serve almeno un admin Telegram.")
+    if CONFIG.get("INTERVAL_MINUTES", 0) < 1:
+        raise RuntimeError("INTERVAL_MINUTES deve essere almeno 1.")
+
+validate_config()
+
 # ---------------------------------------------------------------------------
 # Cifratura dei file contenenti dati personali (chat_id Telegram iscritti)
 # ---------------------------------------------------------------------------
@@ -83,7 +98,13 @@ log = logging.getLogger(__name__)
 from cryptography.fernet import Fernet, InvalidToken
 
 STATE_ENCRYPTION_KEY = os.environ.get("STATE_ENCRYPTION_KEY", "")
-_fernet = Fernet(STATE_ENCRYPTION_KEY.encode()) if STATE_ENCRYPTION_KEY else None
+try:
+    _fernet = Fernet(STATE_ENCRYPTION_KEY.encode()) if STATE_ENCRYPTION_KEY else None
+except Exception as e:
+    raise RuntimeError(
+        "STATE_ENCRYPTION_KEY non valida: rigenerala con "
+        "python -c \"from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())\""
+    ) from e
 
 if _fernet is None and os.environ.get("GITHUB_ACTIONS"):
     log.warning(
@@ -196,6 +217,7 @@ def load_subscribers() -> set:
 
 def save_subscribers(subs: set):
     _save_set(SUBSCRIBERS_PATH, subs)
+    git_commit_and_push([str(SUBSCRIBERS_PATH)], message="aggiornamento iscritti albo [skip ci]")
 
 def load_subscribers_news() -> set:
     """Iscritti News."""
@@ -203,6 +225,7 @@ def load_subscribers_news() -> set:
 
 def save_subscribers_news(subs: set):
     _save_set(SUBSCRIBERS_NEWS_PATH, subs)
+    git_commit_and_push([str(SUBSCRIBERS_NEWS_PATH)], message="aggiornamento iscritti news [skip ci]")
 
 def get_all_recipients() -> set:
     """Destinatari notifiche Albo Pretorio."""
@@ -221,30 +244,67 @@ def is_admin(chat_id: int) -> bool:
 DB_PATH         = DATA_DIR / "seen_items.json"
 LAST_CHECK_PATH = DATA_DIR / "last_check.txt"
 
+def _normalize_item_record(value: dict | list | str | None, *, default_notified: bool = True) -> dict:
+    """Normalizza una voce di seen_items.json.
+
+    Compatibilità: i dati scritti dalle versioni precedenti non avevano il
+    campo `notified`. Per non rispedire notifiche storiche, quelle voci sono
+    considerate già notificate. Le nuove voci create solo come cache tecnica,
+    invece, nascono con `notified=False`.
+    """
+    if isinstance(value, dict):
+        rec = dict(value)
+    else:
+        rec = {}
+    rec.setdefault("notified", default_notified)
+    return rec
+
 def load_db() -> dict:
     """
-    Carica il database atti. Formato:
-    { "hash16": {"date": "DD-MM-YYYY", "date_end": "DD-MM-YYYY", "expired": bool} }
-    Compatibile con il vecchio formato (lista di hash) — migra automaticamente.
+    Carica il database atti. Formato attuale:
+    {
+      "hash16": {
+        "notified": true|false,   # True = già notificato/baseline globale
+        "date": "DD-MM-YYYY",
+        "date_end": "DD-MM-YYYY",
+        "expired": bool
+      }
+    }
+
+    Compatibile con:
+    - vecchio formato lista di hash: tutti considerati già notificati;
+    - vecchio formato dict senza `notified`: voci considerate già notificate
+      per evitare reinvii massivi dopo l'upgrade.
     """
     if not DB_PATH.exists():
         return {}
     raw = json.loads(DB_PATH.read_text(encoding="utf-8"))
     if isinstance(raw, list):
-        # Migrazione da vecchio formato (lista) a nuovo (dizionario)
-        log.info(f"Migrazione seen_items.json: {len(raw)} hash -> formato cache")
-        migrated = {h: {} for h in raw}
-        # Salva subito nel nuovo formato per evitare loop di migrazione
+        log.info(f"Migrazione seen_items.json: {len(raw)} hash -> formato con notified/cache")
+        migrated = {h: {"notified": True} for h in raw}
         DB_PATH.write_text(json.dumps(migrated, ensure_ascii=False, indent=2), encoding="utf-8")
         return migrated
-    return raw
+    if isinstance(raw, dict):
+        changed = False
+        normalized = {}
+        for h, value in raw.items():
+            rec = _normalize_item_record(value, default_notified=True)
+            if rec != value:
+                changed = True
+            normalized[h] = rec
+        if changed:
+            DB_PATH.write_text(json.dumps(normalized, ensure_ascii=False, indent=2), encoding="utf-8")
+        return normalized
+    log.warning("seen_items.json ha un formato inatteso: riparto da database vuoto.")
+    return {}
 
-def save_db(db: dict):
+def save_db(db: dict, *, push: bool = True, message: str = "aggiornamento database [skip ci]"):
     DB_PATH.write_text(
         json.dumps(db, ensure_ascii=False, indent=2),
         encoding="utf-8"
     )
-    git_commit_and_push()
+    if push:
+        git_commit_and_push([str(DB_PATH)], message=message)
 
 def git_commit_and_push(paths: list | None = None,
                           message: str = "aggiornamento database [skip ci]",
@@ -338,32 +398,39 @@ def git_commit_and_push(paths: list | None = None,
         log.warning(f"git_commit_and_push fallito (non bloccante): {e}")
         return False
 
-# Compatibilità: load_seen e save_seen usati nel codice esistente
+# Compatibilità: load_seen e save_seen usati nel codice esistente.
+# Importante: "seen" ora significa notificato/baseline globale, NON semplice
+# presenza nella cache tecnica. Così /atti può arricchire date e allegati senza
+# impedire al check automatico di notificare davvero un nuovo atto.
 def load_seen() -> set:
-    return set(load_db().keys())
+    db = load_db()
+    return {h for h, rec in db.items() if rec.get("notified", True)}
 
 def save_seen(seen: set):
     db = load_db()
-    # Aggiunge nuovi hash senza cancellare i metadati esistenti
     for h in seen:
-        if h not in db:
-            db[h] = {}
-    # Rimuove hash non più presenti
-    for h in list(db.keys()):
-        if h not in seen:
-            del db[h]
+        rec = db.setdefault(h, {})
+        rec["notified"] = True
     save_db(db)
 
-def update_item_cache(item: dict):
-    """Salva date e expired di un atto nel database."""
-    h   = item_id(item)
-    db  = load_db()
-    if h not in db:
-        db[h] = {}
-    db[h]["date"]     = item.get("date", "")
-    db[h]["date_end"] = item.get("date_end", "")
-    db[h]["expired"]  = item.get("expired", True)
-    save_db(db)
+def update_item_cache(item: dict, *, push: bool = False) -> bool:
+    """Salva date/stato di un atto senza marcarlo come notificato.
+
+    Restituisce True se il database è cambiato. Di default scrive il file ma
+    non pusha subito, così enrich_with_pdf può fare un solo commit finale.
+    """
+    h  = item_id(item)
+    db = load_db()
+    rec = db.setdefault(h, {"notified": False})
+    old = dict(rec)
+    rec.setdefault("notified", False)
+    rec["date"]     = item.get("date", "")
+    rec["date_end"] = item.get("date_end", "")
+    rec["expired"]  = item.get("expired", True)
+    changed = rec != old
+    if changed:
+        save_db(db, push=push, message="aggiornamento cache albo [skip ci]")
+    return changed
 
 def enrich_from_cache(item: dict) -> bool:
     """
@@ -398,7 +465,7 @@ def save_news_db(db: dict):
         json.dumps(db, ensure_ascii=False, indent=2),
         encoding="utf-8"
     )
-    git_commit_and_push()
+    git_commit_and_push([str(NEWS_DB_PATH)], message="aggiornamento archivio news [skip ci]")
 
 def load_seen_news() -> set:
     return set(load_news_db().keys())
@@ -450,7 +517,7 @@ def load_user_seen() -> dict:
 
 def save_user_seen(data: dict):
     USER_SEEN_PATH.write_bytes(_encrypt_json(data))
-    git_commit_and_push()
+    git_commit_and_push([str(USER_SEEN_PATH)], message="aggiornamento cronologia utenti [skip ci]")
 
 def get_user_seen_hashes(chat_id: int) -> set:
     data = load_user_seen()
@@ -466,18 +533,29 @@ def mark_user_seen(chat_id: int, hashes: list):
     save_user_seen(data)
 
 def touch_last_check():
+    """Aggiorna il timestamp locale dell'ultimo controllo.
+
+    Su GitHub persiste il file al massimo una volta al giorno: il comando
+    /status continua a leggere l'orario aggiornato dal filesystem del runner,
+    ma si evitano circa 96 commit al giorno quando il polling è ogni 15 minuti.
+    Il commit giornaliero è sufficiente anche a mantenere attivo il workflow
+    nei repository pubblici inattivi.
     """
-    Aggiorna last_check.txt con timestamp corrente.
-    Impedisce a GitHub Actions di disabilitare il workflow
-    per inattività dopo 60 giorni (GHA disabilita se nessun
-    commit nel repo per 60gg — questo file viene committato
-    ad ogni run tramite il workflow).
-    """
-    LAST_CHECK_PATH.write_text(
-        datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        encoding="utf-8"
-    )
-    git_commit_and_push()
+    now = datetime.now(timezone.utc)
+    now_text = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    previous = ""
+    if LAST_CHECK_PATH.exists():
+        previous = LAST_CHECK_PATH.read_text(encoding="utf-8").strip()
+
+    LAST_CHECK_PATH.write_text(now_text, encoding="utf-8")
+
+    previous_day = previous[:10] if len(previous) >= 10 else ""
+    current_day = now_text[:10]
+    if previous_day != current_day:
+        git_commit_and_push(
+            [str(LAST_CHECK_PATH)],
+            message="heartbeat giornaliero [skip ci]",
+        )
 
 # ---------------------------------------------------------------------------
 # Heartbeat — inviato solo se il run è quello delle 9:00 UTC (ora italiana 10/11)
@@ -762,6 +840,7 @@ def news_id(item: dict) -> str:
 # Fetch allegati per una lista di atti (dentro sessione già aperta)
 # ---------------------------------------------------------------------------
 async def enrich_with_pdf(client: httpx.AsyncClient, session_url: str, items: list) -> list:
+    cache_updates = 0
     # Rientra nella sessione MC01 prima di richiedere i dettagli
     await client.post(
         session_url,
@@ -797,13 +876,14 @@ async def enrich_with_pdf(client: httpx.AsyncClient, session_url: str, items: li
                     item["date_end"] = date_vals[1]
                     try:
                         d = datetime.strptime(date_vals[1], "%d-%m-%Y").replace(tzinfo=timezone.utc)
-                        item["expired"] = d < datetime.now(timezone.utc)
+                        item["expired"] = d.date() < datetime.now(timezone.utc).date()
                     except ValueError:
                         item["expired"] = True
                 else:
                     item["expired"] = True
-                # Salva in cache
-                update_item_cache(item)
+                # Salva in cache tecnica, senza marcarlo come notificato.
+                if update_item_cache(item, push=False):
+                    cache_updates += 1
 
             allegati = []
             for func in ["MC96", "MC97", "MC98", "MC99"]:
@@ -844,6 +924,8 @@ async def enrich_with_pdf(client: httpx.AsyncClient, session_url: str, items: li
                 f"Errore durante il recupero allegati per '{item.get('title', '?')[:50]}' "
                 f"(riga {num_riga}): {type(e).__name__}: {e}"
             )
+    if cache_updates:
+        git_commit_and_push([str(DB_PATH)], message="aggiornamento cache albo [skip ci]")
     return items
 
 # ---------------------------------------------------------------------------
@@ -903,8 +985,9 @@ def item_status(item: dict) -> str:
     date_end_str = item.get("date_end", "")
     if date_end_str:
         try:
-            end = datetime.strptime(date_end_str, "%d-%m-%Y").replace(tzinfo=timezone.utc)
-            if datetime.now(timezone.utc) - end <= timedelta(days=RECENT_EXPIRED_DAYS):
+            end = datetime.strptime(date_end_str, "%d-%m-%Y").date()
+            days_since_end = (datetime.now(timezone.utc).date() - end).days
+            if 0 <= days_since_end <= RECENT_EXPIRED_DAYS:
                 return "recent"
         except ValueError:
             pass
@@ -927,7 +1010,7 @@ def parse_albo_html(html: str) -> list:
 
         # Estrai num_riga dall'onclick
         onclick  = link.get("onclick", "")
-        nm       = re.search(r"MC02\('(\d+)'\)", onclick)
+        nm       = re.search(r"MC02\(['\"]?(\d+)['\"]?\)", onclick)
         num_riga = nm.group(1) if nm else ""
 
         # Deduplicazione robusta su (num_riga, title)
@@ -951,7 +1034,7 @@ def parse_albo_html(html: str) -> list:
         if date_end:
             try:
                 d = datetime.strptime(date_end, "%d-%m-%Y").replace(tzinfo=timezone.utc)
-                expired = d < datetime.now(timezone.utc)
+                expired = d.date() < datetime.now(timezone.utc).date()
             except ValueError:
                 pass
 
@@ -998,10 +1081,12 @@ def format_caption(item: dict) -> str:
         lines.append("📎 Nessun documento allegato")
     return "\n".join(lines)
 
-async def _download_and_send_docs(bot_or_update, chat_id: int | None, item: dict, is_reply: bool = False):
+async def _download_and_send_docs(bot_or_update, chat_id: int | None, item: dict, is_reply: bool = False) -> bool:
     """
     Invia caption + allegati a un chat_id oppure come reply a un update.
-    Unica implementazione condivisa tra notify e reply_item.
+    Restituisce True se almeno il messaggio principale è stato inviato.
+    Gli allegati possono fallire singolarmente senza far perdere lo stato del
+    messaggio principale: vengono loggati e ritentati al prossimo /atti.
     """
     caption  = format_caption(item)
     allegati = item.get("allegati", [])
@@ -1043,21 +1128,28 @@ async def _download_and_send_docs(bot_or_update, chat_id: int | None, item: dict
                     log.error(f"Allegato '{alleg['filename']}' non scaricato dopo {MAX_RETRIES} tentativi.")
         target = chat_id if not is_reply else "reply"
         log.info(f"✓ Inviato a {target}: {item['title'][:60]}")
+        return True
     except Exception as e:
         log.error(f"Errore invio atto: {e}")
+        return False
 
-async def send_item_to_chat(bot: Bot, chat_id: int, item: dict):
-    await _download_and_send_docs(bot, chat_id, item, is_reply=False)
+async def send_item_to_chat(bot: Bot, chat_id: int, item: dict) -> bool:
+    return await _download_and_send_docs(bot, chat_id, item, is_reply=False)
 
-async def reply_item(update: Update, item: dict):
-    await _download_and_send_docs(update, None, item, is_reply=True)
+async def reply_item(update: Update, item: dict) -> bool:
+    return await _download_and_send_docs(update, None, item, is_reply=True)
 
-async def notify(bot: Bot, item: dict):
+async def notify(bot: Bot, item: dict) -> int:
+    """Notifica l'atto a tutti i destinatari e restituisce quanti invii sono riusciti."""
     h = item_id(item)
+    sent = 0
     for chat_id in get_all_recipients():
-        await send_item_to_chat(bot, chat_id, item)
-        mark_user_seen(chat_id, [h])
+        ok = await send_item_to_chat(bot, chat_id, item)
+        if ok:
+            sent += 1
+            mark_user_seen(chat_id, [h])
         await asyncio.sleep(1.0)  # evita flood verso Telegram
+    return sent
 
 # ---------------------------------------------------------------------------
 # Formattazione e invio messaggi — News
@@ -1099,7 +1191,7 @@ def format_news_message(item: dict) -> str:
         lines.append(f"\n🔗 {escape_html(item['url'])}")
     return "\n".join(lines)
 
-async def send_news_to_chat(bot: Bot, chat_id: int, item: dict):
+async def send_news_to_chat(bot: Bot, chat_id: int, item: dict) -> bool:
     try:
         await bot.send_message(
             chat_id=chat_id,
@@ -1108,13 +1200,18 @@ async def send_news_to_chat(bot: Bot, chat_id: int, item: dict):
             disable_web_page_preview=False,
         )
         log.info(f"✓ News inviata a {chat_id}: {item['title'][:60]}")
+        return True
     except Exception as e:
         log.error(f"Errore invio news a {chat_id}: {e}")
+        return False
 
-async def notify_news(bot: Bot, item: dict):
+async def notify_news(bot: Bot, item: dict) -> int:
+    sent = 0
     for chat_id in get_all_news_recipients():
-        await send_news_to_chat(bot, chat_id, item)
+        if await send_news_to_chat(bot, chat_id, item):
+            sent += 1
         await asyncio.sleep(1.0)  # evita flood verso Telegram
+    return sent
 
 # ---------------------------------------------------------------------------
 # Comandi Telegram
@@ -1361,12 +1458,14 @@ async def cmd_atti(update: Update, context: ContextTypes.DEFAULT_TYPE):
     da_inviare   = [i for i in attivi_recenti if i.get("allegati") and item_id(i) not in user_seen]
     gia_visti    = [i for i in attivi_recenti if i.get("allegati") and item_id(i) in user_seen]
 
+    sent_hashes = []
     for item in da_inviare:
         await asyncio.sleep(0.5)
-        await reply_item(update, item)
+        if await reply_item(update, item):
+            sent_hashes.append(item_id(item))
 
-    if da_inviare:
-        mark_user_seen(chat_id, [item_id(i) for i in da_inviare])
+    if sent_hashes:
+        mark_user_seen(chat_id, sent_hashes)
 
     if gia_visti:
         ref = store_pending_resend(chat_id, [item_id(i) for i in gia_visti])
@@ -1452,63 +1551,24 @@ async def cmd_news(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("✅ Fine." + MENU_TEXT, parse_mode=ParseMode.MARKDOWN)
 
 async def cmd_controlla(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Forza un controllo immediato (albo + news)."""
+    """Forza un controllo immediato usando la stessa logica produttiva del polling."""
+    if not is_admin(update.effective_chat.id):
+        await update.message.reply_text("⛔ Comando riservato agli amministratori.")
+        return
+
     await update.message.reply_text("🔍 Controllo in corso...")
 
-    # --- Albo Pretorio ---
-    seen  = load_seen()
-    items = await fetch_albo_html()
-    if items is None:
-        await update.message.reply_text("❌ Impossibile raggiungere l'albo.")
-    else:
-        new_items = [i for i in items if item_id(i) not in seen]
-        if new_items:
-            await update.message.reply_text(f"🆕 {len(new_items)} nuovi atti! Recupero documenti...")
-            async with httpx.AsyncClient(follow_redirects=True, timeout=60) as client:
-                session_url = await open_session(client)
-                if not session_url:
-                    await update.message.reply_text(
-                        "❌ Impossibile aprire la sessione per i dettagli — nessun atto segnato "
-                        "come visto, verranno ritentati al prossimo controllo."
-                    )
-                else:
-                    await enrich_with_pdf(client, session_url, new_items)
-                    new_seen = set(seen)
-                    chat_id  = update.effective_chat.id
-                    for item in new_items:
-                        await reply_item(update, item)
-                        new_seen.add(item_id(item))
-                        mark_user_seen(chat_id, [item_id(item)])
-                        await asyncio.sleep(0.5)
-                    save_seen(new_seen)
-                    await update.message.reply_text(f"✅ {len(new_items)} nuovi atti aggiunti all'archivio.")
-        else:
-            await update.message.reply_text(
-                f"✅ Nessun nuovo atto.\n🗂 Archivio: {len(seen)} · Albo ora: {len(items)}"
-            )
+    result_albo = await run_check(context.bot)
+    result_news = await run_check_news(context.bot)
 
-    # --- News ---
-    seen_news  = load_seen_news()
-    news_items = await fetch_news_html(stop_at_known=seen_news)
-    if news_items is None:
-        await update.message.reply_text("❌ Impossibile raggiungere le news." + MENU_TEXT, parse_mode=ParseMode.MARKDOWN)
-        return
-    new_news = [i for i in news_items if news_id(i) not in seen_news]
-    if new_news:
-        await update.message.reply_text(f"🆕 {len(new_news)} nuove news!")
-        for item in new_news:
-            await update.message.reply_text(
-                format_news_message(item), parse_mode=ParseMode.HTML, disable_web_page_preview=False
-            )
-            await asyncio.sleep(0.3)
-        items_by_id = {news_id(i): i for i in new_news}
-        save_seen_news(seen_news | {news_id(i) for i in new_news}, items_by_id)
-        await update.message.reply_text(f"✅ {len(new_news)} nuove news aggiunte all'archivio." + MENU_TEXT, parse_mode=ParseMode.MARKDOWN)
-    else:
-        await update.message.reply_text(
-            f"✅ Nessuna nuova news.\n🗞 Archivio: {len(seen_news)} · Online ora: {len(news_items)}" + MENU_TEXT,
-            parse_mode=ParseMode.MARKDOWN
-        )
+    ok_albo = "✅" if result_albo.get("ok") else "❌"
+    ok_news = "✅" if result_news.get("ok") else "❌"
+    await update.message.reply_text(
+        f"{ok_albo} Albo: {result_albo.get('new', 0)} nuovi atti · archivio {result_albo.get('total', 0)}\n"
+        f"{ok_news} News: {result_news.get('new', 0)} nuove news · archivio {result_news.get('total', 0)}"
+        + MENU_TEXT,
+        parse_mode=ParseMode.MARKDOWN
+    )
 
 async def cmd_status(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Statistiche bot — solo admin."""
@@ -1565,14 +1625,23 @@ async def run_check(bot: Bot) -> dict:
             await enrich_with_pdf(client, session_url, new_items)
 
         new_seen = set(seen)
+        notified_count = 0
+        failed_count = 0
         for item in new_items:
-            await notify(bot, item)
-            new_seen.add(item_id(item))
+            sent = await notify(bot, item)
+            if sent > 0:
+                new_seen.add(item_id(item))
+                notified_count += 1
+            else:
+                failed_count += 1
+                log.warning(f"Atto non marcato come visto perché nessun invio è riuscito: {item.get('title', '?')[:80]}")
             await asyncio.sleep(1.5)  # margine extra tra un atto e il successivo
 
         save_seen(new_seen)
-        log.info(f"✅ {len(new_items)} nuovi atti notificati e salvati.")
-        return {"ok": True, "new": len(new_items), "total": len(new_seen)}
+        if failed_count:
+            log.warning(f"⚠️ {failed_count} atti non salvati come notificati: verranno ritentati.")
+        log.info(f"✅ {notified_count} nuovi atti notificati e salvati.")
+        return {"ok": failed_count == 0, "new": notified_count, "total": len(new_seen), "failed": failed_count}
     else:
         log.info(f"Nessun nuovo atto. (archivio: {len(seen)}, albo ora: {len(items)})")
         return {"ok": True, "new": 0, "total": len(seen)}
@@ -1624,14 +1693,24 @@ async def run_check_news(bot: Bot) -> dict:
                       "segnate come viste senza notifica push.")
 
         log.info(f"🆕 {len(to_notify)} nuove news da notificare...")
+        notified_ids = set()
+        failed_notify = 0
         for item in to_notify:
-            await notify_news(bot, item)
+            sent = await notify_news(bot, item)
+            if sent > 0:
+                notified_ids.add(news_id(item))
+            else:
+                failed_notify += 1
+                log.warning(f"News non marcata come vista perché nessun invio è riuscito: {item.get('title', '?')[:80]}")
             await asyncio.sleep(0.5)
 
+        # Le news troppo vecchie vengono volutamente segnate come viste senza push.
+        silent_ids = {news_id(i) for i in too_old}
+        ids_to_save = notified_ids | silent_ids
         items_by_id = {news_id(i): i for i in new_news}
-        save_seen_news(seen_news | {news_id(i) for i in new_news}, items_by_id)
-        log.info(f"✅ {len(new_news)} nuove news salvate ({len(to_notify)} notificate, {len(too_old)} silenziose).")
-        return {"ok": True, "new": len(to_notify), "total": len(seen_news) + len(new_news)}
+        save_seen_news(seen_news | ids_to_save, items_by_id)
+        log.info(f"✅ {len(ids_to_save)} nuove news salvate ({len(notified_ids)} notificate, {len(silent_ids)} silenziose, {failed_notify} fallite).")
+        return {"ok": failed_notify == 0, "new": len(notified_ids), "total": len(seen_news | ids_to_save), "failed": failed_notify}
     else:
         log.info(f"Nessuna nuova news. (archivio: {len(seen_news)}, online ora: {len(news_items)})")
         return {"ok": True, "new": 0, "total": len(seen_news)}
@@ -1678,7 +1757,7 @@ async def polling_loop(app: Application):
     except Exception as e:
         log.error(f"Errore check avvio: {e}", exc_info=True)
 
-    # Loop continuo (su GHA viene killato dal timeout dopo ~350 min, va bene —
+    # Loop continuo (su GHA viene chiuso dal timeout dopo ~357 min —
     # la concorrenza tra run è gestita nativamente da GitHub Actions tramite
     # il blocco `concurrency` nel workflow YAML, non serve più gestirla qui).
     log.info(f"Loop polling ogni {CONFIG['INTERVAL_MINUTES']} min.")
