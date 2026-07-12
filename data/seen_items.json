@@ -290,7 +290,11 @@
     "expired": true
   },
   "e75122f73ddb95be": {},
-  "d8e8365ac5259da1": {},
+  "d8e8365ac5259da1": {
+    "date": "28-10-2015",
+    "date_end": "",
+    "expired": true
+  },
   "bf67a78d8a351101": {},
   "d53fcccf44ce25da": {
     "date": "01-08-2016",
