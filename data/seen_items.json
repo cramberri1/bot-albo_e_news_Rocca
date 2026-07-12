@@ -156,7 +156,11 @@
   "7318e1f7ed9f1e98": {},
   "08c50bbed02568bb": {},
   "870a844070ba9bfa": {},
-  "38811baa2daaf90a": {},
+  "38811baa2daaf90a": {
+    "date": "08-03-2018",
+    "date_end": "",
+    "expired": true
+  },
   "e75122f73ddb95be": {},
   "d8e8365ac5259da1": {},
   "bf67a78d8a351101": {},
