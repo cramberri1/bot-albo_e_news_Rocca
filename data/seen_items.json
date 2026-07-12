@@ -5,7 +5,11 @@
     "expired": false
   },
   "e42192d8e4df5157": {},
-  "b079c03360aa2b2e": {},
+  "b079c03360aa2b2e": {
+    "date": "13-07-2015",
+    "date_end": "",
+    "expired": true
+  },
   "b06a27a037b47c44": {},
   "404ad1dd04246845": {},
   "8fd1a0be57b50b9c": {
