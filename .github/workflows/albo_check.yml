@@ -63,6 +63,7 @@ jobs:
             data/seen_items.json
             data/subscribers.json
             data/user_seen.json
+            data/user_seen_news.json
             data/seen_news.json
             data/subscribers_news.json
           )
@@ -80,10 +81,12 @@ jobs:
           fi
 
           git add -- "${existing[@]}"
-          if git diff --staged --quiet; then
-            echo "Nessuna modifica residua da committare."
-            exit 0
+          if ! git diff --staged --quiet; then
+            git commit -m "aggiornamento database finale [skip ci]"
+          else
+            echo "Nessuna modifica residua da committare; verifico comunque eventuali commit locali non ancora pubblicati."
           fi
 
-          git commit -m "aggiornamento database finale [skip ci]"
+          # Eseguito sempre: recupera anche un commit creato dal bot durante il
+          # run il cui push fosse fallito temporaneamente.
           git push
