@@ -253,7 +253,11 @@
     "date_end": "",
     "expired": true
   },
-  "5de5580dcc2b1f30": {},
+  "5de5580dcc2b1f30": {
+    "date": "01-08-2016",
+    "date_end": "",
+    "expired": true
+  },
   "059119e3740e5692": {},
   "47895bfbf257bc99": {}
 }
