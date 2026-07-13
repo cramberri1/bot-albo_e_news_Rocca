@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-13T15:19:32Z",
-  "lastSuccessAt": "2026-07-13T15:19:32Z",
+  "generatedAt": "2026-07-13T20:59:58Z",
+  "lastSuccessAt": "2026-07-13T20:59:58Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2016-07-27",
@@ -16,11 +16,95 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-07-13T15:19:32Z",
-    "lastSuccessAt": "2026-07-13T15:19:32Z",
+    "lastAttemptAt": "2026-07-13T20:59:58Z",
+    "lastSuccessAt": "2026-07-13T20:59:58Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "acts": [
+    {
+      "id": "ALBO:e1396:2026:398",
+      "legacyHash16": "7c309abbd967cb2d",
+      "title": "Autorizzazione alla cessione di quote di proprietà dell'immobile costituente il lotto n. 1 dell'area P.I.P. in località Tufara Valle (Foglio 1, particelle 1812, 1685 e 1687). Art. 11 del regolamento per la cessione delle aree in diritto di proprietà nel Piano degli insediamenti produttivi",
+      "publicationNumber": "398",
+      "publicationStart": "2026-07-13",
+      "publicationEnd": "2026-07-28",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA - SEDE",
+      "actType": "DELIBERE DI GIUNTA A",
+      "actNumber": "46",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "attachments": [
+        {
+          "name": "DELIBERA DI GIUNTA n. 46-2026.RTF.pdf",
+          "privacyStatus": "metadata_only"
+        }
+      ],
+      "procurement": {
+        "relevant": false,
+        "score": 2,
+        "reasons": [
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Altro atto contrattuale",
+        "filterVersion": "1.0"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "e098bdb6395f6e0063bbf7ee797537519f50b579ee4e676d925bb276e372431f",
+      "firstSeenAt": "2026-07-13T20:59:58Z",
+      "lastSeenAt": "2026-07-13T20:59:58Z",
+      "detailCapturedAt": "2026-07-13T21:00:16.247522Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:397",
+      "legacyHash16": "6a482bcb70e53a29",
+      "title": "Concessione in comodato d'uso gratuito del locale \"Centro Arte e Cultura\" di Cassano Caudino alla Pro Loco di Roccabascerana.",
+      "publicationNumber": "397",
+      "publicationStart": "2026-07-13",
+      "publicationEnd": "2026-07-28",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA - SEDE",
+      "actType": "DELIBERE DI GIUNTA A",
+      "actNumber": "45",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "attachments": [
+        {
+          "name": "DELIBERA DI GIUNTA n. 45-2026.PDF",
+          "privacyStatus": "metadata_only"
+        }
+      ],
+      "procurement": {
+        "relevant": false,
+        "score": 2,
+        "reasons": [
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Altro atto contrattuale",
+        "filterVersion": "1.0"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "81a725a3950f74ecd88572eb473c32c0455424ee63dac92677ee0cd9880b1f46",
+      "firstSeenAt": "2026-07-13T20:59:58Z",
+      "lastSeenAt": "2026-07-13T20:59:58Z",
+      "detailCapturedAt": "2026-07-13T21:00:17.592367Z"
+    },
     {
       "id": "ALBO:e1396:2026:396",
       "legacyHash16": "040cecb56e9d2340",
@@ -1998,7 +2082,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 1,
       "attachments": [
         {
@@ -2020,8 +2104,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 3,
-      "payloadHash": "cd8af3dc35dfadba8307ebdb83773753fc92c1abf14c95d3c0e67ae2f466e939",
+      "revision": 4,
+      "payloadHash": "119e539d76914815fd629cfe1f234a5194f20b8826621b39f00719436b90de9a",
       "firstSeenAt": "2026-07-12T22:00:05Z",
       "lastSeenAt": "2026-07-13T15:19:32Z",
       "detailCapturedAt": "2026-07-13T15:20:32.368952Z"
@@ -3736,7 +3820,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": false,
+      "currentlyPublished": true,
       "attachmentCount": 0,
       "attachments": [],
       "procurement": {
@@ -3753,10 +3837,10 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 4,
-      "payloadHash": "382873e0c0d8e8dbcfa73deee3471c24635bfe57020c98081cac8a4e4dcb2d24",
+      "revision": 5,
+      "payloadHash": "5cc6b555e9206229f5f8ae12f159423d745321bae7680ca64862a8702b011a85",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-13T14:44:29Z",
+      "lastSeenAt": "2026-07-13T20:59:58Z",
       "detailCapturedAt": null
     },
     {
