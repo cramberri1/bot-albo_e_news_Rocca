@@ -15,10 +15,10 @@
     "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
   },
   "sync": {
-    "status": "fresh",
-    "lastAttemptAt": "2026-07-13T14:44:29Z",
+    "status": "stale",
+    "lastAttemptAt": "2026-07-13T15:01:15Z",
     "lastSuccessAt": "2026-07-13T14:44:29Z",
-    "message": "Archivio aggiornato dal bot comunale."
+    "message": "Aggiornamento non riuscito; viene mantenuto l'ultimo archivio valido."
   },
   "acts": [
     {
