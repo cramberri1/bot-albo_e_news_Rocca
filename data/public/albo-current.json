@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-14T00:01:20Z",
-  "lastSuccessAt": "2026-07-14T00:01:20Z",
+  "generatedAt": "2026-07-14T22:08:53Z",
+  "lastSuccessAt": "2026-07-14T22:08:53Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2016-07-27",
@@ -16,8 +16,8 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-07-14T00:01:20Z",
-    "lastSuccessAt": "2026-07-14T00:01:20Z",
+    "lastAttemptAt": "2026-07-14T22:08:53Z",
+    "lastSuccessAt": "2026-07-14T22:08:53Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "acts": [
@@ -695,7 +695,7 @@
       ],
       "cups": [],
       "expired": false,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 1,
       "attachments": [
         {
@@ -718,8 +718,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 1,
-      "payloadHash": "904137c04bb2926af5e8c6e8ea13b7412c5228eaf794732de42508eba064cff1",
+      "revision": 2,
+      "payloadHash": "3eb67033001fcae1939870223e6b73d1fdd1981701ca5c6f73a02d9abea9ebe1",
       "firstSeenAt": "2026-07-12T21:44:10Z",
       "lastSeenAt": "2026-07-14T00:01:20Z",
       "detailCapturedAt": "2026-07-12T21:44:33.575367Z"
