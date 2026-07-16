@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-16T00:06:38Z",
-  "lastSuccessAt": "2026-07-16T00:06:38Z",
+  "generatedAt": "2026-07-16T20:26:44Z",
+  "lastSuccessAt": "2026-07-16T20:26:44Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2016-07-27",
@@ -16,8 +16,8 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-07-16T00:06:38Z",
-    "lastSuccessAt": "2026-07-16T00:06:38Z",
+    "lastAttemptAt": "2026-07-16T20:26:44Z",
+    "lastSuccessAt": "2026-07-16T20:26:44Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "acts": [
@@ -1141,7 +1141,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 1,
       "attachments": [
         {
@@ -1161,8 +1161,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 1,
-      "payloadHash": "4becf7a0d4975ac28f303692d102f0805ea8651b911efb1f57b6d778193a443b",
+      "revision": 2,
+      "payloadHash": "b811c0992f61807e015bad8c6dfe982719df0b0dedbb3a81530882eeb663f8f5",
       "firstSeenAt": "2026-07-12T21:44:10Z",
       "lastSeenAt": "2026-07-16T00:06:38Z",
       "detailCapturedAt": "2026-07-12T21:44:45.854187Z"
@@ -3520,6 +3520,41 @@
       "payloadHash": "f875dd76bb254ef1d37219600a5d0896bfad65dd7b7b5a015975df7abb0034d6",
       "firstSeenAt": "2026-07-12T21:44:10Z",
       "lastSeenAt": "2026-07-12T21:44:10Z",
+      "detailCapturedAt": null
+    },
+    {
+      "id": "ALBO:e1396:hash:3d57f2ad0fa56e31fc19",
+      "legacyHash16": "204a2d16f49328e8",
+      "title": "ELENCO UNIFICATO GIUDICI POPOLARI DI SECONDO GRADO",
+      "publicationNumber": "295",
+      "publicationStart": null,
+      "publicationEnd": null,
+      "sender": "TRIBUNALE AVELLINO",
+      "actType": "ELENCO GENERALE P",
+      "actNumber": null,
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": true,
+      "currentlyPublished": true,
+      "attachmentCount": 0,
+      "attachments": [],
+      "procurement": {
+        "relevant": false,
+        "score": 0,
+        "reasons": [],
+        "stage": "Altro atto contrattuale",
+        "filterVersion": "1.0"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "c90ccea2e84086d9d3f0aacdfbfbbc99543c9d194612aa3611942de0471b3e74",
+      "firstSeenAt": "2026-07-16T20:26:44Z",
+      "lastSeenAt": "2026-07-16T20:26:44Z",
       "detailCapturedAt": null
     },
     {
