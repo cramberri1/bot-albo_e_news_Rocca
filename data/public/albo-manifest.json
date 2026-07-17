@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-07-17T06:40:19Z",
-  "lastSuccessAt": "2026-07-17T06:40:19Z",
+  "lastAttemptAt": "2026-07-17T08:21:10Z",
+  "lastSuccessAt": "2026-07-17T08:21:10Z",
   "status": "fresh",
-  "sourceCount": 112,
-  "archiveCount": 130,
-  "currentlyPublishedCount": 112,
-  "changedCount": 2,
-  "eventCount": 178,
-  "snapshotSha256": "24af21d535f86fb054440d3bb2b8a385d3817342c5094877bb915a155b4997fc"
+  "sourceCount": 113,
+  "archiveCount": 131,
+  "currentlyPublishedCount": 113,
+  "changedCount": 3,
+  "eventCount": 181,
+  "snapshotSha256": "cfd68c7aae0d6f3873885fe1e492f9aef0b29f6e63d2eb1d6e66046b22528f44"
 }
