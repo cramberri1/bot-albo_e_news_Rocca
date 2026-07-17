@@ -684,5 +684,11 @@
     "date_end": "30-07-2026",
     "expired": false,
     "delivery_pending": false
+  },
+  "e190264916e788d0": {
+    "notified": false,
+    "date": "17-07-2026",
+    "date_end": "30-09-2026",
+    "expired": false
   }
 }
