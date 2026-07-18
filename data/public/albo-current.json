@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-18T00:02:13Z",
-  "lastSuccessAt": "2026-07-18T00:02:13Z",
+  "generatedAt": "2026-07-18T22:13:06Z",
+  "lastSuccessAt": "2026-07-18T22:13:06Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2016-07-27",
@@ -16,8 +16,8 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-07-18T00:02:13Z",
-    "lastSuccessAt": "2026-07-18T00:02:13Z",
+    "lastAttemptAt": "2026-07-18T22:13:06Z",
+    "lastSuccessAt": "2026-07-18T22:13:06Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "acts": [
@@ -507,7 +507,7 @@
       "cigs": [],
       "cups": [],
       "expired": false,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 1,
       "attachments": [
         {
@@ -530,8 +530,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 1,
-      "payloadHash": "139a670004a4075b20b672efb5315a8a1d75ec4e2bd49af1eaa0b2adac4b3867",
+      "revision": 2,
+      "payloadHash": "7459561ad3a051f699557f026843adfe512d84e3260df0efeced93c143ed23b1",
       "firstSeenAt": "2026-07-12T21:44:10Z",
       "lastSeenAt": "2026-07-18T00:02:13Z",
       "detailCapturedAt": "2026-07-12T21:44:25.290201Z"
@@ -550,7 +550,7 @@
       "cigs": [],
       "cups": [],
       "expired": false,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 1,
       "attachments": [
         {
@@ -574,8 +574,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 1,
-      "payloadHash": "805751d67ee2b89607e34b0c5f305aca05387878dd3dee7a0f1d051a554de942",
+      "revision": 2,
+      "payloadHash": "0a4878feb97511538522506acdde84fb007a1ab0682383cd44edb535486729a6",
       "firstSeenAt": "2026-07-12T21:44:10Z",
       "lastSeenAt": "2026-07-18T00:02:13Z",
       "detailCapturedAt": "2026-07-12T21:44:26.457367Z"
