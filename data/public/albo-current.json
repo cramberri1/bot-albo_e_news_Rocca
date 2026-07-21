@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-21T20:32:42Z",
-  "lastSuccessAt": "2026-07-21T20:32:42Z",
+  "generatedAt": "2026-07-21T20:49:38Z",
+  "lastSuccessAt": "2026-07-21T20:49:38Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2016-12-14",
@@ -16,16 +16,16 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-07-21T20:32:42Z",
-    "lastSuccessAt": "2026-07-21T20:32:42Z",
+    "lastAttemptAt": "2026-07-21T20:49:38Z",
+    "lastSuccessAt": "2026-07-21T20:49:38Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "filterStats": {
     "sourceCount": 108,
-    "procurementCheckedCount": 24,
+    "procurementCheckedCount": 48,
     "recentCandidatesCount": 17,
-    "relevantArchiveCount": 19,
-    "excludedCheckedCount": 5
+    "relevantArchiveCount": 20,
+    "excludedCheckedCount": 28
   },
   "acts": [
     {
@@ -278,7 +278,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 1,
       "procurement": {
         "relevant": true,
@@ -295,8 +295,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 2,
-      "payloadHash": "284027a683a39b819435b3d95b8678e15be30a939584389cb79f658de3fe6922",
+      "revision": 3,
+      "payloadHash": "930237deab17967ad0e32d43d06f2d29441d2eb2a6f5484afd8d8e4790f9c27a",
       "firstSeenAt": "2026-07-12T21:44:10Z",
       "lastSeenAt": "2026-07-21T20:32:42Z",
       "detailCapturedAt": "2026-07-21T20:34:16.867790Z"
@@ -315,7 +315,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": false,
+      "currentlyPublished": true,
       "attachmentCount": 1,
       "procurement": {
         "relevant": true,
@@ -326,18 +326,18 @@
           "atto dell'amministrazione comunale"
         ],
         "stage": "Affidamento",
-        "filterVersion": "1.0"
+        "filterVersion": "1.1"
       },
       "source": {
         "system": "Halley EG",
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 2,
-      "payloadHash": "f51a1c946a4675f35d25803cb1d8db99e9a39f2b04da2032bd6a10b7c72b9c9a",
+      "revision": 3,
+      "payloadHash": "3089bceb86955d0cfb83d1127dcd05e88c0811dd2adb0087acb62221b2b067cd",
       "firstSeenAt": "2026-07-12T22:00:05Z",
-      "lastSeenAt": "2026-07-21T00:13:29Z",
-      "detailCapturedAt": "2026-07-12T22:00:42.149064Z"
+      "lastSeenAt": "2026-07-21T20:49:38Z",
+      "detailCapturedAt": "2026-07-21T20:50:30.682519Z"
     },
     {
       "id": "ALBO:e1396:2016:407",
@@ -353,7 +353,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": false,
+      "currentlyPublished": true,
       "attachmentCount": 1,
       "procurement": {
         "relevant": true,
@@ -363,18 +363,18 @@
           "atto dell'amministrazione comunale"
         ],
         "stage": "Programmazione e gara",
-        "filterVersion": "1.0"
+        "filterVersion": "1.1"
       },
       "source": {
         "system": "Halley EG",
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 2,
-      "payloadHash": "b6f78d42b7dc2cc55a31895518b01dbdf6367802978fa4bf3c51b79b52573026",
+      "revision": 3,
+      "payloadHash": "ac3914d4c9f022443d8c5bb9b64da1529c76c6424097913fa6cb4ee01494594b",
       "firstSeenAt": "2026-07-12T22:00:05Z",
-      "lastSeenAt": "2026-07-21T00:13:29Z",
-      "detailCapturedAt": "2026-07-12T22:00:43.295928Z"
+      "lastSeenAt": "2026-07-21T20:49:38Z",
+      "detailCapturedAt": "2026-07-21T20:50:32.705332Z"
     },
     {
       "id": "ALBO:e1396:hash:7e36ca198609fa74909b",
@@ -467,7 +467,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 0,
       "procurement": {
         "relevant": true,
@@ -485,8 +485,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 3,
-      "payloadHash": "0a68841a5d9437eb971abb1b8f04f0bdd80ea222aff6597aafef462975b626b6",
+      "revision": 4,
+      "payloadHash": "e2b713ac3fc55c2f878b7528aa2078197bed2e4e62c34b376509da20e69d6020",
       "firstSeenAt": "2026-07-12T21:44:10Z",
       "lastSeenAt": "2026-07-21T20:32:42Z",
       "detailCapturedAt": null
@@ -505,7 +505,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 0,
       "procurement": {
         "relevant": true,
@@ -522,8 +522,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 3,
-      "payloadHash": "7b275744f4ad0e56c51435e4a39ccd4a20f9febc98bc0225d2239a3ea9ab3a8c",
+      "revision": 4,
+      "payloadHash": "d5723a28581e9c0615f3fedcc7ce2968d8775eee97955a1160fd42368dc6b972",
       "firstSeenAt": "2026-07-12T21:44:10Z",
       "lastSeenAt": "2026-07-21T20:32:42Z",
       "detailCapturedAt": null
@@ -750,6 +750,43 @@
       "payloadHash": "7964d3af7eff009c84a66f27857d16dae3c20a5defb6f26ab247ef90dd1c1a97",
       "firstSeenAt": "2026-07-12T21:44:10Z",
       "lastSeenAt": "2026-07-21T20:32:42Z",
+      "detailCapturedAt": null
+    },
+    {
+      "id": "ALBO:e1396:hash:4e2b889265abe8322d2c",
+      "legacyHash16": "38811baa2daaf90a",
+      "title": "GARA PER LO SPAZZAMENTO STRADALE, DECORO URBANO, PULIZIA CUNETTE PER REGIMENTAZIONE DELLE ACQUE PIOVANE, TAGLIO SIEPI E PULIZIA CASA COMUNALE. \n\nERRATA CORRIGE",
+      "publicationNumber": "131",
+      "publicationStart": null,
+      "publicationEnd": null,
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "actType": "PROCEDURA APERTA P",
+      "actNumber": null,
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": true,
+      "currentlyPublished": true,
+      "attachmentCount": 0,
+      "procurement": {
+        "relevant": true,
+        "score": 6,
+        "reasons": [
+          "gara o procedura",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Programmazione e gara",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "4ccebb79f478da96110d1f7c310e68df719616806a1c8e85fe7c0274044b60d4",
+      "firstSeenAt": "2026-07-21T20:49:38Z",
+      "lastSeenAt": "2026-07-21T20:49:38Z",
       "detailCapturedAt": null
     }
   ]
