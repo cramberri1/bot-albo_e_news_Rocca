@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-21T21:06:35Z",
-  "lastSuccessAt": "2026-07-21T21:06:35Z",
+  "generatedAt": "2026-07-21T21:23:10Z",
+  "lastSuccessAt": "2026-07-21T21:23:10Z",
   "complete": true,
   "coverage": {
-    "publicationStart": "2014-09-10",
+    "publicationStart": "2014-06-11",
     "publicationEnd": "2026-07-15",
     "archiveStartedAt": "2026-07-12T21:44:10Z"
   },
@@ -16,16 +16,16 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-07-21T21:06:35Z",
-    "lastSuccessAt": "2026-07-21T21:06:35Z",
+    "lastAttemptAt": "2026-07-21T21:23:10Z",
+    "lastSuccessAt": "2026-07-21T21:23:10Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "filterStats": {
     "sourceCount": 108,
-    "procurementCheckedCount": 72,
+    "procurementCheckedCount": 96,
     "recentCandidatesCount": 17,
-    "relevantArchiveCount": 23,
-    "excludedCheckedCount": 49
+    "relevantArchiveCount": 27,
+    "excludedCheckedCount": 69
   },
   "acts": [
     {
@@ -390,7 +390,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 1,
       "procurement": {
         "relevant": true,
@@ -408,8 +408,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 1,
-      "payloadHash": "d42cca58a57f82bdbe631105e7652758b1b4c6d8be3e9c692c41df61f079648e",
+      "revision": 2,
+      "payloadHash": "03e272787050f580e46a3a038e7fd4d1619111ab3e684ceb7307da218940e758",
       "firstSeenAt": "2026-07-21T21:06:35Z",
       "lastSeenAt": "2026-07-21T21:06:35Z",
       "detailCapturedAt": "2026-07-21T21:07:35.461909Z"
@@ -428,7 +428,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 1,
       "procurement": {
         "relevant": true,
@@ -447,8 +447,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 1,
-      "payloadHash": "dcd3c34bd624eedc5c7e4f4f66b2663a8623760773d389267089a07e67d1bf67",
+      "revision": 2,
+      "payloadHash": "70d14e70d49b71b12a3af4285960a30a1876574122294f0070e82910d0e822ca",
       "firstSeenAt": "2026-07-21T21:06:35Z",
       "lastSeenAt": "2026-07-21T21:06:35Z",
       "detailCapturedAt": "2026-07-21T21:08:04.225186Z"
@@ -462,6 +462,80 @@
       "publicationEnd": null,
       "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "actType": "AVVISO DI GARA P",
+      "actNumber": null,
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": true,
+      "currentlyPublished": false,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 6,
+        "reasons": [
+          "gara o procedura",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Programmazione e gara",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 2,
+      "payloadHash": "de561b3f142596ecf0726f253d4b955bd9627626c1ebb0a1374a470d7b4cca33",
+      "firstSeenAt": "2026-07-21T21:06:35Z",
+      "lastSeenAt": "2026-07-21T21:06:35Z",
+      "detailCapturedAt": "2026-07-21T21:08:06.218533Z"
+    },
+    {
+      "id": "ALBO:e1396:2014:336",
+      "legacyHash16": "8ce33766f616792b",
+      "title": "PROROGA TERMINE SCADENZA AVVISO PUBBLICO SHORT-LIST",
+      "publicationNumber": "336",
+      "publicationStart": "2014-07-18",
+      "publicationEnd": null,
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "actType": "AVVISO P",
+      "actNumber": null,
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": true,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 6,
+        "reasons": [
+          "proroga o rinnovo",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Modifiche e chiusura",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "17860c7e79207a243ec5eec8afa7b7ce8a05b06ff257ae09d85d1b889126b23e",
+      "firstSeenAt": "2026-07-21T21:23:10Z",
+      "lastSeenAt": "2026-07-21T21:23:10Z",
+      "detailCapturedAt": "2026-07-21T21:23:45.524802Z"
+    },
+    {
+      "id": "ALBO:e1396:2014:335",
+      "legacyHash16": "47895bfbf257bc99",
+      "title": "GARA SELVARANA - PUBBLICAZIONE FAQ.",
+      "publicationNumber": "335",
+      "publicationStart": "2014-07-17",
+      "publicationEnd": null,
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "actType": "AVVISO P",
       "actNumber": null,
       "registerNumber": null,
       "cigs": [],
@@ -485,10 +559,85 @@
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
       "revision": 1,
-      "payloadHash": "c2a72fc8ebf46a0b104727c6c123bdbe85092709a1a3e3f007d1e55d4d4eee90",
-      "firstSeenAt": "2026-07-21T21:06:35Z",
-      "lastSeenAt": "2026-07-21T21:06:35Z",
-      "detailCapturedAt": "2026-07-21T21:08:06.218533Z"
+      "payloadHash": "30c748dc32a5ae0b6d3ea269514254a154f4ea8f03df1c1a0db055cd95fe38da",
+      "firstSeenAt": "2026-07-21T21:23:10Z",
+      "lastSeenAt": "2026-07-21T21:23:10Z",
+      "detailCapturedAt": "2026-07-21T21:23:47.668544Z"
+    },
+    {
+      "id": "ALBO:e1396:2014:329",
+      "legacyHash16": "4ef4961048a910b9",
+      "title": "comunicazione data seduta finale gara",
+      "publicationNumber": "329",
+      "publicationStart": "2014-07-14",
+      "publicationEnd": null,
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "actType": "AVVISO P",
+      "actNumber": null,
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": true,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 6,
+        "reasons": [
+          "gara o procedura",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Programmazione e gara",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "87da69457ee2df3f405131d35a280061b4a7ae2975f234d4762a560e5d043ed6",
+      "firstSeenAt": "2026-07-21T21:23:10Z",
+      "lastSeenAt": "2026-07-21T21:23:10Z",
+      "detailCapturedAt": "2026-07-21T21:23:51.849585Z"
+    },
+    {
+      "id": "ALBO:e1396:2014:256",
+      "legacyHash16": "3a1294865b7045af",
+      "title": "INTERVENTO DI \"LAVORI DI COMPLETAMENTO E RIFUNZIONALIZZAZIONE DEL SISTEMA FOGNARIO COMUNALE",
+      "publicationNumber": "256",
+      "publicationStart": "2014-06-11",
+      "publicationEnd": null,
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "actType": "AVVISO DI GARA P",
+      "actNumber": null,
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": true,
+      "currentlyPublished": true,
+      "attachmentCount": 19,
+      "procurement": {
+        "relevant": true,
+        "score": 8,
+        "reasons": [
+          "gara o procedura",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Programmazione e gara",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "daf17141271af875e516d896fc8e1eff8c0985dc88dda9a22a8e3df73862ff35",
+      "firstSeenAt": "2026-07-21T21:23:10Z",
+      "lastSeenAt": "2026-07-21T21:23:10Z",
+      "detailCapturedAt": "2026-07-21T21:23:54.526612Z"
     },
     {
       "id": "ALBO:e1396:hash:7e36ca198609fa74909b",
@@ -504,7 +653,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": false,
+      "currentlyPublished": true,
       "attachmentCount": 0,
       "procurement": {
         "relevant": true,
@@ -522,10 +671,10 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 3,
-      "payloadHash": "4c4bc7e1e26334841dab7f2a1825465ffe341f745ca0c0065629fecf2fc58230",
+      "revision": 4,
+      "payloadHash": "d0ca910f5ebb6e00be89ed4144f608caae3a8f592586328c612fcdd8390f6212",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T20:32:42Z",
+      "lastSeenAt": "2026-07-21T21:23:10Z",
       "detailCapturedAt": null
     },
     {
@@ -542,7 +691,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": false,
+      "currentlyPublished": true,
       "attachmentCount": 0,
       "procurement": {
         "relevant": true,
@@ -561,10 +710,10 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 3,
-      "payloadHash": "2b0dac9b97c1ff7de6dd3a7cd070fcbbf7e5c16d13c9b89f1395476088c66ec9",
+      "revision": 4,
+      "payloadHash": "61e7a85367977ec60d39a0e3e2ccdc3bc6ccc6da597e34ae6a1e346876617cce",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T20:32:42Z",
+      "lastSeenAt": "2026-07-21T21:23:10Z",
       "detailCapturedAt": null
     },
     {
@@ -656,7 +805,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": false,
+      "currentlyPublished": true,
       "attachmentCount": 0,
       "procurement": {
         "relevant": true,
@@ -673,10 +822,10 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 3,
-      "payloadHash": "9286f83ed8049a2ca4e96a64798e2b0834bf2b64c575f13dd426eb9688334469",
+      "revision": 4,
+      "payloadHash": "8b183a64da5becfea1ec8ec42ec54f699b9bfcaf746182a7f2b3543d9ea51673",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T20:32:42Z",
+      "lastSeenAt": "2026-07-21T21:23:10Z",
       "detailCapturedAt": null
     },
     {
@@ -693,7 +842,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 0,
       "procurement": {
         "relevant": true,
@@ -710,8 +859,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 2,
-      "payloadHash": "854c079962e2eda6c0cf5708334005038f6ecf4215601c173f48708a6bc0eff9",
+      "revision": 3,
+      "payloadHash": "f6833c5020975da2510238623e944f627043703e8cdd139297a46820f598cb81",
       "firstSeenAt": "2026-07-12T21:44:10Z",
       "lastSeenAt": "2026-07-21T20:32:42Z",
       "detailCapturedAt": null
@@ -730,7 +879,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 0,
       "procurement": {
         "relevant": true,
@@ -747,8 +896,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 2,
-      "payloadHash": "e92fd1d36c437b7b930e0f7d752c00c0a37790b9598b3e3bc007ed772ce38be9",
+      "revision": 3,
+      "payloadHash": "978f70a2102aa743f0ebe4bfe6fe63dbb71829b597c4762a4c8c5668102eeca6",
       "firstSeenAt": "2026-07-12T21:44:10Z",
       "lastSeenAt": "2026-07-21T20:32:42Z",
       "detailCapturedAt": null
@@ -805,7 +954,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 0,
       "procurement": {
         "relevant": true,
@@ -822,8 +971,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 2,
-      "payloadHash": "ef9911be85a3f97dd0aa3342ac79e298f5a91d008ca4dc8719451a1ed3ad442f",
+      "revision": 3,
+      "payloadHash": "0d663d0d76f1bbde2355a1d3333f03fb3597ae7cfb51e223abd4f361ecb04b55",
       "firstSeenAt": "2026-07-12T21:44:10Z",
       "lastSeenAt": "2026-07-21T20:32:42Z",
       "detailCapturedAt": null
@@ -842,7 +991,7 @@
       "cigs": [],
       "cups": [],
       "expired": true,
-      "currentlyPublished": true,
+      "currentlyPublished": false,
       "attachmentCount": 0,
       "procurement": {
         "relevant": true,
@@ -860,8 +1009,8 @@
         "entity": "e1396",
         "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
       },
-      "revision": 2,
-      "payloadHash": "7964d3af7eff009c84a66f27857d16dae3c20a5defb6f26ab247ef90dd1c1a97",
+      "revision": 3,
+      "payloadHash": "3957694052aee27eebd786d468687b48d1f8ecad2046188c831a598e34fedf92",
       "firstSeenAt": "2026-07-12T21:44:10Z",
       "lastSeenAt": "2026-07-21T20:32:42Z",
       "detailCapturedAt": null

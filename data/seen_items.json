@@ -10,7 +10,8 @@
     "date": "10-10-2013",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:46.926076Z"
   },
   "b079c03360aa2b2e": {
     "date": "13-07-2015",
@@ -23,7 +24,8 @@
     "date": "10-04-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:29.563914Z"
   },
   "404ad1dd04246845": {
     "date": "29-11-2012",
@@ -49,7 +51,8 @@
     "date": "18-07-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:23:45.524802Z"
   },
   "c112abbf3b23123a": {
     "date": "01-08-2016",
@@ -62,7 +65,8 @@
     "date": "01-04-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:31.712175Z"
   },
   "9a1f60638d643f88": {
     "date": "14-12-2016",
@@ -75,7 +79,8 @@
     "date": "11-06-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:23:54.526612Z"
   },
   "6e2a43ff7e540cb8": {
     "date": "02-07-2026",
@@ -100,7 +105,8 @@
     "date": "20-01-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:40.089625Z"
   },
   "5647659b0f85e0cd": {
     "date": "29-06-2026",
@@ -153,7 +159,8 @@
     "date": "02-05-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:19.300972Z"
   },
   "b92ce5ba33febc49": {
     "date": "30-01-2026",
@@ -179,7 +186,8 @@
     "date": "06-02-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:35.682349Z"
   },
   "2ef29b09b8d68329": {
     "date": "03-07-2026",
@@ -191,7 +199,8 @@
     "date": "15-07-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:23:49.648787Z"
   },
   "a52be400ec120a0d": {
     "date": "04-12-2014",
@@ -232,13 +241,15 @@
     "date": "01-09-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:23:43.730021Z"
   },
   "ff7109e8a25185b7": {
     "date": "30-04-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:23.362957Z"
   },
   "3366e93e00990a1f": {
     "date": "27-07-2016",
@@ -279,7 +290,8 @@
     "date": "10-04-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:27.591843Z"
   },
   "3c09894afd2b897f": {
     "date": "01-08-2016",
@@ -306,7 +318,8 @@
     "date": "24-09-2013",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:49.346046Z"
   },
   "d0dd903121818abc": {
     "date": "22-02-2013",
@@ -391,7 +404,8 @@
     "date": "19-05-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:14.775536Z"
   },
   "c1a4be16b90358f3": {
     "date": "14-02-2013",
@@ -403,7 +417,8 @@
     "date": "15-04-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:25.351426Z"
   },
   "fcdc5133f1caa23d": {
     "date": "28-10-2014",
@@ -416,7 +431,8 @@
     "date": "30-04-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:21.347444Z"
   },
   "718dfbdc511b6e5f": {
     "date": "13-06-2016",
@@ -468,13 +484,15 @@
     "date": "14-07-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:23:51.849585Z"
   },
   "5fa1d229f4f4666f": {
     "date": "02-07-2013",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:50.088871Z"
   },
   "1d57f32d623ba11c": {
     "date": "30-11-2015",
@@ -536,7 +554,8 @@
     "date": "03-02-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:37.954597Z"
   },
   "bfd135e5fe0e974a": {
     "date": "18-12-2014",
@@ -549,7 +568,8 @@
     "date": "13-01-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:42.235709Z"
   },
   "794f05e5a9cfe022": {
     "date": "16-03-2015",
@@ -596,7 +616,8 @@
     "date": "01-04-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:33.691972Z"
   },
   "d8e8365ac5259da1": {
     "date": "28-10-2015",
@@ -630,7 +651,8 @@
     "date": "08-11-2013",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:44.612741Z"
   },
   "88007b2dce28ba3c": {
     "date": "18-07-2016",
@@ -684,13 +706,15 @@
     "date": "05-05-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:24:17.111282Z"
   },
   "47895bfbf257bc99": {
     "date": "17-07-2014",
     "date_end": "",
     "expired": true,
-    "notified": true
+    "notified": true,
+    "procurement_checked_at": "2026-07-21T21:23:47.668544Z"
   },
   "28eb47e65c42dd3e": {
     "notified": true,
