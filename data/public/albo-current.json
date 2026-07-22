@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-21T21:55:48Z",
-  "lastSuccessAt": "2026-07-21T21:55:48Z",
+  "generatedAt": "2026-07-22T00:00:36Z",
+  "lastSuccessAt": "2026-07-22T00:00:36Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2012-10-09",
@@ -16,8 +16,8 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-07-21T21:55:48Z",
-    "lastSuccessAt": "2026-07-21T21:55:48Z",
+    "lastAttemptAt": "2026-07-22T00:00:36Z",
+    "lastSuccessAt": "2026-07-22T00:00:36Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "filterStats": {
@@ -63,7 +63,7 @@
       "revision": 2,
       "payloadHash": "385d86426629f2d02dc8503c886560576e6c2ceadddc3771b4cac2443398197e",
       "firstSeenAt": "2026-07-15T12:11:55Z",
-      "lastSeenAt": "2026-07-21T20:32:42Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": "2026-07-21T20:33:00.407143Z"
     },
     {
@@ -100,7 +100,7 @@
       "revision": 2,
       "payloadHash": "af48782b53d66245e23fd6f7649de9d7e8d5aecfc37ad57e3b2873be86ae3ee0",
       "firstSeenAt": "2026-07-13T14:44:29Z",
-      "lastSeenAt": "2026-07-21T20:32:42Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": "2026-07-21T20:33:33.152605Z"
     },
     {
@@ -261,7 +261,7 @@
       "revision": 2,
       "payloadHash": "0e894309e5acf0222d12a8fe2f54491926a42dc62d455e52cc8febfc6d6535b9",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T20:32:42Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": "2026-07-21T20:34:08.387514Z"
     },
     {
@@ -712,7 +712,7 @@
       "revision": 4,
       "payloadHash": "d0ca910f5ebb6e00be89ed4144f608caae3a8f592586328c612fcdd8390f6212",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T21:23:10Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": null
     },
     {
@@ -751,7 +751,7 @@
       "revision": 4,
       "payloadHash": "61e7a85367977ec60d39a0e3e2ccdc3bc6ccc6da597e34ae6a1e346876617cce",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T21:23:10Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": null
     },
     {
@@ -789,7 +789,7 @@
       "revision": 5,
       "payloadHash": "0a68841a5d9437eb971abb1b8f04f0bdd80ea222aff6597aafef462975b626b6",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T21:06:35Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": null
     },
     {
@@ -826,7 +826,7 @@
       "revision": 5,
       "payloadHash": "7b275744f4ad0e56c51435e4a39ccd4a20f9febc98bc0225d2239a3ea9ab3a8c",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T21:06:35Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": null
     },
     {
@@ -863,7 +863,7 @@
       "revision": 4,
       "payloadHash": "8b183a64da5becfea1ec8ec42ec54f699b9bfcaf746182a7f2b3543d9ea51673",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T21:23:10Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": null
     },
     {
@@ -900,7 +900,7 @@
       "revision": 4,
       "payloadHash": "854c079962e2eda6c0cf5708334005038f6ecf4215601c173f48708a6bc0eff9",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T21:39:54Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": null
     },
     {
@@ -937,7 +937,7 @@
       "revision": 4,
       "payloadHash": "e92fd1d36c437b7b930e0f7d752c00c0a37790b9598b3e3bc007ed772ce38be9",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T21:39:54Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": null
     },
     {
@@ -975,7 +975,7 @@
       "revision": 4,
       "payloadHash": "45d4d66aca1d6647a65618cb0f49ae4d1ce1396e3a66c6dc4c30ad42a7ed0093",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T21:55:48Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": null
     },
     {
@@ -1012,7 +1012,7 @@
       "revision": 4,
       "payloadHash": "ef9911be85a3f97dd0aa3342ac79e298f5a91d008ca4dc8719451a1ed3ad442f",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T21:39:54Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": null
     },
     {
@@ -1050,7 +1050,7 @@
       "revision": 4,
       "payloadHash": "7964d3af7eff009c84a66f27857d16dae3c20a5defb6f26ab247ef90dd1c1a97",
       "firstSeenAt": "2026-07-12T21:44:10Z",
-      "lastSeenAt": "2026-07-21T21:39:54Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": null
     },
     {
@@ -1087,7 +1087,7 @@
       "revision": 1,
       "payloadHash": "4ccebb79f478da96110d1f7c310e68df719616806a1c8e85fe7c0274044b60d4",
       "firstSeenAt": "2026-07-21T20:49:38Z",
-      "lastSeenAt": "2026-07-21T20:49:38Z",
+      "lastSeenAt": "2026-07-22T00:00:36Z",
       "detailCapturedAt": null
     }
   ]
