@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-23T00:14:11Z",
-  "lastSuccessAt": "2026-07-23T00:14:11Z",
+  "generatedAt": "2026-07-23T07:28:55Z",
+  "lastSuccessAt": "2026-07-23T07:28:55Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2012-10-09",
-    "publicationEnd": "2026-07-15",
+    "publicationEnd": "2026-07-23",
     "archiveStartedAt": "2026-07-12T21:44:10Z"
   },
   "source": {
@@ -16,18 +16,56 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-07-23T00:14:11Z",
-    "lastSuccessAt": "2026-07-23T00:14:11Z",
+    "lastAttemptAt": "2026-07-23T07:28:55Z",
+    "lastSuccessAt": "2026-07-23T07:28:55Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "filterStats": {
-    "sourceCount": 109,
-    "procurementCheckedCount": 108,
-    "recentCandidatesCount": 18,
-    "relevantArchiveCount": 28,
+    "sourceCount": 110,
+    "procurementCheckedCount": 109,
+    "recentCandidatesCount": 19,
+    "relevantArchiveCount": 29,
     "excludedCheckedCount": 80
   },
   "acts": [
+    {
+      "id": "ALBO:e1396:2026:403",
+      "legacyHash16": "373f963a678d5cbd",
+      "title": "Liquidazione fornitura energia elettrica a favore della società Unica Spa - Periodo maggio 2026",
+      "publicationNumber": "403",
+      "publicationStart": "2026-07-23",
+      "publicationEnd": "2026-08-07",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA - SEDE",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "157",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 8,
+        "reasons": [
+          "liquidazione o SAL",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "dce588c1d4e6ab45face9a17cf8c8a84b8685475a1152115e87eeeb011218704",
+      "firstSeenAt": "2026-07-23T07:28:55Z",
+      "lastSeenAt": "2026-07-23T07:28:55Z",
+      "detailCapturedAt": "2026-07-23T07:29:09.636169Z"
+    },
     {
       "id": "ALBO:e1396:2026:399",
       "legacyHash16": "f10f2542a3b1f754",
