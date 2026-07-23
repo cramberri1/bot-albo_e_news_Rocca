@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-23T07:28:55Z",
-  "lastSuccessAt": "2026-07-23T07:28:55Z",
+  "generatedAt": "2026-07-23T07:44:38Z",
+  "lastSuccessAt": "2026-07-23T07:44:38Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2012-10-09",
@@ -16,18 +16,206 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-07-23T07:28:55Z",
-    "lastSuccessAt": "2026-07-23T07:28:55Z",
+    "lastAttemptAt": "2026-07-23T07:44:38Z",
+    "lastSuccessAt": "2026-07-23T07:44:38Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "filterStats": {
-    "sourceCount": 110,
-    "procurementCheckedCount": 109,
-    "recentCandidatesCount": 19,
-    "relevantArchiveCount": 29,
+    "sourceCount": 115,
+    "procurementCheckedCount": 114,
+    "recentCandidatesCount": 24,
+    "relevantArchiveCount": 34,
     "excludedCheckedCount": 80
   },
   "acts": [
+    {
+      "id": "ALBO:e1396:2026:408",
+      "legacyHash16": "818d18da1e2313f5",
+      "title": "Abbonamento Maggioli - Liquidazione di spesa",
+      "publicationNumber": "408",
+      "publicationStart": "2026-07-23",
+      "publicationEnd": "2026-08-07",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA - SEDE",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "163",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 6,
+        "reasons": [
+          "liquidazione o SAL",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "0ded63e8f8026e788e20388c4067cb4d5d4dd8791e88de11c8d0c2b0c8924c9d",
+      "firstSeenAt": "2026-07-23T07:44:38Z",
+      "lastSeenAt": "2026-07-23T07:44:38Z",
+      "detailCapturedAt": "2026-07-23T07:44:51.787661Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:407",
+      "legacyHash16": "92e1cfbb82d1f7c8",
+      "title": "Liquidazione a favore della società Consulservice per l'espletamento del servizio di telefonia ed internet nelle scuole e centro arte e cultura",
+      "publicationNumber": "407",
+      "publicationStart": "2026-07-23",
+      "publicationEnd": "2026-08-07",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA - SEDE",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "161",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 8,
+        "reasons": [
+          "liquidazione o SAL",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "3e83b5bf8e2ddf987b4454a77ab8b8831e61cbd7c79c0f0757603a420628f534",
+      "firstSeenAt": "2026-07-23T07:44:38Z",
+      "lastSeenAt": "2026-07-23T07:44:38Z",
+      "detailCapturedAt": "2026-07-23T07:44:54.261937Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:406",
+      "legacyHash16": "cb54a8d43a75b94f",
+      "title": "Liquidazione a favore della società Consulservice srl per servizio telefonia e connessione dati con fibra per sede Comunale - giugno 2026",
+      "publicationNumber": "406",
+      "publicationStart": "2026-07-23",
+      "publicationEnd": "2026-08-07",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA - SEDE",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "160",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 8,
+        "reasons": [
+          "liquidazione o SAL",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "30af42f0fb77c6b4ab891c0d3d5b9ad3f270b90db1cf929617a7e7cb47eb6aac",
+      "firstSeenAt": "2026-07-23T07:44:38Z",
+      "lastSeenAt": "2026-07-23T07:44:38Z",
+      "detailCapturedAt": "2026-07-23T07:44:57.060602Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:405",
+      "legacyHash16": "293071bccb0888d4",
+      "title": "Abbonamento Leggi d'Italia - Wolters Kluwer Italia Srl  - Liquidazione di spesa",
+      "publicationNumber": "405",
+      "publicationStart": "2026-07-23",
+      "publicationEnd": "2026-08-07",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA - SEDE",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "159",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 6,
+        "reasons": [
+          "liquidazione o SAL",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "c17add6d7529f5d9be4ed7750719444ede1cab0caef4d70b015026d26c215e59",
+      "firstSeenAt": "2026-07-23T07:44:38Z",
+      "lastSeenAt": "2026-07-23T07:44:38Z",
+      "detailCapturedAt": "2026-07-23T07:44:59.363231Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:404",
+      "legacyHash16": "c283e6141d59826b",
+      "title": "Liquidazione a favore della società Royal Group SrL per fornitura  gas metano - Periodo aprile/maggio  2026",
+      "publicationNumber": "404",
+      "publicationStart": "2026-07-23",
+      "publicationEnd": "2026-08-07",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA - SEDE",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "158",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 8,
+        "reasons": [
+          "liquidazione o SAL",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "8e7f245948b11da50c9bfbc5b698fdee3c94cc0c825ce5795ad149128aa0ba68",
+      "firstSeenAt": "2026-07-23T07:44:38Z",
+      "lastSeenAt": "2026-07-23T07:44:38Z",
+      "detailCapturedAt": "2026-07-23T07:45:02.029869Z"
+    },
     {
       "id": "ALBO:e1396:2026:403",
       "legacyHash16": "373f963a678d5cbd",

@@ -821,5 +821,40 @@
     "expired": false,
     "procurement_checked_at": "2026-07-23T07:29:09.636169Z",
     "delivery_pending": false
+  },
+  "818d18da1e2313f5": {
+    "notified": false,
+    "date": "23-07-2026",
+    "date_end": "07-08-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-07-23T07:44:51.787661Z"
+  },
+  "92e1cfbb82d1f7c8": {
+    "notified": false,
+    "date": "23-07-2026",
+    "date_end": "07-08-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-07-23T07:44:54.261937Z"
+  },
+  "cb54a8d43a75b94f": {
+    "notified": false,
+    "date": "23-07-2026",
+    "date_end": "07-08-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-07-23T07:44:57.060602Z"
+  },
+  "293071bccb0888d4": {
+    "notified": false,
+    "date": "23-07-2026",
+    "date_end": "07-08-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-07-23T07:44:59.363231Z"
+  },
+  "c283e6141d59826b": {
+    "notified": false,
+    "date": "23-07-2026",
+    "date_end": "07-08-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-07-23T07:45:02.029869Z"
   }
 }
