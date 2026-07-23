@@ -823,38 +823,43 @@
     "delivery_pending": false
   },
   "818d18da1e2313f5": {
-    "notified": false,
+    "notified": true,
     "date": "23-07-2026",
     "date_end": "07-08-2026",
     "expired": false,
-    "procurement_checked_at": "2026-07-23T07:44:51.787661Z"
+    "procurement_checked_at": "2026-07-23T07:44:51.787661Z",
+    "delivery_pending": false
   },
   "92e1cfbb82d1f7c8": {
-    "notified": false,
+    "notified": true,
     "date": "23-07-2026",
     "date_end": "07-08-2026",
     "expired": false,
-    "procurement_checked_at": "2026-07-23T07:44:54.261937Z"
+    "procurement_checked_at": "2026-07-23T07:44:54.261937Z",
+    "delivery_pending": false
   },
   "cb54a8d43a75b94f": {
-    "notified": false,
+    "notified": true,
     "date": "23-07-2026",
     "date_end": "07-08-2026",
     "expired": false,
-    "procurement_checked_at": "2026-07-23T07:44:57.060602Z"
+    "procurement_checked_at": "2026-07-23T07:44:57.060602Z",
+    "delivery_pending": false
   },
   "293071bccb0888d4": {
-    "notified": false,
+    "notified": true,
     "date": "23-07-2026",
     "date_end": "07-08-2026",
     "expired": false,
-    "procurement_checked_at": "2026-07-23T07:44:59.363231Z"
+    "procurement_checked_at": "2026-07-23T07:44:59.363231Z",
+    "delivery_pending": false
   },
   "c283e6141d59826b": {
-    "notified": false,
+    "notified": true,
     "date": "23-07-2026",
     "date_end": "07-08-2026",
     "expired": false,
-    "procurement_checked_at": "2026-07-23T07:45:02.029869Z"
+    "procurement_checked_at": "2026-07-23T07:45:02.029869Z",
+    "delivery_pending": false
   }
 }
