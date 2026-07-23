@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-07-22T00:00:36Z",
-  "lastSuccessAt": "2026-07-22T00:00:36Z",
+  "lastAttemptAt": "2026-07-23T00:14:11Z",
+  "lastSuccessAt": "2026-07-23T00:14:11Z",
   "status": "fresh",
-  "sourceCount": 108,
-  "procurementCheckedCount": 107,
-  "recentCandidatesCount": 17,
+  "sourceCount": 109,
+  "procurementCheckedCount": 108,
+  "recentCandidatesCount": 18,
   "relevantArchiveCount": 28,
-  "excludedCheckedCount": 79,
+  "excludedCheckedCount": 80,
   "archiveCount": 28,
   "currentlyPublishedCount": 14,
   "changedCount": 0,
   "eventCount": 82,
-  "snapshotSha256": "e58487f348f646b446c3ed9b589f51a9e293290c48fad90f91260461ef7e0a08"
+  "snapshotSha256": "6faeb327fbda5bed6aaa3a967e574b0fd1c9257221ea832d41faa691ddd2b9e8"
 }
