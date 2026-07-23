@@ -815,10 +815,11 @@
     "delivery_pending": false
   },
   "373f963a678d5cbd": {
-    "notified": false,
+    "notified": true,
     "date": "23-07-2026",
     "date_end": "07-08-2026",
     "expired": false,
-    "procurement_checked_at": "2026-07-23T07:29:09.636169Z"
+    "procurement_checked_at": "2026-07-23T07:29:09.636169Z",
+    "delivery_pending": false
   }
 }
