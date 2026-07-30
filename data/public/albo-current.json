@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-30T09:01:58Z",
-  "lastSuccessAt": "2026-07-30T09:01:58Z",
+  "generatedAt": "2026-07-30T15:05:18Z",
+  "lastSuccessAt": "2026-07-30T15:05:18Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2012-10-09",
@@ -16,18 +16,206 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-07-30T09:01:58Z",
-    "lastSuccessAt": "2026-07-30T09:01:58Z",
+    "lastAttemptAt": "2026-07-30T15:05:18Z",
+    "lastSuccessAt": "2026-07-30T15:05:18Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "filterStats": {
-    "sourceCount": 123,
-    "procurementCheckedCount": 129,
-    "recentCandidatesCount": 39,
-    "relevantArchiveCount": 41,
-    "excludedCheckedCount": 88
+    "sourceCount": 129,
+    "procurementCheckedCount": 135,
+    "recentCandidatesCount": 45,
+    "relevantArchiveCount": 46,
+    "excludedCheckedCount": 89
   },
   "acts": [
+    {
+      "id": "ALBO:e1396:2026:429",
+      "legacyHash16": "f1089212c8cc57a5",
+      "title": "Liquidazione di spesa preventivamente impegnata per \"Servizio di pulizia nell'edificio pubblico adibito a Sede Municipale Piazza Michele Imbriani\" - Ditta: PRINCIPE TERESA. Periodo Aprile - Maggio - Giugno 2026",
+      "publicationNumber": "429",
+      "publicationStart": "2026-07-30",
+      "publicationEnd": "2026-08-14",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "111",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 8,
+        "reasons": [
+          "liquidazione o SAL",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "42049dc601e2d021e51dbd43a3a35578b612c1b48fa61bd3b3b166dc1b40cf7f",
+      "firstSeenAt": "2026-07-30T15:05:18Z",
+      "lastSeenAt": "2026-07-30T15:05:18Z",
+      "detailCapturedAt": "2026-07-30T15:05:34.856610Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:428",
+      "legacyHash16": "f6fc41b06dc37a2c",
+      "title": "Adesione a convenzione CONSIP \"telefonia mobile 9\" - CIG \"originario\" della convenzione 9458158EE1- Liquidazione periodo 23/04/2026 - 22/06/2026",
+      "publicationNumber": "428",
+      "publicationStart": "2026-07-30",
+      "publicationEnd": "2026-08-14",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "110",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 6,
+        "reasons": [
+          "liquidazione o SAL",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "40e3787b5299cd75796419964bc17fcf9fe2a6e467ce440f1352d058c4cd77b6",
+      "firstSeenAt": "2026-07-30T15:05:18Z",
+      "lastSeenAt": "2026-07-30T15:05:18Z",
+      "detailCapturedAt": "2026-07-30T15:05:37.470225Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:427",
+      "legacyHash16": "f7f7f446c0de2ffe",
+      "title": "Liquidazione di spesa preventivamente impegnata per \"Conferimento Rifiuti Solidi Urbani\" - Ditta Irpiniambiente S.P.A. - Periodo Maggio 2026",
+      "publicationNumber": "427",
+      "publicationStart": "2026-07-30",
+      "publicationEnd": "2026-08-14",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "109",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 6,
+        "reasons": [
+          "liquidazione o SAL",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "f8f985b89e07c3ea59708cdd3b3181283fe18ac749e1815fc165d9c07d706af8",
+      "firstSeenAt": "2026-07-30T15:05:18Z",
+      "lastSeenAt": "2026-07-30T15:05:18Z",
+      "detailCapturedAt": "2026-07-30T15:05:40.257889Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:426",
+      "legacyHash16": "86d1e12bc39aa0fc",
+      "title": "Liquidazione di spesa preventivamente impegnata per \"APPALTO PER SERVIZIO DI PULIZIA, DISOSTRUZIONE E SPURGO DI CONDOTTE E POZZETTI FOGNARI - PULIZIA DI CADITOIE STRADALI SUL TERRITORIO COMUNALE. Servizio di autospurgo per la disostruzione e lo stasamento della rete fognaria nonché di caditoie e pozzetti stradali nell'ambito del territorio del comune\".",
+      "publicationNumber": "426",
+      "publicationStart": "2026-07-30",
+      "publicationEnd": "2026-08-14",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "108",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 8,
+        "reasons": [
+          "liquidazione o SAL",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "43b5d78ad787349ebbfd5df27a4688e1fef81ad0935dc08166bfb913b5e9d0fe",
+      "firstSeenAt": "2026-07-30T15:05:18Z",
+      "lastSeenAt": "2026-07-30T15:05:18Z",
+      "detailCapturedAt": "2026-07-30T15:05:42.856802Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:425",
+      "legacyHash16": "71ec0c2ee515630d",
+      "title": "Liquidazione di spesa preventivamente impegnata per \"Interventi di fornitura e posa opera segnaletica verticale e segnaletica orizzontale nel territorio del comune di Roccabascerana (AV)\"",
+      "publicationNumber": "425",
+      "publicationStart": "2026-07-30",
+      "publicationEnd": "2026-08-14",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "107",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 8,
+        "reasons": [
+          "liquidazione o SAL",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "28ecc5d90c4192397b1d8f46e4a5adc33ee89694556c9d217f8844cfc6b8fdd7",
+      "firstSeenAt": "2026-07-30T15:05:18Z",
+      "lastSeenAt": "2026-07-30T15:05:18Z",
+      "detailCapturedAt": "2026-07-30T15:05:45.622543Z"
+    },
     {
       "id": "ALBO:e1396:2026:423",
       "legacyHash16": "372ea2cd3779275c",
