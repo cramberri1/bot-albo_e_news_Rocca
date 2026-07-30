@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-30T15:05:18Z",
-  "lastSuccessAt": "2026-07-30T15:05:18Z",
+  "generatedAt": "2026-07-30T15:21:42Z",
+  "lastSuccessAt": "2026-07-30T15:21:42Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2012-10-09",
@@ -16,18 +16,59 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-07-30T15:05:18Z",
-    "lastSuccessAt": "2026-07-30T15:05:18Z",
+    "lastAttemptAt": "2026-07-30T15:21:42Z",
+    "lastSuccessAt": "2026-07-30T15:21:42Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "filterStats": {
-    "sourceCount": 129,
-    "procurementCheckedCount": 135,
-    "recentCandidatesCount": 45,
-    "relevantArchiveCount": 46,
+    "sourceCount": 130,
+    "procurementCheckedCount": 136,
+    "recentCandidatesCount": 46,
+    "relevantArchiveCount": 47,
     "excludedCheckedCount": 89
   },
   "acts": [
+    {
+      "id": "ALBO:e1396:2026:430",
+      "legacyHash16": "a4a50db3acc61462",
+      "title": "\" APPALTO INTEGRATO DELLA PROGETTAZIONE ESECUTIVA E REALIZZAZIONE DEI LAVORI INERENTI \"Interventi finanziati con risorse FSC 2014-2020 per la riduzione della dispersione idrica delle reti di distribuzione nel Distretto Calore Irpino\". CUP H13E19000300006.\nLiquidazione Stato Avanzamento Lavori n. 1 e servizio di progettazione.",
+      "publicationNumber": "430",
+      "publicationStart": "2026-07-30",
+      "publicationEnd": "2026-08-14",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "76",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [
+        "H13E19000300006"
+      ],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 10,
+        "reasons": [
+          "contiene CUP",
+          "liquidazione o SAL",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "411225290c575e89acb170ff3d953e0db51e271ab4e725c7598147eee2b11bef",
+      "firstSeenAt": "2026-07-30T15:21:42Z",
+      "lastSeenAt": "2026-07-30T15:21:42Z",
+      "detailCapturedAt": "2026-07-30T15:21:58.646124Z"
+    },
     {
       "id": "ALBO:e1396:2026:429",
       "legacyHash16": "f1089212c8cc57a5",
