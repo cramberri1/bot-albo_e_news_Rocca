@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-30T07:29:39Z",
-  "lastSuccessAt": "2026-07-30T07:29:39Z",
+  "generatedAt": "2026-07-30T09:01:58Z",
+  "lastSuccessAt": "2026-07-30T09:01:58Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2012-10-09",
@@ -16,18 +16,56 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-07-30T07:29:39Z",
-    "lastSuccessAt": "2026-07-30T07:29:39Z",
+    "lastAttemptAt": "2026-07-30T09:01:58Z",
+    "lastSuccessAt": "2026-07-30T09:01:58Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "filterStats": {
-    "sourceCount": 122,
-    "procurementCheckedCount": 128,
-    "recentCandidatesCount": 38,
-    "relevantArchiveCount": 40,
+    "sourceCount": 123,
+    "procurementCheckedCount": 129,
+    "recentCandidatesCount": 39,
+    "relevantArchiveCount": 41,
     "excludedCheckedCount": 88
   },
   "acts": [
+    {
+      "id": "ALBO:e1396:2026:423",
+      "legacyHash16": "372ea2cd3779275c",
+      "title": "Adempimenti Arera - nuovo metodo MTR  -  Elaborazione PEF periodo 2026-2029 e preparazione Tariffe - Assistenza legale dinanzi alla Corte di Giustizia Tributaria e supporto all'ufficio tributi - Affidamento ed impegno di spesa",
+      "publicationNumber": "423",
+      "publicationStart": "2026-07-30",
+      "publicationEnd": "2026-08-14",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA - SEDE",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "167",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 6,
+        "reasons": [
+          "affidamento",
+          "impegno di spesa contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Affidamento",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "bae2c79686b0e96674c71130e369b429ed0fa892c1d2d7c48049cfde31300ae1",
+      "firstSeenAt": "2026-07-30T09:01:58Z",
+      "lastSeenAt": "2026-07-30T09:01:58Z",
+      "detailCapturedAt": "2026-07-30T09:02:12.378765Z"
+    },
     {
       "id": "ALBO:e1396:2026:422",
       "legacyHash16": "92bdc55b1d22687d",
