@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-30T00:01:20Z",
-  "lastSuccessAt": "2026-07-30T00:01:20Z",
+  "generatedAt": "2026-07-30T07:29:39Z",
+  "lastSuccessAt": "2026-07-30T07:29:39Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2012-10-09",
-    "publicationEnd": "2026-07-23",
+    "publicationEnd": "2026-07-30",
     "archiveStartedAt": "2026-07-12T21:44:10Z"
   },
   "source": {
@@ -16,18 +16,245 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-07-30T00:01:20Z",
-    "lastSuccessAt": "2026-07-30T00:01:20Z",
+    "lastAttemptAt": "2026-07-30T07:29:39Z",
+    "lastSuccessAt": "2026-07-30T07:29:39Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "filterStats": {
-    "sourceCount": 115,
-    "procurementCheckedCount": 121,
-    "recentCandidatesCount": 31,
-    "relevantArchiveCount": 34,
-    "excludedCheckedCount": 87
+    "sourceCount": 122,
+    "procurementCheckedCount": 128,
+    "recentCandidatesCount": 38,
+    "relevantArchiveCount": 40,
+    "excludedCheckedCount": 88
   },
   "acts": [
+    {
+      "id": "ALBO:e1396:2026:422",
+      "legacyHash16": "92bdc55b1d22687d",
+      "title": "Liquidazione di spesa preventivamente impegnata per \"Interventi di manutenzione straordinaria e Lavori di sistemazione dell'Edificio sito in via G. Bruno n. 17 (ex Palazzo Principe), alla Fraz. Cassano del comune di Roccabascerana (AV).\"",
+      "publicationNumber": "422",
+      "publicationStart": "2026-07-30",
+      "publicationEnd": "2026-08-14",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "actType": "DETERMINA A",
+      "actNumber": "9",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 8,
+        "reasons": [
+          "liquidazione o SAL",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "f65e45952dc548250126eb28f1ae0d3b8eda433f7b581b84a96ebced3c26ebf1",
+      "firstSeenAt": "2026-07-30T07:29:39Z",
+      "lastSeenAt": "2026-07-30T07:29:39Z",
+      "detailCapturedAt": "2026-07-30T07:29:53.212613Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:421",
+      "legacyHash16": "55858196caa7ee71",
+      "title": "Liquidazione di spesa preventivamente impegnata per \"Servizio di manutenzione, riparazione parti meccaniche-elettroniche e carrozzeria dei veicoli di proprietà comunale anche in dotazione al servizio di polizia locale\". Intervento di manutenzione Peugeot 508 targa GS157ZA",
+      "publicationNumber": "421",
+      "publicationStart": "2026-07-30",
+      "publicationEnd": "2026-08-14",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "actType": "DETERMINA A",
+      "actNumber": "8",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 8,
+        "reasons": [
+          "liquidazione o SAL",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "5b87d86a37067043b3e3a6dba958f8ddf35e2653916fdd830c42a05ab8eb0119",
+      "firstSeenAt": "2026-07-30T07:29:39Z",
+      "lastSeenAt": "2026-07-30T07:29:39Z",
+      "detailCapturedAt": "2026-07-30T07:29:55.601558Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:420",
+      "legacyHash16": "6014512365c782d7",
+      "title": "Liquidazione di spesa preventivamente impegnata per \"Fornitura n. 200 sacchi di asfalto a freddo\"",
+      "publicationNumber": "420",
+      "publicationStart": "2026-07-30",
+      "publicationEnd": "2026-08-14",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "actType": "DETERMINA A",
+      "actNumber": "7",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 8,
+        "reasons": [
+          "liquidazione o SAL",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "fb518ad726b4375f35db6a8850f4491291c9388fb5f8dbaa8a7002befcc88ac8",
+      "firstSeenAt": "2026-07-30T07:29:39Z",
+      "lastSeenAt": "2026-07-30T07:29:39Z",
+      "detailCapturedAt": "2026-07-30T07:29:57.885703Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:419",
+      "legacyHash16": "0c6fb559ff793f2e",
+      "title": "Liquidazione di spesa preventivamente impegnata per \"SERVIZI DI SPAZZAMENTO E CURA DEL VERDE COMUNALE NEL COMUNE DI ROCCABASCERANA\" - Ditta: Partenio Service Roma Soc. Coop. - Periodo gIUGNO 2026",
+      "publicationNumber": "419",
+      "publicationStart": "2026-07-30",
+      "publicationEnd": "2026-08-14",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "actType": "DETERMINA A",
+      "actNumber": "6",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 6,
+        "reasons": [
+          "liquidazione o SAL",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "b879b3c2fc019d35f783da4f191d4d01d20090c8b0e8d40550d6ab159fb323ce",
+      "firstSeenAt": "2026-07-30T07:29:39Z",
+      "lastSeenAt": "2026-07-30T07:29:39Z",
+      "detailCapturedAt": "2026-07-30T07:30:00.307285Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:418",
+      "legacyHash16": "3764bedefb29f3f8",
+      "title": "Approvvigionamento carburante automezzi ed attrezzature comunali. Adesione << convenzione CONSIP - Accordo Quadro \"AQFC3_Q8 - Fuel Card 3\", per la fornitura di carburante per autotrazione mediante Fuel Card >>, stipulata con Kuwait Petroleum Italia S.p.A. Liquidazione di spesa preventivamente impegnata - Periodo Giugno 2026",
+      "publicationNumber": "418",
+      "publicationStart": "2026-07-30",
+      "publicationEnd": "2026-08-14",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "actType": "DETERMINA A",
+      "actNumber": "4",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 8,
+        "reasons": [
+          "liquidazione o SAL",
+          "richiesta di offerta",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "876dcc088b63178617dc4a60baebf933af71a8d3d506f3679171922766a50163",
+      "firstSeenAt": "2026-07-30T07:29:39Z",
+      "lastSeenAt": "2026-07-30T07:29:39Z",
+      "detailCapturedAt": "2026-07-30T07:30:02.712999Z"
+    },
+    {
+      "id": "ALBO:e1396:2026:416",
+      "legacyHash16": "e6784b0dade7208a",
+      "title": "Liquidazione di spesa preventivamente impegnata per \"SERVIZI CIMITERIALI NEL TERRITORIO DEL COMUNE DI ROCCABASCERANA\" - Ditta: Partenio Service Roma Soc. Coop. - Periodo Giugno 2026",
+      "publicationNumber": "416",
+      "publicationStart": "2026-07-30",
+      "publicationEnd": "2026-08-14",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "actType": "DETERMINA A",
+      "actNumber": "2",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 6,
+        "reasons": [
+          "liquidazione o SAL",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "eeadd7d3cbc92dcbc2113aaf702b9a6899ef040b0b060731e84c497a46da9d33",
+      "firstSeenAt": "2026-07-30T07:29:39Z",
+      "lastSeenAt": "2026-07-30T07:29:39Z",
+      "detailCapturedAt": "2026-07-30T07:30:07.684802Z"
+    },
     {
       "id": "ALBO:e1396:2026:408",
       "legacyHash16": "818d18da1e2313f5",
