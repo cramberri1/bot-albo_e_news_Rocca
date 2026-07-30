@@ -868,5 +868,13 @@
     "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_182.html",
     "description": "Alto Calore Servizi",
     "delivery_pending": false
+  },
+  "183": {
+    "title": "Avviso ai contribuenti TARI",
+    "category": "Avviso",
+    "date": "30-07-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_183.html",
+    "description": "Attivazione App TARI",
+    "delivery_pending": false
   }
 }
