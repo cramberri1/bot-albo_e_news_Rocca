@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-03T00:07:41Z",
-  "lastSuccessAt": "2026-08-03T00:07:41Z",
+  "generatedAt": "2026-08-03T10:34:37Z",
+  "lastSuccessAt": "2026-08-03T10:34:37Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2012-10-09",
-    "publicationEnd": "2026-07-30",
+    "publicationEnd": "2026-08-03",
     "archiveStartedAt": "2026-07-12T21:44:10Z"
   },
   "source": {
@@ -16,18 +16,56 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-08-03T00:07:41Z",
-    "lastSuccessAt": "2026-08-03T00:07:41Z",
+    "lastAttemptAt": "2026-08-03T10:34:37Z",
+    "lastSuccessAt": "2026-08-03T10:34:37Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "filterStats": {
-    "sourceCount": 129,
-    "procurementCheckedCount": 138,
-    "recentCandidatesCount": 48,
-    "relevantArchiveCount": 47,
+    "sourceCount": 130,
+    "procurementCheckedCount": 139,
+    "recentCandidatesCount": 49,
+    "relevantArchiveCount": 48,
     "excludedCheckedCount": 91
   },
   "acts": [
+    {
+      "id": "ALBO:e1396:2026:433",
+      "legacyHash16": "32a47c320cf10486",
+      "title": "Fornitura testi scolastici scuola primaria a.s. 2026/2027 - Affidamento",
+      "publicationNumber": "433",
+      "publicationStart": "2026-08-03",
+      "publicationEnd": "2026-08-18",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA - SEDE",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "168",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 8,
+        "reasons": [
+          "affidamento",
+          "oggetto contrattuale",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Affidamento",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "6512f2ddd73b325275e24dacabf8c082487a7d5206df955fb386dc37cfe6751e",
+      "firstSeenAt": "2026-08-03T10:34:37Z",
+      "lastSeenAt": "2026-08-03T10:34:37Z",
+      "detailCapturedAt": "2026-08-03T10:34:50.997042Z"
+    },
     {
       "id": "ALBO:e1396:2026:430",
       "legacyHash16": "a4a50db3acc61462",
