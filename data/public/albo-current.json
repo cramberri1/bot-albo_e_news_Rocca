@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-03T10:34:37Z",
-  "lastSuccessAt": "2026-08-03T10:34:37Z",
+  "generatedAt": "2026-08-03T15:24:47Z",
+  "lastSuccessAt": "2026-08-03T15:24:47Z",
   "complete": true,
   "coverage": {
     "publicationStart": "2012-10-09",
@@ -16,18 +16,55 @@
   },
   "sync": {
     "status": "fresh",
-    "lastAttemptAt": "2026-08-03T10:34:37Z",
-    "lastSuccessAt": "2026-08-03T10:34:37Z",
+    "lastAttemptAt": "2026-08-03T15:24:47Z",
+    "lastSuccessAt": "2026-08-03T15:24:47Z",
     "message": "Archivio aggiornato dal bot comunale."
   },
   "filterStats": {
-    "sourceCount": 130,
-    "procurementCheckedCount": 139,
-    "recentCandidatesCount": 49,
-    "relevantArchiveCount": 48,
-    "excludedCheckedCount": 91
+    "sourceCount": 132,
+    "procurementCheckedCount": 141,
+    "recentCandidatesCount": 51,
+    "relevantArchiveCount": 49,
+    "excludedCheckedCount": 92
   },
   "acts": [
+    {
+      "id": "ALBO:e1396:2026:435",
+      "legacyHash16": "2be75abfb9c33f3d",
+      "title": "Liquidazione Stampa, Imbustamento e Spedizione Accertamenti IMU 2022 e TAR 2023",
+      "publicationNumber": "435",
+      "publicationStart": "2026-08-03",
+      "publicationEnd": "2026-08-18",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA - SEDE",
+      "actType": "DETERMINAZIONI A",
+      "actNumber": "170",
+      "registerNumber": null,
+      "cigs": [],
+      "cups": [],
+      "expired": false,
+      "currentlyPublished": true,
+      "attachmentCount": 1,
+      "procurement": {
+        "relevant": true,
+        "score": 6,
+        "reasons": [
+          "liquidazione o SAL",
+          "atto dell'amministrazione comunale"
+        ],
+        "stage": "Esecuzione e pagamenti",
+        "filterVersion": "1.1"
+      },
+      "source": {
+        "system": "Halley EG",
+        "entity": "e1396",
+        "url": "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL"
+      },
+      "revision": 1,
+      "payloadHash": "53367bd6029076bc64c28c5f7f064bcaee7f4e3f721498e616d7130603032e39",
+      "firstSeenAt": "2026-08-03T15:24:47Z",
+      "lastSeenAt": "2026-08-03T15:24:47Z",
+      "detailCapturedAt": "2026-08-03T15:25:02.525316Z"
+    },
     {
       "id": "ALBO:e1396:2026:433",
       "legacyHash16": "32a47c320cf10486",
