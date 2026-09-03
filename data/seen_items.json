@@ -1373,5 +1373,13 @@
     "expired": false,
     "procurement_checked_at": "2026-09-03T13:22:43.843933Z",
     "delivery_pending": false
+  },
+  "023d715cbd226022": {
+    "notified": true,
+    "date": "03-09-2026",
+    "date_end": "18-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T15:40:50.747076Z",
+    "delivery_pending": false
   }
 }
