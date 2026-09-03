@@ -1077,5 +1077,243 @@
     "expired": false,
     "procurement_checked_at": "2026-08-03T15:25:02.525316Z",
     "delivery_pending": false
+  },
+  "8e6f54337fbead67": {
+    "notified": false,
+    "date": "03-09-2026",
+    "date_end": "18-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:16:51.236800Z"
+  },
+  "26eecb16408aca07": {
+    "notified": false,
+    "date": "03-09-2026",
+    "date_end": "18-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:16:54.171226Z"
+  },
+  "9d4debbc6e672ac0": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:16:56.948718Z"
+  },
+  "31642de4ff9a9297": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:16:59.497578Z"
+  },
+  "0a16756f3d27e709": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:01.730493Z"
+  },
+  "f76834b0ad15ad31": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:03.942668Z"
+  },
+  "7a57c6eeaf948568": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:06.303301Z"
+  },
+  "63d71e6fdb10754c": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:08.625595Z"
+  },
+  "b527dcb6c638888f": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:10.812428Z"
+  },
+  "08e45163d077de29": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:12.984714Z"
+  },
+  "827aa5758081f34e": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:15.343621Z"
+  },
+  "e4839838bc3aec37": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:17.508244Z"
+  },
+  "86cd1e7e6ce20e51": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:19.844811Z"
+  },
+  "ed3701b1f90e2d61": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:22.030801Z"
+  },
+  "c27c0c61a13a578e": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "09-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:24.396768Z"
+  },
+  "613a6095269465c1": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:26.736480Z"
+  },
+  "ecc38af7fa0a61af": {
+    "notified": false,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:28.879667Z"
+  },
+  "5bb8126fda07b187": {
+    "notified": false,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:32.261584Z"
+  },
+  "66912d844b140f15": {
+    "notified": false,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:34.961796Z"
+  },
+  "eceab3645f52eb6e": {
+    "notified": false,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:37.311243Z"
+  },
+  "c29ff1e9f65250f1": {
+    "notified": false,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:39.743502Z"
+  },
+  "2d714e9811c3c837": {
+    "notified": false,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:41.921240Z"
+  },
+  "7bd12802b32c1582": {
+    "notified": false,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:44.130893Z"
+  },
+  "6e0bdaca1bebae00": {
+    "notified": false,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:46.558053Z"
+  },
+  "32a8fac8dfc6c901": {
+    "notified": false,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:49.069440Z"
+  },
+  "07fc68f6095ba038": {
+    "notified": false,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:51.557455Z"
+  },
+  "c248d75a1758e758": {
+    "notified": false,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:54.051005Z"
+  },
+  "6be86bfd9471353c": {
+    "notified": false,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:56.310857Z"
+  },
+  "3df589e78f7cc4a9": {
+    "notified": false,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:17:58.516972Z"
+  },
+  "9dc08d8883fba491": {
+    "notified": false,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:18:00.863874Z"
+  },
+  "2ff5ba304299a05a": {
+    "notified": false,
+    "date": "29-08-2026",
+    "date_end": "13-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:18:03.331604Z"
+  },
+  "738a29ab31cc1bcc": {
+    "notified": false,
+    "date": "27-08-2026",
+    "date_end": "30-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:18:05.722066Z"
+  },
+  "9671c57a570fbe04": {
+    "notified": false,
+    "date": "26-08-2026",
+    "date_end": "10-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:18:08.486960Z"
+  },
+  "013a299ee290499b": {
+    "notified": false,
+    "date": "22-08-2026",
+    "date_end": "06-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T12:18:15.562228Z"
   }
 }
