@@ -1349,5 +1349,29 @@
     "expired": false,
     "procurement_checked_at": "2026-09-03T12:18:15.562228Z",
     "delivery_pending": false
+  },
+  "6b972f436220245e": {
+    "notified": true,
+    "date": "03-09-2026",
+    "date_end": "18-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T13:22:38.331452Z",
+    "delivery_pending": false
+  },
+  "cf2ed95982d2a37a": {
+    "notified": true,
+    "date": "03-09-2026",
+    "date_end": "18-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T13:22:41.226503Z",
+    "delivery_pending": false
+  },
+  "6ea11fae8e293a18": {
+    "notified": true,
+    "date": "03-09-2026",
+    "date_end": "18-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-03T13:22:43.843933Z",
+    "delivery_pending": false
   }
 }
