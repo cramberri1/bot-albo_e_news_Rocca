@@ -884,5 +884,29 @@
     "url": "https://www.comune.roccabascerana.av.it/novita/notizie/novita_184.html",
     "description": "Comunicazione data e sede della prova pratica",
     "delivery_pending": false
+  },
+  "187": {
+    "title": "Servizio trasporto scolastico",
+    "category": "Avviso",
+    "date": "03-09-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_187.html",
+    "description": "Avvio alle iscrizioni per l'anno scolastico 2026/2027",
+    "delivery_pending": false
+  },
+  "190": {
+    "title": "Allerta fumi incendio Airola: Guida sulle precauzioni da seguire",
+    "category": "Avviso",
+    "date": "01-09-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_190.html",
+    "description": "Nota della Prefettura di Avellino e raccomandazioni urgenti dell'ASL",
+    "delivery_pending": false
+  },
+  "186": {
+    "title": "Iniziativa per la promozione della conoscenza della tragedia delle foibe e dellesodo giuliano-dalmata.",
+    "category": "Avviso",
+    "date": "13-08-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_186.html",
+    "description": "Prefettura  Ufficio Territoriale del Governo di Avellino",
+    "delivery_pending": false
   }
 }
