@@ -1421,5 +1421,19 @@
     "expired": false,
     "procurement_checked_at": "2026-09-07T14:42:59.098203Z",
     "delivery_pending": false
+  },
+  "d95a86d4f03d21f5": {
+    "notified": false,
+    "date": "08-09-2026",
+    "date_end": "23-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-08T12:01:45.577428Z"
+  },
+  "ca0bed4adfd05bb1": {
+    "notified": false,
+    "date": "08-09-2026",
+    "date_end": "23-09-2026",
+    "expired": false,
+    "procurement_checked_at": "2026-09-08T12:01:48.318717Z"
   }
 }
