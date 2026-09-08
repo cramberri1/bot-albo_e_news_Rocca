@@ -1423,17 +1423,19 @@
     "delivery_pending": false
   },
   "d95a86d4f03d21f5": {
-    "notified": false,
+    "notified": true,
     "date": "08-09-2026",
     "date_end": "23-09-2026",
     "expired": false,
-    "procurement_checked_at": "2026-09-08T12:01:45.577428Z"
+    "procurement_checked_at": "2026-09-08T12:01:45.577428Z",
+    "delivery_pending": false
   },
   "ca0bed4adfd05bb1": {
-    "notified": false,
+    "notified": true,
     "date": "08-09-2026",
     "date_end": "23-09-2026",
     "expired": false,
-    "procurement_checked_at": "2026-09-08T12:01:48.318717Z"
+    "procurement_checked_at": "2026-09-08T12:01:48.318717Z",
+    "delivery_pending": false
   }
 }
