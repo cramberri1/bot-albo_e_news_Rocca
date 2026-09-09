@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-09-09T00:11:10Z",
+  "lastAttemptAt": "2026-09-09T04:51:53Z",
   "lastSuccessAt": "2026-09-09T00:11:10Z",
-  "status": "fresh",
+  "status": "error",
   "sourceCount": 141,
   "procurementCheckedCount": 187,
   "recentCandidatesCount": 97,
@@ -12,5 +12,6 @@
   "currentlyPublishedCount": 43,
   "changedCount": 0,
   "eventCount": 157,
-  "snapshotSha256": "595f879a444d63469d7676d889e69f2bd04846d3b276eb1d9c365221189ab9b7"
+  "snapshotSha256": "595f879a444d63469d7676d889e69f2bd04846d3b276eb1d9c365221189ab9b7",
+  "error": "Fetch dell'Albo Halley fallito."
 }
