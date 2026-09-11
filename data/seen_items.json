@@ -1485,5 +1485,3593 @@
     "expired": false,
     "procurement_checked_at": "2026-09-11T09:43:14.035387Z",
     "delivery_pending": false
+  },
+  "bfaece827f0b12d3": {
+    "notified": true,
+    "date": "11-09-2026",
+    "date_end": "26-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "a2de2fb7577d9fda6385715303c0c69188173bf36f0e452a13fa88023be2c3c5",
+    "revision_snapshot": {
+      "date": "11-09-2026",
+      "date_end": "26-09-2026",
+      "sender": "enel distribuzione spa",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "844c4268c05c311a208ff5bf48ef6abc8df4f9413b9877581b37cf724cd3f3da"
+      ],
+      "attachment_name_hashes": [
+        "b4d5cfe87716a34b"
+      ]
+    },
+    "revision": 1
+  },
+  "3fbb44ba0249adb2": {
+    "notified": true,
+    "date": "10-09-2026",
+    "date_end": "09-11-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "d46989497e1d3c46ca06cab5bc1e50abc22821dbf0c86bfe85a93447769b869e",
+    "revision_snapshot": {
+      "date": "10-09-2026",
+      "date_end": "09-11-2026",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "8",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "a1fe736c87900d1d3be5aeb52085e4426ec1eb6b38b06bc18956abddc89748e1"
+      ],
+      "attachment_name_hashes": [
+        "b8e2d2835888b65a"
+      ]
+    },
+    "revision": 1
+  },
+  "1bab1bd28383072a": {
+    "notified": true,
+    "date": "10-09-2026",
+    "date_end": "25-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "d2506abe5e18d546be92419e8904045b3c5500fba029f63290fa04799c80f70b",
+    "revision_snapshot": {
+      "date": "10-09-2026",
+      "date_end": "25-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "197",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "24a10c96834178b2ae82592e03efa8629cb1a0706286c8a6e4738c2a36594718",
+        "fd7d5ba70a87276f1e686ccb80307372b47798419cfe8c98859039bb31cfeb9a"
+      ],
+      "attachment_name_hashes": [
+        "ca4efd57671e53cd",
+        "de6a787805f40063"
+      ]
+    },
+    "revision": 1
+  },
+  "c2049a4eb7c72e82": {
+    "notified": true,
+    "date": "10-09-2026",
+    "date_end": "25-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "5baa2e0b30ec3c93bb94a9fb7908347fd35b912116e06e380fecfc54d6068130",
+    "revision_snapshot": {
+      "date": "10-09-2026",
+      "date_end": "25-09-2026",
+      "sender": "RESPONSABILE AREA AMMINISTRATIVA FINANZIARIA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "081ad5ffadb8eac91fff6b71e32468bdc2c13fd06aa55cce8bf6fdb1914ca249",
+        "90e65a39c33e406edc8a496e49bf6cc7246fcb8961646efca709808e8ee72b1b"
+      ],
+      "attachment_name_hashes": [
+        "73bde18a3874dc39",
+        "f7d584a6c29588ec"
+      ]
+    },
+    "revision": 1
+  },
+  "bbb7e809c06923a5": {
+    "notified": true,
+    "date": "09-09-2026",
+    "date_end": "24-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "181b10b10f0a039745e986df00648b60cd8b350805912bb452dc75897a022ca0",
+    "revision_snapshot": {
+      "date": "09-09-2026",
+      "date_end": "24-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "196",
+      "register_number": "",
+      "attachment_count": 3,
+      "attachment_sha256": [
+        "081ad5ffadb8eac91fff6b71e32468bdc2c13fd06aa55cce8bf6fdb1914ca249",
+        "1cbf4351930903cc0f84090b94b1f55236fb7fe6d099edbb9bf93ca233791063",
+        "90e65a39c33e406edc8a496e49bf6cc7246fcb8961646efca709808e8ee72b1b"
+      ],
+      "attachment_name_hashes": [
+        "4349f9c0afb587f5",
+        "d3463c1e96b61f06",
+        "f57cbddb6a1564a9"
+      ]
+    },
+    "revision": 1
+  },
+  "234377e8b4d311da": {
+    "notified": true,
+    "date": "08-09-2026",
+    "date_end": "23-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "fa2e33b1fc30556b99a11e5a1c6f51512804247464b58b79e639bdaf66a7453a",
+    "revision_snapshot": {
+      "date": "08-09-2026",
+      "date_end": "23-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "195",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "dc11b83d7a7d8ecd5ff0dd29b1d3635049803021f4c405279e02c20413affa0e",
+        "dc8484682ba07b862d00e98685b8c3a697c8d9a1f41c8858070789f621433833"
+      ],
+      "attachment_name_hashes": [
+        "d4e444a8a56c320c",
+        "ee691c09f60b3985"
+      ]
+    },
+    "revision": 1
+  },
+  "d1f24eddb76f6f11": {
+    "notified": true,
+    "date": "08-09-2026",
+    "date_end": "23-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "fbd4b3d6872e2fcd344c62daad0d5b00999dd2ac7adf541de8ea364288506784",
+    "revision_snapshot": {
+      "date": "08-09-2026",
+      "date_end": "23-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "194",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "8054eaf8172192fd702199cb6891f3dc16d91cb03fb5328f55b6ebe0d75d7ba5"
+      ],
+      "attachment_name_hashes": [
+        "fff4411d0e34b5c3"
+      ]
+    },
+    "revision": 1
+  },
+  "297285dd4c7a1d57": {
+    "notified": true,
+    "date": "08-09-2026",
+    "date_end": "23-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "ccc55317fe97c8f93fef7ecb140b343d38aa2a908745bc4f1a2f4c00c32b9d8a",
+    "revision_snapshot": {
+      "date": "08-09-2026",
+      "date_end": "23-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "193",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "f6026c3555aeb7ac2557b6788982658ea4ed7906867e008cae2f5e1deff11ee2"
+      ],
+      "attachment_name_hashes": [
+        "f7d3532322fa349b"
+      ]
+    },
+    "revision": 1
+  },
+  "e005c0e0b412a4a0": {
+    "notified": true,
+    "date": "07-09-2026",
+    "date_end": "22-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "ddad9d1f90eee7fecee751169c911a7f808e1997161a47c68e64e4d84d771b52",
+    "revision_snapshot": {
+      "date": "07-09-2026",
+      "date_end": "22-09-2026",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "31",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "bbb7fd36bb28b62bb2b9df4369b56d3d5c9ba3d92218b9148ea7057ad30cacb5"
+      ],
+      "attachment_name_hashes": [
+        "7e37a92d294d63f2"
+      ]
+    },
+    "revision": 1
+  },
+  "39cfd9483ec4fb2b": {
+    "notified": true,
+    "date": "07-09-2026",
+    "date_end": "22-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "071c718d45e8da564f0ca1215285ec79310cf4772b2446ef82dc4a5200fe6982",
+    "revision_snapshot": {
+      "date": "07-09-2026",
+      "date_end": "22-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "192",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "2b7ff4faec7c9d1fc7694396d28b630de0345e3f449543cab8223e3a5bcf1348"
+      ],
+      "attachment_name_hashes": [
+        "471ada5e207b6bf9"
+      ]
+    },
+    "revision": 1
+  },
+  "15441b9afd48fb2f": {
+    "notified": true,
+    "date": "07-09-2026",
+    "date_end": "22-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "3e2d5369196b959eab12b43fdbfcd003bafce45717d42a07ecc083a90dd92698",
+    "revision_snapshot": {
+      "date": "07-09-2026",
+      "date_end": "22-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "189",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "9eb277ec5f1303e8c5be5ec49f932421edb0333db6cc6a8d10770d754841c051"
+      ],
+      "attachment_name_hashes": [
+        "1bd9d567600fbbb9"
+      ]
+    },
+    "revision": 1
+  },
+  "acd7e59aa95e2667": {
+    "notified": true,
+    "date": "07-09-2026",
+    "date_end": "22-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "7ca5439e653459fc1948856a31e57adaa74665bad24b6f79b702a365039d212e",
+    "revision_snapshot": {
+      "date": "07-09-2026",
+      "date_end": "22-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "188",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "e731b4d2f58c87c58d25a9894b11b9c450aeafe325c3f11418f37df61074698e"
+      ],
+      "attachment_name_hashes": [
+        "1f10c357c1477e3c"
+      ]
+    },
+    "revision": 1
+  },
+  "adaa02fa935a052f": {
+    "notified": true,
+    "date": "03-09-2026",
+    "date_end": "18-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "4f1d4753d867cfee9ed5366dbb80a3cc8842d542a7c507d3f5c257691b534f8c",
+    "revision_snapshot": {
+      "date": "03-09-2026",
+      "date_end": "18-09-2026",
+      "sender": "SEGRETARIO COMUNALE -SEDE-",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "623e5dd532f35053d2716252fbdc20f165c7b4a07a2edc849bc4ef0fe2b83460"
+      ],
+      "attachment_name_hashes": [
+        "1d34fdca12d1ff3d"
+      ]
+    },
+    "revision": 1
+  },
+  "515b3e201cd18330": {
+    "notified": true,
+    "date": "03-09-2026",
+    "date_end": "18-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "e1ac9577073909c1de0531b698d938c7ffa2c5677de1bb3e2fc47f0419299fec",
+    "revision_snapshot": {
+      "date": "03-09-2026",
+      "date_end": "18-09-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "52",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "48b7d77ae1883c4dc2f79d949f70faa6cb608564523db0ba0e66c0c7352d7d51"
+      ],
+      "attachment_name_hashes": [
+        "25f0c844142d3bd0"
+      ]
+    },
+    "revision": 1
+  },
+  "6209446a2b805b35": {
+    "notified": true,
+    "date": "03-09-2026",
+    "date_end": "18-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "f39291aa3c3fa9918ac3027236d024d7a46c0bd5fe94e316a75af053dc4013ab",
+    "revision_snapshot": {
+      "date": "03-09-2026",
+      "date_end": "18-09-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "51",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "830106bbeaef7cc97fdff5e4e7646336c5183f2eee5a9d4376682bffdbfbb8d5"
+      ],
+      "attachment_name_hashes": [
+        "40c6c8bc00dc4ca4"
+      ]
+    },
+    "revision": 1
+  },
+  "daacbf09fdc22f9f": {
+    "notified": true,
+    "date": "03-09-2026",
+    "date_end": "18-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "93a3eade6d05a9b8682ea6410c8f506a0eed9872d32cb29b03e6845726bd7d4c",
+    "revision_snapshot": {
+      "date": "03-09-2026",
+      "date_end": "18-09-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "50",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "a6997c0390b52b22d25d16b3fc8cb38b7be2eaa07d267ad0bebbba2d38718d21"
+      ],
+      "attachment_name_hashes": [
+        "da6d34f6d9294228"
+      ]
+    },
+    "revision": 1
+  },
+  "fb821c6127855fa8": {
+    "notified": true,
+    "date": "03-09-2026",
+    "date_end": "18-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "68cbfe5550fb353cb8cf1b71a1d674506149428d41b77f4a276366c74613f75b",
+    "revision_snapshot": {
+      "date": "03-09-2026",
+      "date_end": "18-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "186",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "91e239724927bedb3add2cb951f8bcee775dedb1bcaa6fff2472b4ec20a7886f"
+      ],
+      "attachment_name_hashes": [
+        "95b52193311b8202"
+      ]
+    },
+    "revision": 1
+  },
+  "958a75ce12818945": {
+    "notified": true,
+    "date": "03-09-2026",
+    "date_end": "18-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "2543eb06f78951184387a383a7be725ddf67a08e59124c14839a4e85900cc248",
+    "revision_snapshot": {
+      "date": "03-09-2026",
+      "date_end": "18-09-2026",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "29",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "fd54e4a2ed67b33e2b96053ff5f6da04bb124526c0aef8b115952964a420332c"
+      ],
+      "attachment_name_hashes": [
+        "f25def43f18877f0"
+      ]
+    },
+    "revision": 1
+  },
+  "3ad38cceb82513d8": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "9d1f32fff64e9ace9600751e45280d6ae165cbff2eaac2d0a49610c9ab9eb5a5",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "30",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "14294eda8c9d873899fdf3d3a7632432e7fa10f651dd1da718e3e7d01d0dc5b6"
+      ],
+      "attachment_name_hashes": [
+        "4bb0925635ed1261"
+      ]
+    },
+    "revision": 1
+  },
+  "455828018037dfb8": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "1426d6bc4365a0452c0dfe8a8c2e1c2f4f6fb67115a13833ec94f753b9515911",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "179",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "3845518ccdd928441ba5856d643f81f482030b7a8313efc76c9efb6fda41f204"
+      ],
+      "attachment_name_hashes": [
+        "ccb49b3d91f9a4b4"
+      ]
+    },
+    "revision": 1
+  },
+  "c7fe10ddd2354b9e": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "17f77e1276390bddd96ecae023df6177e8ad219d9a719bbf68fff015fcc22212",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "178",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "997dd254bea0c36aa9ecf0497189d41694dcf231e27a20abfa893787a3623208"
+      ],
+      "attachment_name_hashes": [
+        "c97ffdd27875d7e8"
+      ]
+    },
+    "revision": 1
+  },
+  "088bbc77d84fa2a3": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "b1fd492daf4c6e1c66a0a9f7deb61e0c666c51eb118b513dc5f2eab4cbf64309",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "169",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "167e36e9c11d9aa3611f3c9bbf0e21bac173d9e4f9284de78f188f5d4e77733f"
+      ],
+      "attachment_name_hashes": [
+        "597912a3cb711733"
+      ]
+    },
+    "revision": 1
+  },
+  "4d6f7addbf51e793": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "9966cece85b7a9098173e29308747d51f8078e63463586c38273360ca0b1ddb5",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "180",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "0e213ece450ece337be6d29966a6115a6056765c06a66678a01f21b1c80a0173"
+      ],
+      "attachment_name_hashes": [
+        "92dca69df585e44f"
+      ]
+    },
+    "revision": 1
+  },
+  "a5a2fd6a2d2e1974": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "0ba6531f4b4efb7f9f1c63a04a0f0ec8bf5c36096bbd384ed1c53864c9d62a5d",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "185",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "d95b0124d04639e9ea50deede49e80753af6518d36fc99e029c0b81220470751"
+      ],
+      "attachment_name_hashes": [
+        "6416d28569b342e0"
+      ]
+    },
+    "revision": 1
+  },
+  "0a75d88cfc714ba1": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "5b3d1ec6ea65e2145882788c89cdc46dcd6d3b8793da96bb62609b045b5bde65",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "184",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "f4dbed68375cb7bb9e52404d7c12e632154e1d13775fa0787652d2b33c8fd7fc"
+      ],
+      "attachment_name_hashes": [
+        "811ff7d74f0acded"
+      ]
+    },
+    "revision": 1
+  },
+  "e6870dc5a598f905": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "49a4097c8e1b1c2502162f804e0a6e5907bb2d325434f89d547f2c09517ddd20",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "183",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "9ad30a956d37c3c8e21faf7f34680b3c4c4772d7f4841eafcd5fc7682981a3bc"
+      ],
+      "attachment_name_hashes": [
+        "163f46dd1270b536"
+      ]
+    },
+    "revision": 1
+  },
+  "05d63acdcbe658e7": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "882a696bf987dafca6aa1ea324da4c6f4dc57f55b700637a6fc300e395d85525",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "182",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "8c2c91d7715aa8af8bf4120200eb6cbcbde72f10d5aef1ce088040e3a45111e1"
+      ],
+      "attachment_name_hashes": [
+        "f52e758a5e49cce8"
+      ]
+    },
+    "revision": 1
+  },
+  "e8910bf9c7f59892": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "ef93ba0c6874634242e5a10c5f36c5e23dd965470307dbfb39a271e7a500af39",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "177",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "79c47f89cf010bc5f5a7b1da93b3dd354cd3869b3e611d7020172ab5ab040738"
+      ],
+      "attachment_name_hashes": [
+        "dea2bdb75000f6ad"
+      ]
+    },
+    "revision": 1
+  },
+  "bf596dfcffcbcfd0": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "5834a42d064ee67659d3a3e682b3b31d8ba2a802cfdec52b6f67d9689cfb3814",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "175",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "865e440eabc362d4bc741e6aeb42e84fde302f322aa921c650adb83178849371"
+      ],
+      "attachment_name_hashes": [
+        "a2442f9e53a5d036"
+      ]
+    },
+    "revision": 1
+  },
+  "e0474b5b5e80c8ad": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "6ba956cd3255ef1ab4ea7bf6f69f0c596508b3d9c1454b582717481d96288b51",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "171",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "4eebd816308947cd17f3ebb6ff82199abcb304e96a76984955580979d87d8ad6"
+      ],
+      "attachment_name_hashes": [
+        "3887b87829d293b8"
+      ]
+    },
+    "revision": 1
+  },
+  "7fd3500711229a19": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "58ad10ba2d6467fec652df90597fe280c549173b627f4d2eb32661e25008712d",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "173",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "be5457fadf2b280a1746c0ad0ef9475e25ac5268e8dd00308a0e0406478f06ea"
+      ],
+      "attachment_name_hashes": [
+        "f10745b47b6cc85f"
+      ]
+    },
+    "revision": 1
+  },
+  "5d9f406a563ccc27": {
+    "notified": true,
+    "date": "01-09-2026",
+    "date_end": "16-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "dd053543d3b1019ab800c82b2b4633fee14a30ee57678a6478d08f4c1d2cab82",
+    "revision_snapshot": {
+      "date": "01-09-2026",
+      "date_end": "16-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "181",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "a1ad571c6912b997e9565bfe4b906f320269ac31cf9b35050a5a7f67bd8817e8",
+        "db1135518555be180e484618cfc00c1da62da435902cc256ade0c580c511cc5e"
+      ],
+      "attachment_name_hashes": [
+        "58e3659b9c2ec64f",
+        "f37cdbe6bbf8701d"
+      ]
+    },
+    "revision": 1
+  },
+  "9bb574117a3fb7bd": {
+    "notified": true,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "095873e500a25eb94f05d8a5f1857595871465ec6a4b8a04580d1c0a774532ff",
+    "revision_snapshot": {
+      "date": "31-08-2026",
+      "date_end": "15-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "29",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "548368057dbc1b4f52ba08864e8fc068441333478355843006bcd74266b8bed8"
+      ],
+      "attachment_name_hashes": [
+        "06a628e9cc8745f8"
+      ]
+    },
+    "revision": 1
+  },
+  "80ee5e92cdde9994": {
+    "notified": true,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "30f7d0a54075afecca2778bc04ae362105bfd13fcd3744fc21824db30a01eacf",
+    "revision_snapshot": {
+      "date": "31-08-2026",
+      "date_end": "15-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "28",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "dd1d55f6ae40e708a1a5fef82c9161aed63a2feac48c29a0dc9ca8bbc719f8a3"
+      ],
+      "attachment_name_hashes": [
+        "11c04662701541b8"
+      ]
+    },
+    "revision": 1
+  },
+  "7a5a206df121e706": {
+    "notified": true,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "f2048ce4424ad7ebdf9e5557955189b36f33063d7ea03cae5d6be1270be3aa99",
+    "revision_snapshot": {
+      "date": "31-08-2026",
+      "date_end": "15-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "27",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "8b5cbbd1717a8749c06b1aac126daf675128d060fe3bda53626e7a33ecc02f73"
+      ],
+      "attachment_name_hashes": [
+        "961ed849227a800f"
+      ]
+    },
+    "revision": 1
+  },
+  "d896bdf4784622ea": {
+    "notified": true,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "ed71e6ba636af564b29c9d7263344994311864a65c97e6e78efc6d4ad83d5b74",
+    "revision_snapshot": {
+      "date": "31-08-2026",
+      "date_end": "15-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "26",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "c03e74d4f06b22b9c66ea50cf07805c274a8208f5bc072aea74ab1765893be8a"
+      ],
+      "attachment_name_hashes": [
+        "360e3530be01d853"
+      ]
+    },
+    "revision": 1
+  },
+  "85bdd42619c930d6": {
+    "notified": true,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "24f7a775fbcbf8d6c34f8d07e201b0f9dc17d58f110eaf0068158fb5cb9b50f5",
+    "revision_snapshot": {
+      "date": "31-08-2026",
+      "date_end": "15-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "24",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "14c5011745c1f930b8ec61f411d0d50c11afb795eed1e7cb4f80d1b80cff19c9"
+      ],
+      "attachment_name_hashes": [
+        "6a58115e0245f5fd"
+      ]
+    },
+    "revision": 1
+  },
+  "a1a3d918a6538d02": {
+    "notified": true,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "8adee447c9c3b396f3fc28b3e50fa821ef7fcd1188b33793966594412b14fff1",
+    "revision_snapshot": {
+      "date": "31-08-2026",
+      "date_end": "15-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "23",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "f934641b144977db893ec804322811b11d644f3cc69f07894277856ca79d9159"
+      ],
+      "attachment_name_hashes": [
+        "63eb706f5f782ca2"
+      ]
+    },
+    "revision": 1
+  },
+  "f072b4f821b946ff": {
+    "notified": true,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "1b9355dc6b6b64a9ba90a297707eeb102b76014a8337e0fcc5a64ae11dd5ee1c",
+    "revision_snapshot": {
+      "date": "31-08-2026",
+      "date_end": "15-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "22",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "6d375ab084a8dfc0742c944e12d61689636bb7b530703e34dde020d21a055105"
+      ],
+      "attachment_name_hashes": [
+        "41ee7e5cca78c80e"
+      ]
+    },
+    "revision": 1
+  },
+  "5e6e58067289ae81": {
+    "notified": true,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "fd906de53d75ad64d2f642391eadeec90612b97717f0aadaed39f57d4bc088db",
+    "revision_snapshot": {
+      "date": "31-08-2026",
+      "date_end": "15-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "21",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "19b478b2245db99431929542957a2ded2cc0fefaddc2abf082d2bc4adb6c7006"
+      ],
+      "attachment_name_hashes": [
+        "8169fe20978145dc"
+      ]
+    },
+    "revision": 1
+  },
+  "0a84a745fdc8cb15": {
+    "notified": true,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "d601639d42fd44d134744b0488c54ed85d12eb5ef49aa9bf7a827ccb8f141520",
+    "revision_snapshot": {
+      "date": "31-08-2026",
+      "date_end": "15-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "20",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "1046bb51e98e8411d265090de5b010d92484cb7db32e1c0500e4125f769f937b"
+      ],
+      "attachment_name_hashes": [
+        "d12a86e830b24569"
+      ]
+    },
+    "revision": 1
+  },
+  "0f28249f3bdd8571": {
+    "notified": true,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "2cd53c8c2850a367746049d31d6e3bede4c08be09445f7f0ae87d3f604400af3",
+    "revision_snapshot": {
+      "date": "31-08-2026",
+      "date_end": "15-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "18",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "06aea0f7d45c7b54957114b57f8c9ed66cec334a0beea57f8c3a16c0030e8c05"
+      ],
+      "attachment_name_hashes": [
+        "6547c35332afddf5"
+      ]
+    },
+    "revision": 1
+  },
+  "de9356369729e237": {
+    "notified": true,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "290c9363a2a7c672eb36d7de0686e6f45cb26a4300825df052a386c43a554019",
+    "revision_snapshot": {
+      "date": "31-08-2026",
+      "date_end": "15-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "17",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "1a03e508e7af9835b4813dd4f56f396bf87d68f16b5c4a1606d880d1ddb967e3"
+      ],
+      "attachment_name_hashes": [
+        "8a247437c752c4b2"
+      ]
+    },
+    "revision": 1
+  },
+  "797b7c97362322b1": {
+    "notified": true,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "12380624c5e5282f3aafb80b427f05ae6598448df7fb478c48745d48e4956160",
+    "revision_snapshot": {
+      "date": "31-08-2026",
+      "date_end": "15-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "16",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "fb7131bec5c95e62be01034405352ccf439e4326bd49a2de5e350a1d87a6af00"
+      ],
+      "attachment_name_hashes": [
+        "7b76da7333f87c9c"
+      ]
+    },
+    "revision": 1
+  },
+  "b9583e97640634df": {
+    "notified": true,
+    "date": "31-08-2026",
+    "date_end": "15-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "9cdda75b3f14cc9f0c02046ebb26cac858861ad9596699193eaa24550f286254",
+    "revision_snapshot": {
+      "date": "31-08-2026",
+      "date_end": "15-09-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "15",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "6dd4fcce730fcbdb905e57e2b8c6887b38fbdc6b0ce385c79d6792b9b49823f7"
+      ],
+      "attachment_name_hashes": [
+        "25a5e289a19b4d5e"
+      ]
+    },
+    "revision": 1
+  },
+  "8ea9e50bfeae1571": {
+    "notified": true,
+    "date": "29-08-2026",
+    "date_end": "13-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "e2c3248aea7e6380e79e9e692f3ded50331bf858d92d7804965da83f4576afa5",
+    "revision_snapshot": {
+      "date": "29-08-2026",
+      "date_end": "13-09-2026",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "28",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "cf1c7b46f8a7fe8aa62cfbad0fbfa9102099357259101a7c35e0791e93d0c2bb"
+      ],
+      "attachment_name_hashes": [
+        "834ef0275bf1f6ae"
+      ]
+    },
+    "revision": 1
+  },
+  "55b4ab2c30640db0": {
+    "notified": true,
+    "date": "27-08-2026",
+    "date_end": "30-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "2ec4e8efdf3b42cfd62508382c287bc51c4d55bf3133713e4d1ac00d5c050397",
+    "revision_snapshot": {
+      "date": "27-08-2026",
+      "date_end": "30-09-2026",
+      "sender": "ASL DIPARTIMENTO E PREVENZIONE",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "e629aba4cc7e9b1e3c6880d5f8b1235f8e8f8d2b7700d884b5c1272107460a54"
+      ],
+      "attachment_name_hashes": [
+        "f5d46997a3f65985"
+      ]
+    },
+    "revision": 1
+  },
+  "6e9b9b33b491d130": {
+    "notified": true,
+    "date": "17-07-2026",
+    "date_end": "30-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "ca342ef4f1779c00baa3f67bebc3708f18dc473763019679550609ee0083567e",
+    "revision_snapshot": {
+      "date": "17-07-2026",
+      "date_end": "30-09-2026",
+      "sender": "VICESINDACO FUCCI ALBINO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "ea300431139dbfe763441d51d447b153db8485b310dcae137a4592898ee26f03"
+      ],
+      "attachment_name_hashes": [
+        "e871b5dc9bd61a48"
+      ]
+    },
+    "revision": 1
+  },
+  "b9b8090ae542db33": {
+    "notified": true,
+    "date": "19-06-2026",
+    "date_end": "17-10-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "6c97b0286a51616a859c10768639f094845329005f4211020a5057346d2a483e",
+    "revision_snapshot": {
+      "date": "19-06-2026",
+      "date_end": "17-10-2026",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "4f27bedcd5250e8332540c8aa0e2375cfc6ca65bcce6e190a56992a29a8f3a81"
+      ],
+      "attachment_name_hashes": [
+        "23cb2c39b46ef4ee"
+      ]
+    },
+    "revision": 1
+  },
+  "dd8f9f77ee330b3c": {
+    "notified": true,
+    "date": "18-06-2026",
+    "date_end": "30-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "70d835fb0458024e184bdd52528b209b3e36ec6fff1470ecdfe482750632e64c",
+    "revision_snapshot": {
+      "date": "18-06-2026",
+      "date_end": "30-09-2026",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "14",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "7b5772e18e49daf7877eedeb1fdaa18237afea64b14745cd0cf83ed40e4af532"
+      ],
+      "attachment_name_hashes": [
+        "92d56e4224cc2c99"
+      ]
+    },
+    "revision": 1
+  },
+  "527368df377433c6": {
+    "notified": true,
+    "date": "15-06-2026",
+    "date_end": "13-10-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "e0c169ef3f40062f7c18ccc9974de25d632292deb16589b4bd041b9ee95af91d",
+    "revision_snapshot": {
+      "date": "15-06-2026",
+      "date_end": "13-10-2026",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "5",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "fc372124d0cdb2aaef28f33caec4ed1a1f8f5e6d908672e672e58442e144901c"
+      ],
+      "attachment_name_hashes": [
+        "93d38323cd089478"
+      ]
+    },
+    "revision": 1
+  },
+  "11345c016b674318": {
+    "notified": true,
+    "date": "15-06-2026",
+    "date_end": "30-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "8c3ec79a4f7b60a431f12398424d4efccf4534e1c653031cb1eec4a6f7b380fd",
+    "revision_snapshot": {
+      "date": "15-06-2026",
+      "date_end": "30-09-2026",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "13",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "fe6340ec36dd4d7d17670426e3e395bf18e6b59b90d3fd250caf62aa434a6a1d"
+      ],
+      "attachment_name_hashes": [
+        "44135a672a5d98d1"
+      ]
+    },
+    "revision": 1
+  },
+  "450a8268e0829dd2": {
+    "notified": true,
+    "date": "30-01-2026",
+    "date_end": "31-01-2027",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "a39c57eaf86d2b7130826ce5617406f2a1b4005c466b45ba060666159d982340",
+    "revision_snapshot": {
+      "date": "30-01-2026",
+      "date_end": "31-01-2027",
+      "sender": "RESPONSABILE AREA AMMINISTRATIVA FINANZIARIA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 4,
+      "attachment_sha256": [
+        "092a5df162dbd7fc32ee67b194c1e3c0bed7d9e59046bd90e29090bf22e9c4f7",
+        "3f412f6eeb037d42900d5bc609adb62dac867919a07ce45f370c091e49b90e2e",
+        "79e870d5ee0be697ca8e31a70de914bfce78f34403f197601fa791e12f156e1b",
+        "ed7643689b8b69cd131797068504b830d86de3bd63523379e838f4e0170b35ef"
+      ],
+      "attachment_name_hashes": [
+        "b4b77fbfda8be731",
+        "e3a544563d113731",
+        "eb345696d1439d7e",
+        "f91695c3af7df8d8"
+      ]
+    },
+    "revision": 1
+  },
+  "ea06613d73371f67": {
+    "notified": true,
+    "date": "30-12-2025",
+    "date_end": "31-12-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "6a3bc618058b51d0e293bcf3bc27208cb57e65cceecdcf9489a505e3966f11b8",
+    "revision_snapshot": {
+      "date": "30-12-2025",
+      "date_end": "31-12-2026",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "ca6bb9a6e169dd490f42a96336aa17f551630db96498bde7f4e4dc602ba5349c"
+      ],
+      "attachment_name_hashes": [
+        "bc79a4a8364d5e63"
+      ]
+    },
+    "revision": 1
+  },
+  "2acc60fea73fbd9b": {
+    "notified": true,
+    "date": "19-03-2020",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "8f2e49fd48c5a7b7d49883025be42034b68ead8a8d1521bf7f2d4d58f0414794",
+    "revision_snapshot": {
+      "date": "19-03-2020",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "6a15b79c357f11f48e114c33d38e3122c17409e287086627401b7a3365d3aa08"
+      ],
+      "attachment_name_hashes": [
+        "80e359cc614fc5a9"
+      ]
+    },
+    "revision": 1
+  },
+  "e0e28a821e01e262": {
+    "notified": true,
+    "date": "01-08-2019",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "230f49139dbe0d6f0445801330787cc53ebf73cd4dd70860f7eb09fbbcc58cda",
+    "revision_snapshot": {
+      "date": "01-08-2019",
+      "date_end": "",
+      "sender": "SINDACO  COMUNE SEDE",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "f6099886ad7699560c26c83a8459ea0453fadbe55007cd20555d8566d7e413aa"
+      ],
+      "attachment_name_hashes": [
+        "41e7ed32dec0fec6"
+      ]
+    },
+    "revision": 1
+  },
+  "096493026f406bd9": {
+    "notified": true,
+    "date": "20-06-2018",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "500a63058dd478cc8d6aa98dc931fd6081afcb39942d9f3350c8d51e4d29fe11",
+    "revision_snapshot": {
+      "date": "20-06-2018",
+      "date_end": "",
+      "sender": "TRIBUNALE AVELLINO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "0b8821536197a5dcfad83120faed0591745fd9680b6e0123b81c138de7e62430"
+      ],
+      "attachment_name_hashes": [
+        "443e0637ac3c3378"
+      ]
+    },
+    "revision": 1
+  },
+  "88afca4569fbee1f": {
+    "notified": true,
+    "date": "08-03-2018",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "2eb49a4120a2c1babecaccfd8754b83b2c556d0cc667320b176189dc4604af8d",
+    "revision_snapshot": {
+      "date": "08-03-2018",
+      "date_end": "",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "69bb7fb7111e27e65ac9ab931c4dda4e0573d95c56146dec81e1292b21d7628a"
+      ],
+      "attachment_name_hashes": [
+        "68051a3967535960"
+      ]
+    },
+    "revision": 1
+  },
+  "db086483363f79d7": {
+    "notified": true,
+    "date": "08-03-2018",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "3cb630df7099188ec92d0c677c19abc49ccb1cf71753562d7ac4eedd1e9fc5b4",
+    "revision_snapshot": {
+      "date": "08-03-2018",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 9,
+      "attachment_sha256": [
+        "050508eb8e398d64eda856ab987da834c9d47f4c623efe1c988adeeb38fd6faf",
+        "19a96abaed5724942707d542df70232876f728016121afe2fdc4afc1abf152ee",
+        "69714b64b85e259dd7b0d3ec8d6d90819d502cb6ad3db9f473a79fd6f54d5ca2",
+        "8853a57ff6456c7a415c54381cc2d80da760eeb5d90c06e12c3d0e6d11290d79",
+        "bac1018510741650c58836b9ca731f7078360ba0cf51817b6864d8b13d8ed160",
+        "ccab0946325696a90f69b7286b9624c1537352bdb91458c988b600a2bdc4506e",
+        "dc2f296f8b624b06b81ec62623f53efbd7a3f314e2e915d62c8513b499fa662f",
+        "f3f6a261c40b0f52ec85629dedce935218c8cbaf0bab0e34b3cac953e439c3ea",
+        "f6c7acc8c24bf9ea3cf03630866de903e1529e6b989fa5a567686046754f5feb"
+      ],
+      "attachment_name_hashes": [
+        "4c776e16b8d3b25f",
+        "7327eb25205af782",
+        "95d79eedfb6843a1",
+        "be2e0221efe2e7f4",
+        "c1168263c5a9b698",
+        "e3e7f52e7e97f06c",
+        "f2b08354d65a4de1",
+        "fff01bf3d29e0bb9",
+        "fff82ac203e4dbf6"
+      ]
+    },
+    "revision": 1
+  },
+  "e81babcd37b6c182": {
+    "notified": true,
+    "date": "19-02-2018",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "df44ffc48868bdfdba9fd31503c1a46782c7e3b1ff9c6db2c583f463d0c88fb9",
+    "revision_snapshot": {
+      "date": "19-02-2018",
+      "date_end": "",
+      "sender": "COMUNITA MONTANA DEL PARTENIO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "15b80cea7968167bbd7d4c7620b382d8cf27135edcf3acd14de46ebd41fb9961",
+        "3d39e81e65fb465001ff549658f9f58557318018be00cdd183efb11ce567e949"
+      ],
+      "attachment_name_hashes": [
+        "3d0624e48f0f837d",
+        "de7089b1246c60c3"
+      ]
+    },
+    "revision": 1
+  },
+  "857f8b0a7fcc00cf": {
+    "notified": true,
+    "date": "08-02-2018",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "723a32c9fe006ab8ae47899bd03dc0e131bdeb3b15d24ca672590b903d163a76",
+    "revision_snapshot": {
+      "date": "08-02-2018",
+      "date_end": "",
+      "sender": "COMUNITA' MONTANA PARTENIO-VALLO DI LAURO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "55bba8cdcf5881f2b625df02c523257ffa852d3d446d773d68ac98c0d85c45b7",
+        "e0f6f3416c05ca5edf49f938bb58b8f850e6bbecc3b008e5151529c6e79c9a8b"
+      ],
+      "attachment_name_hashes": [
+        "94f1b508db4a3372",
+        "ec14380d41e59f4e"
+      ]
+    },
+    "revision": 1
+  },
+  "1faa4da028f986df": {
+    "notified": true,
+    "date": "01-02-2018",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "4647f5906c7d0a52d3925717d7f137aa6a6f666b4246817249bdcd14a837ba4c",
+    "revision_snapshot": {
+      "date": "01-02-2018",
+      "date_end": "",
+      "sender": "COMUNITA' MONTANA PARTENIO-VALLO DI LAURO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "259af28a60464bdade7974b2bd6dca85d66dbed56b12c366edb6a40185bb37c5"
+      ],
+      "attachment_name_hashes": [
+        "720fa5f068823a1c"
+      ]
+    },
+    "revision": 1
+  },
+  "5437464b62271211": {
+    "notified": true,
+    "date": "15-11-2017",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "ef522daab7773ffda6c9a36cee5c8c6f33f7cb5861980e38dda630093a3a51bb",
+    "revision_snapshot": {
+      "date": "15-11-2017",
+      "date_end": "",
+      "sender": "COMUNITA' MONTANA PARTENIO-VALLO DI LAURO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 7,
+      "attachment_sha256": [
+        "17f24bcd80d4d1f0f7f40d5df67d76b771772cdea55c2a80ba987c681bf97d57",
+        "20447542681f79763e08054ea8d79e5535c69ef3622a2fada75de7c042104751",
+        "4a5aaaedbfe3e675f212714ecf885c7ac9bbf1eb4508f94d23d47b2652521d07",
+        "5516284bced2c2c34f05d2030e9a265583b460bbd5316c24dcf41ec4671ed4f6",
+        "9d8321a999df104ea31e53e036c8370a8c998576d68454f55f829ee712e5e959",
+        "bbc479a17d9c8004cd403343cc8799744f6fb026fb2bf5a697b63a8f8b43ea11",
+        "f9439992003bf0323e8d6f8c6a70838df9857b23ebaf9a01067684d78ffe55da"
+      ],
+      "attachment_name_hashes": [
+        "0a2b611861dbc69f",
+        "3a779db510b07055",
+        "3f8f76ccd212e92e",
+        "95d79eedfb6843a1",
+        "b7fe1ed2da5ab3d7",
+        "c1168263c5a9b698",
+        "faf9d37681775630"
+      ]
+    },
+    "revision": 1
+  },
+  "d30ffde4a9bbc779": {
+    "notified": true,
+    "date": "06-04-2017",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "b44e20d2402624c7dd522a9316f12ac4c81f2fa9573427593b8b19583ddc5435",
+    "revision_snapshot": {
+      "date": "06-04-2017",
+      "date_end": "",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "9d49dfec870fe3448a81836e04794d50cf9abcef4bb9a180fd56f97e973abdec"
+      ],
+      "attachment_name_hashes": [
+        "cf1203a847cdbac5"
+      ]
+    },
+    "revision": 1
+  },
+  "e53c927b0e12a6ea": {
+    "notified": true,
+    "date": "02-02-2017",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "5bb1831fc1a393c5249c665bc3d651fc38d5bd53db5aa9f74b6860608c2df688",
+    "revision_snapshot": {
+      "date": "02-02-2017",
+      "date_end": "",
+      "sender": "DIPARTIMENTO PREVENZIONE ASL-AV",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 5,
+      "attachment_sha256": [
+        "08cca9d02bde9e426a46788df431374a4d08e9611b8a5bd1e8218adbe310de01",
+        "24ecda232c9b1d04bf01d03063cba675df13ef602cdffb1b48613905e1a54729",
+        "8490af8c81ef6e6ff30f32847b96d5fcf979bd724250ea252e37b503639f3f5f",
+        "870085b3e010cc34811ead35500eccc056b042086e069244dae4636a0bf9f87f",
+        "870085b3e010cc34811ead35500eccc056b042086e069244dae4636a0bf9f87f"
+      ],
+      "attachment_name_hashes": [
+        "3a779db510b07055",
+        "733d0facb0eebc26",
+        "7ff7f13814d9e9c8",
+        "95d79eedfb6843a1",
+        "c1168263c5a9b698"
+      ]
+    },
+    "revision": 1
+  },
+  "0a4315b0938a2038": {
+    "notified": true,
+    "date": "14-12-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "d94cee21b0cf9cbf4c33889c429a2e5f6272817ae06576883bbde142026c4c23",
+    "revision_snapshot": {
+      "date": "14-12-2016",
+      "date_end": "",
+      "sender": "ASSESSORE RESPONSABILE UTC FUCCI ALBINO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "da0963f953596268ac070f1693adcb018a2cec9280ffd47c5749158381e37b05"
+      ],
+      "attachment_name_hashes": [
+        "73092f2e2500fe37"
+      ]
+    },
+    "revision": 1
+  },
+  "a9433e900462a8f3": {
+    "notified": true,
+    "date": "14-12-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "e38a15fbb6674871e9dab8c6e2bf21655cd307d08a97fee60b9d81385248485c",
+    "revision_snapshot": {
+      "date": "14-12-2016",
+      "date_end": "",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "544d28838113499cf449dfa6ae9cfabb187e64237c03e40a8d58bcf796c62ae0"
+      ],
+      "attachment_name_hashes": [
+        "2568122d06ca5f18"
+      ]
+    },
+    "revision": 1
+  },
+  "a7ff26bbc26c36a8": {
+    "notified": true,
+    "date": "09-11-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "4a093bbb9177b3ee53a9850198b0901ce39dbdfcc069813d47d3df84a326c09b",
+    "revision_snapshot": {
+      "date": "09-11-2016",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "7c9347d3555b036921731ce2a38188a48d332f2acf0dd25f8fffd8185ff0b991"
+      ],
+      "attachment_name_hashes": [
+        "5062516515669159"
+      ]
+    },
+    "revision": 1
+  },
+  "53eb102f4c9a2dca": {
+    "notified": true,
+    "date": "14-09-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "849a1cb5fdee929694e93ea9c0994ef40fc253187b843aea88f90a188876df17",
+    "revision_snapshot": {
+      "date": "14-09-2016",
+      "date_end": "",
+      "sender": "COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "45",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "47e3dc141c9de34ef820f3220f7e214e2e388dbccbd21f7fc3948440063c1a0b"
+      ],
+      "attachment_name_hashes": [
+        "37f204a152c334b1"
+      ]
+    },
+    "revision": 1
+  },
+  "4c3217bd4f88ce86": {
+    "notified": true,
+    "date": "14-09-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "2a44a5c0b43f10bc26100dd0b7d075db313a6145588ed03fc586e460e1add3f4",
+    "revision_snapshot": {
+      "date": "14-09-2016",
+      "date_end": "",
+      "sender": "COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "44",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "83598cd73ef101925398c96c9eaa3e3c2e8b9f116b2690b017af8aa97b13ab33"
+      ],
+      "attachment_name_hashes": [
+        "6023e7134f648ed0"
+      ]
+    },
+    "revision": 1
+  },
+  "ef031ed9bfb85dfe": {
+    "notified": true,
+    "date": "31-08-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "609bce43de54a5d078f134d99f2f1cfe423b837921587d9a697281694df68f38",
+    "revision_snapshot": {
+      "date": "31-08-2016",
+      "date_end": "",
+      "sender": "DIPARTIMENTO PREVENZIONE ASL-AV",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 5,
+      "attachment_sha256": [
+        "05dcb38e0c599bd29380c8f76839dfca1c969e942e3966f63f98033f4eac8cdd",
+        "4066a7266952319ef1cdd7ec92efcae19377824d3a53a4b52f0ff11cb75d864c",
+        "4bd7eb5acccf61c189a4d4295612521e65ce98315ef5206b73b9d347e868f96a",
+        "4bd7eb5acccf61c189a4d4295612521e65ce98315ef5206b73b9d347e868f96a",
+        "4e1a64cf9875e026b8038a33ee481e2d7119c2f0f32a3a4b734867916dccc430"
+      ],
+      "attachment_name_hashes": [
+        "3a779db510b07055",
+        "95d79eedfb6843a1",
+        "9b4c7ac8f801f8f5",
+        "acf6d2e42348e414",
+        "c1168263c5a9b698"
+      ]
+    },
+    "revision": 1
+  },
+  "1bd56505b7e44665": {
+    "notified": true,
+    "date": "01-08-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "646e4e231c93a0e0ed704230692730b6615cd024a9c955b6061724a35433021a",
+    "revision_snapshot": {
+      "date": "01-08-2016",
+      "date_end": "",
+      "sender": "ALTO CALORE SERVIZI S.P.A.",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 5,
+      "attachment_sha256": [
+        "47b817022c05fe0a409b9eabc89c641c7ec78cab284878eb231a85e3e7d3a438",
+        "adb87c069696df9de3adebd78048207f2dc28663da2832700745b59d296fa749",
+        "b81c3530f815c2774ac41eaaf56656e46d566ec391a1c8323d72cbdefdc9cee2",
+        "f246c60fa424eb36b5b8ce40fe1d120ba95805462554585711b66e01038a85ce",
+        "f246c60fa424eb36b5b8ce40fe1d120ba95805462554585711b66e01038a85ce"
+      ],
+      "attachment_name_hashes": [
+        "3a779db510b07055",
+        "506d7f815e1c102f",
+        "95d79eedfb6843a1",
+        "9c46803aafb686ee",
+        "c1168263c5a9b698"
+      ]
+    },
+    "revision": 1
+  },
+  "2f476f6a9fc7ed00": {
+    "notified": true,
+    "date": "01-08-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "9ed4d7fb60ab9cc7634abce400318d58dbe39a287311b03030bd1c1e1a8caf66",
+    "revision_snapshot": {
+      "date": "01-08-2016",
+      "date_end": "",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "",
+      "register_number": "6",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "cf37ebcfebdfa062ff1ad6cd5d220c7614a4d6a36a3a2703eb34739cf03b60f1"
+      ],
+      "attachment_name_hashes": [
+        "586bc2681803646b"
+      ]
+    },
+    "revision": 1
+  },
+  "46c65d906aaaa464": {
+    "notified": true,
+    "date": "01-08-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "0197abc12acc5c3577cc486164f725f18599280ab12ed210993b22ead9201990",
+    "revision_snapshot": {
+      "date": "01-08-2016",
+      "date_end": "",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "",
+      "register_number": "5",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "060a08f1cd1b3e7d4bea525f3672ac1595f195da8526db69b7f4d23d8396c8ad"
+      ],
+      "attachment_name_hashes": [
+        "722a2c130bb6343b"
+      ]
+    },
+    "revision": 1
+  },
+  "8453ced01ce20ddd": {
+    "notified": true,
+    "date": "01-08-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "1eef481efbfeac1f43c5172d0e72cd868269a139d8280610ee6b487ebd4872fc",
+    "revision_snapshot": {
+      "date": "01-08-2016",
+      "date_end": "",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "",
+      "register_number": "4",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "fb5c70dcc736872f6310a73ad617effcc5f5900d7d3af4a7f260749419b5ef18"
+      ],
+      "attachment_name_hashes": [
+        "16938a1b54a598ba"
+      ]
+    },
+    "revision": 1
+  },
+  "e346a02686888efd": {
+    "notified": true,
+    "date": "01-08-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "2e1723d7a08c4742ad7e96d1b920ee3824084c54d512f6755d5481e47fbd8274",
+    "revision_snapshot": {
+      "date": "01-08-2016",
+      "date_end": "",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "",
+      "register_number": "3",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "32c43b8a8f3b8a8100fa7446d7f24666ba64ee97e24f262268f99ba73439b9a9"
+      ],
+      "attachment_name_hashes": [
+        "78fd72fff2c65111"
+      ]
+    },
+    "revision": 1
+  },
+  "93c19303920bdc94": {
+    "notified": true,
+    "date": "01-08-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "279fc78a96dea871a4ecc10f4f6abeecfb5e6332f8c2bbcbce56b6ac1b0a79d2",
+    "revision_snapshot": {
+      "date": "01-08-2016",
+      "date_end": "",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "",
+      "register_number": "2",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "40dac6ffe1fbbad7b3f9e9cd8ad14fb02bc7d0a5dab573253b1186c719a3c974"
+      ],
+      "attachment_name_hashes": [
+        "2e2674e98744a4de"
+      ]
+    },
+    "revision": 1
+  },
+  "4159f76e4609e9d4": {
+    "notified": true,
+    "date": "01-08-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "b9c9caa468f881f3ba31e58dfc5c8934032041ba3728ec1f99b836ad18034d7e",
+    "revision_snapshot": {
+      "date": "01-08-2016",
+      "date_end": "",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "",
+      "register_number": "1",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "536c5fc5961cb75388fe0e3e88dcfda1e26d22c040c9632738e5fbe4bf28bb72"
+      ],
+      "attachment_name_hashes": [
+        "8487b1143e0066ea"
+      ]
+    },
+    "revision": 1
+  },
+  "615e4a017fe08a86": {
+    "notified": true,
+    "date": "27-07-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "c61813c3cfaecc350339b3e8ad0e6d92ad44fcb28895a272d6d7620b6c8f1fa8",
+    "revision_snapshot": {
+      "date": "27-07-2016",
+      "date_end": "",
+      "sender": "COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 6,
+      "attachment_sha256": [
+        "22b39a3b3e30dcbafae950f6284d01786f482640bd5b82e68d47b6dee1200bfc",
+        "22b39a3b3e30dcbafae950f6284d01786f482640bd5b82e68d47b6dee1200bfc",
+        "38bd0813167d1ac1b121985009ababccb66fc42e5db79edd762b7775d60f0e14",
+        "957d53bdc34ed9b87e28000d9d94ba7b9dc02e30da8ce1c35a6343cbd53a48b9",
+        "c23375bc4ee520e5459aa13778ccf8117d7d03f087eb81cca7aed7ee62716abe",
+        "c7abaa910a0ca13a6f8bc3febbbd7af3a0dac7a8f0b9e6af090083b8ac2f301d"
+      ],
+      "attachment_name_hashes": [
+        "6ffe912c84523924",
+        "95d79eedfb6843a1",
+        "a14da62d0d29ba6f",
+        "a884db76f63bf8ab",
+        "c249a8da884890f3",
+        "cf6c4da39005f817"
+      ]
+    },
+    "revision": 1
+  },
+  "b6e88a4e6a3e5670": {
+    "notified": true,
+    "date": "18-07-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "a815fb07ef1d269d85b66e040d819356dadba461825001a8ac9bc68ee755ebaf",
+    "revision_snapshot": {
+      "date": "18-07-2016",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "36",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "bae093ea21550a96f4b5546d5738521e17cffb7b52140f73eaf59e4d8771ae98"
+      ],
+      "attachment_name_hashes": [
+        "2135d415af72f158"
+      ]
+    },
+    "revision": 1
+  },
+  "57672f4493e70a38": {
+    "notified": true,
+    "date": "18-07-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "7e4fcb47d552f3c348545b04b1cdef5ad098d7ffe2e834c1fee0ccd4be1ec505",
+    "revision_snapshot": {
+      "date": "18-07-2016",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "164c9c035caca37178ad5aad2f00eb7c2f60aa1dd0a3b75f2d2e2eef4001f51b",
+        "275793ee9852c5f530fbc0661a2219780122bf9ffe0e5a2343b91fc837d79710"
+      ],
+      "attachment_name_hashes": [
+        "534dfa812a04164f",
+        "f3d86bcc06383fe8"
+      ]
+    },
+    "revision": 1
+  },
+  "959bbec47b85c8f2": {
+    "notified": true,
+    "date": "30-06-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "68a05879b74ff635de8424d1a8859646b1a4cc4815844859c48064a0db0bc438",
+    "revision_snapshot": {
+      "date": "30-06-2016",
+      "date_end": "",
+      "sender": "DIPARTIMENTO PREVENZIONE ASL-AV",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 5,
+      "attachment_sha256": [
+        "687a6cbdba923c944313ef6329f0f54c1df6b97e7703ceed05277268208ac8b7",
+        "db226917bc127ac5b89d8e52cab40d5f27b64bfe7b555333ad054c392996b692",
+        "f715bc876ec964843610ba44314f26ad19acddd4387fdc452070625e821e0d7f",
+        "fe7e9f6d9315bbff559ab6aae650892f20e52e2e300832a220ca66888ae0a920",
+        "fe7e9f6d9315bbff559ab6aae650892f20e52e2e300832a220ca66888ae0a920"
+      ],
+      "attachment_name_hashes": [
+        "1d7a233550536926",
+        "3a779db510b07055",
+        "4f62d55c2c4bc162",
+        "95d79eedfb6843a1",
+        "c1168263c5a9b698"
+      ]
+    },
+    "revision": 1
+  },
+  "caa70e9237a03438": {
+    "notified": true,
+    "date": "29-06-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "4ba81a84c894da0e916703288484dc57edf09be0022b1991cabc5fd61cc73105",
+    "revision_snapshot": {
+      "date": "29-06-2016",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "30",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "d7c5a240f67cd3f32285e2c56820e415dfffcc745e42d2fbec5d1cb9b9192517"
+      ],
+      "attachment_name_hashes": [
+        "dfed88532ff913e0"
+      ]
+    },
+    "revision": 1
+  },
+  "59b4e32586caeddd": {
+    "notified": true,
+    "date": "24-06-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "da7635095d393418402a1fc38643f2c91d87f7a264b2db081cfb31456e9a9e88",
+    "revision_snapshot": {
+      "date": "24-06-2016",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "29",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "510dd45573d106182b5679227c7d5e535c00256a998cb0d4623f12337a22fb82"
+      ],
+      "attachment_name_hashes": [
+        "11162b297003f02a"
+      ]
+    },
+    "revision": 1
+  },
+  "a3418f631d4a2421": {
+    "notified": true,
+    "date": "24-06-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "823e53f8ac57120b2192c2b1d98ae22540670e70018e0b87175d62f99801a013",
+    "revision_snapshot": {
+      "date": "24-06-2016",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "ca72f483ffadd08d567ebb6946472abf19f9de859d984c2e73a04c54d2144b32"
+      ],
+      "attachment_name_hashes": [
+        "58de6ed3c6c6e6dd"
+      ]
+    },
+    "revision": 1
+  },
+  "c7ac136dd9476d1d": {
+    "notified": true,
+    "date": "21-06-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "ddc47b572e20f4fa09570d10dbf21f0d2a4294d6d23b2138c3c319cee32f8216",
+    "revision_snapshot": {
+      "date": "21-06-2016",
+      "date_end": "",
+      "sender": "PIANO DI ZONA SOCIALE AMBITO A04 AVELLINO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "1c85cd2dd07102f97ab965f1add7fb4fdf90becd6419d1154b03b9c85b363bf8"
+      ],
+      "attachment_name_hashes": [
+        "1f588b88fbabedc4"
+      ]
+    },
+    "revision": 1
+  },
+  "62de63a6fb349cbf": {
+    "notified": true,
+    "date": "13-06-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "36cc6d31b1e8d6a7c428dff8b2671c842e44d002de2ac1fa30e7ed2f1a877303",
+    "revision_snapshot": {
+      "date": "13-06-2016",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "27",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "b4744ec6068d3479437f1417010498b2b2248dc13776cb542980381cb03f3a56"
+      ],
+      "attachment_name_hashes": [
+        "37cf5e5f9a15a6bf"
+      ]
+    },
+    "revision": 1
+  },
+  "f7d492bcefbb68d4": {
+    "notified": true,
+    "date": "13-06-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "134a127415fe59999b872a4a5baa602078bdacaf48f52740ef533be69ecb0677",
+    "revision_snapshot": {
+      "date": "13-06-2016",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "26",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "7703a61865e8dd3281556a9f9faa04253a8e07f67787c340e631cd130ae027e9"
+      ],
+      "attachment_name_hashes": [
+        "46fcaa7b5487d4f7"
+      ]
+    },
+    "revision": 1
+  },
+  "55745ed1fb416144": {
+    "notified": true,
+    "date": "13-06-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "7a62ec2ff3f83569418475ae78fddb38a0504c911f3bea2fcbb1f3052a086108",
+    "revision_snapshot": {
+      "date": "13-06-2016",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "25",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "3573900a53cd779697e283a92441d28d43d1a577d51004e80a39e615cee3e8a9"
+      ],
+      "attachment_name_hashes": [
+        "541ca0dcfd27ca9a"
+      ]
+    },
+    "revision": 1
+  },
+  "aa72b71b83128175": {
+    "notified": true,
+    "date": "13-06-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "3e72c89a3c6e3570b4fa67d4f8ef2574a9f8d607039c154b1c5e4c747e91ce43",
+    "revision_snapshot": {
+      "date": "13-06-2016",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "24",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "f22545dab81a76dd88bd676095d85497703dabcbbb965769388c69a78b828633"
+      ],
+      "attachment_name_hashes": [
+        "f448e6ed44926f14"
+      ]
+    },
+    "revision": 1
+  },
+  "b8599ad13ccde98a": {
+    "notified": true,
+    "date": "13-06-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "01f622a601f94575f4838370e09fd6037bf92001d89c7215f10e458ff280d73d",
+    "revision_snapshot": {
+      "date": "13-06-2016",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "23",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "6427e82d6dba8c8f46334835af72d1fa17a4df4f279410f46ef0f711b45e2b5d"
+      ],
+      "attachment_name_hashes": [
+        "aa5d2e854137dfe4"
+      ]
+    },
+    "revision": 1
+  },
+  "e5f4bfb56032a756": {
+    "notified": true,
+    "date": "08-06-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "27843a5e823f2315136b604f761b052519d5bf02fc454221f692a89cc8ad7970",
+    "revision_snapshot": {
+      "date": "08-06-2016",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "d112d44a3c6af86e5ff0789a7dea3de7144a4ed65aec1fb9b95d895d2f9a0b60"
+      ],
+      "attachment_name_hashes": [
+        "3897e32e66e812f3"
+      ]
+    },
+    "revision": 1
+  },
+  "ad606c4424317336": {
+    "notified": true,
+    "date": "04-04-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "05919b5bb22f3e89f18a6e74114d91886383307a6ac9ef85f19ef04e1f7835fd",
+    "revision_snapshot": {
+      "date": "04-04-2016",
+      "date_end": "",
+      "sender": "ASSOCIAZIONE SOCIALE CEPPALONI",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 7,
+      "attachment_sha256": [
+        "20b53a93342f363bb80e98fd94a2d50813dc5e68ed2224db3e1877a89d41e2be",
+        "440a84ab13ce94141ecb24affbddc70acb9dbc1a61336a38c01f95d48884efb3",
+        "5b63d86418464f171ab039a4809363f55b7859cc7efd58afbb1e8e621e73174f",
+        "5b63d86418464f171ab039a4809363f55b7859cc7efd58afbb1e8e621e73174f",
+        "84260a77d04f24ae29ee9ef63da9bf8db3491eb9ac3f1ca8c65266b836767dd1",
+        "92c26073b7a76c039775174437ee39b01c3269b2739929a6acc0ad947ba7a1ac",
+        "ac0016142ce31b3e4e99466c62141c26c5b9d3037070867965261584c8271f21"
+      ],
+      "attachment_name_hashes": [
+        "1c0730377123fec3",
+        "3a779db510b07055",
+        "6a260b17df54066b",
+        "95d79eedfb6843a1",
+        "abcc30b3535fe9f7",
+        "c1168263c5a9b698",
+        "e8c92fecab87a48d"
+      ]
+    },
+    "revision": 1
+  },
+  "2a7714eeb54e7bfc": {
+    "notified": true,
+    "date": "18-01-2016",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "c422a861947d45cdc2a6b5744fda961a64b62ffecb3db50a5a2fcded45855942",
+    "revision_snapshot": {
+      "date": "18-01-2016",
+      "date_end": "",
+      "sender": "CENTRO STUDI FORMAZIONE ORIENTAMENTO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "220c648318f85b1a3e046a77aba3fb9dfe051560892bf4b9be2700f89aec367b",
+        "ee62f8f988d25a35827c9a6a249269c5217276155d46038a1b4f40d8dbfcec81"
+      ],
+      "attachment_name_hashes": [
+        "22cfa72b6562cf7e",
+        "dce909286cba71ea"
+      ]
+    },
+    "revision": 1
+  },
+  "9e2388914daa739d": {
+    "notified": true,
+    "date": "09-12-2015",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "504ad206d8f3403e42ce882a1f641c6b5e90dc453998d43c2f33488162777bf9",
+    "revision_snapshot": {
+      "date": "09-12-2015",
+      "date_end": "",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "167",
+      "register_number": "246",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "2031a7177b8356d3ff9526f7938bb9be8b8df4d9dbef621597610ec50aca5bde"
+      ],
+      "attachment_name_hashes": [
+        "9ba10863ba8b1e32"
+      ]
+    },
+    "revision": 1
+  },
+  "3c82544d020fe491": {
+    "notified": true,
+    "date": "30-11-2015",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "d53060142c9e1e0fd7c5f3794ff4a3703856e5bc11b11730bf9bc98439956803",
+    "revision_snapshot": {
+      "date": "30-11-2015",
+      "date_end": "",
+      "sender": "DIPARTIMENTO PREVENZIONE ASL-AV",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "1bf648c7ac14806c3f716022260f100da5f9342604b35281f7fd73e8de0c00da"
+      ],
+      "attachment_name_hashes": [
+        "d61e5bb83abe8015"
+      ]
+    },
+    "revision": 1
+  },
+  "826d6b0c4399532c": {
+    "notified": true,
+    "date": "26-11-2015",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "42d139b94182c6f681ca8b9d40bdb4ccd314b7d085f36d352b28455250b112aa",
+    "revision_snapshot": {
+      "date": "26-11-2015",
+      "date_end": "",
+      "sender": "RESPONSABILE DELL'ATTIVITA' DI TUTELA Tonino Storti",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 0,
+      "attachment_sha256": [],
+      "attachment_name_hashes": []
+    },
+    "revision": 1
+  },
+  "1561e1641f800df3": {
+    "notified": true,
+    "date": "28-10-2015",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "ad270a168f92cafd5e35f22de66c8856bd7d2d8c835c80a56bfd01f90f8be24a",
+    "revision_snapshot": {
+      "date": "28-10-2015",
+      "date_end": "",
+      "sender": "PREFETTURA DI AVELLINO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 5,
+      "attachment_sha256": [
+        "0138a8ed12f3b79f5dab6b8eaa7836a729e35428a2652b08edbaa8d54b984385",
+        "1166632bdf94c55cd5d9b5c6b1e32006f31cf423f90b345e17f1b0bd1b48169d",
+        "4a301bc9918188b0e7a33174dbd64d519a48af9bf1eeca34f75e0b6635b3ff87",
+        "bafa3665c30ec31af1dc7c75d54f6b6298871a357bdc1f002ebebbbad69e2c24",
+        "c06cf7cc22fcd90ef49fa6e02d232877180cfb3fd85515c7544370d60645317d"
+      ],
+      "attachment_name_hashes": [
+        "3a779db510b07055",
+        "8db94ac95a965ecd",
+        "95d79eedfb6843a1",
+        "a0ee08e7a3478878",
+        "c1168263c5a9b698"
+      ]
+    },
+    "revision": 1
+  },
+  "086e41e1cae96b66": {
+    "notified": true,
+    "date": "24-09-2015",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "f26942c58a3cff70a4affc72ba8405ae221eefbcb82be8317824e5503aaa067c",
+    "revision_snapshot": {
+      "date": "24-09-2015",
+      "date_end": "",
+      "sender": "consorzio pubblico di servizi sociali",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "ccf434c870290854226d5b505050dfe4a6d0cfdcebfc14c1a58548a7d7488124"
+      ],
+      "attachment_name_hashes": [
+        "adbf00e9caa02c30"
+      ]
+    },
+    "revision": 1
+  },
+  "e6981c97b5af7645": {
+    "notified": true,
+    "date": "13-07-2015",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "94a99461e18cee93b9d648a7b29926900e9c4b41d057d244a6872ba0dfd5ee64",
+    "revision_snapshot": {
+      "date": "13-07-2015",
+      "date_end": "",
+      "sender": "Prefettura Avellino",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "e37afd119e5a5af23afe7ba5c2dc3a33d721141509d41a803203bd6b108de47c"
+      ],
+      "attachment_name_hashes": [
+        "37690bbf77247743"
+      ]
+    },
+    "revision": 1
+  },
+  "1637507011ee6c56": {
+    "notified": true,
+    "date": "06-07-2015",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "28fa8f5110dfb6d1d4fb6d37fc791dc64ac3b1a20790983112f073172d95ac5b",
+    "revision_snapshot": {
+      "date": "06-07-2015",
+      "date_end": "",
+      "sender": "COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "63c66ea36d7f605194948fa81a703a5ce93bf4568aafa2f234f324a5d677cfb4"
+      ],
+      "attachment_name_hashes": [
+        "aede2977965563c5"
+      ]
+    },
+    "revision": 1
+  },
+  "6d8f70529e941e1d": {
+    "notified": true,
+    "date": "16-03-2015",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "a4e384b23a23527d51906666545fcb830eafbcaf8ab5c50e5a6a0885981b91b2",
+    "revision_snapshot": {
+      "date": "16-03-2015",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "43f410ee5cd64bd374722d3888b334fca71ecdcc90832edc29bfd1f0b4298efc"
+      ],
+      "attachment_name_hashes": [
+        "e07cf35be7467702"
+      ]
+    },
+    "revision": 1
+  },
+  "d15bd46f42717ce8": {
+    "notified": true,
+    "date": "30-01-2015",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "e60275698a003eb59d0557ac9f946e8c9223234f3bc9568fc225d8a612991563",
+    "revision_snapshot": {
+      "date": "30-01-2015",
+      "date_end": "",
+      "sender": "SERVIZIO ELETTORALE COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "4741066345ed9db6cfd1980525c7c709a79d682cfa76cbad7baba6310c82b6c9"
+      ],
+      "attachment_name_hashes": [
+        "5f2555ae9e32cdcb"
+      ]
+    },
+    "revision": 1
+  },
+  "e20fd1c25895c4d6": {
+    "notified": true,
+    "date": "18-12-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "9a2cc79109fe9ace351acfb5336f93dacbedf3fcd67b2e8216f6182f2814db89",
+    "revision_snapshot": {
+      "date": "18-12-2014",
+      "date_end": "",
+      "sender": "COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "ccedb00b0b7a7b57246c786ed3f5d8e22367bda5d3b76847d8bea33b8c8081ae"
+      ],
+      "attachment_name_hashes": [
+        "1f588b88fbabedc4"
+      ]
+    },
+    "revision": 1
+  },
+  "f436e8077142b4ad": {
+    "notified": true,
+    "date": "18-12-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "84bb93d4f59c4b0c50b62c68b112f62d10efd2ce533176beba673cb36bb00601",
+    "revision_snapshot": {
+      "date": "18-12-2014",
+      "date_end": "",
+      "sender": "Comunita Montana del Partenio",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 0,
+      "attachment_sha256": [],
+      "attachment_name_hashes": []
+    },
+    "revision": 1
+  },
+  "73081c97eb51b1ae": {
+    "notified": true,
+    "date": "04-12-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "4294d371598fea6ae84fef01d45e6a43c082f6c67ee3d5105d30690465733adf",
+    "revision_snapshot": {
+      "date": "04-12-2014",
+      "date_end": "",
+      "sender": "CONSORZIO ASI-PROVINCIA AVELLINO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "1bcbc9fe73b1101d87457d1df0757cafa1d0ed52b8515a2a28c551a8c014d99c"
+      ],
+      "attachment_name_hashes": [
+        "52ad5450ee095b4c"
+      ]
+    },
+    "revision": 1
+  },
+  "ea0adc2b8d66f425": {
+    "notified": true,
+    "date": "28-10-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "b414cd766ab9c0b7b3e47c94233ac4c87b2c64f230ec09d82b992267cdcf40a8",
+    "revision_snapshot": {
+      "date": "28-10-2014",
+      "date_end": "",
+      "sender": "ASL AVELLINO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "c2a60c36fed0a72d16a639207960ef24f3e10f07662c9059efe8e3a39e621a04"
+      ],
+      "attachment_name_hashes": [
+        "c4529eae8c2fd4bc"
+      ]
+    },
+    "revision": 1
+  },
+  "cf37130c94a031da": {
+    "notified": true,
+    "date": "06-10-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "1b2d690365d60590598dc8ed0347345250aaf2299f34b029be68aa7fd07476f8",
+    "revision_snapshot": {
+      "date": "06-10-2014",
+      "date_end": "",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "4e5196a24f578e915624ef69b083e2a3897070e87728b584f6e25ac9632c272d"
+      ],
+      "attachment_name_hashes": [
+        "3afab6c36df502d3"
+      ]
+    },
+    "revision": 1
+  },
+  "9efbe37c3b3a5c5f": {
+    "notified": true,
+    "date": "10-09-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "a9bc6b1a23c34d32729dce52011a401849187a88959107d93aa8cfe7581293c7",
+    "revision_snapshot": {
+      "date": "10-09-2014",
+      "date_end": "",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "6d40a2860b940cc7814f575958b7f74781ec91ef23e14510bdd234c6c4dc3b95"
+      ],
+      "attachment_name_hashes": [
+        "099faa9e8d6240d1"
+      ]
+    },
+    "revision": 1
+  },
+  "ace07fd2ea3a31bc": {
+    "notified": true,
+    "date": "01-09-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "cc7c7c49e27557fbdaae6c2bad9c08a7123a6c4f80676970fb8a628b5d0e6987",
+    "revision_snapshot": {
+      "date": "01-09-2014",
+      "date_end": "",
+      "sender": "COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "34ba43cbba7822169607375ace18550ebb07f20a5cacdc0ef2e0fadd2628f0c1"
+      ],
+      "attachment_name_hashes": [
+        "cb10a8f814d78aa7"
+      ]
+    },
+    "revision": 1
+  },
+  "5c62baa3fb28df0b": {
+    "notified": true,
+    "date": "18-07-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "f2f801740bd25d1567cb2872d1278907518648ee859a7b457403b74746fd93bd",
+    "revision_snapshot": {
+      "date": "18-07-2014",
+      "date_end": "",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "80fd2bef47b2f14879cdbf1ee37ca7f7bca97748576b9e8481a8bb0d19459773"
+      ],
+      "attachment_name_hashes": [
+        "a820fe2be0519fdd"
+      ]
+    },
+    "revision": 1
+  },
+  "2c70a87d74a46df7": {
+    "notified": true,
+    "date": "17-07-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "1c03fb250ee863d2cdebbc505cd22242eaad5fd2699d8281cd66f722893d18b2",
+    "revision_snapshot": {
+      "date": "17-07-2014",
+      "date_end": "",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "5d64dc004d5e3c565af27508ac4851dd26f7c6e2f697f5b73473602fe06cbfb4"
+      ],
+      "attachment_name_hashes": [
+        "f47e9aa97501729b"
+      ]
+    },
+    "revision": 1
+  },
+  "91f9260c177ceef1": {
+    "notified": true,
+    "date": "15-07-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "b8a06655e4f6656d8f7ff7d7cc8cdfffab87a8dc9567e4fad1ec1b9d174e4510",
+    "revision_snapshot": {
+      "date": "15-07-2014",
+      "date_end": "",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "2a2239385b9318caeae25a45a9fe76eb4a36d9d38f4cacef5396fb4657653a46"
+      ],
+      "attachment_name_hashes": [
+        "1f588b88fbabedc4"
+      ]
+    },
+    "revision": 1
+  },
+  "63eb4228ed7b1efa": {
+    "notified": true,
+    "date": "14-07-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "ac50f93ce4f5a367be2a6300aabbe521670ce0de29c7af848d53f8ac68a18296",
+    "revision_snapshot": {
+      "date": "14-07-2014",
+      "date_end": "",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "eef006b65d3dfb10fee7b82648711b56c0d179101eedf68c7723ae06bb8619e9"
+      ],
+      "attachment_name_hashes": [
+        "8dbbcf6fc6a12a05"
+      ]
+    },
+    "revision": 1
+  },
+  "390b8e769764f8bb": {
+    "notified": true,
+    "date": "11-06-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "f2e9d9e224a2923926b75322006f7b11a0929cdb8e87bf4d14c9a0fe32c32934",
+    "revision_snapshot": {
+      "date": "11-06-2014",
+      "date_end": "",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 19,
+      "attachment_sha256": [
+        "1ab7a523f06699390ad0a6725a89b6f7ff5ca497756a0f769f2429d785e8987f",
+        "1e6d234261ed67a43670d88cce49baa145c81c1962a8b7222dd0720fec90a2c9",
+        "3356b2a9692fb48c15a6acb6c2d45dc85e828ac8469c797ab155b3918bb18bb8",
+        "3c4d34e50a41894bde34011d7d0de7481c98d262dfec21e2045b605ba6910fb8",
+        "4e57f4d525d6f098870d56e096b290bafdcb8eae6d2b95815ba2183c94714d8a",
+        "659838508c73a644b3cf8dfc54d204f6998de4172a1f3f1d129ac6646d513835",
+        "8abe8fecd83d83f8353d06fca6a122e1bf9749db64855c4c7b1ad7f77399bb18",
+        "9a54ec7f615a7f75f6ddf73d66dad0807137712fb4e7193f15933f8fdbcb9049",
+        "a1980eb7e17684e3553507e9db94444ade923bbbcb9259c47b33542e09f1ee8f",
+        "a8a911dab705fc994d17eada33e351f9f3631dcbf6786fe89dccc3ceef0410a8",
+        "b3606f07aed57f964f8aaf983fb2b47f2379b82bcf9b0f7a671a39aa0937ea6a",
+        "bd88dcf6345e8774a00519ed9302456755211ec9ae10b57eb6e8bbf03d5cadd1",
+        "c9e51118a1de1625dedf8d28e381d69021519fe91792ec6ea49156bb0c08990d",
+        "d74aa7c9b831984904a596275ef1a71673c2e6a8a47a2bcc28e52caf59c5edd7",
+        "d77f65ecae03590fcdc326e4675de21795882f1109c3a434dc8dc3fe02483164",
+        "dca4a0209265d30145161f33c7e2beda8e50dfdc9102d416de7a1d5cb5f82267",
+        "f515766d7e3e88ab50b1e38240dc75ce24c83835df96c29a838f215cabcfe10f",
+        "f7884d2bfaa45f31fd7e44aeb7c0e645cd83959bbb03f688df39e3edb2332f6c",
+        "fc7f7d2cd0b77e583eb9f4c599c1d9dbfc122b31bc73b20f0c50d8226b61d2be"
+      ],
+      "attachment_name_hashes": [
+        "0233beadbb809d36",
+        "28b7752f73654bd6",
+        "331163aefbb4da19",
+        "4ab45daa1bb281ce",
+        "4cc17fb411f098c1",
+        "520c27fb8a6fda63",
+        "5772ccb8987f4b0a",
+        "6bce878c5ccce028",
+        "84f2ba1fda2896dc",
+        "98c8463c94e0ffcc",
+        "9c87e92dedbbbe26",
+        "c93fe11de9ba30d2",
+        "ce8e9e63e60d6465",
+        "d026541bf7b5283e",
+        "d23ec15d12a7c3ce",
+        "d692c57620fd983b",
+        "e3986a43d0205d04",
+        "e922b02b8b508da4",
+        "fe50613218eb77dd"
+      ]
+    },
+    "revision": 1
+  },
+  "d0fa9eb356e5d091": {
+    "notified": true,
+    "date": "19-05-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "b101e77a46bd19822e6298218847fc32438e93e3cfc0cfe34b685e0e25218c70",
+    "revision_snapshot": {
+      "date": "19-05-2014",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "322c5d0df32489ef30532720fe3dd9e2f62902bd7ac34f501478fedb489f14d5"
+      ],
+      "attachment_name_hashes": [
+        "a3b3a97c06517d1b"
+      ]
+    },
+    "revision": 1
+  },
+  "18ec09c8ec84a02f": {
+    "notified": true,
+    "date": "05-05-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "5b95c629ae3d2c173cf9d899129241c84955c14ac7efb8d115eb0c0f493ad140",
+    "revision_snapshot": {
+      "date": "05-05-2014",
+      "date_end": "",
+      "sender": "DIPARTIMENTO PREVENZIONE ASL-AV",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "8e227b5c49f926e1b70b0e9a0a853536f310d76d55c0d95e26182ea771e64608"
+      ],
+      "attachment_name_hashes": [
+        "7922e7e605a43fc2"
+      ]
+    },
+    "revision": 1
+  },
+  "31590772c7cd8256": {
+    "notified": true,
+    "date": "02-05-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "8044261f8693db899a0d13d81d693163aa4e1242445c5db5d3acfccea7b78a60",
+    "revision_snapshot": {
+      "date": "02-05-2014",
+      "date_end": "",
+      "sender": "UFFICIO ELETTORALE COMUNE",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "0e8365e60b6f3d8e49b016464244be8bb102f75782364561a48627621dc2fbb1"
+      ],
+      "attachment_name_hashes": [
+        "b1723367041db437"
+      ]
+    },
+    "revision": 1
+  },
+  "ca1325171763ce44": {
+    "notified": true,
+    "date": "30-04-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "a325421289323162f996e38119a8d262ea1d80aca0a5dc5a6dbe577d08a606ee",
+    "revision_snapshot": {
+      "date": "30-04-2014",
+      "date_end": "",
+      "sender": "DIPARTIMENTO PREVENZIONE ASL-AV",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "a7d3389fe54f239eb2ef2d28fe9612ffaec2bc319fb1868c3476fb7977962e63"
+      ],
+      "attachment_name_hashes": [
+        "62cd29a808bfa500"
+      ]
+    },
+    "revision": 1
+  },
+  "4cdc4ef0f663d0c0": {
+    "notified": true,
+    "date": "30-04-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "1e195e5701199ba7d97e90339b2fc04361832237f3639349f0f5ddeca61de7e8",
+    "revision_snapshot": {
+      "date": "30-04-2014",
+      "date_end": "",
+      "sender": "AI CONSIGLIERI COMUNALI sede",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "8ca9e6582b91935b45a0a2ac65f7af76d501943f7dbc034b092cdf8a96e444bf"
+      ],
+      "attachment_name_hashes": [
+        "df25f91e937a7339"
+      ]
+    },
+    "revision": 1
+  },
+  "28670eb912f0606d": {
+    "notified": true,
+    "date": "15-04-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "97cedb3bd6d8de824755afe96926088184240e4c9f7e3ed556f91892eacccab9",
+    "revision_snapshot": {
+      "date": "15-04-2014",
+      "date_end": "",
+      "sender": "UFFICIO TECNICO-COMUNE ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "b4ec2b8ff9b03360e85be2af97e1d150c06b15644d436d957f966a0c44b07497"
+      ],
+      "attachment_name_hashes": [
+        "3cfaa055fd1108da"
+      ]
+    },
+    "revision": 1
+  },
+  "a5e8a143f3838f76": {
+    "notified": true,
+    "date": "10-04-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "3c2db2d4d8c3e5b127c3f4cc4ac643cfbaf7c46140988ac07c6092663ce33f97",
+    "revision_snapshot": {
+      "date": "10-04-2014",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "55181b85b3f53b6c621b0f2f792079121a8260d71d9aa25dbe2169d05db62364"
+      ],
+      "attachment_name_hashes": [
+        "66f10b2abbaa2e6a"
+      ]
+    },
+    "revision": 1
+  },
+  "970004ae0d703c71": {
+    "notified": true,
+    "date": "10-04-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "eb44bbe55c5439704066f60af28d2282fea006decfa360ac45a46ad07a9bc63d",
+    "revision_snapshot": {
+      "date": "10-04-2014",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "1d0299385fcd4104112bda811b9dc755211456eecb3990c7a329517859be8b46"
+      ],
+      "attachment_name_hashes": [
+        "2c6a074d1c7bd51d"
+      ]
+    },
+    "revision": 1
+  },
+  "1a05b21e5ba661c2": {
+    "notified": true,
+    "date": "01-04-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "389d9f6469a86573a71700224ef39fe9a221b2057aebc10b69e5d612098eaf80",
+    "revision_snapshot": {
+      "date": "01-04-2014",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "83bed6fabfd37033279dba5359175d15f2fed2e3ab6a37c3cbb719d77743d893"
+      ],
+      "attachment_name_hashes": [
+        "80e8444bff5e1ad0"
+      ]
+    },
+    "revision": 1
+  },
+  "b190cd2aab055fb5": {
+    "notified": true,
+    "date": "01-04-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "9881d9b7b8cdb74358452fe4038ff67e7b4e0fda38606167169098bbd2b62561",
+    "revision_snapshot": {
+      "date": "01-04-2014",
+      "date_end": "",
+      "sender": "COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "5f29481f82dcd23f03dfa3e18438f2843ad005bdb5b36549c46dcd1ca7782f3f"
+      ],
+      "attachment_name_hashes": [
+        "c8cbabcb955e08b4"
+      ]
+    },
+    "revision": 1
+  },
+  "cf7cb2aee1667b01": {
+    "notified": true,
+    "date": "06-02-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "29063d66f630e4ef19e52af9037d8951d65ef25b479e8c434378d5e65849cb3c",
+    "revision_snapshot": {
+      "date": "06-02-2014",
+      "date_end": "",
+      "sender": "UFFICIO ELETTORALE COMUNE",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "d2e7a4d75dd8f0ec5d67a7b3408a802f6474d071c3e127e93ae4515a4eb6fab1"
+      ],
+      "attachment_name_hashes": [
+        "99012169b8b8e5cd"
+      ]
+    },
+    "revision": 1
+  },
+  "3e2fecc830ebe116": {
+    "notified": true,
+    "date": "03-02-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "7f37fd326391e5024494b03677d8ad1338a36b0938e609b737654077441f5d96",
+    "revision_snapshot": {
+      "date": "03-02-2014",
+      "date_end": "",
+      "sender": "COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "1fb56d1b9ad46e87fdb8c80e19b8ab4665826a8e7c4cfa7d4960fb5217fd2552"
+      ],
+      "attachment_name_hashes": [
+        "b874a1b7e664c773"
+      ]
+    },
+    "revision": 1
+  },
+  "f720f106861b0bc2": {
+    "notified": true,
+    "date": "20-01-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "866980ada64beb5334df7f1d5adfea460be82ea9a116fe4f8281debc7192b84c",
+    "revision_snapshot": {
+      "date": "20-01-2014",
+      "date_end": "",
+      "sender": "CONSORZIO ASI  ENTE PUBBLICO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "154e6a413844172961db70cbb5c612b2331b0f28942a4f88677e9d44c77f435d"
+      ],
+      "attachment_name_hashes": [
+        "02439c66356c5c4e"
+      ]
+    },
+    "revision": 1
+  },
+  "2850cd8bfaef24c3": {
+    "notified": true,
+    "date": "13-01-2014",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "865fe84b31cec0078e2c9cec7357a8d2ec6adc5c3a44a2d44b6510d630e2cf53",
+    "revision_snapshot": {
+      "date": "13-01-2014",
+      "date_end": "",
+      "sender": "SEGRETARIO COMUNALE -SEDE-",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "b001a5d3937fc13897a1ccb3450adfa652dfec8c0d307f1d055c4d51aa44b340"
+      ],
+      "attachment_name_hashes": [
+        "88e1eff5aa6375b5"
+      ]
+    },
+    "revision": 1
+  },
+  "35f76338c7b8a72b": {
+    "notified": true,
+    "date": "08-11-2013",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "7109fa309b05899c161ff4d8a6afe16b81eaed1df46e83f343a47f5b9f0e007e",
+    "revision_snapshot": {
+      "date": "08-11-2013",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "aa6b638424e7461b54582ae80602261f4b527c8dc6f612a568cc870bc2b282ad"
+      ],
+      "attachment_name_hashes": [
+        "8c0dee2fd310b1e7"
+      ]
+    },
+    "revision": 1
+  },
+  "1b8186a3dc99ba0d": {
+    "notified": true,
+    "date": "10-10-2013",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "520ee0e955e8f6a70bb2a4ae10276d6dee9022c1d69f8ac0a597ba6c39c3b353",
+    "revision_snapshot": {
+      "date": "10-10-2013",
+      "date_end": "",
+      "sender": "AGENZIA AGORA' PROGRAMMAZIONE SVILUPPO SOCIALE",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "a2e079dce7846a0e6bb9f10c98d0ab6255b9ccb93ef945debe3cff952a6de101"
+      ],
+      "attachment_name_hashes": [
+        "8bb482b12f916ee4"
+      ]
+    },
+    "revision": 1
+  },
+  "05fbdd5824de8230": {
+    "notified": true,
+    "date": "24-09-2013",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "c15e6c626f5e159856e291e1a24972ef22049c4979ffd108fab19af386baa726",
+    "revision_snapshot": {
+      "date": "24-09-2013",
+      "date_end": "",
+      "sender": "PREFETTURA BENEVENTO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 0,
+      "attachment_sha256": [],
+      "attachment_name_hashes": []
+    },
+    "revision": 1
+  },
+  "bda9605ff64ca153": {
+    "notified": true,
+    "date": "02-07-2013",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "c3366706dee17e366b2fffff8d0eb6ab7c065e8c002068c678ab0d9e51816e43",
+    "revision_snapshot": {
+      "date": "02-07-2013",
+      "date_end": "",
+      "sender": "COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "fa9b670149014ac6ee58da1c59ac01d5462f355458377972932ac438419f3a31"
+      ],
+      "attachment_name_hashes": [
+        "6730ffd5d937f12f"
+      ]
+    },
+    "revision": 1
+  },
+  "bded09426e8dc0fb": {
+    "notified": true,
+    "date": "13-05-2013",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "ecc78ba6866f9a124ddf7aaefbd07ac95d36c97ad0574654ba13eebdeebdb417",
+    "revision_snapshot": {
+      "date": "13-05-2013",
+      "date_end": "",
+      "sender": "COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 0,
+      "attachment_sha256": [],
+      "attachment_name_hashes": []
+    },
+    "revision": 1
+  },
+  "eb3ae93f44552d86": {
+    "notified": true,
+    "date": "22-02-2013",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "08e1efda75acccd38410d815d1dd27fe02d2d5654c0fea63d30afebc6437be83",
+    "revision_snapshot": {
+      "date": "22-02-2013",
+      "date_end": "",
+      "sender": "ASL AVELLINO - DIREZIONE GENERALE",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "61999d53c68f8470d9f48a7355404816751fd2528742ee0a5bb7427e0df604d2"
+      ],
+      "attachment_name_hashes": [
+        "528e88719b71ae48"
+      ]
+    },
+    "revision": 1
+  },
+  "393e6eae0a32ad3e": {
+    "notified": true,
+    "date": "14-02-2013",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "ea11fd7db433e55387de9cf609c2287b8809eafe617cea03b3a55eb8af7b9640",
+    "revision_snapshot": {
+      "date": "14-02-2013",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "2b1f04526355d0043d4e5a054d62e9bd8f8c2ff52d84f319d1218d9bb06efeff"
+      ],
+      "attachment_name_hashes": [
+        "ae4908decf04fdbc"
+      ]
+    },
+    "revision": 1
+  },
+  "9acb2d51d2750e55": {
+    "notified": true,
+    "date": "11-01-2013",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "cf37a8d2c129c9e52ac11dbae22462be10ed6f0121c13c8faa489af70c966495",
+    "revision_snapshot": {
+      "date": "11-01-2013",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "3bb1ad030442504e611fa143cc023993752b4f6c2e0f256453baca4d10d456f5"
+      ],
+      "attachment_name_hashes": [
+        "222f084d4fd767c8"
+      ]
+    },
+    "revision": 1
+  },
+  "cd3988f026cf33f3": {
+    "notified": true,
+    "date": "29-11-2012",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "d3fc59594c511ac70c8c00c8ed5f7e5acb81d86fda63009d28b577673ad8027f",
+    "revision_snapshot": {
+      "date": "29-11-2012",
+      "date_end": "",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "ab926d4ea0ba8a174ac0adf0f6ae31f39332db99dd3f223d7baca4ec6a0fe3a1"
+      ],
+      "attachment_name_hashes": [
+        "67d09f410954a988"
+      ]
+    },
+    "revision": 1
+  },
+  "0bccc7468399e5ca": {
+    "notified": true,
+    "date": "09-10-2012",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "c0657ebb820d6adf4a0743b465d5db1e7ae6f26fd44d6a410dfb94de4d9649a1",
+    "revision_snapshot": {
+      "date": "09-10-2012",
+      "date_end": "",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA - SEDE",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "959e39a17a5bdd2081f5fcc3f25d6c3f729c11ca269d8316ed2545c4a8d5fdca"
+      ],
+      "attachment_name_hashes": [
+        "1f588b88fbabedc4"
+      ]
+    },
+    "revision": 1
+  },
+  "e5238e5287fad39c": {
+    "notified": true,
+    "date": "02-08-2012",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "03979cb294454af2f02142b25386fdb82ddfad140e6f063b5577d775ef3e0097",
+    "revision_snapshot": {
+      "date": "02-08-2012",
+      "date_end": "",
+      "sender": "comune di roccabascerana",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "1fa714d1fe8337d106fe003126ff5eebc4dfaf60232d52151f45867ffffea123"
+      ],
+      "attachment_name_hashes": [
+        "9aae7dda9712946b"
+      ]
+    },
+    "revision": 1
+  },
+  "9eab1e4404931a11": {
+    "notified": true,
+    "date": "27-06-2012",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "06f351dde1746e0dfff7f0fce4c19f968441dab29033c95ca1370b9c8a265903",
+    "revision_snapshot": {
+      "date": "27-06-2012",
+      "date_end": "",
+      "sender": "UFFICIO STATO CIVILE E ANAGRAFE  ISTRUTTORE UGO VISCIONE",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "7a1c6394415d105353dc0b45a8aac53cce0a7397a8feb83b9bacf485651eb80b"
+      ],
+      "attachment_name_hashes": [
+        "d81f7c7a9fa140c4"
+      ]
+    },
+    "revision": 1
+  },
+  "938dfac158e9b889": {
+    "notified": true,
+    "date": "21-06-2012",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "cf50dd09f3e1bbb02b5edc8e654de369d059d8c7f74291faeab275ba1805b0f2",
+    "revision_snapshot": {
+      "date": "21-06-2012",
+      "date_end": "",
+      "sender": "consorzio pubblico di servizi sociali",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "375aca15d379d76f9e16794b49c1f39f791f5afb9b1ef1cb50d7f931e4ee628a"
+      ],
+      "attachment_name_hashes": [
+        "43f26791bb2823e6"
+      ]
+    },
+    "revision": 1
+  },
+  "7acdb1729301142a": {
+    "notified": true,
+    "date": "12-06-2012",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "6dc33051fe10a1d25f69ccb4a3d53d905b529b046a70c6e858abb9da77387bc8",
+    "revision_snapshot": {
+      "date": "12-06-2012",
+      "date_end": "",
+      "sender": "COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "a8f486a3ed4af24102f3d31b0fc1bdf2b58f2daa3c8ae51679ad2272295b4a72"
+      ],
+      "attachment_name_hashes": [
+        "340280840930cf9f"
+      ]
+    },
+    "revision": 1
+  },
+  "cd9e383bf6f1372b": {
+    "notified": true,
+    "date": "19-05-2011",
+    "date_end": "",
+    "expired": null,
+    "last_revision_check_at": "2026-09-11T12:07:25Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "bfada2b9cebb06f8b7df7720a1fe58dca4b032ab07c93453a4c59e17a33ba43a",
+    "revision_snapshot": {
+      "date": "19-05-2011",
+      "date_end": "",
+      "sender": "UFFICIO ELETTORALE COMUNE ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 0,
+      "attachment_sha256": [],
+      "attachment_name_hashes": []
+    },
+    "revision": 1
   }
 }
