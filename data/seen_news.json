@@ -924,5 +924,14 @@
     "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_193.html",
     "description": "Anno scolastico 2026/2027",
     "delivery_pending": false
+  },
+  "194": {
+    "title": "Catasto incendi boschivi - legge 353/2000 - art. 10 comma 2 O.P.C.M. 3606/2007 e 3680/2008",
+    "category": "Avviso",
+    "date": "14-09-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_194.html",
+    "description": "Pubblicazione degli elenchi delle aree percorse dal fuoco anno 2025",
+    "notified": true,
+    "delivery_pending": false
   }
 }
