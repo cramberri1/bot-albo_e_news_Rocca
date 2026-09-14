@@ -5097,5 +5097,29 @@
       ]
     },
     "revision": 1
+  },
+  "153c3ec8e0dafc01": {
+    "notified": true,
+    "date": "14-09-2026",
+    "date_end": "29-09-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-14T08:32:15Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "a002875b3c96e223c982c8307efad0984810ab5b3b895dabeee357bfafa41a94",
+    "revision_snapshot": {
+      "date": "14-09-2026",
+      "date_end": "29-09-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "199",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "66bd603cf9a1413e51d6814abef09c3201c41a170424e6d5dfc773bf8da4fcde"
+      ],
+      "attachment_name_hashes": [
+        "bcd38c6fed0d3cc1"
+      ]
+    },
+    "revision": 1
   }
 }
