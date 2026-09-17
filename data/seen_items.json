@@ -5253,10 +5253,31 @@
     "revision": 1
   },
   "2b8bff63e2ae4010": {
-    "notified": false,
+    "notified": true,
     "date": "17-09-2026",
     "date_end": "17-10-2026",
     "expired": false,
-    "delivery_pending": false
+    "delivery_pending": false,
+    "last_revision_check_at": "2026-09-17T10:39:16Z",
+    "revision_fingerprint": "ed553132393747bfe3cb143932a282ada1baca5a24072091870673fa40bbbcde",
+    "revision_snapshot": {
+      "date": "17-09-2026",
+      "date_end": "17-10-2026",
+      "sender": "PROVINCIA DI AVELLINO (SUA)",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 3,
+      "attachment_sha256": [
+        "83198dc5a0f5d573e99b546bc7d08e87e6e3cda8f76d6e707a75a2015f4ce9dd",
+        "b98edde3596c8a4254dfa520b627cc59622b0b327cb2e8c07d2f6d64e6e6f7de",
+        "ec292f45367c4bfaaefba46272da2c98225bdeb2832196b7420f55812e8b95f4"
+      ],
+      "attachment_name_hashes": [
+        "20aa84ac327bf51e",
+        "b61048e05f70465a",
+        "e67ab6b677770e24"
+      ]
+    },
+    "revision": 1
   }
 }
