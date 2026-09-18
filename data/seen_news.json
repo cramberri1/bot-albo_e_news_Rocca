@@ -942,5 +942,14 @@
     "description": "Provincia di Avellino SUA",
     "notified": true,
     "delivery_pending": false
+  },
+  "196": {
+    "title": "Servizio di Trasporto Scolastico \u0013 Disponibilità posti",
+    "category": "Avviso",
+    "date": "18-09-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_196.html",
+    "description": "AVVISO ALL\u0019UTENZA",
+    "notified": true,
+    "delivery_pending": false
   }
 }
