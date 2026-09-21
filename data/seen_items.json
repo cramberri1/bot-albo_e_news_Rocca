@@ -5258,7 +5258,7 @@
     "date_end": "17-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-09-21T07:16:51Z",
+    "last_revision_check_at": "2026-09-21T08:19:44Z",
     "revision_fingerprint": "ed553132393747bfe3cb143932a282ada1baca5a24072091870673fa40bbbcde",
     "revision_snapshot": {
       "date": "17-09-2026",
@@ -5354,6 +5354,30 @@
         "68ea6984680d6862",
         "deff2c3e21b54854",
         "e9e5474087b62011"
+      ]
+    },
+    "revision": 1
+  },
+  "aef1a8f97c355d4f": {
+    "notified": true,
+    "date": "21-09-2026",
+    "date_end": "06-10-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-21T08:19:44Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "320b72718ebb4d2d8555739ddc7f4e13f30db6936e3566e36e89690ae68fdf13",
+    "revision_snapshot": {
+      "date": "21-09-2026",
+      "date_end": "06-10-2026",
+      "sender": "responsabile area tecnica e di vigilanza",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "19eb5d6056f5033bb5d6efc6988263e70af9e5268fc451c6a8757065ea084612"
+      ],
+      "attachment_name_hashes": [
+        "e2e5ce0f94d1126a"
       ]
     },
     "revision": 1
