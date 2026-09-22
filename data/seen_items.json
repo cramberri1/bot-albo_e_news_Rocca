@@ -5453,5 +5453,29 @@
       ]
     },
     "revision": 1
+  },
+  "88c7c1d60e562d60": {
+    "notified": true,
+    "date": "22-09-2026",
+    "date_end": "07-10-2026",
+    "expired": false,
+    "last_revision_check_at": "2026-09-22T11:38:32Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "bc5d16bac47a79c9e175d3036253bb718e8c4ebe323fe1ee6d17bfa21de70541",
+    "revision_snapshot": {
+      "date": "22-09-2026",
+      "date_end": "07-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "32",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "5256eb7b6c6f7c0bb57aad4610723a2483555b6ac94d6fdafcbb381e927a4629"
+      ],
+      "attachment_name_hashes": [
+        "1a202579c266a0ec"
+      ]
+    },
+    "revision": 1
   }
 }
