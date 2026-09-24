@@ -60,6 +60,8 @@ class RegressionTests(unittest.TestCase):
         item = dict(title='Atto', num_pub='123', date='24-09-2026')
         record = dict(item, date='24-09-2025', notified=True)
         self.assertIsNone(bot.find_existing_equivalent_item(item, {bot.legacy_item_id(item): record}))
+        record.pop('num_pub')  # Legacy records did not retain publication metadata.
+        self.assertIsNone(bot.find_existing_equivalent_item(item, {bot.legacy_item_id(item): record}))
 
 
 class StateTests(unittest.TestCase):

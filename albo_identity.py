@@ -72,7 +72,7 @@ def find_existing_equivalent_item(item, db, snapshot=None):
     def compatible_publication(record):
         old_date = str(record.get('date') or '')
         new_date = str(item.get('date') or '')
-        if record.get('num_pub') and old_date and new_date:
+        if re.fullmatch(r'\d{2}-\d{2}-\d{4}', old_date) and re.fullmatch(r'\d{2}-\d{2}-\d{4}', new_date):
             # The old hash omitted the publication year; don't inherit that collision.
             return old_date[-4:] == new_date[-4:]
         return True
