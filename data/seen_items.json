@@ -1515,15 +1515,15 @@
     "date": "10-09-2026",
     "date_end": "09-11-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:31:51Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "d46989497e1d3c46ca06cab5bc1e50abc22821dbf0c86bfe85a93447769b869e",
+    "revision_fingerprint": "5593570bf0ade649eb6ff3eb9cec7d2182d6fb551a496aea619d6439563b985f",
     "revision_snapshot": {
       "date": "10-09-2026",
       "date_end": "09-11-2026",
       "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
       "act_number": "8",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "a1fe736c87900d1d3be5aeb52085e4426ec1eb6b38b06bc18956abddc89748e1"
@@ -1532,22 +1532,22 @@
         "b8e2d2835888b65a"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "1bab1bd28383072a": {
     "notified": true,
     "date": "10-09-2026",
     "date_end": "25-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:31:51Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "d2506abe5e18d546be92419e8904045b3c5500fba029f63290fa04799c80f70b",
+    "revision_fingerprint": "8927d97244f5d9b2135261fcd09aa5a04ad40e8a0d009be0dd9fb85fd3536b1a",
     "revision_snapshot": {
       "date": "10-09-2026",
       "date_end": "25-09-2026",
       "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "197",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 2,
       "attachment_sha256": [
         "24a10c96834178b2ae82592e03efa8629cb1a0706286c8a6e4738c2a36594718",
@@ -1558,7 +1558,7 @@
         "de6a787805f40063"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "c2049a4eb7c72e82": {
     "notified": true,
@@ -1591,15 +1591,15 @@
     "date": "09-09-2026",
     "date_end": "24-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:15:36Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "181b10b10f0a039745e986df00648b60cd8b350805912bb452dc75897a022ca0",
+    "revision_fingerprint": "1d4d22b41fc99168efc4b1871ce86a07381d30e3cb1a145d2ec87f4ef76a805c",
     "revision_snapshot": {
       "date": "09-09-2026",
       "date_end": "24-09-2026",
       "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "196",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 3,
       "attachment_sha256": [
         "081ad5ffadb8eac91fff6b71e32468bdc2c13fd06aa55cce8bf6fdb1914ca249",
@@ -1612,7 +1612,7 @@
         "f57cbddb6a1564a9"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "234377e8b4d311da": {
     "notified": true,
@@ -2679,15 +2679,15 @@
     "date": "18-06-2026",
     "date_end": "30-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:15:36Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "70d835fb0458024e184bdd52528b209b3e36ec6fff1470ecdfe482750632e64c",
+    "revision_fingerprint": "937b889f5bff31c90de0d29b999d1cbc03479187666bbc0b1ca47ad33c88640a",
     "revision_snapshot": {
       "date": "18-06-2026",
       "date_end": "30-09-2026",
       "sender": "SINDACO COMUNE DI ROCCABASCERANA",
       "act_number": "14",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "7b5772e18e49daf7877eedeb1fdaa18237afea64b14745cd0cf83ed40e4af532"
@@ -2696,22 +2696,22 @@
         "92d56e4224cc2c99"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "527368df377433c6": {
     "notified": true,
     "date": "15-06-2026",
     "date_end": "13-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:15:36Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "e0c169ef3f40062f7c18ccc9974de25d632292deb16589b4bd041b9ee95af91d",
+    "revision_fingerprint": "f0837aaba52219a10b92414822ceff9c0da0eb92b08f33992869cee73c51e742",
     "revision_snapshot": {
       "date": "15-06-2026",
       "date_end": "13-10-2026",
       "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
       "act_number": "5",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "fc372124d0cdb2aaef28f33caec4ed1a1f8f5e6d908672e672e58442e144901c"
@@ -2720,22 +2720,22 @@
         "93d38323cd089478"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "11345c016b674318": {
     "notified": true,
     "date": "15-06-2026",
     "date_end": "30-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:15:36Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "8c3ec79a4f7b60a431f12398424d4efccf4534e1c653031cb1eec4a6f7b380fd",
+    "revision_fingerprint": "c12a899a7d3a08b0c38b24f7712f226eb3c2384bcb3e2caf9bce3eab29acdcc6",
     "revision_snapshot": {
       "date": "15-06-2026",
       "date_end": "30-09-2026",
       "sender": "SINDACO COMUNE DI ROCCABASCERANA",
       "act_number": "13",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "fe6340ec36dd4d7d17670426e3e395bf18e6b59b90d3fd250caf62aa434a6a1d"
@@ -2744,7 +2744,7 @@
         "44135a672a5d98d1"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "450a8268e0829dd2": {
     "notified": true,
@@ -5079,15 +5079,15 @@
     "date": "11-09-2026",
     "date_end": "26-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:31:51Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "114811bdc46880cbef00a855dcefd5a4f867aae3df1f58dc59ab12eaeb2a2487",
+    "revision_fingerprint": "207423f07635c525cfe76f25829498d01ed33328c188d270706c92494cb4adc1",
     "revision_snapshot": {
       "date": "11-09-2026",
       "date_end": "26-09-2026",
       "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "198",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "9562388647e8e45655c435ca21066ea3733302c204f9aa0fa545a86fed7dff1f"
@@ -5096,22 +5096,22 @@
         "d9a30ce88de8ab20"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "153c3ec8e0dafc01": {
     "notified": true,
     "date": "14-09-2026",
     "date_end": "29-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:31:51Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "a002875b3c96e223c982c8307efad0984810ab5b3b895dabeee357bfafa41a94",
+    "revision_fingerprint": "3fbf73860cdd8f4a222475dae5a06c28bc07d909783fcc8b7a39654500213e4c",
     "revision_snapshot": {
       "date": "14-09-2026",
       "date_end": "29-09-2026",
       "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "199",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "66bd603cf9a1413e51d6814abef09c3201c41a170424e6d5dfc773bf8da4fcde"
@@ -5120,22 +5120,22 @@
         "bcd38c6fed0d3cc1"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "561785735b5ffea5": {
     "notified": true,
     "date": "14-09-2026",
     "date_end": "29-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:31:51Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "470173550f7cdea96482e4e322767724ad1bb7a353451f384891f6b9d78c1e29",
+    "revision_fingerprint": "37c2b3c1c5565a1bbd4a3cf7bb9013f9f0e1eb12fc71edaea138fee71d34b652",
     "revision_snapshot": {
       "date": "14-09-2026",
       "date_end": "29-09-2026",
       "sender": "SINDACO COMUNE DI ROCCABASCERANA",
       "act_number": "32",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "6330000eaa6b2de5d4066abab52c030a8d022bf19c5f8cce9888d18fbe4c3eaf"
@@ -5144,7 +5144,7 @@
         "892a41f86c872706"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "b6e50a08d78fcffd": {
     "notified": true,
@@ -5177,15 +5177,15 @@
     "date": "14-09-2026",
     "date_end": "29-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:31:51Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "1d9ba98f75377924baafab23db3844b273347d6d4605c276aa3009973d83f5f7",
+    "revision_fingerprint": "7645acee758e2dc1f691ba497b7ddbef95e08159c84a859cdc2b1d90578641c3",
     "revision_snapshot": {
       "date": "14-09-2026",
       "date_end": "29-09-2026",
       "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "201",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "a774f18e9ae2e6aee237992b5039342a13a0a5a1c5c9933995269ddbbcfc772b"
@@ -5194,22 +5194,22 @@
         "23f493756b142ccd"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "c63faac59f646956": {
     "notified": true,
     "date": "15-09-2026",
     "date_end": "30-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:31:51Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "208a66c15b0c7fc730341ca5d6fd5173d26f267ed9fa811aa681186f5660cdc8",
+    "revision_fingerprint": "8922172272ab2b4b7fbaf138b7988b2e8a99cc8582ce2a461ccaee2f7a24750b",
     "revision_snapshot": {
       "date": "15-09-2026",
       "date_end": "30-09-2026",
       "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "203",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 2,
       "attachment_sha256": [
         "995b8fb84b6e1695ad2045f12e237c20721f4eef111480bd86c785515c256f55",
@@ -5220,7 +5220,7 @@
         "943d57da3b0b0cad"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "6e898efae4a608e2": {
     "notified": true,
@@ -5285,15 +5285,15 @@
     "date": "17-09-2026",
     "date_end": "02-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:31:51Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "8cd9db1e052e452209916080ffc0622f99fafa8ef0a6d8e2d0fc648cc7aa8b3f",
+    "revision_fingerprint": "f8c1c9c71a2de4cd19238ad1ea1b1a90f7156944ca6c58cfb707a646cfe0af60",
     "revision_snapshot": {
       "date": "17-09-2026",
       "date_end": "02-10-2026",
       "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
       "act_number": "38",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "0d8beeebdabd737d2316b564243f610a8738992cc8ce9908a35baff81c1cbcc1"
@@ -5302,22 +5302,22 @@
         "6fc9c74e404279af"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "f3a6d71baa7150f6": {
     "notified": true,
     "date": "17-09-2026",
     "date_end": "02-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:31:51Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "ab887288a9513efc46fcaeb2be419e357fa373ba2cb46af6362d1bfc407a3f27",
+    "revision_fingerprint": "fb234b2b2cbaa5471f6c152529400f30ab71f18919e1ba5f7c05265013aa7370",
     "revision_snapshot": {
       "date": "17-09-2026",
       "date_end": "02-10-2026",
       "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
       "act_number": "53",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "a512bc5a91b424ac31ba409e7181dc98a4bfd722e1a2aee2b936b493c6b591be"
@@ -5326,7 +5326,7 @@
         "a2df5075ea22927c"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "5b79b12d76589737": {
     "notified": true,
@@ -5388,14 +5388,14 @@
     "date_end": "07-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-09-24T11:15:36Z",
-    "revision_fingerprint": "2bb6baa8c5a08b138abb94cd1ab7576f5f8b9dd908c26c033614702f4dc1fc94",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
+    "revision_fingerprint": "4554723a2e65587119f92aa821be0e8027d2f50d9fdce696d2eb4454b430035d",
     "revision_snapshot": {
       "date": "22-09-2026",
       "date_end": "07-10-2026",
       "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
       "act_number": "55",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "e0b08a5cb6f092b276c71b14ce63a019d955bc7898ccc1e285e6e51911b14aea"
@@ -5404,7 +5404,7 @@
         "8d86e5e3900fd1d6"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "94ef968f6c37731b": {
     "notified": true,
@@ -5412,14 +5412,14 @@
     "date_end": "07-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-09-24T11:15:36Z",
-    "revision_fingerprint": "bb1e8d0db3927f7f2d0e5da165093998841bd2ce9f1a81afc4862e91cb3410db",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
+    "revision_fingerprint": "cc59f05d31a4c36907c445b9093e117d904369b40d7e4fa7aa6aeee908987c4a",
     "revision_snapshot": {
       "date": "22-09-2026",
       "date_end": "07-10-2026",
       "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
       "act_number": "54",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "e2379877da26addebfeafa11dafd957e8bd8e152cef0daef2d689a76e3d2c0b9"
@@ -5428,22 +5428,22 @@
         "d0cc6f417247e26f"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "bc4412f309eaa14c": {
     "notified": true,
     "date": "22-09-2026",
     "date_end": "07-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:15:36Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "59312a385979a599b57503f5751507065a1de69c57f628d832364e7e27bd7e41",
+    "revision_fingerprint": "b151c7ef94ac91fb648956e3f547a45455d16d9033fd8d3304cc34866cf2b005",
     "revision_snapshot": {
       "date": "22-09-2026",
       "date_end": "07-10-2026",
       "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
       "act_number": "56",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "2e2abd8428cba6236fafd896b461b52d54f085d977eea4392a5ba316e0df3c69"
@@ -5452,22 +5452,22 @@
         "62acf7e5b54237d5"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "88c7c1d60e562d60": {
     "notified": true,
     "date": "22-09-2026",
     "date_end": "07-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:15:36Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "bc5d16bac47a79c9e175d3036253bb718e8c4ebe323fe1ee6d17bfa21de70541",
+    "revision_fingerprint": "a9cf13fa3d391e0ab02a62a7f7602ade5ca14f983afe00399c0642ef476f207d",
     "revision_snapshot": {
       "date": "22-09-2026",
       "date_end": "07-10-2026",
       "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
       "act_number": "32",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "5256eb7b6c6f7c0bb57aad4610723a2483555b6ac94d6fdafcbb381e927a4629"
@@ -5476,22 +5476,22 @@
         "1a202579c266a0ec"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "ca4096f59e063f8d": {
     "notified": true,
     "date": "23-09-2026",
     "date_end": "08-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:15:36Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "e6c27fa386e90642a49c9c16ea9c2f959992f18315c309cba30fe74f697e1c34",
+    "revision_fingerprint": "1c273de3c3bb58122fbf39afc8d91c79f7b6a3b5c27e6f397b04ca7ccf482f1b",
     "revision_snapshot": {
       "date": "23-09-2026",
       "date_end": "08-10-2026",
       "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "207",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "342fc549cda1d72dc6834a2fa0aa3881b19924050d6b11985e43d3992f63f9db"
@@ -5500,7 +5500,7 @@
         "6e315a3df9e86379"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "da4c99966fc656a9": {
     "notified": true,
@@ -5535,15 +5535,15 @@
     "date": "23-09-2026",
     "date_end": "08-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T11:15:36Z",
+    "last_revision_check_at": "2026-09-24T12:34:21Z",
     "delivery_pending": false,
-    "revision_fingerprint": "abfab4924a63e47df16d03336e6ac69ffc060348b0b98f627552c8746e98c56c",
+    "revision_fingerprint": "3426578a38b2df4b7b17db4f0c5011e9fdf2c3e7dfc90600dccb538136ad6afc",
     "revision_snapshot": {
       "date": "23-09-2026",
       "date_end": "08-10-2026",
       "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "210",
-      "register_number": "",
+      "register_number": "0",
       "attachment_count": 1,
       "attachment_sha256": [
         "557811112d139416bcecc75ae05b5f10b3badc0668ee13420fc7f8cd255c2013"
@@ -5552,7 +5552,7 @@
         "e7e0959bc497255c"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "2061456df0837721": {
     "notified": true,
