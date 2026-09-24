@@ -1,0 +1,538 @@
+{
+  "duplicates": [
+    {
+      "duplicate": "0370d3330e62b8f2",
+      "canonical": "5b79b12d76589737",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "07e8db6477dd7ca1",
+      "canonical": "2a7714eeb54e7bfc",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "0bd3da65ce4fc65a",
+      "canonical": "f7d492bcefbb68d4",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "0dd90b77ba928cd2",
+      "canonical": "35f76338c7b8a72b",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "124b492b8e3ba472",
+      "canonical": "970004ae0d703c71",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "1402b731831d65bb",
+      "canonical": "ea0adc2b8d66f425",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "144d5f0fbd2e2aa3",
+      "canonical": "b9b8090ae542db33",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "14a8e003daba121c",
+      "canonical": "b190cd2aab055fb5",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "150895dc7abb90c6",
+      "canonical": "46c65d906aaaa464",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "1a00c2a171ac424d",
+      "canonical": "9eab1e4404931a11",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "1d8d39142aaa8a96",
+      "canonical": "ca1325171763ce44",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "1f1372a120495a68",
+      "canonical": "e53c927b0e12a6ea",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "2061456df0837721",
+      "canonical": "da4c99966fc656a9",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "2633ef7ab9ceb730",
+      "canonical": "4159f76e4609e9d4",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "26f222a0774d6e7e",
+      "canonical": "bda9605ff64ca153",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "282612b8a609487f",
+      "canonical": "e346a02686888efd",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "29cebd159af37ce8",
+      "canonical": "857f8b0a7fcc00cf",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "2c288f3d83932668",
+      "canonical": "0a4315b0938a2038",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "2c3e386b7fd72a93",
+      "canonical": "6e898efae4a608e2",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "2ddcf23a050e91c3",
+      "canonical": "826d6b0c4399532c",
+      "basis": "exact old AND new SHA256 ID reconstruction from live title/publication/type + identical historical snapshot"
+    },
+    {
+      "duplicate": "2e2c7a15d9049fee",
+      "canonical": "62de63a6fb349cbf",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "2e381b3828d64d57",
+      "canonical": "c2049a4eb7c72e82",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "2f61a5dd99994587",
+      "canonical": "18ec09c8ec84a02f",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "315cfc1a59950a59",
+      "canonical": "63eb4228ed7b1efa",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "3f6875628ead6b71",
+      "canonical": "e5f4bfb56032a756",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "40f8d198b5c4e706",
+      "canonical": "8453ced01ce20ddd",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "45a58c4c18539644",
+      "canonical": "55745ed1fb416144",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "46aae13809339d03",
+      "canonical": "5c62baa3fb28df0b",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "47f7fad07597447d",
+      "canonical": "615e4a017fe08a86",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "4a88da8332ca138f",
+      "canonical": "2c70a87d74a46df7",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "4ae17a408b9821c3",
+      "canonical": "5437464b62271211",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "4b0c7197ec91cd34",
+      "canonical": "aef1a8f97c355d4f",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "5098641654a3cd24",
+      "canonical": "390b8e769764f8bb",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "50ee9142beede77f",
+      "canonical": "b6e50a08d78fcffd",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "568310579d363e46",
+      "canonical": "ad606c4424317336",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "58b8e4a0dd176f06",
+      "canonical": "1b8186a3dc99ba0d",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "5e6c180cd9b4b159",
+      "canonical": "959bbec47b85c8f2",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "605d015c4fbc8e8c",
+      "canonical": "55b4ab2c30640db0",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "609d806dd41769d3",
+      "canonical": "1561e1641f800df3",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "6156595e594a57cc",
+      "canonical": "9acb2d51d2750e55",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "61c36d20d91fc4f7",
+      "canonical": "eb3ae93f44552d86",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "6290b4becb652b1c",
+      "canonical": "4cdc4ef0f663d0c0",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "64299675d65711a3",
+      "canonical": "ef031ed9bfb85dfe",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "649a8c4884f3b539",
+      "canonical": "1637507011ee6c56",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "65bbb03880dd9063",
+      "canonical": "d30ffde4a9bbc779",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "65d0877e386f26fd",
+      "canonical": "1bd56505b7e44665",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "6bb75a3c0499e6e3",
+      "canonical": "b6e88a4e6a3e5670",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "6ddd5d4d39b98ad3",
+      "canonical": "6e9b9b33b491d130",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "6e23faf55e9c749e",
+      "canonical": "31590772c7cd8256",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "6fe0e0d53cdd88cf",
+      "canonical": "28670eb912f0606d",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "72554f2fb89da8d4",
+      "canonical": "3e2fecc830ebe116",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "7776620029bb4163",
+      "canonical": "ace07fd2ea3a31bc",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "7a84687b4d8ce9a3",
+      "canonical": "1faa4da028f986df",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "7f30da3c74202541",
+      "canonical": "e81babcd37b6c182",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "80e9d5ae212c0f9f",
+      "canonical": "f720f106861b0bc2",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "84bb217771ae340d",
+      "canonical": "9efbe37c3b3a5c5f",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "85992054ac3b8be0",
+      "canonical": "2850cd8bfaef24c3",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "8a5254ee2b23eaf7",
+      "canonical": "c7ac136dd9476d1d",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "8b4ab1d8e8485111",
+      "canonical": "05fbdd5824de8230",
+      "basis": "exact old AND new SHA256 ID reconstruction from live title/publication/type + identical historical snapshot"
+    },
+    {
+      "duplicate": "8bdf21f4cb12e269",
+      "canonical": "57672f4493e70a38",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "8cd61553918b92f4",
+      "canonical": "59b4e32586caeddd",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "8fd08117c199d420",
+      "canonical": "4c3217bd4f88ce86",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "90345eee8aaafbe6",
+      "canonical": "b8599ad13ccde98a",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "90c4a749aabc9790",
+      "canonical": "bfaece827f0b12d3",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "93787cc5483a3f68",
+      "canonical": "aa72b71b83128175",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "944896ae17539503",
+      "canonical": "d0fa9eb356e5d091",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "9c8179680aa85edc",
+      "canonical": "91f9260c177ceef1",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "9ffced25d8d642dd",
+      "canonical": "db086483363f79d7",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "a0c0119a581b2a57",
+      "canonical": "73081c97eb51b1ae",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "a67b710331760a19",
+      "canonical": "a9433e900462a8f3",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "aeb80536c00d98ac",
+      "canonical": "ea06613d73371f67",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "af26b42ba4982247",
+      "canonical": "cd3988f026cf33f3",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "aff46d72caf7e61a",
+      "canonical": "6d8f70529e941e1d",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "b47c081b6c9a4d1f",
+      "canonical": "a5e8a143f3838f76",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "b80b5d1e2ce40cfa",
+      "canonical": "3c82544d020fe491",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "bb9e96c28b0d7408",
+      "canonical": "f436e8077142b4ad",
+      "basis": "exact old AND new SHA256 ID reconstruction from live title/publication/type + identical historical snapshot"
+    },
+    {
+      "duplicate": "bc68e40ef628c6bb",
+      "canonical": "88afca4569fbee1f",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "c591a61fd0a42354",
+      "canonical": "938dfac158e9b889",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "c68e50697df039e3",
+      "canonical": "7acdb1729301142a",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "c7ebfce4edd0a14b",
+      "canonical": "bded09426e8dc0fb",
+      "basis": "exact old AND new SHA256 ID reconstruction from live title/publication/type + identical historical snapshot"
+    },
+    {
+      "duplicate": "c8f3a63f237f62cb",
+      "canonical": "1a05b21e5ba661c2",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "c995b5652b6ba8ea",
+      "canonical": "d15bd46f42717ce8",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "cc867df5b19261f3",
+      "canonical": "086e41e1cae96b66",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "ccc1d82100547a5f",
+      "canonical": "a3418f631d4a2421",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "ce104974ff3a21f9",
+      "canonical": "a7ff26bbc26c36a8",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "cf255d582ae87e6e",
+      "canonical": "caa70e9237a03438",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "d315ae8319147e85",
+      "canonical": "cf7cb2aee1667b01",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "d32b7a6ab2addbd4",
+      "canonical": "cd9e383bf6f1372b",
+      "basis": "exact old AND new SHA256 ID reconstruction from live title/publication/type + identical historical snapshot"
+    },
+    {
+      "duplicate": "d80bc1b412f6e198",
+      "canonical": "cf37130c94a031da",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "d934e7d6fdea7ab2",
+      "canonical": "93c19303920bdc94",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "db02dc9f79682011",
+      "canonical": "2b8bff63e2ae4010",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "df23b63f1afe5c8e",
+      "canonical": "2acc60fea73fbd9b",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "dfeee17a9b228c91",
+      "canonical": "e5238e5287fad39c",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "e0472f154e6beb97",
+      "canonical": "096493026f406bd9",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "e668d98f4e785fb2",
+      "canonical": "e0e28a821e01e262",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "e8082d0128442842",
+      "canonical": "0bccc7468399e5ca",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "e94b0e9c97866816",
+      "canonical": "393e6eae0a32ad3e",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "f1b577be43e37811",
+      "canonical": "e20fd1c25895c4d6",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "f50a224ef1c90151",
+      "canonical": "2f476f6a9fc7ed00",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "f8defcb96ffbe228",
+      "canonical": "e6981c97b5af7645",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "fdbbda241b8ceedc",
+      "canonical": "53eb102f4c9a2dca",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    },
+    {
+      "duplicate": "ff3879df1090b2b9",
+      "canonical": "450a8268e0829dd2",
+      "basis": "date/sender/numbers/attachment count/names/SHA256 identical after placeholder normalization"
+    }
+  ],
+  "false_revisions": [
+    "3fbb44ba0249adb2",
+    "1bab1bd28383072a",
+    "bbb7e809c06923a5",
+    "dd8f9f77ee330b3c",
+    "527368df377433c6",
+    "11345c016b674318",
+    "ff0ee28f9991871b",
+    "153c3ec8e0dafc01",
+    "561785735b5ffea5",
+    "dccb8d4f7a383388",
+    "c63faac59f646956",
+    "a3a8cd1ab4ba7375",
+    "f3a6d71baa7150f6",
+    "538c3575587dd54b",
+    "94ef968f6c37731b",
+    "bc4412f309eaa14c",
+    "88c7c1d60e562d60",
+    "ca4096f59e063f8d",
+    "50a732d55e8ee34d"
+  ],
+  "skipped": [],
+  "before_count": 465,
+  "after_count": 363
+}
