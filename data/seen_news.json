@@ -951,5 +951,14 @@
     "description": "AVVISO ALL\u0019UTENZA",
     "notified": true,
     "delivery_pending": false
+  },
+  "197": {
+    "title": "Consegna libri di testo Scuola Primaria",
+    "category": "Notizia",
+    "date": "24-09-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/notizie/novita_197.html",
+    "description": "Consegna libri di testo Scuola Primaria A.S. 2026/2027",
+    "notified": true,
+    "delivery_pending": false
   }
 }
