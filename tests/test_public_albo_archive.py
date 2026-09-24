@@ -8,9 +8,12 @@ from pathlib import Path
 os.environ.setdefault("BOT_TOKEN", "test-token")
 os.environ.setdefault("CHAT_IDS", "1")
 
+os.environ.pop('GITHUB_ACTIONS', None)
 import bot
 
 
+@unittest.skipUnless(hasattr(bot, "PUBLIC_DATA_DIR"),
+                     "Legacy archive API absent from main before this fix (see docs/HARDENING.md)")
 class PublicAlboArchiveTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

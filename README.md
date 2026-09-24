@@ -9,6 +9,9 @@ Il bot gira automaticamente su **GitHub Actions**: non serve un server,
 un Raspberry Pi o un hosting dedicato — GitHub esegue il workflow secondo
 lo scheduling configurato, gratuitamente, nei limiti del piano free.
 
+> Aggiornamento 24/09/2026: identità v2, anti-raffica, deduplicazione Telegram, ricerca e nuovi orari.
+> Vedi [revisione e limiti operativi](docs/HARDENING.md) per configurazione e verifiche.
+
 ---
 
 ## Come funziona
@@ -66,6 +69,8 @@ lo scheduling configurato, gratuitamente, nei limiti del piano free.
 | `/disabbonati_news` | Cancella solo l'iscrizione alle News |
 | `/atti` | Mostra l'elenco completo degli atti in albo, con stato e date. Per gli atti attivi/recenti invia anche i documenti allegati (chiede conferma se già ricevuti) |
 | `/news` | Mostra le ultime 10 news pubblicate sul sito del Comune |
+| `/cerca <testo>` | Cerca negli atti conservati; 5 risultati per pagina |
+| `/cerca_news <testo>` | Cerca nelle news conservate; 5 risultati per pagina |
 | `/controlla` | Forza un controllo immediato di nuovi atti e nuove news (**solo amministratori**) |
 | `/status` | Statistiche del bot (solo amministratori) |
 
@@ -79,12 +84,12 @@ ricevono sempre entrambe le notifiche indipendentemente dall'iscrizione.
 
 Il workflow è definito in `.github/workflows/albo_check.yml`:
 
-- **Scheduling GitHub Actions**: ogni 6 ore (00:00, 06:00, 12:00, 18:00 UTC)
-- **Durata massima per run**: 360 minuti; il processo Python viene chiuso
-  intenzionalmente dopo **357 minuti**. Il timeout usa `SIGINT` per consentire
+- **Scheduling GitHub Actions**: Europe/Rome: 06:57, 12:37, 18:17 (giorno); 00:07, 03:37 (notte)
+- **Durata massima per run**: 355 minuti; il processo Python viene chiuso
+  intenzionalmente dopo **343 minuti di giorno, 55 di notte, 10 con avvio manuale**. Il timeout usa `SIGINT` per consentire
   una chiusura più ordinata e lascia un piccolo margine allo step finale
 - **Polling interno**: dentro ogni run il bot controlla Albo Pretorio e News
-  ogni `INTERVAL_MINUTES` minuti (nel workflow: 15), quindi non aspetta 6 ore
+  ogni `INTERVAL_MINUTES` minuti (nel workflow: 15 di giorno e 30 di notte), quindi non aspetta 6 ore
   tra un controllo effettivo e l'altro
 - **Persistenza dati**: il bot stesso esegue `git commit` + `git push`
   dei file di stato quando aggiorna dati importanti (notifiche, iscritti,

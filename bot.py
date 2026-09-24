@@ -27,6 +27,12 @@ import sys
 import hashlib
 import tempfile
 import threading
+import signal
+import contextvars
+import functools
+from albo_identity import (normalize_field, normalize_number, parse_publication_number,
+    parse_act_number, parse_register_number, legacy_item_id, item_id_v2,
+    normalize_snapshot, find_existing_equivalent_item, flood_reason, _age)
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib.parse import urljoin, urlparse, unquote
@@ -73,6 +79,8 @@ logging.basicConfig(
     handlers=[logging.StreamHandler()],
 )
 log = logging.getLogger(__name__)
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("httpcore").setLevel(logging.WARNING)
 
 
 def _safe_error(error: BaseException | str) -> str:
@@ -197,6 +205,13 @@ BASE_URL = CONFIG["ALBO_URL"]
 # repository privato separato, montato dal workflow tramite BOT_STATE_DIR.
 DATA_DIR = Path(os.environ.get("BOT_STATE_DIR", "data"))
 DATA_DIR.mkdir(parents=True, exist_ok=True)
+ALBO_SAFETY_PATH = DATA_DIR / 'albo_safety.json'
+TELEGRAM_UPDATES_PATH = DATA_DIR / 'telegram_updates.json'
+ALBO_MAX_NEW_PER_CYCLE = max(1, int(os.environ.get('ALBO_MAX_NEW_PER_CYCLE', '30')))
+ALBO_NEW_RATIO = float(os.environ.get('ALBO_NEW_RATIO', '.65'))
+ALBO_RATIO_MIN_ITEMS = max(1, int(os.environ.get('ALBO_RATIO_MIN_ITEMS', '15')))
+ALBO_MAX_OLD_CANDIDATES = max(1, int(os.environ.get('ALBO_MAX_OLD_CANDIDATES', '5')))
+ALBO_NOTIFY_MAX_AGE_DAYS = max(1, int(os.environ.get('ALBO_NOTIFY_MAX_AGE_DAYS', '30')))
 NEWS_URL = CONFIG["NEWS_URL"]
 ORIGIN   = "{uri.scheme}://{uri.netloc}".format(uri=urlparse(BASE_URL))
 ENTE     = "e1396"
@@ -287,6 +302,23 @@ def _release_attachment_spool(size: int):
         _ATTACHMENT_SPOOL_BYTES = max(0, _ATTACHMENT_SPOOL_BYTES - max(0, int(size)))
 
 
+_SPOOL_SCOPE = contextvars.ContextVar('attachment_scope', default=None)
+
+
+def cleanup_spool_scope(func):
+    @functools.wraps(func)
+    async def wrapped(*args, **kwargs):
+        owned = []
+        token = _SPOOL_SCOPE.set(owned)
+        try:
+            return await func(*args, **kwargs)
+        finally:
+            for spool in owned:
+                spool.cleanup()
+            _SPOOL_SCOPE.reset(token)
+    return wrapped
+
+
 class _AttachmentSpool:
     """File temporaneo posseduto dal singolo allegato, idempotente nel cleanup."""
 
@@ -297,6 +329,9 @@ class _AttachmentSpool:
         self.size = int(size)
         self.sha256 = sha256
         self._closed = False
+        scope = _SPOOL_SCOPE.get()
+        if scope is not None:
+            scope.append(self)
 
     def open(self):
         if self._closed:
@@ -374,6 +409,8 @@ MENU_TEXT = (
     "/abbonati\\_news — solo notifiche news\n"
     "/atti — mostra gli atti attuali\n"
     "/news — mostra le ultime news\n"
+    "/cerca <testo> — cerca nello storico atti\n"
+    "/cerca\\_news <testo> — cerca nello storico news\n"
     "/controlla — forza un controllo\n"
     "/status — statistiche bot (solo admin)\n"
     "/start — messaggio di benvenuto"
@@ -524,6 +561,8 @@ def git_commit_and_push(
                 USER_SEEN_NEWS_PATH,
                 NEWS_DB_PATH,
                 SUBSCRIBERS_NEWS_PATH,
+                TELEGRAM_UPDATES_PATH,
+                ALBO_SAFETY_PATH,
             )
             if p.exists()
         ]
@@ -665,6 +704,7 @@ def git_commit_and_push(
                     timeout=90,
                 )
                 if rebase.returncode != 0:
+                    subprocess.run(["git", "-C", repo, "rebase", "--abort"], capture_output=True, timeout=30)
                     log.warning(
                         f"git rebase origin/{target_branch} fallito in {repo}: "
                         f"{_safe_error(rebase.stderr)}"
@@ -699,14 +739,18 @@ def update_item_cache(item: dict, *, push: bool = False) -> bool:
     Restituisce True se il database è cambiato. Di default scrive il file ma
     non pusha subito, così enrich_with_attachments può fare un solo commit finale.
     """
-    h  = item_id(item)
     db = load_db()
+    bind_identity(item, db, item_revision_snapshot(item))
+    h = item_id(item)
+    if h not in db and item_revision_snapshot(item) is None:
+        return False  # Do not create a provisional ID before content reconciliation.
     rec = db.setdefault(h, {"notified": False})
     old = dict(rec)
     rec.setdefault("notified", False)
     rec["date"]     = item.get("date", "")
     rec["date_end"] = item.get("date_end", "")
     rec["expired"]  = item.get("expired")
+    remember_identity(rec, item)
     changed = rec != old
     if changed:
         save_db(db, push=push, message="aggiornamento cache albo [skip ci]")
@@ -717,8 +761,9 @@ def enrich_from_cache(item: dict) -> bool:
     Carica date e expired dalla cache se disponibili.
     Restituisce True se i dati erano in cache (skip MC02), False altrimenti.
     """
-    h  = item_id(item)
     db = load_db()
+    bind_identity(item, db, item_revision_snapshot(item))
+    h = item_id(item)
     if h in db and db[h].get("date"):
         item["date"]     = db[h].get("date", "")
         item["date_end"] = db[h].get("date_end", "")
@@ -834,8 +879,12 @@ def save_user_seen(data: dict, *, push: bool = True):
         git_commit_and_push([str(USER_SEEN_PATH)], message="aggiornamento cronologia utenti [skip ci]")
 
 def get_user_seen_hashes(chat_id: int) -> set:
-    data = load_user_seen()
-    return set(data.get(str(chat_id), []))
+    delivered = set(load_user_seen().get(str(chat_id), []))
+    for key, record in load_db().items():
+        if set(record.get('legacy_ids', [])).intersection(delivered):
+            delivered.add(key)
+    return delivered
+
 
 def mark_user_seen(chat_id: int, hashes: list):
     """Aggiunge una lista di hash atto come 'visti' da questo utente."""
@@ -1033,6 +1082,8 @@ async def fetch_all_pages(
     # Pagine successive
     page = 2
     while has_next_page(r.text):
+        if page > 100:
+            raise IncompleteAlboSnapshot("Limite pagine Albo superato")
         await asyncio.sleep(0.5)
         r = await client.post(
             session_url,
@@ -1096,6 +1147,9 @@ async def fetch_albo_html(
                         on_progress=on_progress,
                         diagnostics=diagnostics,
                     )
+                    identity_db = load_db()
+                    for item in items:
+                        bind_identity(item, identity_db)
                     if detail_selector is not None and items:
                         selected = list(detail_selector(items) or [])
                         if selected:
@@ -1113,7 +1167,7 @@ async def fetch_albo_html(
                 log.warning(
                     f"Errore fetch_albo tentativo {attempt}/{MAX_RETRIES}: {_safe_error(e)}"
                 )
-            except Exception:
+            except BaseException:
                 # Gli errori applicativi dell'arricchimento sono gestiti per
                 # singolo atto. Se qualcosa sfugge, non lasciare spool orfani.
                 cleanup_attachment_files(items)
@@ -1281,9 +1335,9 @@ def detail_identity_matches(item: dict, detail_text: str) -> bool:
     title = normalize(item.get("title", ""))
     detail = normalize(detail_text)
     if not title or not detail:
-        return True
+        return False
     if len(detail.split()) < 5:
-        return True
+        return title in detail
     if len(title) >= 18 and title in detail:
         return True
     tokens = {
@@ -1291,7 +1345,7 @@ def detail_identity_matches(item: dict, detail_text: str) -> bool:
         if len(token) >= 4 and token not in _DETAIL_IDENTITY_STOPWORDS
     }
     if len(tokens) < 3:
-        return True
+        return title in detail
     overlap = len(tokens.intersection(detail.split())) / len(tokens)
     return overlap >= 0.30
 
@@ -1640,6 +1694,9 @@ async def enrich_with_attachments(
             if update_item_cache(item, push=False):
                 cache_updates += 1
             await asyncio.sleep(0.3)
+        except asyncio.CancelledError:
+            cleanup_attachment_files({"allegati": allegati})
+            raise
         except Exception as e:
             cleanup_attachment_files({"allegati": allegati})
             item["allegati"] = []
@@ -1663,15 +1720,27 @@ async def fetch_atti_with_attachments() -> list | None:
 # Parsing lista atti
 # ---------------------------------------------------------------------------
 def item_id(item: dict) -> str:
-    """
-    ID stabile basato su titolo + numero pubblicazione + tipo.
-    NON usa num_riga: è la posizione dell'atto nella sessione Halley
-    corrente, non un ID permanente — può cambiare tra una sessione e
-    l'altra anche per lo stesso identico atto, causando falsi positivi
-    di "atto nuovo" e rinvii di notifiche per atti già visti da anni.
-    """
-    raw = (item.get("title", "") + "|" + item.get("num_pub", "") + "|" + item.get("tipo", "")).encode()
-    return hashlib.sha256(raw).hexdigest()[:16]
+    # Keep established delivery keys; v2 is stored as an alias on old records.
+    return item.get('_canonical_id') or item_id_v2(item)
+
+
+def bind_identity(item, db, snapshot=None):
+    match = find_existing_equivalent_item(item, db, snapshot)
+    if match:
+        item['_canonical_id'] = match
+    return match
+
+
+def remember_identity(record, item):
+    record['identity_version'] = 2
+    aliases = set(record.get('legacy_ids', []))
+    if record.get('primary_id'):
+        aliases.add(record['primary_id'])
+    record['primary_id'] = item_id_v2(item)
+    record['legacy_ids'] = sorted(aliases | {item.get('_legacy_id', legacy_item_id(item))})
+    for key in ('title', 'num_pub', 'tipo', 'sender', 'act_number', 'register_number'):
+        record[key] = item.get(key, '')
+
 
 def _parse_albo_date(value: str | None):
     if not value:
@@ -1761,7 +1830,7 @@ def item_revision_snapshot(item: dict) -> dict | None:
 def item_revision_fingerprint(snapshot: dict | None) -> str:
     if not snapshot:
         return ""
-    raw = json.dumps(snapshot, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    raw = json.dumps(normalize_snapshot(snapshot), ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
     return hashlib.sha256(raw).hexdigest()
 
 
@@ -1772,6 +1841,8 @@ def revision_delivery_key(item_hash: str, fingerprint: str) -> str:
 def revision_changes(previous_snapshot: dict | None, current_snapshot: dict) -> list[str]:
     if not previous_snapshot:
         return []
+    previous_snapshot = normalize_snapshot(previous_snapshot)
+    current_snapshot = normalize_snapshot(current_snapshot)
     changes = []
     if (
         previous_snapshot.get("date") != current_snapshot.get("date")
@@ -1829,7 +1900,8 @@ def parse_albo_html(
         mc02_candidates += 1
 
         h5 = link.find("h5")
-        title = h5.get_text(strip=True) if h5 else link.get_text(strip=True)
+        legacy_title = h5.get_text(strip=True) if h5 else link.get_text(strip=True)
+        title = h5.get_text(" ", strip=True) if h5 else link.get_text(" ", strip=True)
         onclick = link.get("onclick", "")
         nm = re.search(r"\bMC02\s*\(\s*['\"]?(\d+)['\"]?", onclick, re.I)
         num_riga = nm.group(1) if nm else ""
@@ -1858,8 +1930,9 @@ def parse_albo_html(
         seen_keys.add(dedup_key)
 
         num_span = card.find("span", class_="fw-semibold")
-        num_pub = num_span.get_text(strip=True) if num_span else ""
+        legacy_num_pub = num_span.get_text(strip=True) if num_span else ""
         card_text = card.get_text(separator=" ", strip=True)
+        num_pub = parse_publication_number(card_text)
         start_match = re.search(
             r"Pubblicazione\s+dal\s*(\d{2}-\d{2}-\d{4})",
             card_text,
@@ -1878,10 +1951,10 @@ def parse_albo_html(
                 date_end = end_match.group(1)
 
         tipo_match = re.search(r"Tipo:\s*([^|]+?)(?=\s+Mittente:|\s+Atto\s+n\.|$)", card_text, re.I)
+        legacy_tipo = tipo_match.group(1).strip() if tipo_match else ""
+        tipo_match = re.search(r"Tipo:\s*(.+?)(?=\s+(?:Mittente:|Atto\s+n\.|Registro\s+generale|Pubblicazione)|$)", card_text, re.I)
         tipo = tipo_match.group(1).strip() if tipo_match else ""
-        sender_match = re.search(r"Mittente:\s*(.+?)\s+Tipo:", card_text, re.I)
-        act_match = re.search(r"Atto\s+n\.\s*([^\s]+)", card_text, re.I)
-        register_match = re.search(r"Registro\s+generale\s+n\.\s*([^\s]+)", card_text, re.I)
+        sender_match = re.search(r"Mittente:\s*(.+?)(?=\s+(?:Tipo:|Atto\s+n\.|Registro\s+generale|Pubblicazione)|$)", card_text, re.I)
 
         expired = None
         if date_end:
@@ -1900,8 +1973,9 @@ def parse_albo_html(
             "tipo": tipo,
             "num_pub": num_pub,
             "sender": sender_match.group(1).strip() if sender_match else "",
-            "act_number": act_match.group(1).strip() if act_match else "",
-            "register_number": register_match.group(1).strip() if register_match else "",
+            "act_number": parse_act_number(card_text),
+            "register_number": parse_register_number(card_text),
+            "_legacy_id": legacy_item_id(dict(title=legacy_title, num_pub=legacy_num_pub, tipo=legacy_tipo)),
             "allegati": [],
         })
 
@@ -2440,6 +2514,7 @@ async def cmd_disabbonati_news(update: Update, context: ContextTypes.DEFAULT_TYP
         parse_mode=ParseMode.MARKDOWN
     )
 
+@cleanup_spool_scope
 async def cmd_atti(update: Update, context: ContextTypes.DEFAULT_TYPE):
     msg = await update.message.reply_text("⏳ Recupero atti, dettagli e allegati...")
     diagnostics: dict = {}
@@ -2634,6 +2709,7 @@ async def cmd_atti(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         await update.message.reply_text(ending + MENU_TEXT, parse_mode=ParseMode.MARKDOWN)
 
+@cleanup_spool_scope
 async def cmd_atti_resend_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Gestisce la risposta al bottone 'Vuoi che te li rimandi?'."""
     query = update.callback_query
@@ -2734,6 +2810,80 @@ async def cmd_news(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text("✅ Fine." + MENU_TEXT, parse_mode=ParseMode.MARKDOWN)
 
+_search_sessions = {}
+
+
+def search_text(value):
+    import unicodedata
+    return ''.join(c for c in unicodedata.normalize('NFKD', normalize_field(value))
+                   if not unicodedata.combining(c))
+
+
+def search_records(db, query):
+    needle = search_text(query)
+    return [dict(record, _id=key) for key, record in db.items()
+            if needle and needle in search_text(' '.join(str(record.get(k, ''))
+            for k in ('title', 'sender', 'num_pub', 'tipo', 'description', 'category')))]
+
+
+def render_search_page(records, page, ref):
+    last = max(0, (len(records) - 1) // 5)
+    page = min(max(page, 0), last)
+    lines = [f'Risultati nello storico disponibile al bot · pagina {page + 1}/{last + 1}']
+    for record in records[page * 5:page * 5 + 5]:
+        lines.append(escape_html(f"{record.get('date', '')} · {record.get('title', '')[:500]}"))
+    buttons = []
+    if page:
+        buttons.append(InlineKeyboardButton('Indietro', callback_data=f'search:{ref}:{page - 1}'))
+    if page < last:
+        buttons.append(InlineKeyboardButton('Avanti', callback_data=f'search:{ref}:{page + 1}'))
+    return '\n\n'.join(lines), InlineKeyboardMarkup([buttons]) if buttons else None
+
+
+async def _search_command(update, context, news=False):
+    query = ' '.join(context.args).strip()
+    if not query:
+        await update.message.reply_text('Usa /cerca_news <testo>' if news else 'Usa /cerca <testo>')
+        return
+    records = search_records(load_news_db() if news else load_db(), query)
+    if not records:
+        await update.message.reply_text('La ricerca non risulta nello storico disponibile al bot.')
+        return
+    now = datetime.now(timezone.utc).timestamp()
+    for key, session in list(_search_sessions.items()):
+        if session['expires'] <= now:
+            _search_sessions.pop(key, None)
+    if len(_search_sessions) >= 100:
+        _search_sessions.pop(next(iter(_search_sessions)))
+    ref = secrets.token_urlsafe(9)
+    _search_sessions[ref] = dict(chat_id=update.effective_chat.id, records=records, expires=now + 1800)
+    text, keyboard = render_search_page(records, 0, ref)
+    await update.message.reply_text(text, parse_mode=ParseMode.HTML, reply_markup=keyboard)
+
+
+async def cmd_cerca(update, context):
+    await _search_command(update, context)
+
+
+async def cmd_cerca_news(update, context):
+    await _search_command(update, context, news=True)
+
+
+async def cmd_search_page(update, context):
+    query = update.callback_query
+    _, ref, page = query.data.split(':')
+    session = _search_sessions.get(ref)
+    if not session or session['chat_id'] != update.effective_chat.id or session['expires'] <= datetime.now(timezone.utc).timestamp():
+        await query.answer('Ricerca scaduta o appartenente a un’altra chat.', show_alert=True)
+        return
+    await query.answer()
+    text, keyboard = render_search_page(session['records'], int(page), ref)
+    try:
+        await query.edit_message_text(text, parse_mode=ParseMode.HTML, reply_markup=keyboard)
+    except Exception as error:
+        log.warning('Paginazione ricerca: %s', _safe_error(error))
+
+
 async def cmd_controlla(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Forza un controllo immediato usando la stessa logica produttiva del polling."""
     if not is_admin(update.effective_chat.id):
@@ -2778,6 +2928,8 @@ async def cmd_status(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 async def cmd_unknown(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if not update.message:
+        return
     await update.message.reply_text("Non riconosco questo messaggio." + MENU_TEXT, parse_mode=ParseMode.MARKDOWN)
 
 # ---------------------------------------------------------------------------
@@ -2787,6 +2939,7 @@ _ALBO_CHECK_LOCK = asyncio.Lock()
 _NEWS_CHECK_LOCK = asyncio.Lock()
 
 
+@cleanup_spool_scope
 async def run_check(bot: Bot) -> dict:
     """Serializza i controlli Albo per evitare doppioni tra loop e /controlla."""
     async with _ALBO_CHECK_LOCK:
@@ -2797,12 +2950,37 @@ async def _run_check_albo(bot: Bot) -> dict:
     """Controlla nuovi atti, retry e revisioni di atti già notificati."""
     now = datetime.now(timezone.utc)
     now_iso = now.isoformat(timespec="seconds").replace("+00:00", "Z")
+    if not git_commit_and_push():
+        log.error('SAFETY STOP: stato locale non sincronizzato; invii sospesi.')
+        return {'ok': False, 'new': 0, 'updated': 0, 'total': 0, 'failed': 0}
     db = load_db()
     seen = {h for h, rec in db.items() if rec.get("notified", True)}
     enrichment_items: list[dict] = []
+    diagnostics = {}
+    safety_state = json.loads(ALBO_SAFETY_PATH.read_text()) if ALBO_SAFETY_PATH.exists() else {}
+    migration = not safety_state.get('identity_v2_ready')
+    safety_reason = ''
+    reconciled = 0
+    suppressed_revisions = 0
+    candidate_count = 0
+    revision_due_count = 0
+
 
     def select_enrichment_items(current_items: list) -> list:
+        nonlocal safety_reason, reconciled, candidate_count, revision_due_count
+        for item in current_items:
+            if bind_identity(item, db):
+                reconciled += 1
         new_now = [i for i in current_items if item_id(i) not in seen]
+        candidate_count = len(new_now)
+        safety_reason = flood_reason(current_items, new_now,
+            max_new=ALBO_MAX_NEW_PER_CYCLE, ratio=ALBO_NEW_RATIO,
+            ratio_min=ALBO_RATIO_MIN_ITEMS, old_count=ALBO_MAX_OLD_CANDIDATES,
+            max_age=ALBO_NOTIFY_MAX_AGE_DAYS, today=now.date())
+        if diagnostics.get('unreadable_pages') or diagnostics.get('skipped_cards', 0) > max(2, len(current_items) * .1):
+            safety_reason = 'SAFETY STOP: qualità dello snapshot Albo insufficiente.'
+        if safety_reason:
+            return []
         pending_now = [
             i for i in current_items
             if item_id(i) in seen and db.get(item_id(i), {}).get("delivery_pending", False)
@@ -2828,8 +3006,11 @@ async def _run_check_albo(bot: Bot) -> dict:
             )
         )
         revision_due = revision_due[:REVISION_RECHECK_MAX_ITEMS]
+        revision_due_count = len(revision_due)
 
-        selected = merge_item_groups(new_now, pending_now, revision_due)
+        new_details = [i for i in new_now if _age(i, now.date()) is not None
+                       and 0 <= _age(i, now.date()) <= ALBO_NOTIFY_MAX_AGE_DAYS]
+        selected = merge_item_groups(new_details, pending_now, revision_due)
         enrichment_items[:] = selected
         if selected:
             log.info(
@@ -2843,6 +3024,7 @@ async def _run_check_albo(bot: Bot) -> dict:
         detail_selector=select_enrichment_items,
         force_detail=True,
         push_cache=False,
+        diagnostics=diagnostics,
     )
     touch_last_check()
 
@@ -2850,11 +3032,46 @@ async def _run_check_albo(bot: Bot) -> dict:
         log.error("Fetch albo fallito — skip ciclo.")
         return {"ok": False, "new": 0, "updated": 0, "total": len(seen), "failed": 0}
 
+    if not items and db:
+        safety_reason = 'SAFETY STOP: elenco Albo vuoto inatteso; baseline conservata.'
+    if safety_reason:
+        log.error(safety_reason)
+        # Persist the diagnostic latch before sending it, including across restarts.
+        if not safety_state.get('last_stop'):
+            safety_state['last_stop'] = safety_reason
+            _atomic_write_text(ALBO_SAFETY_PATH, json.dumps(safety_state))
+            if git_commit_and_push([str(ALBO_SAFETY_PATH)]):
+                for admin in CONFIG['ADMIN_IDS']:
+                    try:
+                        await bot.send_message(chat_id=admin, text=safety_reason)
+                    except Exception as error:
+                        log.warning('Diagnostica admin fallita: %s', _safe_error(error))
+        cleanup_attachment_files(items)
+        return {'ok': False, 'new': 0, 'updated': 0, 'total': len(seen), 'failed': 0}
+
     # enrich_with_attachments può aver aggiornato la cache date: ripartiamo dal
     # DB più recente prima di confrontare le revisioni.
     db = load_db()
     db_changed = False
-    new_items = [i for i in items if item_id(i) not in seen]
+    for item in items:
+        # Enrichment may have resolved a legacy record by its content hashes.
+        bind_identity(item, db, item_revision_snapshot(item))
+    seen = {h for h, rec in db.items() if rec.get('notified', True)}
+    new_items = []
+    for item in items:
+        h = item_id(item)
+        rec = db.setdefault(h, {'notified': False})
+        remember_identity(rec, item)
+        if h not in seen:
+            age = _age(item, now.date())
+            if migration or age is None or age < 0 or age > ALBO_NOTIFY_MAX_AGE_DAYS:
+                rec['notified'] = True
+                rec['baseline_reason'] = 'identity_migration' if migration else 'historical_or_unknown_date'
+                seen.add(h)
+                db_changed = True
+            else:
+                new_items.append(item)
+    db_changed = True
     pending_initial = []
     revision_items = []
 
@@ -2872,9 +3089,23 @@ async def _run_check_albo(bot: Bot) -> dict:
         # revisione. Le revisioni usano una delivery-key diversa dal solo hash.
         if rec.get("delivery_pending", False):
             if rec.get("pending_kind") == "revision":
+                if not snapshot or not fingerprint:
+                    continue
+                changes = revision_changes(rec.get('revision_snapshot'), snapshot)
+                # Same pending version may already have reached some recipients.
+                if not changes and fingerprint != rec.get('pending_version'):
+                    rec['delivery_pending'] = False
+                    for key in ('pending_kind', 'pending_version', 'pending_revision_changes'):
+                        rec.pop(key, None)
+                    suppressed_revisions += 1
+                    db_changed = True
+                    continue
                 item["_notification_kind"] = "revision"
-                item["_revision_hash"] = fingerprint or str(rec.get("pending_version") or "")
-                item["_revision_changes"] = list(rec.get("pending_revision_changes") or ["contenuto dell'atto"])
+                item["_revision_hash"] = fingerprint
+                item["_revision_changes"] = changes or list(rec.get('pending_revision_changes') or [])
+                if not item['_revision_changes']:
+                    log.warning('Revisione pending senza modifica concreta: invio sospeso')
+                    continue
                 revision_items.append(item)
             else:
                 item["_notification_kind"] = "new"
@@ -2900,7 +3131,15 @@ async def _run_check_albo(bot: Bot) -> dict:
             continue
 
         if fingerprint != previous_fp:
-            changes = revision_changes(previous_snapshot, snapshot) or ["contenuto dell'atto"]
+            changes = revision_changes(previous_snapshot, snapshot)
+            if not changes:
+                log.warning('Fingerprint differente ma nessuna modifica sostanziale: notifica soppressa')
+                suppressed_revisions += 1
+                rec['revision_fingerprint'] = fingerprint
+                rec['revision_snapshot'] = normalize_snapshot(snapshot)
+                rec['last_revision_check_at'] = now_iso
+                db_changed = True
+                continue
             item["_notification_kind"] = "revision"
             item["_revision_hash"] = fingerprint
             item["_revision_changes"] = changes
@@ -2916,6 +3155,11 @@ async def _run_check_albo(bot: Bot) -> dict:
             db_changed = True
 
     work_items = merge_item_groups(new_items, pending_initial, revision_items)
+
+    if len(work_items) > ALBO_MAX_NEW_PER_CYCLE:
+        log.error('SAFETY STOP: troppe consegne/revisioni in un ciclo: %s', len(work_items))
+        cleanup_attachment_files(items)
+        return {'ok': False, 'new': 0, 'updated': 0, 'total': len(seen), 'failed': 0}
 
     recipients = get_all_recipients()
     user_seen_data = load_user_seen()
@@ -2940,6 +3184,7 @@ async def _run_check_albo(bot: Bot) -> dict:
         already_delivered = {
             chat_id for chat_id in recipients
             if delivery_key in set(user_seen_data.get(str(chat_id), []))
+            or (kind == 'new' and set(rec.get('legacy_ids', [])).intersection(user_seen_data.get(str(chat_id), [])))
         }
         targets = recipients - already_delivered
 
@@ -2973,7 +3218,7 @@ async def _run_check_albo(bot: Bot) -> dict:
             if failed:
                 rec["pending_kind"] = "revision"
                 rec["pending_version"] = fingerprint
-                rec["pending_revision_changes"] = list(item.get("_revision_changes") or ["contenuto dell'atto"])
+                rec["pending_revision_changes"] = list(item.get("_revision_changes") or [])
             else:
                 rec.pop("pending_kind", None)
                 rec.pop("pending_version", None)
@@ -3006,9 +3251,21 @@ async def _run_check_albo(bot: Bot) -> dict:
                 f"{label.capitalize()} con {len(failed)} consegne in sospeso: "
                 f"{item.get('title', '?')[:80]}"
             )
+        latest_history = load_user_seen()
+        for key, delivered in user_seen_data.items():
+            latest_history[key] = sorted(set(latest_history.get(key, [])) | set(delivered))
+        save_user_seen(latest_history, push=False)
+        latest_records = load_db()
+        latest_records[h] = {**latest_records.get(h, {}), **rec}
+        save_db(latest_records, push=False)
+        if not git_commit_and_push([str(DB_PATH), str(USER_SEEN_PATH)]):
+            raise RuntimeError('Checkpoint consegna fallito: ciclo interrotto per sicurezza')
         await asyncio.sleep(1.5)
 
-    paths_to_push = []
+    safety_state['identity_v2_ready'] = True
+    safety_state.pop('last_stop', None)
+    _atomic_write_text(ALBO_SAFETY_PATH, json.dumps(safety_state))
+    paths_to_push = [str(ALBO_SAFETY_PATH)]
     if user_seen_changed:
         latest_user_seen = load_user_seen()
         for key, hashes in user_seen_data.items():
@@ -3049,6 +3306,10 @@ async def _run_check_albo(bot: Bot) -> dict:
     if updated_count:
         log.info(f"♻️ {updated_count} revisioni di atti notificate.")
 
+    log.info('Albo: online=%s known=%s candidate_new=%s reconciled=%s real_new=%s revision_due=%s real_revisions=%s suppressed_revisions=%s pending=%s failed=%s',
+             len(items), len(seen), candidate_count, reconciled, notified_count,
+             revision_due_count, updated_count, suppressed_revisions,
+             sum(bool(r.get('delivery_pending')) for r in db.values()), failed_deliveries)
     cleanup_attachment_files(items)
     return {
         "ok": failed_deliveries == 0 and git_ok,
@@ -3306,6 +3567,68 @@ async def polling_loop(app: Application):
         except Exception as e:
             log.error(f"Errore loop: {_safe_error(e)}")
 
+def load_telegram_updates():
+    if not TELEGRAM_UPDATES_PATH.exists():
+        return {'last_update_id': None, 'recent_ids': []}
+    state = json.loads(TELEGRAM_UPDATES_PATH.read_text(encoding='utf-8'))
+    if not isinstance(state, dict) or not isinstance(state.get('recent_ids'), list):
+        raise RuntimeError('Stato update Telegram invalido: polling fermato per sicurezza')
+    return state
+
+
+def claim_telegram_update(update_id):
+    state = load_telegram_updates()
+    if update_id in state['recent_ids']:
+        return False
+    last = state.get('last_update_id')
+    last_at = datetime.fromisoformat(state['last_claimed_at']) if state.get('last_claimed_at') else None
+    # Telegram may choose a random ID after a week without updates.
+    if last is not None and update_id <= last and last_at and datetime.now(timezone.utc) - last_at < timedelta(days=7):
+        return False
+    state.update(last_update_id=update_id, last_claimed_at=datetime.now(timezone.utc).isoformat(),
+                 recent_ids=(state['recent_ids'] + [update_id])[-512:], in_progress=update_id)
+    _atomic_write_text(TELEGRAM_UPDATES_PATH, json.dumps(state))
+    # Claim must reach Git before side effects. On failure, stop without acknowledging.
+    if not git_commit_and_push([str(TELEGRAM_UPDATES_PATH)]):
+        raise RuntimeError('Claim Telegram non persistito: elaborazione sospesa')
+    return True
+
+
+async def telegram_polling(app, stop):
+    # Own the offset: unlike Updater, acknowledge only after handling and persistence.
+    # No drop_pending_updates: legitimate commands received during downtime survive.
+    await app.bot.delete_webhook(drop_pending_updates=False)
+    offset = None
+    while not stop.is_set():
+        try:
+            updates = await app.bot.get_updates(offset=offset, timeout=25,
+                allowed_updates=['message', 'callback_query'])
+        except Exception as error:
+            log.warning('Long polling Telegram: %s', _safe_error(error))
+            await asyncio.sleep(5)
+            continue
+        for update in updates:
+            if stop.is_set():
+                return
+            if claim_telegram_update(update.update_id):
+                message = update.effective_message
+                timestamp = message.date if message else None
+                command = (message.text or '').split(maxsplit=1)[0].split('@')[0] if message else ''
+                known = {'/start', '/help', '/abbonati', '/disabbonati', '/abbonati_albo', '/disabbonati_albo', '/abbonati_news', '/disabbonati_news', '/atti', '/news', '/controlla', '/status', '/cerca', '/cerca_news'}
+                kind = 'callback' if update.callback_query else command if command in known else 'message'
+                age = int((datetime.now(timezone.utc) - timestamp).total_seconds()) if timestamp else None
+                log.info('Telegram update ricevuto: update_id=%s tipo=%s timestamp=%s age_seconds=%s',
+                         update.update_id, kind, timestamp, age)
+                await app.process_update(update)
+                state = load_telegram_updates()
+                state.pop('in_progress', None)
+                state['last_processed_update_id'] = update.update_id
+                _atomic_write_text(TELEGRAM_UPDATES_PATH, json.dumps(state))
+                if not git_commit_and_push():
+                    raise RuntimeError('Stato Telegram non sincronizzato dopo elaborazione')
+            offset = update.update_id + 1
+
+
 # ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
@@ -3329,16 +3652,38 @@ async def main():
     app.add_handler(CommandHandler("disabbonati_news",  cmd_disabbonati_news))
     app.add_handler(CommandHandler("atti",              cmd_atti))
     app.add_handler(CommandHandler("news",              cmd_news))
+    app.add_handler(CommandHandler("cerca", cmd_cerca))
+    app.add_handler(CommandHandler("cerca_news", cmd_cerca_news))
+    app.add_handler(CallbackQueryHandler(cmd_search_page, pattern=r"^search:[A-Za-z0-9_-]+:[0-9]+$"))
     app.add_handler(CommandHandler("controlla",         cmd_controlla))
     app.add_handler(CommandHandler("status",            cmd_status))
     app.add_handler(CallbackQueryHandler(cmd_atti_resend_callback, pattern=r"^resend:"))
     app.add_handler(MessageHandler(filters.ALL,         cmd_unknown))
 
+    stop = asyncio.Event()
+    loop = asyncio.get_running_loop()
+    for sig in (signal.SIGINT, signal.SIGTERM):
+        signal.signal(sig, lambda *_: loop.call_soon_threadsafe(stop.set))
+    async def handle_error(update, context):
+        log.error('Errore handler Telegram: %s', _safe_error(context.error))
+    app.add_error_handler(handle_error)
     async with app:
         await app.start()
-        await app.updater.start_polling()
-        log.info("Bot in ascolto comandi Telegram + polling automatico...")
-        await polling_loop(app)
+        tasks = [asyncio.create_task(polling_loop(app)), asyncio.create_task(telegram_polling(app, stop))]
+        stop_task = asyncio.create_task(stop.wait())
+        try:
+            done, _ = await asyncio.wait([*tasks, stop_task], return_when=asyncio.FIRST_COMPLETED)
+            for task in done:
+                if task is not stop_task:
+                    task.result()
+        finally:
+            stop.set()
+            for task in [*tasks, stop_task]:
+                task.cancel()
+            await asyncio.gather(*tasks, stop_task, return_exceptions=True)
+            await app.stop()
+            if not git_commit_and_push():
+                log.error('Flush Git finale fallito: conservare lo stato residuo del runner.')
 
 if __name__ == "__main__":
     asyncio.run(main())
