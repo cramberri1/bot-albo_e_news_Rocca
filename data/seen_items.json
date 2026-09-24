@@ -1512,7 +1512,15 @@
     "legacy_ids": [
       "90c4a749aabc9790"
     ],
-    "incident_reconciled_from": "90c4a749aabc9790"
+    "incident_reconciled_from": "90c4a749aabc9790",
+    "identity_version": 2,
+    "primary_id": "v2:ea4db349a1f6f0f81e5af9fb",
+    "title": "Inizio attività di sfrascamento della vegetazione interferente con le linee MT 20 kV e impianti afferenti. PP",
+    "num_pub": "505",
+    "tipo": "RENDE NOTO",
+    "sender": "enel distribuzione spa",
+    "act_number": "",
+    "register_number": ""
   },
   "3fbb44ba0249adb2": {
     "notified": true,
@@ -1537,7 +1545,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:0828540c2e9367745f06b25f",
+    "legacy_ids": [
+      "3fbb44ba0249adb2"
+    ],
+    "title": "Ordinanza Dirigenziale n.8/2026 - Ordinanza chiusura strada comunale \"Via Parco San Giorgio\", divieto temporaneo di transito per lavori di rifacimento della rete idrica",
+    "num_pub": "504",
+    "tipo": "ORDINANZA DIRIGENZIALE",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "8",
+    "register_number": ""
   },
   "1bab1bd28383072a": {
     "notified": true,
@@ -1564,7 +1583,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:092fa25c111a28d389e202dd",
+    "legacy_ids": [
+      "1bab1bd28383072a"
+    ],
+    "title": "Costituzione fondo 2026 per le risorse decentrate del personale non dirigente",
+    "num_pub": "503",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "197",
+    "register_number": ""
   },
   "c2049a4eb7c72e82": {
     "notified": true,
@@ -1594,7 +1624,15 @@
     "legacy_ids": [
       "2e381b3828d64d57"
     ],
-    "incident_reconciled_from": "2e381b3828d64d57"
+    "incident_reconciled_from": "2e381b3828d64d57",
+    "identity_version": 2,
+    "primary_id": "v2:f4d92752939c91eae4c5a394",
+    "title": "Fornitura libri di testo per gli alunni della Scuola Secondaria di primo grado - anno scolastico 2026/2027",
+    "num_pub": "502",
+    "tipo": "AVVISO",
+    "sender": "RESPONSABILE AREA AMMINISTRATIVA FINANZIARIA",
+    "act_number": "",
+    "register_number": ""
   },
   "bbb7e809c06923a5": {
     "notified": true,
@@ -1623,7 +1661,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:006b5ada9a678345a96bc1e7",
+    "legacy_ids": [
+      "bbb7e809c06923a5"
+    ],
+    "title": "Avviso pubblico contenente i criteri per accedere all'assegnazione del beneficio contributo libri, a favore degli alunni che nell'anno scolastico 2026/2027 frequentano la scuola secondaria di primo grado del Comune di Roccabascerana appartenenti a famiglie in condizioni economiche di svantaggio - Approvazione",
+    "num_pub": "501",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "196",
+    "register_number": ""
   },
   "234377e8b4d311da": {
     "notified": true,
@@ -2639,7 +2688,15 @@
     "legacy_ids": [
       "605d015c4fbc8e8c"
     ],
-    "incident_reconciled_from": "605d015c4fbc8e8c"
+    "incident_reconciled_from": "605d015c4fbc8e8c",
+    "identity_version": 2,
+    "primary_id": "v2:d009360711abc3601f5eec39",
+    "title": "Reperibilità settembre 26 Dip.to Prevenzione ASL AV",
+    "num_pub": "457",
+    "tipo": "REPERIBILITA'  DEL PERSONALE",
+    "sender": "ASL DIPARTIMENTO E PREVENZIONE",
+    "act_number": "",
+    "register_number": ""
   },
   "6e9b9b33b491d130": {
     "notified": true,
@@ -2667,7 +2724,15 @@
     "legacy_ids": [
       "6ddd5d4d39b98ad3"
     ],
-    "incident_reconciled_from": "6ddd5d4d39b98ad3"
+    "incident_reconciled_from": "6ddd5d4d39b98ad3",
+    "identity_version": 2,
+    "primary_id": "v2:7cc64cde2b64fc573aafa420",
+    "title": "Ord. Sid. n. 18/2026 - deroga ai limiti orari delle emissioni sonore per il periodo estivo 2026 - autorizzazione alla diffusione di musica e intrattenimenti sonori fino alle ore 01:00 del giorno successivo sull'intero territorio comunale",
+    "num_pub": "400",
+    "tipo": "DECRETO SINDACALE",
+    "sender": "VICESINDACO FUCCI ALBINO",
+    "act_number": "",
+    "register_number": ""
   },
   "b9b8090ae542db33": {
     "notified": true,
@@ -2695,7 +2760,15 @@
     "legacy_ids": [
       "144d5f0fbd2e2aa3"
     ],
-    "incident_reconciled_from": "144d5f0fbd2e2aa3"
+    "incident_reconciled_from": "144d5f0fbd2e2aa3",
+    "identity_version": 2,
+    "primary_id": "v2:c54d2c85a484d61b2279b859",
+    "title": "Ordinanza contingibile ed urgente in materia di circolazione stradale: chiusura totale al traffico veicolare e pedonale del tratto stradale di Via A. da Brescia dal civico n. 107 (limite del nucleo abitato immobile sito al civico n. 107, abitazione P",
+    "num_pub": "366",
+    "tipo": "ORDINANZA SINDACALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "dd8f9f77ee330b3c": {
     "notified": true,
@@ -2720,7 +2793,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:801af5f9bbcc48d3129206ca",
+    "legacy_ids": [
+      "dd8f9f77ee330b3c"
+    ],
+    "title": "ORDINANZA DEL SINDACO N° 14 DEL 18/06/2026. DIVIETO DI INTRODUZIONE DI FIORI FRESCHI E UTILIZZO DI ACQUA NEI PORTAFIORI DEI CIMITERI COMUNALI DURANTE IL PERIODO ESTIVO, DAL 25/06/2026 AL 30/09/2026",
+    "num_pub": "365",
+    "tipo": "ORDINANZA SINDACALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "14",
+    "register_number": ""
   },
   "527368df377433c6": {
     "notified": true,
@@ -2745,7 +2829,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:4171e4bd585138ed27505ebc",
+    "legacy_ids": [
+      "527368df377433c6"
+    ],
+    "title": "Ord. Dir. 5/2026 - Disciplina della circolazione veicolare su via comunale P.zza M. Imbriani, altezza civico n. 144 della località Roccabascerana di questo Comune",
+    "num_pub": "358",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "5",
+    "register_number": ""
   },
   "11345c016b674318": {
     "notified": true,
@@ -2770,7 +2865,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:0e4671cae75f6df86ef5c262",
+    "legacy_ids": [
+      "11345c016b674318"
+    ],
+    "title": "Ord. Sind. n. 13/2026 - Applicazione delle misure di prevenzione rischio incendi boschivi in vista del periodo di massima pericolosità per gli incendi boschivi. Decreto Giunta Regionale della Campania n. 212 del 09/06/2026",
+    "num_pub": "356",
+    "tipo": "ORDINANZA SINDACALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "13",
+    "register_number": ""
   },
   "450a8268e0829dd2": {
     "notified": true,
@@ -2804,7 +2910,15 @@
     "legacy_ids": [
       "ff3879df1090b2b9"
     ],
-    "incident_reconciled_from": "ff3879df1090b2b9"
+    "incident_reconciled_from": "ff3879df1090b2b9",
+    "identity_version": 2,
+    "primary_id": "v2:6139cc1964c214b008334140",
+    "title": "AVVISO PUBBLICO - Per l'accesso ai contributi del Fondo regionale di contrasto all'emergenza abitativa ai sensi della D.G.R. n. 376 del 16/06/2025\" ex D.D. n. 429 del 17/12/2025.",
+    "num_pub": "57",
+    "tipo": "AVVISO",
+    "sender": "RESPONSABILE AREA AMMINISTRATIVA FINANZIARIA",
+    "act_number": "",
+    "register_number": ""
   },
   "ea06613d73371f67": {
     "notified": true,
@@ -2832,7 +2946,15 @@
     "legacy_ids": [
       "aeb80536c00d98ac"
     ],
-    "incident_reconciled_from": "aeb80536c00d98ac"
+    "incident_reconciled_from": "aeb80536c00d98ac",
+    "identity_version": 2,
+    "primary_id": "v2:92613f562e41a57895c8ec4f",
+    "title": "Lavori pubblici di cui al Programma triennale 2026/2028. Avviso pubblico per la costituzione di un elenco aperto di operatori economici Modalità espletamento procedure di affidamento  Albo fornitori e piattaforme di e-procurement.",
+    "num_pub": "788",
+    "tipo": "AVVISO",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "",
+    "register_number": ""
   },
   "2acc60fea73fbd9b": {
     "notified": true,
@@ -2860,7 +2982,15 @@
     "legacy_ids": [
       "df23b63f1afe5c8e"
     ],
-    "incident_reconciled_from": "df23b63f1afe5c8e"
+    "incident_reconciled_from": "df23b63f1afe5c8e",
+    "identity_version": 2,
+    "primary_id": "v2:b0fb4a19d67609041a6cf146",
+    "title": "Decreto Sindacale n.7",
+    "num_pub": "109",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "e0e28a821e01e262": {
     "notified": true,
@@ -2888,7 +3018,15 @@
     "legacy_ids": [
       "e668d98f4e785fb2"
     ],
-    "incident_reconciled_from": "e668d98f4e785fb2"
+    "incident_reconciled_from": "e668d98f4e785fb2",
+    "identity_version": 2,
+    "primary_id": "v2:4dacd20339d43e0977cbf449",
+    "title": "CAUSA CHIUSURA DELL' IMPIANTO DI RICEZIONE DEI RIFIUTI BIODEGRADABILI DI CUCINE E MENSE",
+    "num_pub": "282",
+    "tipo": "AVVISO PUBBLICO",
+    "sender": "SINDACO  COMUNE SEDE",
+    "act_number": "",
+    "register_number": ""
   },
   "096493026f406bd9": {
     "notified": true,
@@ -2916,7 +3054,15 @@
     "legacy_ids": [
       "e0472f154e6beb97"
     ],
-    "incident_reconciled_from": "e0472f154e6beb97"
+    "incident_reconciled_from": "e0472f154e6beb97",
+    "identity_version": 2,
+    "primary_id": "v2:a9c4fab4893f027366299d0d",
+    "title": "ELENCO UNIFICATO GIUDICI POPOLARI DI SECONDO GRADO",
+    "num_pub": "295",
+    "tipo": "ELENCO GENERALE",
+    "sender": "TRIBUNALE AVELLINO",
+    "act_number": "",
+    "register_number": ""
   },
   "88afca4569fbee1f": {
     "notified": true,
@@ -2944,7 +3090,15 @@
     "legacy_ids": [
       "bc68e40ef628c6bb"
     ],
-    "incident_reconciled_from": "bc68e40ef628c6bb"
+    "incident_reconciled_from": "bc68e40ef628c6bb",
+    "identity_version": 2,
+    "primary_id": "v2:9f7231128a5a2149a00f2955",
+    "title": "GARA PER LO SPAZZAMENTO STRADALE, DECORO URBANO, PULIZIA CUNETTE PER REGIMENTAZIONE DELLE ACQUE PIOVANE, TAGLIO SIEPI E PULIZIA CASA COMUNALE. \n\nERRATA CORRIGE",
+    "num_pub": "131",
+    "tipo": "PROCEDURA APERTA",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "",
+    "register_number": ""
   },
   "db086483363f79d7": {
     "notified": true,
@@ -2988,7 +3142,15 @@
     "legacy_ids": [
       "9ffced25d8d642dd"
     ],
-    "incident_reconciled_from": "9ffced25d8d642dd"
+    "incident_reconciled_from": "9ffced25d8d642dd",
+    "identity_version": 2,
+    "primary_id": "v2:d95fe6456946e2ac4442a502",
+    "title": "Bando di selezione n.1 farmacista collaboratore full time a tempo determinato; bando di selezione n. 4 farmacisti collaboratori part-time (20 ore settimanali) a tempo determinato; bando di selezione n. 4 magazzinieri part time (20",
+    "num_pub": "130",
+    "tipo": "BANDO DI CONCORSO",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "e81babcd37b6c182": {
     "notified": true,
@@ -3018,7 +3180,15 @@
     "legacy_ids": [
       "7f30da3c74202541"
     ],
-    "incident_reconciled_from": "7f30da3c74202541"
+    "incident_reconciled_from": "7f30da3c74202541",
+    "identity_version": 2,
+    "primary_id": "v2:eb397a34c1462ee7d4455e13",
+    "title": "Istanza di Autorizzazione per i movimenti di terra finalizzati alla realizzazione di un parcheggio seminterrato su fondo sito in agro di Roccabascerana AV. Ditta rich. Todin",
+    "num_pub": "104",
+    "tipo": "RICHIESTA AUTORIZZAZIONE ART.23 L.R.11/96",
+    "sender": "COMUNITA MONTANA DEL PARTENIO",
+    "act_number": "",
+    "register_number": ""
   },
   "857f8b0a7fcc00cf": {
     "notified": true,
@@ -3048,7 +3218,15 @@
     "legacy_ids": [
       "29cebd159af37ce8"
     ],
-    "incident_reconciled_from": "29cebd159af37ce8"
+    "incident_reconciled_from": "29cebd159af37ce8",
+    "identity_version": 2,
+    "primary_id": "v2:86b04fd20bd3e0d25e7d21e0",
+    "title": "Istanza per i movimenti di terra finalizzati alla realizzazione di un fabbricato rurale su fondo in agro del Comune di Roccabascerana AV. Ditta Parrella Pellegrino",
+    "num_pub": "76",
+    "tipo": "RICHIESTA AUTORIZZAZIONE ART.23 L.R.11/96",
+    "sender": "COMUNITA' MONTANA PARTENIO-VALLO DI LAURO",
+    "act_number": "",
+    "register_number": ""
   },
   "1faa4da028f986df": {
     "notified": true,
@@ -3076,7 +3254,15 @@
     "legacy_ids": [
       "7a84687b4d8ce9a3"
     ],
-    "incident_reconciled_from": "7a84687b4d8ce9a3"
+    "incident_reconciled_from": "7a84687b4d8ce9a3",
+    "identity_version": 2,
+    "primary_id": "v2:27adccdd4b6d91b27ec40751",
+    "title": "Istanza di Autorizzazione per i movimenti di terra finalizzati alla realizzazione di un parcheggio seminterrato su fondo sito in agro del Comune di Roccabascerana AV. Ditta",
+    "num_pub": "54",
+    "tipo": "RICHIESTA AUTORIZZAZIONE ART.23 L.R.11/96",
+    "sender": "COMUNITA' MONTANA PARTENIO-VALLO DI LAURO",
+    "act_number": "",
+    "register_number": ""
   },
   "5437464b62271211": {
     "notified": true,
@@ -3116,7 +3302,15 @@
     "legacy_ids": [
       "4ae17a408b9821c3"
     ],
-    "incident_reconciled_from": "4ae17a408b9821c3"
+    "incident_reconciled_from": "4ae17a408b9821c3",
+    "identity_version": 2,
+    "primary_id": "v2:88034301237c8b21cb5063c2",
+    "title": "Richiesta di Pubblicazione all'Albo Pretorio del Comune. Istanza per i movimenti di terra finalizzati alla realizzazione di un vigneto in agro del Comune di Roccabascerana AV. Ditta Barbati Veronica.",
+    "num_pub": "446",
+    "tipo": "RICHIESTA AUTORIZZAZIONE ART.23 L.R.11/96",
+    "sender": "COMUNITA' MONTANA PARTENIO-VALLO DI LAURO",
+    "act_number": "",
+    "register_number": ""
   },
   "d30ffde4a9bbc779": {
     "notified": true,
@@ -3144,7 +3338,15 @@
     "legacy_ids": [
       "65bbb03880dd9063"
     ],
-    "incident_reconciled_from": "65bbb03880dd9063"
+    "incident_reconciled_from": "65bbb03880dd9063",
+    "identity_version": 2,
+    "primary_id": "v2:31b7af869ae1aa00c50f5aae",
+    "title": "presa d'atto partecipazione alla iniziativa \"progetto sportello di aascolto\"",
+    "num_pub": "148",
+    "tipo": "AVVISO",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "",
+    "register_number": ""
   },
   "e53c927b0e12a6ea": {
     "notified": true,
@@ -3180,7 +3382,15 @@
     "legacy_ids": [
       "1f1372a120495a68"
     ],
-    "incident_reconciled_from": "1f1372a120495a68"
+    "incident_reconciled_from": "1f1372a120495a68",
+    "identity_version": 2,
+    "primary_id": "v2:3af1057b7eb061d10ea46ada",
+    "title": "reperibilità febbraio 17 Dip.to Prevenzione ASL AV",
+    "num_pub": "36",
+    "tipo": "REPERIBILITA'  DEL PERSONALE",
+    "sender": "DIPARTIMENTO PREVENZIONE ASL-AV",
+    "act_number": "",
+    "register_number": ""
   },
   "0a4315b0938a2038": {
     "notified": true,
@@ -3208,7 +3418,15 @@
     "legacy_ids": [
       "2c288f3d83932668"
     ],
-    "incident_reconciled_from": "2c288f3d83932668"
+    "incident_reconciled_from": "2c288f3d83932668",
+    "identity_version": 2,
+    "primary_id": "v2:9a24a4a775a7d0689647d187",
+    "title": "Verbale sorteggio manistazione di interesse \"all'affidamento del servizio di manutenzione  delle  aree  verdi pubbliche, decoro urbano e della pulizia dei locali comunali\".",
+    "num_pub": "412",
+    "tipo": "VERBALE",
+    "sender": "ASSESSORE RESPONSABILE UTC FUCCI ALBINO",
+    "act_number": "",
+    "register_number": ""
   },
   "a9433e900462a8f3": {
     "notified": true,
@@ -3236,7 +3454,15 @@
     "legacy_ids": [
       "a67b710331760a19"
     ],
-    "incident_reconciled_from": "a67b710331760a19"
+    "incident_reconciled_from": "a67b710331760a19",
+    "identity_version": 2,
+    "primary_id": "v2:8cafd9f77eefe49ca98aee3d",
+    "title": "VERBALE DI SELEZIONE DELLE DITTE DA SORTEGGIARE PER LA PROCEDURA NEGOZIATA",
+    "num_pub": "407",
+    "tipo": "VERBALE",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "",
+    "register_number": ""
   },
   "a7ff26bbc26c36a8": {
     "notified": true,
@@ -3264,7 +3490,15 @@
     "legacy_ids": [
       "ce104974ff3a21f9"
     ],
-    "incident_reconciled_from": "ce104974ff3a21f9"
+    "incident_reconciled_from": "ce104974ff3a21f9",
+    "identity_version": 2,
+    "primary_id": "v2:c1bc8f3cd7bd9f904e0a947d",
+    "title": "INVITO  PER I GIOVANI  PER IL FORUM GIOVANILE",
+    "num_pub": "355",
+    "tipo": "INVITO",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "53eb102f4c9a2dca": {
     "notified": true,
@@ -3292,7 +3526,15 @@
     "legacy_ids": [
       "fdbbda241b8ceedc"
     ],
-    "incident_reconciled_from": "fdbbda241b8ceedc"
+    "incident_reconciled_from": "fdbbda241b8ceedc",
+    "identity_version": 2,
+    "primary_id": "v2:5f9eb7b1a78994468de2fd21",
+    "title": "DECRETO NOMINA RESPONSABILE UTC",
+    "num_pub": "305",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": "45"
   },
   "4c3217bd4f88ce86": {
     "notified": true,
@@ -3320,7 +3562,15 @@
     "legacy_ids": [
       "8fd08117c199d420"
     ],
-    "incident_reconciled_from": "8fd08117c199d420"
+    "incident_reconciled_from": "8fd08117c199d420",
+    "identity_version": 2,
+    "primary_id": "v2:657743e70efa4c24ad233d69",
+    "title": "DECRETO N. 44/16 DEL 13.06.2016",
+    "num_pub": "304",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": "44"
   },
   "ef031ed9bfb85dfe": {
     "notified": true,
@@ -3356,7 +3606,15 @@
     "legacy_ids": [
       "64299675d65711a3"
     ],
-    "incident_reconciled_from": "64299675d65711a3"
+    "incident_reconciled_from": "64299675d65711a3",
+    "identity_version": 2,
+    "primary_id": "v2:0abbf5a5f311718c42f63611",
+    "title": "reperibilità sett. 16 Dip.to Prevenzione ASL AV",
+    "num_pub": "300",
+    "tipo": "ABUSIVISMO EDILIZIO",
+    "sender": "DIPARTIMENTO PREVENZIONE ASL-AV",
+    "act_number": "",
+    "register_number": ""
   },
   "1bd56505b7e44665": {
     "notified": true,
@@ -3392,7 +3650,15 @@
     "legacy_ids": [
       "65d0877e386f26fd"
     ],
-    "incident_reconciled_from": "65d0877e386f26fd"
+    "incident_reconciled_from": "65d0877e386f26fd",
+    "identity_version": 2,
+    "primary_id": "v2:efba4921df22abb50ec55c5a",
+    "title": "Pubblicazione avviso cessione crediti - Lavori di manutenzione Area Benevento 1",
+    "num_pub": "285",
+    "tipo": "AVVISO AI CREDITORI",
+    "sender": "ALTO CALORE SERVIZI S.P.A.",
+    "act_number": "",
+    "register_number": ""
   },
   "2f476f6a9fc7ed00": {
     "notified": true,
@@ -3420,7 +3686,15 @@
     "legacy_ids": [
       "f50a224ef1c90151"
     ],
-    "incident_reconciled_from": "f50a224ef1c90151"
+    "incident_reconciled_from": "f50a224ef1c90151",
+    "identity_version": 2,
+    "primary_id": "v2:ae04e07abc8c584331ce10da",
+    "title": "SETTORE FINANZIARIO AMMINISTRATIVO n.6/2016 DECRETO di Responsabile dei Procedimenti",
+    "num_pub": "279",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "",
+    "register_number": "6"
   },
   "46c65d906aaaa464": {
     "notified": true,
@@ -3448,7 +3722,15 @@
     "legacy_ids": [
       "150895dc7abb90c6"
     ],
-    "incident_reconciled_from": "150895dc7abb90c6"
+    "incident_reconciled_from": "150895dc7abb90c6",
+    "identity_version": 2,
+    "primary_id": "v2:4641091425823de07224dc2e",
+    "title": "SETTORE FINANZIARIO AMMINISTRATIVO n.5/2016 DECRETO di Responsabile dei Procedimenti",
+    "num_pub": "278",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "",
+    "register_number": "5"
   },
   "8453ced01ce20ddd": {
     "notified": true,
@@ -3476,7 +3758,15 @@
     "legacy_ids": [
       "40f8d198b5c4e706"
     ],
-    "incident_reconciled_from": "40f8d198b5c4e706"
+    "incident_reconciled_from": "40f8d198b5c4e706",
+    "identity_version": 2,
+    "primary_id": "v2:329b086e48178a74ede42a5c",
+    "title": "SETTORE FINANZIARIO AMMINISTRATIVO n.4/2016 DECRETO di Responsabile dei Procedimenti",
+    "num_pub": "277",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "",
+    "register_number": "4"
   },
   "e346a02686888efd": {
     "notified": true,
@@ -3504,7 +3794,15 @@
     "legacy_ids": [
       "282612b8a609487f"
     ],
-    "incident_reconciled_from": "282612b8a609487f"
+    "incident_reconciled_from": "282612b8a609487f",
+    "identity_version": 2,
+    "primary_id": "v2:7399f6b2f9efceb95707f51b",
+    "title": "SETTORE FINANZIARIO AMMINISTRATIVO n.3/2016 DECRETO di Responsabile dei Procedimenti",
+    "num_pub": "276",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "",
+    "register_number": "3"
   },
   "93c19303920bdc94": {
     "notified": true,
@@ -3532,7 +3830,15 @@
     "legacy_ids": [
       "d934e7d6fdea7ab2"
     ],
-    "incident_reconciled_from": "d934e7d6fdea7ab2"
+    "incident_reconciled_from": "d934e7d6fdea7ab2",
+    "identity_version": 2,
+    "primary_id": "v2:da031c84b9d741455b2490fc",
+    "title": "SETTORE FINANZIARIO AMMINISTRATIVO n.2/2016 DECRETO di Responsabile dei Procedimenti",
+    "num_pub": "275",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "",
+    "register_number": "2"
   },
   "4159f76e4609e9d4": {
     "notified": true,
@@ -3560,7 +3866,15 @@
     "legacy_ids": [
       "2633ef7ab9ceb730"
     ],
-    "incident_reconciled_from": "2633ef7ab9ceb730"
+    "incident_reconciled_from": "2633ef7ab9ceb730",
+    "identity_version": 2,
+    "primary_id": "v2:3d3b4be4ae6f30a785de85b0",
+    "title": "SETTORE FINANZIARIO AMMINISTRATIVO n.1/2016 DECRETO  di Responsabile dei Procedimenti",
+    "num_pub": "274",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "",
+    "register_number": "1"
   },
   "615e4a017fe08a86": {
     "notified": true,
@@ -3598,7 +3912,15 @@
     "legacy_ids": [
       "47f7fad07597447d"
     ],
-    "incident_reconciled_from": "47f7fad07597447d"
+    "incident_reconciled_from": "47f7fad07597447d",
+    "identity_version": 2,
+    "primary_id": "v2:60c68fa7d3744dc19c19481a",
+    "title": "Richiesta pubblicazione del bando di corso con selezione finale per agenti di polizia locale cat. C1 e formazione di una graduatoria di merito valida per gli enti locali associati al Centro Studi Formazione e Orientamento.",
+    "num_pub": "261",
+    "tipo": "BANDO DI CONCORSO",
+    "sender": "COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "b6e88a4e6a3e5670": {
     "notified": true,
@@ -3626,7 +3948,15 @@
     "legacy_ids": [
       "6bb75a3c0499e6e3"
     ],
-    "incident_reconciled_from": "6bb75a3c0499e6e3"
+    "incident_reconciled_from": "6bb75a3c0499e6e3",
+    "identity_version": 2,
+    "primary_id": "v2:93a4483d9c4ea137cf9154e2",
+    "title": "Ordinanza sindacale n. 36 del 18/07/2016 disciplina circolazione veicolare Cassano Caudino",
+    "num_pub": "255",
+    "tipo": "ORDINANZA SINDACALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": "36"
   },
   "57672f4493e70a38": {
     "notified": true,
@@ -3656,7 +3986,15 @@
     "legacy_ids": [
       "8bdf21f4cb12e269"
     ],
-    "incident_reconciled_from": "8bdf21f4cb12e269"
+    "incident_reconciled_from": "8bdf21f4cb12e269",
+    "identity_version": 2,
+    "primary_id": "v2:8f8ca6d8abe085c06bab1abb",
+    "title": "AVVISO PUBBLICAZIONE DEGLI ELENCHI DELLE AREE PERCORSE DAL FUOCO ANNO 2015",
+    "num_pub": "253",
+    "tipo": "RENDE NOTO",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "959bbec47b85c8f2": {
     "notified": true,
@@ -3692,7 +4030,15 @@
     "legacy_ids": [
       "5e6c180cd9b4b159"
     ],
-    "incident_reconciled_from": "5e6c180cd9b4b159"
+    "incident_reconciled_from": "5e6c180cd9b4b159",
+    "identity_version": 2,
+    "primary_id": "v2:614d937445fbace7934d5185",
+    "title": "reperibilità luglio 16 Dip.to Prevenzione ASL AV",
+    "num_pub": "231",
+    "tipo": "REPERIBILITA'  DEL PERSONALE",
+    "sender": "DIPARTIMENTO PREVENZIONE ASL-AV",
+    "act_number": "",
+    "register_number": ""
   },
   "caa70e9237a03438": {
     "notified": true,
@@ -3720,7 +4066,15 @@
     "legacy_ids": [
       "cf255d582ae87e6e"
     ],
-    "incident_reconciled_from": "cf255d582ae87e6e"
+    "incident_reconciled_from": "cf255d582ae87e6e",
+    "identity_version": 2,
+    "primary_id": "v2:f0e5ba9aada52d2ee0752de0",
+    "title": "DECRETO NOMINA RESPONSABILI PROCEDIMENTI POLIZIA MUNICIPALE",
+    "num_pub": "230",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": "30"
   },
   "59b4e32586caeddd": {
     "notified": true,
@@ -3748,7 +4102,15 @@
     "legacy_ids": [
       "8cd61553918b92f4"
     ],
-    "incident_reconciled_from": "8cd61553918b92f4"
+    "incident_reconciled_from": "8cd61553918b92f4",
+    "identity_version": 2,
+    "primary_id": "v2:7ab44d7da7ab8e5958cbfb41",
+    "title": "DECRETO DI NOMINA RESPONSABILE AREA AMMINISTRATIVA-FINANZIARIA",
+    "num_pub": "229",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": "29"
   },
   "a3418f631d4a2421": {
     "notified": true,
@@ -3776,7 +4138,15 @@
     "legacy_ids": [
       "ccc1d82100547a5f"
     ],
-    "incident_reconciled_from": "ccc1d82100547a5f"
+    "incident_reconciled_from": "ccc1d82100547a5f",
+    "identity_version": 2,
+    "primary_id": "v2:94ed6273b0b8b2597ef85a4b",
+    "title": "Decreto Sindacale  Individuazione del  Responsabile Prevenzione della Corruzzione",
+    "num_pub": "228",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "c7ac136dd9476d1d": {
     "notified": true,
@@ -3804,7 +4174,15 @@
     "legacy_ids": [
       "8a5254ee2b23eaf7"
     ],
-    "incident_reconciled_from": "8a5254ee2b23eaf7"
+    "incident_reconciled_from": "8a5254ee2b23eaf7",
+    "identity_version": 2,
+    "primary_id": "v2:630f376c73fad99896e6a44f",
+    "title": "RENDE NOTO ASSISTENZA DOMICILIARE SOCIO-ASSISTENZIALE",
+    "num_pub": "227",
+    "tipo": "AVVISO",
+    "sender": "PIANO DI ZONA SOCIALE AMBITO A04 AVELLINO",
+    "act_number": "",
+    "register_number": ""
   },
   "62de63a6fb349cbf": {
     "notified": true,
@@ -3832,7 +4210,15 @@
     "legacy_ids": [
       "2e2c7a15d9049fee"
     ],
-    "incident_reconciled_from": "2e2c7a15d9049fee"
+    "incident_reconciled_from": "2e2c7a15d9049fee",
+    "identity_version": 2,
+    "primary_id": "v2:336e0090c0f92f84ad3382ee",
+    "title": "DECRETO NOMINA MESSO NOTIFICATORE STRAORDINARIO AGGIUNTO",
+    "num_pub": "221",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": "27"
   },
   "f7d492bcefbb68d4": {
     "notified": true,
@@ -3860,7 +4246,15 @@
     "legacy_ids": [
       "0bd3da65ce4fc65a"
     ],
-    "incident_reconciled_from": "0bd3da65ce4fc65a"
+    "incident_reconciled_from": "0bd3da65ce4fc65a",
+    "identity_version": 2,
+    "primary_id": "v2:271d3669c4ee823ea607091f",
+    "title": "DECRETO  DI NOMINA  RESPONSABILE PUBBLICAZIONI",
+    "num_pub": "220",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": "26"
   },
   "55745ed1fb416144": {
     "notified": true,
@@ -3888,7 +4282,15 @@
     "legacy_ids": [
       "45a58c4c18539644"
     ],
-    "incident_reconciled_from": "45a58c4c18539644"
+    "incident_reconciled_from": "45a58c4c18539644",
+    "identity_version": 2,
+    "primary_id": "v2:e72f1699e9df34dda3564820",
+    "title": "ATTO DI DELEGA PER LA FIRMA DI DOCUMENTI E CERTIFICAZIONI NON ATTINENTI ALL'ANAGRAFE ED ALLO STATO CIVILE",
+    "num_pub": "219",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": "25"
   },
   "aa72b71b83128175": {
     "notified": true,
@@ -3916,7 +4318,15 @@
     "legacy_ids": [
       "93787cc5483a3f68"
     ],
-    "incident_reconciled_from": "93787cc5483a3f68"
+    "incident_reconciled_from": "93787cc5483a3f68",
+    "identity_version": 2,
+    "primary_id": "v2:59d6a6c741c44df100124c16",
+    "title": "DELEGA PER L'ESERCIZIO DELLE FUNZIONI DI UFFICIALE DI ANAGRAFE E RILASCIO DELLE CARTE D'IDENTITA'",
+    "num_pub": "218",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": "24"
   },
   "b8599ad13ccde98a": {
     "notified": true,
@@ -3944,7 +4354,15 @@
     "legacy_ids": [
       "90345eee8aaafbe6"
     ],
-    "incident_reconciled_from": "90345eee8aaafbe6"
+    "incident_reconciled_from": "90345eee8aaafbe6",
+    "identity_version": 2,
+    "primary_id": "v2:51b3ac57c311fb6f8620ae3c",
+    "title": "INCARICO DI REPERIBILITA' PER L'UFFICIO DI STATO CIVILE DELL'ENTE",
+    "num_pub": "217",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": "23"
   },
   "e5f4bfb56032a756": {
     "notified": true,
@@ -3972,7 +4390,15 @@
     "legacy_ids": [
       "3f6875628ead6b71"
     ],
-    "incident_reconciled_from": "3f6875628ead6b71"
+    "incident_reconciled_from": "3f6875628ead6b71",
+    "identity_version": 2,
+    "primary_id": "v2:0f187a211b24c9eebdb17eb3",
+    "title": "PUBBLICAZIONE MANIFESTO PROCLAMAZIONE DEGLI ELETTI",
+    "num_pub": "215",
+    "tipo": "AVVISO PUBBLICO",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "ad606c4424317336": {
     "notified": true,
@@ -4012,7 +4438,15 @@
     "legacy_ids": [
       "568310579d363e46"
     ],
-    "incident_reconciled_from": "568310579d363e46"
+    "incident_reconciled_from": "568310579d363e46",
+    "identity_version": 2,
+    "primary_id": "v2:b7047bb0bf987e93ed641c37",
+    "title": "progetto #artedimezzo: Richiesta pubblicazione Avviso Pubblico per la Costituzione di una Short-List di Giovani Artisti della Valle Caudina",
+    "num_pub": "123",
+    "tipo": "AVVISO",
+    "sender": "ASSOCIAZIONE SOCIALE CEPPALONI",
+    "act_number": "",
+    "register_number": ""
   },
   "2a7714eeb54e7bfc": {
     "notified": true,
@@ -4042,7 +4476,15 @@
     "legacy_ids": [
       "07e8db6477dd7ca1"
     ],
-    "incident_reconciled_from": "07e8db6477dd7ca1"
+    "incident_reconciled_from": "07e8db6477dd7ca1",
+    "identity_version": 2,
+    "primary_id": "v2:69978da10f0a718c892cb2ff",
+    "title": "Richiesta Pubblicazione Bando per Corso Con Selezione per Agenti di Polizia",
+    "num_pub": "13",
+    "tipo": "BANDO DI CONCORSO",
+    "sender": "CENTRO STUDI FORMAZIONE ORIENTAMENTO",
+    "act_number": "",
+    "register_number": ""
   },
   "9e2388914daa739d": {
     "notified": true,
@@ -4066,7 +4508,18 @@
         "9ba10863ba8b1e32"
       ]
     },
-    "revision": 1
+    "revision": 1,
+    "identity_version": 2,
+    "primary_id": "v2:c4b17b91b6a64979573a240d",
+    "legacy_ids": [
+      "9e2388914daa739d"
+    ],
+    "title": "LIQUIDAZIONE 1 SAL LAVORI DI COSTRUZIONE LOCULI NEL CIMITERO DI TUFARA VALLE- IMPRESA SIGNORE CARMINE",
+    "num_pub": "492",
+    "tipo": "ABUSIVISMO EDILIZIO",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "167",
+    "register_number": "246"
   },
   "3c82544d020fe491": {
     "notified": true,
@@ -4094,7 +4547,15 @@
     "legacy_ids": [
       "b80b5d1e2ce40cfa"
     ],
-    "incident_reconciled_from": "b80b5d1e2ce40cfa"
+    "incident_reconciled_from": "b80b5d1e2ce40cfa",
+    "identity_version": 2,
+    "primary_id": "v2:e6b69aed2f7b5c903932f8c5",
+    "title": "TURNI DI REPERIBILITA DICEMBRE 2015",
+    "num_pub": "470",
+    "tipo": "REPERIBILITA'  DEL PERSONALE",
+    "sender": "DIPARTIMENTO PREVENZIONE ASL-AV",
+    "act_number": "",
+    "register_number": ""
   },
   "826d6b0c4399532c": {
     "notified": true,
@@ -4118,7 +4579,15 @@
     "legacy_ids": [
       "2ddcf23a050e91c3"
     ],
-    "incident_reconciled_from": "2ddcf23a050e91c3"
+    "incident_reconciled_from": "2ddcf23a050e91c3",
+    "identity_version": 2,
+    "primary_id": "v2:921a504e6b045565453a47e9",
+    "title": "Autorizzazioni Paesistico Ambientale .-ELENCO -",
+    "num_pub": "469",
+    "tipo": "ELENCO GENERALE",
+    "sender": "RESPONSABILE DELL'ATTIVITA' DI TUTELA Tonino Storti",
+    "act_number": "",
+    "register_number": ""
   },
   "1561e1641f800df3": {
     "notified": true,
@@ -4154,7 +4623,15 @@
     "legacy_ids": [
       "609d806dd41769d3"
     ],
-    "incident_reconciled_from": "609d806dd41769d3"
+    "incident_reconciled_from": "609d806dd41769d3",
+    "identity_version": 2,
+    "primary_id": "v2:bb5e8c332707b3e0f623d525",
+    "title": "26926/11/a3/seq-NOTIFICA ORDINANZA INGIUNTIVA  art.140 c.p.c.",
+    "num_pub": "419",
+    "tipo": "NOTIFICA",
+    "sender": "PREFETTURA DI AVELLINO",
+    "act_number": "",
+    "register_number": ""
   },
   "086e41e1cae96b66": {
     "notified": true,
@@ -4182,7 +4659,15 @@
     "legacy_ids": [
       "cc867df5b19261f3"
     ],
-    "incident_reconciled_from": "cc867df5b19261f3"
+    "incident_reconciled_from": "cc867df5b19261f3",
+    "identity_version": 2,
+    "primary_id": "v2:f2af645086b15bd7735e3ec0",
+    "title": "PUBBLICAZIONE \"AVISO PUBBLICO PER LA FORMAZIONE DI UNA SHORT LIST DI ERPERTI IDONEI A CUI CONFERIRE INCARICHIE PROFESSIONALE ECC.",
+    "num_pub": "361",
+    "tipo": "AVVISO PUBBLICO",
+    "sender": "consorzio pubblico di servizi sociali",
+    "act_number": "",
+    "register_number": ""
   },
   "e6981c97b5af7645": {
     "notified": true,
@@ -4210,7 +4695,15 @@
     "legacy_ids": [
       "f8defcb96ffbe228"
     ],
-    "incident_reconciled_from": "f8defcb96ffbe228"
+    "incident_reconciled_from": "f8defcb96ffbe228",
+    "identity_version": 2,
+    "primary_id": "v2:175d8a50dd3e53bccca4c2a6",
+    "title": "Determinazione del calendario delle festivita' religiose ebraiche per l'anno 2016",
+    "num_pub": "294",
+    "tipo": "AVVISO",
+    "sender": "Prefettura Avellino",
+    "act_number": "",
+    "register_number": ""
   },
   "1637507011ee6c56": {
     "notified": true,
@@ -4238,7 +4731,15 @@
     "legacy_ids": [
       "649a8c4884f3b539"
     ],
-    "incident_reconciled_from": "649a8c4884f3b539"
+    "incident_reconciled_from": "649a8c4884f3b539",
+    "identity_version": 2,
+    "primary_id": "v2:dfa71be4a3fa215385fe1ffc",
+    "title": "TRASMISSIONE ABUSIVISMO EDILIZIO MESE DI GIUGNO 2015",
+    "num_pub": "281",
+    "tipo": "ABUSIVISMO EDILIZIO",
+    "sender": "COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "6d8f70529e941e1d": {
     "notified": true,
@@ -4266,7 +4767,15 @@
     "legacy_ids": [
       "aff46d72caf7e61a"
     ],
-    "incident_reconciled_from": "aff46d72caf7e61a"
+    "incident_reconciled_from": "aff46d72caf7e61a",
+    "identity_version": 2,
+    "primary_id": "v2:382e6b629c657e3a05818c00",
+    "title": "CONVOCAIZONE CONSIGLIO COMUNALE GIORNO 23.03.2015 ORE 12,00",
+    "num_pub": "98",
+    "tipo": "CONVOCAZIONE CONSIGLIO",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "d15bd46f42717ce8": {
     "notified": true,
@@ -4294,7 +4803,15 @@
     "legacy_ids": [
       "c995b5652b6ba8ea"
     ],
-    "incident_reconciled_from": "c995b5652b6ba8ea"
+    "incident_reconciled_from": "c995b5652b6ba8ea",
+    "identity_version": 2,
+    "primary_id": "v2:be11d9a2edc33ba1de3761a9",
+    "title": "AVVISO DEPOSITO VERBALE AGGIORNAMENTO ALBO SCRUTATORI",
+    "num_pub": "33",
+    "tipo": "AVVISO PUBBLICO",
+    "sender": "SERVIZIO ELETTORALE COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "e20fd1c25895c4d6": {
     "notified": true,
@@ -4322,7 +4839,15 @@
     "legacy_ids": [
       "f1b577be43e37811"
     ],
-    "incident_reconciled_from": "f1b577be43e37811"
+    "incident_reconciled_from": "f1b577be43e37811",
+    "identity_version": 2,
+    "primary_id": "v2:95fc3e74568e100fa2c08779",
+    "title": "AVVISO CHIUSURA ANTICIPATA UFFICI COMUNALI IN OCCASIONE FESTIVITA' NATALIZIE . GIORNI 24 E 31 DICEMBRE ORE 12,00",
+    "num_pub": "530",
+    "tipo": "AVVISO",
+    "sender": "COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "f436e8077142b4ad": {
     "notified": true,
@@ -4346,7 +4871,15 @@
     "legacy_ids": [
       "bb9e96c28b0d7408"
     ],
-    "incident_reconciled_from": "bb9e96c28b0d7408"
+    "incident_reconciled_from": "bb9e96c28b0d7408",
+    "identity_version": 2,
+    "primary_id": "v2:260d7b64bad7919389860213",
+    "title": "RICHIESTA PUBBLICAZIONE ALBO PRETORIO ON LINE",
+    "num_pub": "529",
+    "tipo": "RICHIESTA AUTORIZZAZIONE ART.23 L.R.11/96",
+    "sender": "Comunita Montana del Partenio",
+    "act_number": "",
+    "register_number": ""
   },
   "73081c97eb51b1ae": {
     "notified": true,
@@ -4374,7 +4907,15 @@
     "legacy_ids": [
       "a0c0119a581b2a57"
     ],
-    "incident_reconciled_from": "a0c0119a581b2a57"
+    "incident_reconciled_from": "a0c0119a581b2a57",
+    "identity_version": 2,
+    "primary_id": "v2:0f21148b00a84c210929c583",
+    "title": "SOSPENSIONE TEMPORANEA DELLA CIRCOLAZIONE SULLA STRADA DENOMINATA ASSE ATTREZZATO",
+    "num_pub": "509",
+    "tipo": "AVVISO",
+    "sender": "CONSORZIO ASI-PROVINCIA AVELLINO",
+    "act_number": "",
+    "register_number": ""
   },
   "ea0adc2b8d66f425": {
     "notified": true,
@@ -4402,7 +4943,15 @@
     "legacy_ids": [
       "1402b731831d65bb"
     ],
-    "incident_reconciled_from": "1402b731831d65bb"
+    "incident_reconciled_from": "1402b731831d65bb",
+    "identity_version": 2,
+    "primary_id": "v2:3a4eb1b96f6fae47724c2c41",
+    "title": "TURNI DI REPERERIBILITA' NOVEMBRE 2014",
+    "num_pub": "449",
+    "tipo": "REPERIBILITA'  DEL PERSONALE",
+    "sender": "ASL AVELLINO",
+    "act_number": "",
+    "register_number": ""
   },
   "cf37130c94a031da": {
     "notified": true,
@@ -4430,7 +4979,15 @@
     "legacy_ids": [
       "d80bc1b412f6e198"
     ],
-    "incident_reconciled_from": "d80bc1b412f6e198"
+    "incident_reconciled_from": "d80bc1b412f6e198",
+    "identity_version": 2,
+    "primary_id": "v2:6e7719de9e740583f803810c",
+    "title": "avviso di gara esperita affidamento servizio refezione scolastica anno 2014/2015",
+    "num_pub": "424",
+    "tipo": "AVVISO DI GARA ESPERITA",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "",
+    "register_number": ""
   },
   "9efbe37c3b3a5c5f": {
     "notified": true,
@@ -4458,7 +5015,15 @@
     "legacy_ids": [
       "84bb217771ae340d"
     ],
-    "incident_reconciled_from": "84bb217771ae340d"
+    "incident_reconciled_from": "84bb217771ae340d",
+    "identity_version": 2,
+    "primary_id": "v2:d28a149f0e4cd52177e484bb",
+    "title": "AVVISO DI GARA MENSA SCOLASTICA",
+    "num_pub": "390",
+    "tipo": "AVVISO DI GARA",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "",
+    "register_number": ""
   },
   "ace07fd2ea3a31bc": {
     "notified": true,
@@ -4486,7 +5051,15 @@
     "legacy_ids": [
       "7776620029bb4163"
     ],
-    "incident_reconciled_from": "7776620029bb4163"
+    "incident_reconciled_from": "7776620029bb4163",
+    "identity_version": 2,
+    "primary_id": "v2:9250d1995bf6d13f45e3d7e6",
+    "title": "Comunicazione dati mensili art. 31 comma 7 DPR 380/2001. Rapporto del mese di AGOSTO 2014",
+    "num_pub": "374",
+    "tipo": "ABUSIVISMO EDILIZIO",
+    "sender": "COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "5c62baa3fb28df0b": {
     "notified": true,
@@ -4514,7 +5087,15 @@
     "legacy_ids": [
       "46aae13809339d03"
     ],
-    "incident_reconciled_from": "46aae13809339d03"
+    "incident_reconciled_from": "46aae13809339d03",
+    "identity_version": 2,
+    "primary_id": "v2:f0a8bc576b028485b73b7522",
+    "title": "PROROGA TERMINE SCADENZA AVVISO PUBBLICO SHORT-LIST",
+    "num_pub": "336",
+    "tipo": "AVVISO",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "",
+    "register_number": ""
   },
   "2c70a87d74a46df7": {
     "notified": true,
@@ -4542,7 +5123,15 @@
     "legacy_ids": [
       "4a88da8332ca138f"
     ],
-    "incident_reconciled_from": "4a88da8332ca138f"
+    "incident_reconciled_from": "4a88da8332ca138f",
+    "identity_version": 2,
+    "primary_id": "v2:edab526b5bfb8984dd76ac99",
+    "title": "GARA SELVARANA - PUBBLICAZIONE FAQ.",
+    "num_pub": "335",
+    "tipo": "AVVISO",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "",
+    "register_number": ""
   },
   "91f9260c177ceef1": {
     "notified": true,
@@ -4570,7 +5159,15 @@
     "legacy_ids": [
       "9c8179680aa85edc"
     ],
-    "incident_reconciled_from": "9c8179680aa85edc"
+    "incident_reconciled_from": "9c8179680aa85edc",
+    "identity_version": 2,
+    "primary_id": "v2:c4bcaa4860ec7d7a84d73776",
+    "title": "COM'PLETAMENTPO FOGNA - PUBBLICAZIONE FAQ N. 1 DEL 14/07/2014",
+    "num_pub": "330",
+    "tipo": "AVVISO",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "",
+    "register_number": ""
   },
   "63eb4228ed7b1efa": {
     "notified": true,
@@ -4598,7 +5195,15 @@
     "legacy_ids": [
       "315cfc1a59950a59"
     ],
-    "incident_reconciled_from": "315cfc1a59950a59"
+    "incident_reconciled_from": "315cfc1a59950a59",
+    "identity_version": 2,
+    "primary_id": "v2:d8fffab2c4508c82e3b6d4d6",
+    "title": "comunicazione data seduta finale gara",
+    "num_pub": "329",
+    "tipo": "AVVISO",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "",
+    "register_number": ""
   },
   "390b8e769764f8bb": {
     "notified": true,
@@ -4662,7 +5267,15 @@
     "legacy_ids": [
       "5098641654a3cd24"
     ],
-    "incident_reconciled_from": "5098641654a3cd24"
+    "incident_reconciled_from": "5098641654a3cd24",
+    "identity_version": 2,
+    "primary_id": "v2:938febfe6e198e5e81e8c08d",
+    "title": "INTERVENTO DI \"LAVORI DI COMPLETAMENTO E RIFUNZIONALIZZAZIONE DEL SISTEMA FOGNARIO COMUNALE",
+    "num_pub": "256",
+    "tipo": "AVVISO DI GARA",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "",
+    "register_number": ""
   },
   "d0fa9eb356e5d091": {
     "notified": true,
@@ -4690,7 +5303,15 @@
     "legacy_ids": [
       "944896ae17539503"
     ],
-    "incident_reconciled_from": "944896ae17539503"
+    "incident_reconciled_from": "944896ae17539503",
+    "identity_version": 2,
+    "primary_id": "v2:ef0849744ce9cda136c03985",
+    "title": "ORDINE DEL GIORNO AGGIUNTIVO",
+    "num_pub": "228",
+    "tipo": "DISPOSIZIONE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "18ec09c8ec84a02f": {
     "notified": true,
@@ -4718,7 +5339,15 @@
     "legacy_ids": [
       "2f61a5dd99994587"
     ],
-    "incident_reconciled_from": "2f61a5dd99994587"
+    "incident_reconciled_from": "2f61a5dd99994587",
+    "identity_version": 2,
+    "primary_id": "v2:a6c8883536d1d8a4fefe8235",
+    "title": "Elezioni Europee ed Amministrative domenica 25 Maggio  Rilascio certioficati medici ad elettori fisicamente impediti",
+    "num_pub": "212",
+    "tipo": "AVVISO",
+    "sender": "DIPARTIMENTO PREVENZIONE ASL-AV",
+    "act_number": "",
+    "register_number": ""
   },
   "31590772c7cd8256": {
     "notified": true,
@@ -4746,7 +5375,15 @@
     "legacy_ids": [
       "6e23faf55e9c749e"
     ],
-    "incident_reconciled_from": "6e23faf55e9c749e"
+    "incident_reconciled_from": "6e23faf55e9c749e",
+    "identity_version": 2,
+    "primary_id": "v2:25246fae7b5d9e791f6531ee",
+    "title": "CONVOCAZIONE COMMISSIONE PER NOMINA SCRUTATORI",
+    "num_pub": "211",
+    "tipo": "CONVOCAZIONE COMMISSIONE",
+    "sender": "UFFICIO ELETTORALE COMUNE",
+    "act_number": "",
+    "register_number": ""
   },
   "ca1325171763ce44": {
     "notified": true,
@@ -4774,7 +5411,15 @@
     "legacy_ids": [
       "1d8d39142aaa8a96"
     ],
-    "incident_reconciled_from": "1d8d39142aaa8a96"
+    "incident_reconciled_from": "1d8d39142aaa8a96",
+    "identity_version": 2,
+    "primary_id": "v2:e78cc2c74871625349dedb3c",
+    "title": "TURNI DI REPERIBILITA' MESE DI MAGGIO 2014",
+    "num_pub": "210",
+    "tipo": "REPERIBILITA'  DEL PERSONALE",
+    "sender": "DIPARTIMENTO PREVENZIONE ASL-AV",
+    "act_number": "",
+    "register_number": ""
   },
   "4cdc4ef0f663d0c0": {
     "notified": true,
@@ -4802,7 +5447,15 @@
     "legacy_ids": [
       "6290b4becb652b1c"
     ],
-    "incident_reconciled_from": "6290b4becb652b1c"
+    "incident_reconciled_from": "6290b4becb652b1c",
+    "identity_version": 2,
+    "primary_id": "v2:2683a7a633ce40c768138c63",
+    "title": "CONVOCAZIONE CONSIGLIO COMUNALE DEL 26 MAGGI 2014",
+    "num_pub": "209",
+    "tipo": "CONVOCAZIONE CONSIGLIO",
+    "sender": "AI CONSIGLIERI COMUNALI sede",
+    "act_number": "",
+    "register_number": ""
   },
   "28670eb912f0606d": {
     "notified": true,
@@ -4830,7 +5483,15 @@
     "legacy_ids": [
       "6fe0e0d53cdd88cf"
     ],
-    "incident_reconciled_from": "6fe0e0d53cdd88cf"
+    "incident_reconciled_from": "6fe0e0d53cdd88cf",
+    "identity_version": 2,
+    "primary_id": "v2:d3e9bd94b66070e9b65d4376",
+    "title": "Decreto 16 marzo 2012 - Pon sicurezza per lo sviluppo - Obiettivo Convergenza 2007/2013 Ob. Op. 2.1. Lavori di \" Casa Guascinara\" PUBBLICAZIONE \"RENDE NOTO\"",
+    "num_pub": "178",
+    "tipo": "RENDE NOTO",
+    "sender": "UFFICIO TECNICO-COMUNE ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "a5e8a143f3838f76": {
     "notified": true,
@@ -4858,7 +5519,15 @@
     "legacy_ids": [
       "b47c081b6c9a4d1f"
     ],
-    "incident_reconciled_from": "b47c081b6c9a4d1f"
+    "incident_reconciled_from": "b47c081b6c9a4d1f",
+    "identity_version": 2,
+    "primary_id": "v2:62b25515bb94dbf14b25e440",
+    "title": "CONVOCAZIONE CONSIGLIO COMUNALE 14.04.2014",
+    "num_pub": "158",
+    "tipo": "CONVOCAZIONE CONSIGLIO",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "970004ae0d703c71": {
     "notified": true,
@@ -4886,7 +5555,15 @@
     "legacy_ids": [
       "124b492b8e3ba472"
     ],
-    "incident_reconciled_from": "124b492b8e3ba472"
+    "incident_reconciled_from": "124b492b8e3ba472",
+    "identity_version": 2,
+    "primary_id": "v2:af35232b174820c16a31d28f",
+    "title": "CONVOCAZIONE COMIZI ELETTORALI",
+    "num_pub": "157",
+    "tipo": "AVVISO",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "1a05b21e5ba661c2": {
     "notified": true,
@@ -4914,7 +5591,15 @@
     "legacy_ids": [
       "c8f3a63f237f62cb"
     ],
-    "incident_reconciled_from": "c8f3a63f237f62cb"
+    "incident_reconciled_from": "c8f3a63f237f62cb",
+    "identity_version": 2,
+    "primary_id": "v2:68177a3fbd4d52b71ef0d88e",
+    "title": "CONVOCAZIONE CONSIGLIO COMUNALE 02.04.2014",
+    "num_pub": "147",
+    "tipo": "CONVOCAZIONE CONSIGLIO",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "b190cd2aab055fb5": {
     "notified": true,
@@ -4942,7 +5627,15 @@
     "legacy_ids": [
       "14a8e003daba121c"
     ],
-    "incident_reconciled_from": "14a8e003daba121c"
+    "incident_reconciled_from": "14a8e003daba121c",
+    "identity_version": 2,
+    "primary_id": "v2:33bad7e1e66c51bd4ced3796",
+    "title": "TRASMISSIONE ABUSIVISMO EDILIZIO MESE DI MARZO 2014",
+    "num_pub": "146",
+    "tipo": "ABUSIVISMO EDILIZIO",
+    "sender": "COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "cf7cb2aee1667b01": {
     "notified": true,
@@ -4970,7 +5663,15 @@
     "legacy_ids": [
       "d315ae8319147e85"
     ],
-    "incident_reconciled_from": "d315ae8319147e85"
+    "incident_reconciled_from": "d315ae8319147e85",
+    "identity_version": 2,
+    "primary_id": "v2:170f9cafae1f4376411048cd",
+    "title": "ELEZIONE DEI MEMBRE DEL PARLAMENTO EUROPEO SPETTANTI ALL'ITALIA DA PARTE DEI CITTADINI DELL'UNIONE EUROPEA RESIDENTI IN ITALIA",
+    "num_pub": "51",
+    "tipo": "AVVISO",
+    "sender": "UFFICIO ELETTORALE COMUNE",
+    "act_number": "",
+    "register_number": ""
   },
   "3e2fecc830ebe116": {
     "notified": true,
@@ -4998,7 +5699,15 @@
     "legacy_ids": [
       "72554f2fb89da8d4"
     ],
-    "incident_reconciled_from": "72554f2fb89da8d4"
+    "incident_reconciled_from": "72554f2fb89da8d4",
+    "identity_version": 2,
+    "primary_id": "v2:48ea9a3dd3a45c56bb52eb19",
+    "title": "TRASMISSIONE ELENCO GIOVANI CLASSE 1997 LEVA MILITARE",
+    "num_pub": "45",
+    "tipo": "ELENCO ISCRIZIONE LISTA LEVA",
+    "sender": "COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "f720f106861b0bc2": {
     "notified": true,
@@ -5026,7 +5735,15 @@
     "legacy_ids": [
       "80e9d5ae212c0f9f"
     ],
-    "incident_reconciled_from": "80e9d5ae212c0f9f"
+    "incident_reconciled_from": "80e9d5ae212c0f9f",
+    "identity_version": 2,
+    "primary_id": "v2:48af277c3a3c9189e4238daf",
+    "title": "CHIUSURA AL TRAFFICO DELLA STRADA DENOMINATA \"ASSE ATTREZZATO VALLE CAUDINA/PIANODARDINE: 2 LOTTO  SAN MARTINO -ROCCABASCERANA",
+    "num_pub": "25",
+    "tipo": "DISPOSIZIONE",
+    "sender": "CONSORZIO ASI  ENTE PUBBLICO",
+    "act_number": "",
+    "register_number": ""
   },
   "2850cd8bfaef24c3": {
     "notified": true,
@@ -5054,7 +5771,15 @@
     "legacy_ids": [
       "85992054ac3b8be0"
     ],
-    "incident_reconciled_from": "85992054ac3b8be0"
+    "incident_reconciled_from": "85992054ac3b8be0",
+    "identity_version": 2,
+    "primary_id": "v2:5fa542698823c018ec07d662",
+    "title": "AVVISO PUBBLICO  PER LA PARTECIPAZIONE ALLA REDAZIONE L'ADOZIONE DEL PIANO TRIENNALE DI PREVENZIONE DELLA CORRUZIONE (P:T:P:C:) E DEL PROGRAMMA TRIENNALE PER LA TRASPARENZA",
+    "num_pub": "11",
+    "tipo": "AVVISO PUBBLICO",
+    "sender": "SEGRETARIO COMUNALE -SEDE-",
+    "act_number": "",
+    "register_number": ""
   },
   "35f76338c7b8a72b": {
     "notified": true,
@@ -5082,7 +5807,15 @@
     "legacy_ids": [
       "0dd90b77ba928cd2"
     ],
-    "incident_reconciled_from": "0dd90b77ba928cd2"
+    "incident_reconciled_from": "0dd90b77ba928cd2",
+    "identity_version": 2,
+    "primary_id": "v2:a39c95d81af2a0ef65db3bc8",
+    "title": "CONCVOCAZIONE CONSIGLIO COMUNALE 14.11.2013",
+    "num_pub": "368",
+    "tipo": "CONVOCAZIONE CONSIGLIO",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "1b8186a3dc99ba0d": {
     "notified": true,
@@ -5110,7 +5843,15 @@
     "legacy_ids": [
       "58b8e4a0dd176f06"
     ],
-    "incident_reconciled_from": "58b8e4a0dd176f06"
+    "incident_reconciled_from": "58b8e4a0dd176f06",
+    "identity_version": 2,
+    "primary_id": "v2:16f96e91a46f44c42f2e5544",
+    "title": "BANDO DI SELEZIONE VOLONTARI DA IMPIEGARE NEI PROGETTI DI SERVIZIO CIVILE ANNUALITA' 2013/2014. COMUNICAZIONE",
+    "num_pub": "337",
+    "tipo": "BANDO DI CONCORSO",
+    "sender": "AGENZIA AGORA' PROGRAMMAZIONE SVILUPPO SOCIALE",
+    "act_number": "",
+    "register_number": ""
   },
   "05fbdd5824de8230": {
     "notified": true,
@@ -5134,7 +5875,15 @@
     "legacy_ids": [
       "8b4ab1d8e8485111"
     ],
-    "incident_reconciled_from": "8b4ab1d8e8485111"
+    "incident_reconciled_from": "8b4ab1d8e8485111",
+    "identity_version": 2,
+    "primary_id": "v2:466bfde12b97c61db3719f42",
+    "title": "NOTIFICA ESTREMI DI VIOLAZIONE AMMINISTRATIVA PARRELLA GIOAVANNI 27.3.62",
+    "num_pub": "307",
+    "tipo": "NOTIFICA CONTRIBUENTE",
+    "sender": "PREFETTURA BENEVENTO",
+    "act_number": "",
+    "register_number": ""
   },
   "bda9605ff64ca153": {
     "notified": true,
@@ -5162,7 +5911,15 @@
     "legacy_ids": [
       "26f222a0774d6e7e"
     ],
-    "incident_reconciled_from": "26f222a0774d6e7e"
+    "incident_reconciled_from": "26f222a0774d6e7e",
+    "identity_version": 2,
+    "primary_id": "v2:d06550fb7788dbe30802a4d6",
+    "title": "Comunicazione dati mensili art. 31 comma 7 DPR 380/2001.  Rapporto del mese di GIUGNO 2013",
+    "num_pub": "220",
+    "tipo": "DISPOSIZIONE",
+    "sender": "COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "bded09426e8dc0fb": {
     "notified": true,
@@ -5186,7 +5943,15 @@
     "legacy_ids": [
       "c7ebfce4edd0a14b"
     ],
-    "incident_reconciled_from": "c7ebfce4edd0a14b"
+    "incident_reconciled_from": "c7ebfce4edd0a14b",
+    "identity_version": 2,
+    "primary_id": "v2:bde5664275f39eb60a1af219",
+    "title": "TRASMISSIONE ABUSIVISMO EDILIZIO MESE DI APRILE 2013",
+    "num_pub": "156",
+    "tipo": "DISPOSIZIONE",
+    "sender": "COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "eb3ae93f44552d86": {
     "notified": true,
@@ -5214,7 +5979,15 @@
     "legacy_ids": [
       "61c36d20d91fc4f7"
     ],
-    "incident_reconciled_from": "61c36d20d91fc4f7"
+    "incident_reconciled_from": "61c36d20d91fc4f7",
+    "identity_version": 2,
+    "primary_id": "v2:16e0c26f991784185aeef2cd",
+    "title": "RICHIESTA COLLABORAZIONE PER INFORMATIVA AI CITTADINI",
+    "num_pub": "82",
+    "tipo": "AVVISO",
+    "sender": "ASL AVELLINO - DIREZIONE GENERALE",
+    "act_number": "",
+    "register_number": ""
   },
   "393e6eae0a32ad3e": {
     "notified": true,
@@ -5242,7 +6015,15 @@
     "legacy_ids": [
       "e94b0e9c97866816"
     ],
-    "incident_reconciled_from": "e94b0e9c97866816"
+    "incident_reconciled_from": "e94b0e9c97866816",
+    "identity_version": 2,
+    "primary_id": "v2:03a5ab1ec3ab5698c3d9d765",
+    "title": "Ordine del Giorno  consiglio Comunale del 19/02/2013",
+    "num_pub": "80",
+    "tipo": "CONVOCAZIONE CONSIGLIO",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "9acb2d51d2750e55": {
     "notified": true,
@@ -5270,7 +6051,15 @@
     "legacy_ids": [
       "6156595e594a57cc"
     ],
-    "incident_reconciled_from": "6156595e594a57cc"
+    "incident_reconciled_from": "6156595e594a57cc",
+    "identity_version": 2,
+    "primary_id": "v2:313b236c08718709aa054c46",
+    "title": "Trasmissione Ordine del Giorno CC del  17/01/2013",
+    "num_pub": "28",
+    "tipo": "CONVOCAZIONE CONSIGLIO",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "cd3988f026cf33f3": {
     "notified": true,
@@ -5298,7 +6087,15 @@
     "legacy_ids": [
       "af26b42ba4982247"
     ],
-    "incident_reconciled_from": "af26b42ba4982247"
+    "incident_reconciled_from": "af26b42ba4982247",
+    "identity_version": 2,
+    "primary_id": "v2:ae6460480353661dc176002a",
+    "title": "Convocazione Consiglio Comunale giorno 6Dicembre 2012",
+    "num_pub": "416",
+    "tipo": "NOTIFICA",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "0bccc7468399e5ca": {
     "notified": true,
@@ -5326,7 +6123,15 @@
     "legacy_ids": [
       "e8082d0128442842"
     ],
-    "incident_reconciled_from": "e8082d0128442842"
+    "incident_reconciled_from": "e8082d0128442842",
+    "identity_version": 2,
+    "primary_id": "v2:18186f9def7fb9c0ef62111a",
+    "title": "avviso  importante sul capitolato  d'appalto  servizio mensa",
+    "num_pub": "335",
+    "tipo": "AVVISO",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA - SEDE",
+    "act_number": "",
+    "register_number": ""
   },
   "e5238e5287fad39c": {
     "notified": true,
@@ -5354,7 +6159,15 @@
     "legacy_ids": [
       "dfeee17a9b228c91"
     ],
-    "incident_reconciled_from": "dfeee17a9b228c91"
+    "incident_reconciled_from": "dfeee17a9b228c91",
+    "identity_version": 2,
+    "primary_id": "v2:32b8d11a3f8b24eed5a6f201",
+    "title": "TRASMISSIONE ATTI PER LA NOTIFICA",
+    "num_pub": "267",
+    "tipo": "AVVISO",
+    "sender": "comune di roccabascerana",
+    "act_number": "",
+    "register_number": ""
   },
   "9eab1e4404931a11": {
     "notified": true,
@@ -5382,7 +6195,15 @@
     "legacy_ids": [
       "1a00c2a171ac424d"
     ],
-    "incident_reconciled_from": "1a00c2a171ac424d"
+    "incident_reconciled_from": "1a00c2a171ac424d",
+    "identity_version": 2,
+    "primary_id": "v2:4651a7567ec487a04c83d785",
+    "title": "REPERIBILITA' MESE DI LUGLIO \"2012 PERSONALE REPERIBILE PER ATTI DI MORTE",
+    "num_pub": "232",
+    "tipo": "AVVISO",
+    "sender": "UFFICIO STATO CIVILE E ANAGRAFE  ISTRUTTORE UGO VISCIONE",
+    "act_number": "",
+    "register_number": ""
   },
   "938dfac158e9b889": {
     "notified": true,
@@ -5410,7 +6231,15 @@
     "legacy_ids": [
       "c591a61fd0a42354"
     ],
-    "incident_reconciled_from": "c591a61fd0a42354"
+    "incident_reconciled_from": "c591a61fd0a42354",
+    "identity_version": 2,
+    "primary_id": "v2:aef0c58cc3e6ada8844ef655",
+    "title": "SITO WEB ISTITUZIONALE. COMUNICAZIONI",
+    "num_pub": "224",
+    "tipo": "AVVISO",
+    "sender": "consorzio pubblico di servizi sociali",
+    "act_number": "",
+    "register_number": ""
   },
   "7acdb1729301142a": {
     "notified": true,
@@ -5438,7 +6267,15 @@
     "legacy_ids": [
       "c68e50697df039e3"
     ],
-    "incident_reconciled_from": "c68e50697df039e3"
+    "incident_reconciled_from": "c68e50697df039e3",
+    "identity_version": 2,
+    "primary_id": "v2:1383e38441525be879926275",
+    "title": "Terremoto in Emilia Iniziativa di solidarieta'",
+    "num_pub": "216",
+    "tipo": "AVVISO",
+    "sender": "COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "cd9e383bf6f1372b": {
     "notified": true,
@@ -5462,7 +6299,15 @@
     "legacy_ids": [
       "d32b7a6ab2addbd4"
     ],
-    "incident_reconciled_from": "d32b7a6ab2addbd4"
+    "incident_reconciled_from": "d32b7a6ab2addbd4",
+    "identity_version": 2,
+    "primary_id": "v2:98eb6eb433b19af883f647ca",
+    "title": "TRASMISSIONE ELENCO DEGLI SCRUTATORI PER LE ELEZIONI DEL 12 E 13 GIUGNO 2011",
+    "num_pub": "388",
+    "tipo": "NOTIFICA",
+    "sender": "UFFICIO ELETTORALE COMUNE ROCCABASCERANA",
+    "act_number": "",
+    "register_number": ""
   },
   "ff0ee28f9991871b": {
     "notified": true,
@@ -5487,7 +6332,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:12f22445a06b86eb3cd65eed",
+    "legacy_ids": [
+      "ff0ee28f9991871b"
+    ],
+    "title": "Assunzione a tempo pieno e indeterminato di n. 2 Operatori esperti amministrativi - Area degli Operatori esperti - mediante scorrimento della graduatoria concorsuale approvata da questo Ente. Presa d'atto degli esiti delle verifiche e individuazione dei candidati.",
+    "num_pub": "506",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "198",
+    "register_number": ""
   },
   "153c3ec8e0dafc01": {
     "notified": true,
@@ -5512,7 +6368,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:19b3376d019543ac29e33013",
+    "legacy_ids": [
+      "153c3ec8e0dafc01"
+    ],
+    "title": "Trasporto scolastico periodo compreso tra il 15 settembre e il 22 dicembre 2026 - impegno di spesa",
+    "num_pub": "507",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "199",
+    "register_number": ""
   },
   "561785735b5ffea5": {
     "notified": true,
@@ -5537,7 +6404,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:e68a70a3620102b2ce410655",
+    "legacy_ids": [
+      "561785735b5ffea5"
+    ],
+    "title": "Ord.Sind.32/2026-Revoca dell'Ordinanza Sindacale n. 23/2026 in materia di circolazione stradale e contestuale RIAPERTURA al transito veicolare e pedonale del tratto di strada comunale denominata \"Via Case Sparse Tufara\" in località Tufara Valle",
+    "num_pub": "508",
+    "tipo": "ORDINANZA SINDACALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "32",
+    "register_number": ""
   },
   "b6e50a08d78fcffd": {
     "notified": true,
@@ -5567,7 +6445,15 @@
     "legacy_ids": [
       "50ee9142beede77f"
     ],
-    "incident_reconciled_from": "50ee9142beede77f"
+    "incident_reconciled_from": "50ee9142beede77f",
+    "identity_version": 2,
+    "primary_id": "v2:505bd20f7535e29587ac64a1",
+    "title": "CATASTO INCENDI BOSCHIVI - LEGGE 353/2000 - ART. 10 COMMA 2 O.P.C.M. 3606/2007 E 3680/2008 - PUBBLICAZIONE DEGLI ELENCHI DELLE AREE PERCORSE DAL FUOCO ANNO 2025",
+    "num_pub": "509",
+    "tipo": "RENDE NOTO",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "",
+    "register_number": ""
   },
   "dccb8d4f7a383388": {
     "notified": true,
@@ -5592,7 +6478,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:066823f49e8265be27870042",
+    "legacy_ids": [
+      "dccb8d4f7a383388"
+    ],
+    "title": "Servizio di trasporto scolastico dedicato agli studenti con disabilità - periodo 15.09 - 22.12.2026 - frequentanti la scuola dell'infanzia e/o primaria e servizio di trasporto scolastico dedicato agli studenti con disabilità frequentanti la scuola secondaria di primo grado - Impegno di spesa",
+    "num_pub": "510",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "201",
+    "register_number": ""
   },
   "c63faac59f646956": {
     "notified": true,
@@ -5619,7 +6516,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:6e70eef5b95bca6116e3dd45",
+    "legacy_ids": [
+      "c63faac59f646956"
+    ],
+    "title": "Assunzione a tempo pieno ed indeterminato a seguito di procedura concorsuale e scorrimento di graduatoria di n. 2 esecutori amministrativo, (ex cat. B) posizione economica 1, ed approvazione dello schema di contratto.",
+    "num_pub": "511",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "203",
+    "register_number": ""
   },
   "6e898efae4a608e2": {
     "notified": true,
@@ -5653,7 +6561,15 @@
     "legacy_ids": [
       "2c3e386b7fd72a93"
     ],
-    "incident_reconciled_from": "2c3e386b7fd72a93"
+    "incident_reconciled_from": "2c3e386b7fd72a93",
+    "identity_version": 2,
+    "primary_id": "v2:96698bb802ca7f726d383371",
+    "title": "Protocollo In uscita: 0047834/2026 - SUA  AMMINISTRAZIONE DELEGANTE DELLA PROVINCIA DI AVELLINO PER I LAVORI, I SERVIZI E LE FORNITURE \"LAVORI DI MESSA IN SICUREZZA E RIAMMAGLIAMENO DELLE STRADE DI COLLE",
+    "num_pub": "512",
+    "tipo": "AVVISO",
+    "sender": "PROVINCIA DI AVELLINO (SUA)",
+    "act_number": "",
+    "register_number": ""
   },
   "2b8bff63e2ae4010": {
     "notified": true,
@@ -5685,7 +6601,15 @@
     "legacy_ids": [
       "db02dc9f79682011"
     ],
-    "incident_reconciled_from": "db02dc9f79682011"
+    "incident_reconciled_from": "db02dc9f79682011",
+    "identity_version": 2,
+    "primary_id": "v2:3079ab136b39786757c0278b",
+    "title": "POSTA CERTIFICATA: Generico - Protocollo In uscita: 0048090/2026 - SERVIZIO DI ACCOGLIENZA PRESSO IL COMUNE DI ROCCABASCERANA NELL?AMBITO DEL PROGETTO SAI ? SIPROIMI A FAVORE DI RICHIEDENTI E TITOLARI DI PROTEZIONE INTERNAZIONALE PER N. 30 POSTI PER",
+    "num_pub": "513",
+    "tipo": "RENDE NOTO",
+    "sender": "PROVINCIA DI AVELLINO (SUA)",
+    "act_number": "",
+    "register_number": ""
   },
   "a3a8cd1ab4ba7375": {
     "notified": true,
@@ -5710,7 +6634,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:26d22b4e305d88ab23953c37",
+    "legacy_ids": [
+      "a3a8cd1ab4ba7375"
+    ],
+    "title": "\"LAVORI DI MESSA IN SICUREZZA E RIAMMAGLIAMENO DELLE STRADE DI COLLEGAMENTO TRA LA ZONA INDUSTRIALE DEL COMUNE DI ROCCABASCERANA E LA ZONA ASI DELLA VALLE CAUDINA\" NEL COMUNE DI ROCCABASCERANA - ATTO INTEGRATIVO DELLA DETERMINAZIONE N. 902 DEL 10/09/2026 - CUP G75F24000330006",
+    "num_pub": "514",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "38",
+    "register_number": ""
   },
   "f3a6d71baa7150f6": {
     "notified": true,
@@ -5735,7 +6670,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:7092c1f52271f25a2b69fdc1",
+    "legacy_ids": [
+      "f3a6d71baa7150f6"
+    ],
+    "title": "Presa d'atto della determinazione del Responsabile dell'Area amministrativa e finanziaria n. 198 del 10.09.2026 di assunzione di n. 2 Operatori esperti amministrativi mediante scorrimento di graduatoria. Attuazione del Piano triennale dei fabbisogni di personale e aggiornamento della dotazione organica.",
+    "num_pub": "515",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "53",
+    "register_number": ""
   },
   "5b79b12d76589737": {
     "notified": true,
@@ -5769,7 +6715,15 @@
     "legacy_ids": [
       "0370d3330e62b8f2"
     ],
-    "incident_reconciled_from": "0370d3330e62b8f2"
+    "incident_reconciled_from": "0370d3330e62b8f2",
+    "identity_version": 2,
+    "primary_id": "v2:8544fb33c270117d73447573",
+    "title": "RICHIESTA PUBBLICAZIONE - Protocollo In uscita: 0048392/2026 - SUA_Provincia di Avellino_?LAVORI DI MESSA IN SICUREZZA E RIAMMAGLIAMENO DELLE STRADE DI COLLEGAMENTO TRA LA ZONA INDUSTRIALE DEL COMUNE DI ROCCABASCERANA E LA ZONA AS",
+    "num_pub": "516",
+    "tipo": "AVVISO DI GARA",
+    "sender": "PROVINCIA DI AVELLINO (SUA)",
+    "act_number": "",
+    "register_number": ""
   },
   "aef1a8f97c355d4f": {
     "notified": true,
@@ -5797,7 +6751,15 @@
     "legacy_ids": [
       "4b0c7197ec91cd34"
     ],
-    "incident_reconciled_from": "4b0c7197ec91cd34"
+    "incident_reconciled_from": "4b0c7197ec91cd34",
+    "identity_version": 2,
+    "primary_id": "v2:daaa619338bbc838f89baca9",
+    "title": "VVISO DI RILASCIO PERMESSO DI COSTRUIRE n. 4 del 21/09/2026",
+    "num_pub": "517",
+    "tipo": "RENDE NOTO",
+    "sender": "responsabile area tecnica e di vigilanza",
+    "act_number": "",
+    "register_number": ""
   },
   "538c3575587dd54b": {
     "notified": true,
@@ -5822,7 +6784,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:e230111b825fe5aeaa571c5b",
+    "legacy_ids": [
+      "538c3575587dd54b"
+    ],
+    "title": "Concessione patrocinio gratuito alla Libera Associazione San Nicola per manifestazione del 04.10.2026",
+    "num_pub": "519",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "55",
+    "register_number": ""
   },
   "94ef968f6c37731b": {
     "notified": true,
@@ -5847,7 +6820,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:2a6d1d30f0683b67faf7a545",
+    "legacy_ids": [
+      "94ef968f6c37731b"
+    ],
+    "title": "Patrocinio all'Associazione il Filo di Arianna per evento culturale",
+    "num_pub": "518",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "54",
+    "register_number": ""
   },
   "bc4412f309eaa14c": {
     "notified": true,
@@ -5872,7 +6856,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:5e2458688b11b2cb4c1e486f",
+    "legacy_ids": [
+      "bc4412f309eaa14c"
+    ],
+    "title": "Atto di precetto notificato da BFF Bank S.p.A. (già Banca Farmafactoring S.p.A.) in forza del decreto ingiuntivo del Tribunale di Avellino n. 966/2018. Autorizzazione a proporre opposizione e mandato al Responsabile del Settore per l'individuazione del legale.",
+    "num_pub": "520",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "56",
+    "register_number": ""
   },
   "88c7c1d60e562d60": {
     "notified": true,
@@ -5897,7 +6892,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:ce3e55d4f047042bbef5e9f0",
+    "legacy_ids": [
+      "88c7c1d60e562d60"
+    ],
+    "title": "Affidamento in adozione dell'area a verde pubblico sita in Via Anna Frank alla \"Società Agricola Bellaria S.r.l.\" ai sensi del Regolamento Comunale approvato con Delibera di C.C. n. 9/2018.",
+    "num_pub": "521",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "32",
+    "register_number": ""
   },
   "ca4096f59e063f8d": {
     "notified": true,
@@ -5922,7 +6928,18 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:35217c99439fa2d596f6b134",
+    "legacy_ids": [
+      "ca4096f59e063f8d"
+    ],
+    "title": "Affidamento allo studio notarile del Notaio Sandra Sabatelli per cessione particelle intestate al Comune di Roccabascerana C/O Ditta Galasso Elisabetta, per l'area di accesso alla guglia rocciosa e area pertinenziale in località Roccabascerana Capoluogo.",
+    "num_pub": "522",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "207",
+    "register_number": ""
   },
   "da4c99966fc656a9": {
     "notified": true,
@@ -5954,7 +6971,15 @@
     "legacy_ids": [
       "2061456df0837721"
     ],
-    "incident_reconciled_from": "2061456df0837721"
+    "incident_reconciled_from": "2061456df0837721",
+    "identity_version": 2,
+    "primary_id": "v2:b6fd4e0093be593851f1e032",
+    "title": "POSTA CERTIFICATA: RICHIESTA PUBBLICAZIONE - Protocollo In uscita: 0049468/2026 - SUA_COMUNE DI ROCCABASCERANA (AV)_?LAVORI DI MESSA IN SICUREZZA E RIAMMAGLIAMENO DELLE STRADE DI COLLEGAMENTO TRA LA ZONA INDUSTRIALE DEL COMUNE DI ROCCABASCERANA E LA",
+    "num_pub": "523",
+    "tipo": "AVVISO",
+    "sender": "PROVINCIA DI AVELLINO (SUA)",
+    "act_number": "",
+    "register_number": ""
   },
   "50a732d55e8ee34d": {
     "notified": true,
@@ -5979,6 +7004,17 @@
       ]
     },
     "revision": 1,
-    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd"
+    "incident_false_revision_repaired": "25d503b7deea0893a0167b97c89d87b631f3f0cd",
+    "identity_version": 2,
+    "primary_id": "v2:e62cfb72f48a85a034a2b22a",
+    "legacy_ids": [
+      "50a732d55e8ee34d"
+    ],
+    "title": "Affidamento incarico legale per opposizione all'atto di precetto nella controversia BFF c/Comune di Roccabascerana - Impegno di spesa",
+    "num_pub": "524",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "210",
+    "register_number": ""
   }
 }
