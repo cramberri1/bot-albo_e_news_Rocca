@@ -1491,7 +1491,7 @@
     "date": "11-09-2026",
     "date_end": "26-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-25T20:31:19Z",
+    "last_revision_check_at": "2026-09-25T21:34:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "a2de2fb7577d9fda6385715303c0c69188173bf36f0e452a13fa88023be2c3c5",
     "revision_snapshot": {
@@ -1604,7 +1604,7 @@
     "date": "10-09-2026",
     "date_end": "25-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-25T20:31:19Z",
+    "last_revision_check_at": "2026-09-25T21:34:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "83e740f14cbfc6a8895982175eb00d09b6bd5c88f2c267fe578d8a8dc040a6b1",
     "revision_snapshot": {
@@ -2671,7 +2671,7 @@
     "date": "27-08-2026",
     "date_end": "30-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-25T20:31:19Z",
+    "last_revision_check_at": "2026-09-25T21:34:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "9f31a7472c9353f6d100ea396afc28271b3693f9e6c9c9bc305fc0fe279eb85c",
     "revision_snapshot": {
@@ -2708,7 +2708,7 @@
     "date": "17-07-2026",
     "date_end": "30-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-25T20:31:19Z",
+    "last_revision_check_at": "2026-09-25T21:34:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "437818cdcc86622d2e312449299587f7e575ec83f812243767c563f187d5c924",
     "revision_snapshot": {
@@ -2745,7 +2745,7 @@
     "date": "19-06-2026",
     "date_end": "17-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-25T20:31:19Z",
+    "last_revision_check_at": "2026-09-25T21:34:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "bf12f8e2da17f527342ea27a70ad8c6c7a67d8d159e54a62d7b480247c649881",
     "revision_snapshot": {
@@ -2893,7 +2893,7 @@
     "date": "30-01-2026",
     "date_end": "31-01-2027",
     "expired": false,
-    "last_revision_check_at": "2026-09-25T20:31:19Z",
+    "last_revision_check_at": "2026-09-25T21:34:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "0dffd967df4bf5de1b04a968ffb6044aa2399e9fad137cb63273ca5d7dd73b38",
     "revision_snapshot": {
@@ -2936,7 +2936,7 @@
     "date": "30-12-2025",
     "date_end": "31-12-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-25T20:31:19Z",
+    "last_revision_check_at": "2026-09-25T21:34:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "274da7318cb2de3c4bd1835a7e1f91b0012d7f9f9925298c141f489a585bf8a0",
     "revision_snapshot": {
@@ -6527,7 +6527,7 @@
     "date": "14-09-2026",
     "date_end": "14-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-25T20:31:19Z",
+    "last_revision_check_at": "2026-09-25T21:34:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "eeeb2c45115bb8c4179d06e3cad10c8dd72563bf79564e4716cb45effe4bcbec",
     "revision_snapshot": {
@@ -6642,7 +6642,7 @@
     "date": "16-09-2026",
     "date_end": "20-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-25T20:31:19Z",
+    "last_revision_check_at": "2026-09-25T21:34:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "defc395be8c89e5256cf32d3799a82a8108c52a37708ce2fada0ea2cec3dfb50",
     "revision_snapshot": {
@@ -6686,7 +6686,7 @@
     "date_end": "17-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-09-25T20:31:19Z",
+    "last_revision_check_at": "2026-09-25T21:34:38Z",
     "revision_fingerprint": "f2d00b2ed2ebe8d23314928574460e393e0a18a36bcb27655e784faa2d48473e",
     "revision_snapshot": {
       "date": "17-09-2026",
@@ -6800,7 +6800,7 @@
     "date": "18-09-2026",
     "date_end": "18-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-25T20:31:19Z",
+    "last_revision_check_at": "2026-09-25T21:34:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "d6fb2f5a065e46666b0258fc4e4ab7d9f5554cd58adc178989ce3f9f52a1475b",
     "revision_snapshot": {
