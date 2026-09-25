@@ -1510,7 +1510,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "90c4a749aabc9790"
+      "90c4a749aabc9790",
+      "v2:ea4db349a1f6f0f81e5af9fb"
     ],
     "incident_reconciled_from": "90c4a749aabc9790",
     "identity_version": 2,
@@ -1527,13 +1528,13 @@
     "date": "10-09-2026",
     "date_end": "09-11-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "3aaeadbeb571dc866d68a6b382354455ac9c7edf719039007f939dde6ef393d5",
     "revision_snapshot": {
       "date": "10-09-2026",
       "date_end": "09-11-2026",
-      "sender": "responsabile area tecnica manutentiva",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
       "act_number": "8",
       "register_number": "",
       "attachment_count": 1,
@@ -1549,7 +1550,8 @@
     "identity_version": 2,
     "primary_id": "v2:0828540c2e9367745f06b25f",
     "legacy_ids": [
-      "3fbb44ba0249adb2"
+      "3fbb44ba0249adb2",
+      "v2:0828540c2e9367745f06b25f"
     ],
     "title": "Ordinanza Dirigenziale n.8/2026 - Ordinanza chiusura strada comunale \"Via Parco San Giorgio\", divieto temporaneo di transito per lavori di rifacimento della rete idrica",
     "num_pub": "504",
@@ -1563,13 +1565,13 @@
     "date": "10-09-2026",
     "date_end": "25-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "ba2deea5876c2632ab29fb0ff80c3135db63bbd1aa3f968271b2fee923503ae9",
     "revision_snapshot": {
       "date": "10-09-2026",
       "date_end": "25-09-2026",
-      "sender": "area amministrativa e finanziaria",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "197",
       "register_number": "",
       "attachment_count": 2,
@@ -1587,7 +1589,8 @@
     "identity_version": 2,
     "primary_id": "v2:092fa25c111a28d389e202dd",
     "legacy_ids": [
-      "1bab1bd28383072a"
+      "1bab1bd28383072a",
+      "v2:092fa25c111a28d389e202dd"
     ],
     "title": "Costituzione fondo 2026 per le risorse decentrate del personale non dirigente",
     "num_pub": "503",
@@ -1622,7 +1625,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "2e381b3828d64d57"
+      "2e381b3828d64d57",
+      "v2:f4d92752939c91eae4c5a394"
     ],
     "incident_reconciled_from": "2e381b3828d64d57",
     "identity_version": 2,
@@ -2686,7 +2690,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "605d015c4fbc8e8c"
+      "605d015c4fbc8e8c",
+      "v2:d009360711abc3601f5eec39"
     ],
     "incident_reconciled_from": "605d015c4fbc8e8c",
     "identity_version": 2,
@@ -2722,7 +2727,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "6ddd5d4d39b98ad3"
+      "6ddd5d4d39b98ad3",
+      "v2:7cc64cde2b64fc573aafa420"
     ],
     "incident_reconciled_from": "6ddd5d4d39b98ad3",
     "identity_version": 2,
@@ -2758,7 +2764,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "144d5f0fbd2e2aa3"
+      "144d5f0fbd2e2aa3",
+      "v2:c54d2c85a484d61b2279b859"
     ],
     "incident_reconciled_from": "144d5f0fbd2e2aa3",
     "identity_version": 2,
@@ -2775,13 +2782,13 @@
     "date": "18-06-2026",
     "date_end": "30-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "b6f9ea67520d2b4d03ed5e10b831eb2a14f316d2a761c64707bede5843c7dc48",
     "revision_snapshot": {
       "date": "18-06-2026",
       "date_end": "30-09-2026",
-      "sender": "sindaco comune di roccabascerana",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
       "act_number": "14",
       "register_number": "",
       "attachment_count": 1,
@@ -2797,7 +2804,8 @@
     "identity_version": 2,
     "primary_id": "v2:801af5f9bbcc48d3129206ca",
     "legacy_ids": [
-      "dd8f9f77ee330b3c"
+      "dd8f9f77ee330b3c",
+      "v2:801af5f9bbcc48d3129206ca"
     ],
     "title": "ORDINANZA DEL SINDACO N° 14 DEL 18/06/2026. DIVIETO DI INTRODUZIONE DI FIORI FRESCHI E UTILIZZO DI ACQUA NEI PORTAFIORI DEI CIMITERI COMUNALI DURANTE IL PERIODO ESTIVO, DAL 25/06/2026 AL 30/09/2026",
     "num_pub": "365",
@@ -2811,13 +2819,13 @@
     "date": "15-06-2026",
     "date_end": "13-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "1b76fdc73dee1e6c040cc297f9b8fdb83eb9a781e28af129b27de05a6976d39d",
     "revision_snapshot": {
       "date": "15-06-2026",
       "date_end": "13-10-2026",
-      "sender": "responsabile area tecnica manutentiva",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
       "act_number": "5",
       "register_number": "",
       "attachment_count": 1,
@@ -2833,7 +2841,8 @@
     "identity_version": 2,
     "primary_id": "v2:4171e4bd585138ed27505ebc",
     "legacy_ids": [
-      "527368df377433c6"
+      "527368df377433c6",
+      "v2:4171e4bd585138ed27505ebc"
     ],
     "title": "Ord. Dir. 5/2026 - Disciplina della circolazione veicolare su via comunale P.zza M. Imbriani, altezza civico n. 144 della località Roccabascerana di questo Comune",
     "num_pub": "358",
@@ -2847,13 +2856,13 @@
     "date": "15-06-2026",
     "date_end": "30-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "d1e6334e290d5bc485419e51eb77e857bfce8f8cb233fd9326ddf80a62375b3f",
     "revision_snapshot": {
       "date": "15-06-2026",
       "date_end": "30-09-2026",
-      "sender": "sindaco comune di roccabascerana",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
       "act_number": "13",
       "register_number": "",
       "attachment_count": 1,
@@ -2869,7 +2878,8 @@
     "identity_version": 2,
     "primary_id": "v2:0e4671cae75f6df86ef5c262",
     "legacy_ids": [
-      "11345c016b674318"
+      "11345c016b674318",
+      "v2:0e4671cae75f6df86ef5c262"
     ],
     "title": "Ord. Sind. n. 13/2026 - Applicazione delle misure di prevenzione rischio incendi boschivi in vista del periodo di massima pericolosità per gli incendi boschivi. Decreto Giunta Regionale della Campania n. 212 del 09/06/2026",
     "num_pub": "356",
@@ -2908,7 +2918,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "ff3879df1090b2b9"
+      "ff3879df1090b2b9",
+      "v2:6139cc1964c214b008334140"
     ],
     "incident_reconciled_from": "ff3879df1090b2b9",
     "identity_version": 2,
@@ -2944,7 +2955,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "aeb80536c00d98ac"
+      "aeb80536c00d98ac",
+      "v2:92613f562e41a57895c8ec4f"
     ],
     "incident_reconciled_from": "aeb80536c00d98ac",
     "identity_version": 2,
@@ -2980,7 +2992,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "df23b63f1afe5c8e"
+      "df23b63f1afe5c8e",
+      "v2:b0fb4a19d67609041a6cf146"
     ],
     "incident_reconciled_from": "df23b63f1afe5c8e",
     "identity_version": 2,
@@ -3016,7 +3029,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "e668d98f4e785fb2"
+      "e668d98f4e785fb2",
+      "v2:4dacd20339d43e0977cbf449"
     ],
     "incident_reconciled_from": "e668d98f4e785fb2",
     "identity_version": 2,
@@ -3052,7 +3066,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "e0472f154e6beb97"
+      "e0472f154e6beb97",
+      "v2:a9c4fab4893f027366299d0d"
     ],
     "incident_reconciled_from": "e0472f154e6beb97",
     "identity_version": 2,
@@ -3088,7 +3103,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "bc68e40ef628c6bb"
+      "bc68e40ef628c6bb",
+      "v2:9f7231128a5a2149a00f2955"
     ],
     "incident_reconciled_from": "bc68e40ef628c6bb",
     "identity_version": 2,
@@ -3140,7 +3156,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "9ffced25d8d642dd"
+      "9ffced25d8d642dd",
+      "v2:d95fe6456946e2ac4442a502"
     ],
     "incident_reconciled_from": "9ffced25d8d642dd",
     "identity_version": 2,
@@ -3178,7 +3195,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "7f30da3c74202541"
+      "7f30da3c74202541",
+      "v2:eb397a34c1462ee7d4455e13"
     ],
     "incident_reconciled_from": "7f30da3c74202541",
     "identity_version": 2,
@@ -3216,7 +3234,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "29cebd159af37ce8"
+      "29cebd159af37ce8",
+      "v2:86b04fd20bd3e0d25e7d21e0"
     ],
     "incident_reconciled_from": "29cebd159af37ce8",
     "identity_version": 2,
@@ -3252,7 +3271,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "7a84687b4d8ce9a3"
+      "7a84687b4d8ce9a3",
+      "v2:27adccdd4b6d91b27ec40751"
     ],
     "incident_reconciled_from": "7a84687b4d8ce9a3",
     "identity_version": 2,
@@ -3300,7 +3320,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "4ae17a408b9821c3"
+      "4ae17a408b9821c3",
+      "v2:88034301237c8b21cb5063c2"
     ],
     "incident_reconciled_from": "4ae17a408b9821c3",
     "identity_version": 2,
@@ -3336,7 +3357,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "65bbb03880dd9063"
+      "65bbb03880dd9063",
+      "v2:31b7af869ae1aa00c50f5aae"
     ],
     "incident_reconciled_from": "65bbb03880dd9063",
     "identity_version": 2,
@@ -3380,7 +3402,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "1f1372a120495a68"
+      "1f1372a120495a68",
+      "v2:3af1057b7eb061d10ea46ada"
     ],
     "incident_reconciled_from": "1f1372a120495a68",
     "identity_version": 2,
@@ -3416,7 +3439,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "2c288f3d83932668"
+      "2c288f3d83932668",
+      "v2:9a24a4a775a7d0689647d187"
     ],
     "incident_reconciled_from": "2c288f3d83932668",
     "identity_version": 2,
@@ -3452,7 +3476,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "a67b710331760a19"
+      "a67b710331760a19",
+      "v2:8cafd9f77eefe49ca98aee3d"
     ],
     "incident_reconciled_from": "a67b710331760a19",
     "identity_version": 2,
@@ -3488,7 +3513,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "ce104974ff3a21f9"
+      "ce104974ff3a21f9",
+      "v2:c1bc8f3cd7bd9f904e0a947d"
     ],
     "incident_reconciled_from": "ce104974ff3a21f9",
     "identity_version": 2,
@@ -3524,7 +3550,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "fdbbda241b8ceedc"
+      "fdbbda241b8ceedc",
+      "v2:5f9eb7b1a78994468de2fd21"
     ],
     "incident_reconciled_from": "fdbbda241b8ceedc",
     "identity_version": 2,
@@ -3560,7 +3587,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "8fd08117c199d420"
+      "8fd08117c199d420",
+      "v2:657743e70efa4c24ad233d69"
     ],
     "incident_reconciled_from": "8fd08117c199d420",
     "identity_version": 2,
@@ -3604,7 +3632,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "64299675d65711a3"
+      "64299675d65711a3",
+      "v2:0abbf5a5f311718c42f63611"
     ],
     "incident_reconciled_from": "64299675d65711a3",
     "identity_version": 2,
@@ -3648,7 +3677,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "65d0877e386f26fd"
+      "65d0877e386f26fd",
+      "v2:efba4921df22abb50ec55c5a"
     ],
     "incident_reconciled_from": "65d0877e386f26fd",
     "identity_version": 2,
@@ -3684,7 +3714,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "f50a224ef1c90151"
+      "f50a224ef1c90151",
+      "v2:ae04e07abc8c584331ce10da"
     ],
     "incident_reconciled_from": "f50a224ef1c90151",
     "identity_version": 2,
@@ -3720,7 +3751,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "150895dc7abb90c6"
+      "150895dc7abb90c6",
+      "v2:4641091425823de07224dc2e"
     ],
     "incident_reconciled_from": "150895dc7abb90c6",
     "identity_version": 2,
@@ -3756,7 +3788,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "40f8d198b5c4e706"
+      "40f8d198b5c4e706",
+      "v2:329b086e48178a74ede42a5c"
     ],
     "incident_reconciled_from": "40f8d198b5c4e706",
     "identity_version": 2,
@@ -3792,7 +3825,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "282612b8a609487f"
+      "282612b8a609487f",
+      "v2:7399f6b2f9efceb95707f51b"
     ],
     "incident_reconciled_from": "282612b8a609487f",
     "identity_version": 2,
@@ -3828,7 +3862,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "d934e7d6fdea7ab2"
+      "d934e7d6fdea7ab2",
+      "v2:da031c84b9d741455b2490fc"
     ],
     "incident_reconciled_from": "d934e7d6fdea7ab2",
     "identity_version": 2,
@@ -3864,7 +3899,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "2633ef7ab9ceb730"
+      "2633ef7ab9ceb730",
+      "v2:3d3b4be4ae6f30a785de85b0"
     ],
     "incident_reconciled_from": "2633ef7ab9ceb730",
     "identity_version": 2,
@@ -3910,7 +3946,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "47f7fad07597447d"
+      "47f7fad07597447d",
+      "v2:60c68fa7d3744dc19c19481a"
     ],
     "incident_reconciled_from": "47f7fad07597447d",
     "identity_version": 2,
@@ -3946,7 +3983,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "6bb75a3c0499e6e3"
+      "6bb75a3c0499e6e3",
+      "v2:93a4483d9c4ea137cf9154e2"
     ],
     "incident_reconciled_from": "6bb75a3c0499e6e3",
     "identity_version": 2,
@@ -3984,7 +4022,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "8bdf21f4cb12e269"
+      "8bdf21f4cb12e269",
+      "v2:8f8ca6d8abe085c06bab1abb"
     ],
     "incident_reconciled_from": "8bdf21f4cb12e269",
     "identity_version": 2,
@@ -4028,7 +4067,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "5e6c180cd9b4b159"
+      "5e6c180cd9b4b159",
+      "v2:614d937445fbace7934d5185"
     ],
     "incident_reconciled_from": "5e6c180cd9b4b159",
     "identity_version": 2,
@@ -4064,7 +4104,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "cf255d582ae87e6e"
+      "cf255d582ae87e6e",
+      "v2:f0e5ba9aada52d2ee0752de0"
     ],
     "incident_reconciled_from": "cf255d582ae87e6e",
     "identity_version": 2,
@@ -4100,7 +4141,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "8cd61553918b92f4"
+      "8cd61553918b92f4",
+      "v2:7ab44d7da7ab8e5958cbfb41"
     ],
     "incident_reconciled_from": "8cd61553918b92f4",
     "identity_version": 2,
@@ -4136,7 +4178,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "ccc1d82100547a5f"
+      "ccc1d82100547a5f",
+      "v2:94ed6273b0b8b2597ef85a4b"
     ],
     "incident_reconciled_from": "ccc1d82100547a5f",
     "identity_version": 2,
@@ -4172,7 +4215,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "8a5254ee2b23eaf7"
+      "8a5254ee2b23eaf7",
+      "v2:630f376c73fad99896e6a44f"
     ],
     "incident_reconciled_from": "8a5254ee2b23eaf7",
     "identity_version": 2,
@@ -4208,7 +4252,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "2e2c7a15d9049fee"
+      "2e2c7a15d9049fee",
+      "v2:336e0090c0f92f84ad3382ee"
     ],
     "incident_reconciled_from": "2e2c7a15d9049fee",
     "identity_version": 2,
@@ -4244,7 +4289,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "0bd3da65ce4fc65a"
+      "0bd3da65ce4fc65a",
+      "v2:271d3669c4ee823ea607091f"
     ],
     "incident_reconciled_from": "0bd3da65ce4fc65a",
     "identity_version": 2,
@@ -4280,7 +4326,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "45a58c4c18539644"
+      "45a58c4c18539644",
+      "v2:e72f1699e9df34dda3564820"
     ],
     "incident_reconciled_from": "45a58c4c18539644",
     "identity_version": 2,
@@ -4316,7 +4363,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "93787cc5483a3f68"
+      "93787cc5483a3f68",
+      "v2:59d6a6c741c44df100124c16"
     ],
     "incident_reconciled_from": "93787cc5483a3f68",
     "identity_version": 2,
@@ -4352,7 +4400,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "90345eee8aaafbe6"
+      "90345eee8aaafbe6",
+      "v2:51b3ac57c311fb6f8620ae3c"
     ],
     "incident_reconciled_from": "90345eee8aaafbe6",
     "identity_version": 2,
@@ -4388,7 +4437,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "3f6875628ead6b71"
+      "3f6875628ead6b71",
+      "v2:0f187a211b24c9eebdb17eb3"
     ],
     "incident_reconciled_from": "3f6875628ead6b71",
     "identity_version": 2,
@@ -4436,7 +4486,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "568310579d363e46"
+      "568310579d363e46",
+      "v2:b7047bb0bf987e93ed641c37"
     ],
     "incident_reconciled_from": "568310579d363e46",
     "identity_version": 2,
@@ -4474,7 +4525,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "07e8db6477dd7ca1"
+      "07e8db6477dd7ca1",
+      "v2:69978da10f0a718c892cb2ff"
     ],
     "incident_reconciled_from": "07e8db6477dd7ca1",
     "identity_version": 2,
@@ -4512,7 +4564,8 @@
     "identity_version": 2,
     "primary_id": "v2:c4b17b91b6a64979573a240d",
     "legacy_ids": [
-      "9e2388914daa739d"
+      "9e2388914daa739d",
+      "v2:c4b17b91b6a64979573a240d"
     ],
     "title": "LIQUIDAZIONE 1 SAL LAVORI DI COSTRUZIONE LOCULI NEL CIMITERO DI TUFARA VALLE- IMPRESA SIGNORE CARMINE",
     "num_pub": "492",
@@ -4545,7 +4598,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "b80b5d1e2ce40cfa"
+      "b80b5d1e2ce40cfa",
+      "v2:e6b69aed2f7b5c903932f8c5"
     ],
     "incident_reconciled_from": "b80b5d1e2ce40cfa",
     "identity_version": 2,
@@ -4577,7 +4631,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "2ddcf23a050e91c3"
+      "2ddcf23a050e91c3",
+      "v2:921a504e6b045565453a47e9"
     ],
     "incident_reconciled_from": "2ddcf23a050e91c3",
     "identity_version": 2,
@@ -4621,7 +4676,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "609d806dd41769d3"
+      "609d806dd41769d3",
+      "v2:bb5e8c332707b3e0f623d525"
     ],
     "incident_reconciled_from": "609d806dd41769d3",
     "identity_version": 2,
@@ -4657,7 +4713,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "cc867df5b19261f3"
+      "cc867df5b19261f3",
+      "v2:f2af645086b15bd7735e3ec0"
     ],
     "incident_reconciled_from": "cc867df5b19261f3",
     "identity_version": 2,
@@ -4693,7 +4750,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "f8defcb96ffbe228"
+      "f8defcb96ffbe228",
+      "v2:175d8a50dd3e53bccca4c2a6"
     ],
     "incident_reconciled_from": "f8defcb96ffbe228",
     "identity_version": 2,
@@ -4729,7 +4787,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "649a8c4884f3b539"
+      "649a8c4884f3b539",
+      "v2:dfa71be4a3fa215385fe1ffc"
     ],
     "incident_reconciled_from": "649a8c4884f3b539",
     "identity_version": 2,
@@ -4765,7 +4824,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "aff46d72caf7e61a"
+      "aff46d72caf7e61a",
+      "v2:382e6b629c657e3a05818c00"
     ],
     "incident_reconciled_from": "aff46d72caf7e61a",
     "identity_version": 2,
@@ -4801,7 +4861,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "c995b5652b6ba8ea"
+      "c995b5652b6ba8ea",
+      "v2:be11d9a2edc33ba1de3761a9"
     ],
     "incident_reconciled_from": "c995b5652b6ba8ea",
     "identity_version": 2,
@@ -4837,7 +4898,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "f1b577be43e37811"
+      "f1b577be43e37811",
+      "v2:95fc3e74568e100fa2c08779"
     ],
     "incident_reconciled_from": "f1b577be43e37811",
     "identity_version": 2,
@@ -4869,7 +4931,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "bb9e96c28b0d7408"
+      "bb9e96c28b0d7408",
+      "v2:260d7b64bad7919389860213"
     ],
     "incident_reconciled_from": "bb9e96c28b0d7408",
     "identity_version": 2,
@@ -4905,7 +4968,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "a0c0119a581b2a57"
+      "a0c0119a581b2a57",
+      "v2:0f21148b00a84c210929c583"
     ],
     "incident_reconciled_from": "a0c0119a581b2a57",
     "identity_version": 2,
@@ -4941,7 +5005,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "1402b731831d65bb"
+      "1402b731831d65bb",
+      "v2:3a4eb1b96f6fae47724c2c41"
     ],
     "incident_reconciled_from": "1402b731831d65bb",
     "identity_version": 2,
@@ -4977,7 +5042,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "d80bc1b412f6e198"
+      "d80bc1b412f6e198",
+      "v2:6e7719de9e740583f803810c"
     ],
     "incident_reconciled_from": "d80bc1b412f6e198",
     "identity_version": 2,
@@ -5013,7 +5079,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "84bb217771ae340d"
+      "84bb217771ae340d",
+      "v2:d28a149f0e4cd52177e484bb"
     ],
     "incident_reconciled_from": "84bb217771ae340d",
     "identity_version": 2,
@@ -5049,7 +5116,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "7776620029bb4163"
+      "7776620029bb4163",
+      "v2:9250d1995bf6d13f45e3d7e6"
     ],
     "incident_reconciled_from": "7776620029bb4163",
     "identity_version": 2,
@@ -5085,7 +5153,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "46aae13809339d03"
+      "46aae13809339d03",
+      "v2:f0a8bc576b028485b73b7522"
     ],
     "incident_reconciled_from": "46aae13809339d03",
     "identity_version": 2,
@@ -5121,7 +5190,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "4a88da8332ca138f"
+      "4a88da8332ca138f",
+      "v2:edab526b5bfb8984dd76ac99"
     ],
     "incident_reconciled_from": "4a88da8332ca138f",
     "identity_version": 2,
@@ -5157,7 +5227,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "9c8179680aa85edc"
+      "9c8179680aa85edc",
+      "v2:c4bcaa4860ec7d7a84d73776"
     ],
     "incident_reconciled_from": "9c8179680aa85edc",
     "identity_version": 2,
@@ -5193,7 +5264,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "315cfc1a59950a59"
+      "315cfc1a59950a59",
+      "v2:d8fffab2c4508c82e3b6d4d6"
     ],
     "incident_reconciled_from": "315cfc1a59950a59",
     "identity_version": 2,
@@ -5265,7 +5337,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "5098641654a3cd24"
+      "5098641654a3cd24",
+      "v2:938febfe6e198e5e81e8c08d"
     ],
     "incident_reconciled_from": "5098641654a3cd24",
     "identity_version": 2,
@@ -5301,7 +5374,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "944896ae17539503"
+      "944896ae17539503",
+      "v2:ef0849744ce9cda136c03985"
     ],
     "incident_reconciled_from": "944896ae17539503",
     "identity_version": 2,
@@ -5337,7 +5411,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "2f61a5dd99994587"
+      "2f61a5dd99994587",
+      "v2:a6c8883536d1d8a4fefe8235"
     ],
     "incident_reconciled_from": "2f61a5dd99994587",
     "identity_version": 2,
@@ -5373,7 +5448,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "6e23faf55e9c749e"
+      "6e23faf55e9c749e",
+      "v2:25246fae7b5d9e791f6531ee"
     ],
     "incident_reconciled_from": "6e23faf55e9c749e",
     "identity_version": 2,
@@ -5409,7 +5485,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "1d8d39142aaa8a96"
+      "1d8d39142aaa8a96",
+      "v2:e78cc2c74871625349dedb3c"
     ],
     "incident_reconciled_from": "1d8d39142aaa8a96",
     "identity_version": 2,
@@ -5445,7 +5522,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "6290b4becb652b1c"
+      "6290b4becb652b1c",
+      "v2:2683a7a633ce40c768138c63"
     ],
     "incident_reconciled_from": "6290b4becb652b1c",
     "identity_version": 2,
@@ -5481,7 +5559,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "6fe0e0d53cdd88cf"
+      "6fe0e0d53cdd88cf",
+      "v2:d3e9bd94b66070e9b65d4376"
     ],
     "incident_reconciled_from": "6fe0e0d53cdd88cf",
     "identity_version": 2,
@@ -5517,7 +5596,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "b47c081b6c9a4d1f"
+      "b47c081b6c9a4d1f",
+      "v2:62b25515bb94dbf14b25e440"
     ],
     "incident_reconciled_from": "b47c081b6c9a4d1f",
     "identity_version": 2,
@@ -5553,7 +5633,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "124b492b8e3ba472"
+      "124b492b8e3ba472",
+      "v2:af35232b174820c16a31d28f"
     ],
     "incident_reconciled_from": "124b492b8e3ba472",
     "identity_version": 2,
@@ -5589,7 +5670,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "c8f3a63f237f62cb"
+      "c8f3a63f237f62cb",
+      "v2:68177a3fbd4d52b71ef0d88e"
     ],
     "incident_reconciled_from": "c8f3a63f237f62cb",
     "identity_version": 2,
@@ -5625,7 +5707,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "14a8e003daba121c"
+      "14a8e003daba121c",
+      "v2:33bad7e1e66c51bd4ced3796"
     ],
     "incident_reconciled_from": "14a8e003daba121c",
     "identity_version": 2,
@@ -5661,7 +5744,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "d315ae8319147e85"
+      "d315ae8319147e85",
+      "v2:170f9cafae1f4376411048cd"
     ],
     "incident_reconciled_from": "d315ae8319147e85",
     "identity_version": 2,
@@ -5697,7 +5781,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "72554f2fb89da8d4"
+      "72554f2fb89da8d4",
+      "v2:48ea9a3dd3a45c56bb52eb19"
     ],
     "incident_reconciled_from": "72554f2fb89da8d4",
     "identity_version": 2,
@@ -5733,7 +5818,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "80e9d5ae212c0f9f"
+      "80e9d5ae212c0f9f",
+      "v2:48af277c3a3c9189e4238daf"
     ],
     "incident_reconciled_from": "80e9d5ae212c0f9f",
     "identity_version": 2,
@@ -5769,7 +5855,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "85992054ac3b8be0"
+      "85992054ac3b8be0",
+      "v2:5fa542698823c018ec07d662"
     ],
     "incident_reconciled_from": "85992054ac3b8be0",
     "identity_version": 2,
@@ -5805,7 +5892,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "0dd90b77ba928cd2"
+      "0dd90b77ba928cd2",
+      "v2:a39c95d81af2a0ef65db3bc8"
     ],
     "incident_reconciled_from": "0dd90b77ba928cd2",
     "identity_version": 2,
@@ -5841,7 +5929,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "58b8e4a0dd176f06"
+      "58b8e4a0dd176f06",
+      "v2:16f96e91a46f44c42f2e5544"
     ],
     "incident_reconciled_from": "58b8e4a0dd176f06",
     "identity_version": 2,
@@ -5873,7 +5962,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "8b4ab1d8e8485111"
+      "8b4ab1d8e8485111",
+      "v2:466bfde12b97c61db3719f42"
     ],
     "incident_reconciled_from": "8b4ab1d8e8485111",
     "identity_version": 2,
@@ -5909,7 +5999,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "26f222a0774d6e7e"
+      "26f222a0774d6e7e",
+      "v2:d06550fb7788dbe30802a4d6"
     ],
     "incident_reconciled_from": "26f222a0774d6e7e",
     "identity_version": 2,
@@ -5941,7 +6032,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "c7ebfce4edd0a14b"
+      "c7ebfce4edd0a14b",
+      "v2:bde5664275f39eb60a1af219"
     ],
     "incident_reconciled_from": "c7ebfce4edd0a14b",
     "identity_version": 2,
@@ -5977,7 +6069,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "61c36d20d91fc4f7"
+      "61c36d20d91fc4f7",
+      "v2:16e0c26f991784185aeef2cd"
     ],
     "incident_reconciled_from": "61c36d20d91fc4f7",
     "identity_version": 2,
@@ -6013,7 +6106,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "e94b0e9c97866816"
+      "e94b0e9c97866816",
+      "v2:03a5ab1ec3ab5698c3d9d765"
     ],
     "incident_reconciled_from": "e94b0e9c97866816",
     "identity_version": 2,
@@ -6049,7 +6143,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "6156595e594a57cc"
+      "6156595e594a57cc",
+      "v2:313b236c08718709aa054c46"
     ],
     "incident_reconciled_from": "6156595e594a57cc",
     "identity_version": 2,
@@ -6085,7 +6180,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "af26b42ba4982247"
+      "af26b42ba4982247",
+      "v2:ae6460480353661dc176002a"
     ],
     "incident_reconciled_from": "af26b42ba4982247",
     "identity_version": 2,
@@ -6121,7 +6217,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "e8082d0128442842"
+      "e8082d0128442842",
+      "v2:18186f9def7fb9c0ef62111a"
     ],
     "incident_reconciled_from": "e8082d0128442842",
     "identity_version": 2,
@@ -6157,7 +6254,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "dfeee17a9b228c91"
+      "dfeee17a9b228c91",
+      "v2:32b8d11a3f8b24eed5a6f201"
     ],
     "incident_reconciled_from": "dfeee17a9b228c91",
     "identity_version": 2,
@@ -6193,7 +6291,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "1a00c2a171ac424d"
+      "1a00c2a171ac424d",
+      "v2:4651a7567ec487a04c83d785"
     ],
     "incident_reconciled_from": "1a00c2a171ac424d",
     "identity_version": 2,
@@ -6229,7 +6328,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "c591a61fd0a42354"
+      "c591a61fd0a42354",
+      "v2:aef0c58cc3e6ada8844ef655"
     ],
     "incident_reconciled_from": "c591a61fd0a42354",
     "identity_version": 2,
@@ -6265,7 +6365,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "c68e50697df039e3"
+      "c68e50697df039e3",
+      "v2:1383e38441525be879926275"
     ],
     "incident_reconciled_from": "c68e50697df039e3",
     "identity_version": 2,
@@ -6297,7 +6398,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "d32b7a6ab2addbd4"
+      "d32b7a6ab2addbd4",
+      "v2:98eb6eb433b19af883f647ca"
     ],
     "incident_reconciled_from": "d32b7a6ab2addbd4",
     "identity_version": 2,
@@ -6314,13 +6416,13 @@
     "date": "11-09-2026",
     "date_end": "26-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "ab91103d853dd253e9b04c24e0bf90111a8c934c721001a7042b4c84ab3b05f0",
     "revision_snapshot": {
       "date": "11-09-2026",
       "date_end": "26-09-2026",
-      "sender": "area amministrativa e finanziaria",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "198",
       "register_number": "",
       "attachment_count": 1,
@@ -6336,7 +6438,8 @@
     "identity_version": 2,
     "primary_id": "v2:12f22445a06b86eb3cd65eed",
     "legacy_ids": [
-      "ff0ee28f9991871b"
+      "ff0ee28f9991871b",
+      "v2:12f22445a06b86eb3cd65eed"
     ],
     "title": "Assunzione a tempo pieno e indeterminato di n. 2 Operatori esperti amministrativi - Area degli Operatori esperti - mediante scorrimento della graduatoria concorsuale approvata da questo Ente. Presa d'atto degli esiti delle verifiche e individuazione dei candidati.",
     "num_pub": "506",
@@ -6350,13 +6453,13 @@
     "date": "14-09-2026",
     "date_end": "29-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "4719841f165d6d38eb3e12dd5429a3d8866c0f3405872e189dffedfc9c9e5d6f",
     "revision_snapshot": {
       "date": "14-09-2026",
       "date_end": "29-09-2026",
-      "sender": "area amministrativa e finanziaria",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "199",
       "register_number": "",
       "attachment_count": 1,
@@ -6372,7 +6475,8 @@
     "identity_version": 2,
     "primary_id": "v2:19b3376d019543ac29e33013",
     "legacy_ids": [
-      "153c3ec8e0dafc01"
+      "153c3ec8e0dafc01",
+      "v2:19b3376d019543ac29e33013"
     ],
     "title": "Trasporto scolastico periodo compreso tra il 15 settembre e il 22 dicembre 2026 - impegno di spesa",
     "num_pub": "507",
@@ -6386,13 +6490,13 @@
     "date": "14-09-2026",
     "date_end": "29-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "e4734a6d0a281a818046ef60ebdff5f146938149a01decb9101bc23b82eced56",
     "revision_snapshot": {
       "date": "14-09-2026",
       "date_end": "29-09-2026",
-      "sender": "sindaco comune di roccabascerana",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
       "act_number": "32",
       "register_number": "",
       "attachment_count": 1,
@@ -6408,7 +6512,8 @@
     "identity_version": 2,
     "primary_id": "v2:e68a70a3620102b2ce410655",
     "legacy_ids": [
-      "561785735b5ffea5"
+      "561785735b5ffea5",
+      "v2:e68a70a3620102b2ce410655"
     ],
     "title": "Ord.Sind.32/2026-Revoca dell'Ordinanza Sindacale n. 23/2026 in materia di circolazione stradale e contestuale RIAPERTURA al transito veicolare e pedonale del tratto di strada comunale denominata \"Via Case Sparse Tufara\" in località Tufara Valle",
     "num_pub": "508",
@@ -6443,7 +6548,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "50ee9142beede77f"
+      "50ee9142beede77f",
+      "v2:505bd20f7535e29587ac64a1"
     ],
     "incident_reconciled_from": "50ee9142beede77f",
     "identity_version": 2,
@@ -6460,13 +6566,13 @@
     "date": "14-09-2026",
     "date_end": "29-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "774262e0ac2ce89136aae6c5564b4cf5e4948cce4bc2212bda61024cbe4148ea",
     "revision_snapshot": {
       "date": "14-09-2026",
       "date_end": "29-09-2026",
-      "sender": "area amministrativa e finanziaria",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "201",
       "register_number": "",
       "attachment_count": 1,
@@ -6482,7 +6588,8 @@
     "identity_version": 2,
     "primary_id": "v2:066823f49e8265be27870042",
     "legacy_ids": [
-      "dccb8d4f7a383388"
+      "dccb8d4f7a383388",
+      "v2:066823f49e8265be27870042"
     ],
     "title": "Servizio di trasporto scolastico dedicato agli studenti con disabilità - periodo 15.09 - 22.12.2026 - frequentanti la scuola dell'infanzia e/o primaria e servizio di trasporto scolastico dedicato agli studenti con disabilità frequentanti la scuola secondaria di primo grado - Impegno di spesa",
     "num_pub": "510",
@@ -6496,13 +6603,13 @@
     "date": "15-09-2026",
     "date_end": "30-09-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "fd0bf82ecd345d814231594ece53159faab90c7b2542271c8ede786dc7f285f0",
     "revision_snapshot": {
       "date": "15-09-2026",
       "date_end": "30-09-2026",
-      "sender": "area amministrativa e finanziaria",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "203",
       "register_number": "",
       "attachment_count": 2,
@@ -6520,7 +6627,8 @@
     "identity_version": 2,
     "primary_id": "v2:6e70eef5b95bca6116e3dd45",
     "legacy_ids": [
-      "c63faac59f646956"
+      "c63faac59f646956",
+      "v2:6e70eef5b95bca6116e3dd45"
     ],
     "title": "Assunzione a tempo pieno ed indeterminato a seguito di procedura concorsuale e scorrimento di graduatoria di n. 2 esecutori amministrativo, (ex cat. B) posizione economica 1, ed approvazione dello schema di contratto.",
     "num_pub": "511",
@@ -6559,7 +6667,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "2c3e386b7fd72a93"
+      "2c3e386b7fd72a93",
+      "v2:96698bb802ca7f726d383371"
     ],
     "incident_reconciled_from": "2c3e386b7fd72a93",
     "identity_version": 2,
@@ -6599,7 +6708,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "db02dc9f79682011"
+      "db02dc9f79682011",
+      "v2:3079ab136b39786757c0278b"
     ],
     "incident_reconciled_from": "db02dc9f79682011",
     "identity_version": 2,
@@ -6616,13 +6726,13 @@
     "date": "17-09-2026",
     "date_end": "02-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "fe45127358753ea535675585c10e1a996e7001b89bb5d35598f9a959f51015fd",
     "revision_snapshot": {
       "date": "17-09-2026",
       "date_end": "02-10-2026",
-      "sender": "area tecnica e di vigilanza - sede",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
       "act_number": "38",
       "register_number": "",
       "attachment_count": 1,
@@ -6638,7 +6748,8 @@
     "identity_version": 2,
     "primary_id": "v2:26d22b4e305d88ab23953c37",
     "legacy_ids": [
-      "a3a8cd1ab4ba7375"
+      "a3a8cd1ab4ba7375",
+      "v2:26d22b4e305d88ab23953c37"
     ],
     "title": "\"LAVORI DI MESSA IN SICUREZZA E RIAMMAGLIAMENO DELLE STRADE DI COLLEGAMENTO TRA LA ZONA INDUSTRIALE DEL COMUNE DI ROCCABASCERANA E LA ZONA ASI DELLA VALLE CAUDINA\" NEL COMUNE DI ROCCABASCERANA - ATTO INTEGRATIVO DELLA DETERMINAZIONE N. 902 DEL 10/09/2026 - CUP G75F24000330006",
     "num_pub": "514",
@@ -6652,13 +6763,13 @@
     "date": "17-09-2026",
     "date_end": "02-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "b7f72b8f0d46f36824045a08eb714c9fb35ec637b7ae0d0729bcc73aad408b33",
     "revision_snapshot": {
       "date": "17-09-2026",
       "date_end": "02-10-2026",
-      "sender": "segretario comunale francesco pezzolla",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
       "act_number": "53",
       "register_number": "",
       "attachment_count": 1,
@@ -6674,7 +6785,8 @@
     "identity_version": 2,
     "primary_id": "v2:7092c1f52271f25a2b69fdc1",
     "legacy_ids": [
-      "f3a6d71baa7150f6"
+      "f3a6d71baa7150f6",
+      "v2:7092c1f52271f25a2b69fdc1"
     ],
     "title": "Presa d'atto della determinazione del Responsabile dell'Area amministrativa e finanziaria n. 198 del 10.09.2026 di assunzione di n. 2 Operatori esperti amministrativi mediante scorrimento di graduatoria. Attuazione del Piano triennale dei fabbisogni di personale e aggiornamento della dotazione organica.",
     "num_pub": "515",
@@ -6713,7 +6825,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "0370d3330e62b8f2"
+      "0370d3330e62b8f2",
+      "v2:8544fb33c270117d73447573"
     ],
     "incident_reconciled_from": "0370d3330e62b8f2",
     "identity_version": 2,
@@ -6730,7 +6843,7 @@
     "date": "21-09-2026",
     "date_end": "06-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T18:30:45Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "320b72718ebb4d2d8555739ddc7f4e13f30db6936e3566e36e89690ae68fdf13",
     "revision_snapshot": {
@@ -6749,7 +6862,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "4b0c7197ec91cd34"
+      "4b0c7197ec91cd34",
+      "v2:daaa619338bbc838f89baca9"
     ],
     "incident_reconciled_from": "4b0c7197ec91cd34",
     "identity_version": 2,
@@ -6767,12 +6881,12 @@
     "date_end": "07-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "revision_fingerprint": "1d4680e2a988f76e2cad533c47ff56371d1abb7a9a425377708a3450996ff1a4",
     "revision_snapshot": {
       "date": "22-09-2026",
       "date_end": "07-10-2026",
-      "sender": "segretario comunale francesco pezzolla",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
       "act_number": "55",
       "register_number": "",
       "attachment_count": 1,
@@ -6788,7 +6902,8 @@
     "identity_version": 2,
     "primary_id": "v2:e230111b825fe5aeaa571c5b",
     "legacy_ids": [
-      "538c3575587dd54b"
+      "538c3575587dd54b",
+      "v2:e230111b825fe5aeaa571c5b"
     ],
     "title": "Concessione patrocinio gratuito alla Libera Associazione San Nicola per manifestazione del 04.10.2026",
     "num_pub": "519",
@@ -6803,12 +6918,12 @@
     "date_end": "07-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "revision_fingerprint": "2146a9052646672c228e2987997c8d882cb517eb4cdef162626ed5292d0f324a",
     "revision_snapshot": {
       "date": "22-09-2026",
       "date_end": "07-10-2026",
-      "sender": "segretario comunale francesco pezzolla",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
       "act_number": "54",
       "register_number": "",
       "attachment_count": 1,
@@ -6824,7 +6939,8 @@
     "identity_version": 2,
     "primary_id": "v2:2a6d1d30f0683b67faf7a545",
     "legacy_ids": [
-      "94ef968f6c37731b"
+      "94ef968f6c37731b",
+      "v2:2a6d1d30f0683b67faf7a545"
     ],
     "title": "Patrocinio all'Associazione il Filo di Arianna per evento culturale",
     "num_pub": "518",
@@ -6838,13 +6954,13 @@
     "date": "22-09-2026",
     "date_end": "07-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "f3e8a6f76bc9b59997eba7b6eebeb3eda36114d6dc8e4332c4f090ba5027dabe",
     "revision_snapshot": {
       "date": "22-09-2026",
       "date_end": "07-10-2026",
-      "sender": "segretario comunale francesco pezzolla",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
       "act_number": "56",
       "register_number": "",
       "attachment_count": 1,
@@ -6860,7 +6976,8 @@
     "identity_version": 2,
     "primary_id": "v2:5e2458688b11b2cb4c1e486f",
     "legacy_ids": [
-      "bc4412f309eaa14c"
+      "bc4412f309eaa14c",
+      "v2:5e2458688b11b2cb4c1e486f"
     ],
     "title": "Atto di precetto notificato da BFF Bank S.p.A. (già Banca Farmafactoring S.p.A.) in forza del decreto ingiuntivo del Tribunale di Avellino n. 966/2018. Autorizzazione a proporre opposizione e mandato al Responsabile del Settore per l'individuazione del legale.",
     "num_pub": "520",
@@ -6874,13 +6991,13 @@
     "date": "22-09-2026",
     "date_end": "07-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "cc452b58649a99663bcf994ef0de5f04f2582b322c3f7144e707a58076fdc9f5",
     "revision_snapshot": {
       "date": "22-09-2026",
       "date_end": "07-10-2026",
-      "sender": "area tecnica e di vigilanza - sede",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
       "act_number": "32",
       "register_number": "",
       "attachment_count": 1,
@@ -6896,7 +7013,8 @@
     "identity_version": 2,
     "primary_id": "v2:ce3e55d4f047042bbef5e9f0",
     "legacy_ids": [
-      "88c7c1d60e562d60"
+      "88c7c1d60e562d60",
+      "v2:ce3e55d4f047042bbef5e9f0"
     ],
     "title": "Affidamento in adozione dell'area a verde pubblico sita in Via Anna Frank alla \"Società Agricola Bellaria S.r.l.\" ai sensi del Regolamento Comunale approvato con Delibera di C.C. n. 9/2018.",
     "num_pub": "521",
@@ -6910,13 +7028,13 @@
     "date": "23-09-2026",
     "date_end": "08-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "8ff3a1e8dc2aeae33cbd4c14fa2bd7114a094bbbaf2c95a3e7c712cdaff10996",
     "revision_snapshot": {
       "date": "23-09-2026",
       "date_end": "08-10-2026",
-      "sender": "area amministrativa e finanziaria",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "207",
       "register_number": "",
       "attachment_count": 1,
@@ -6932,7 +7050,8 @@
     "identity_version": 2,
     "primary_id": "v2:35217c99439fa2d596f6b134",
     "legacy_ids": [
-      "ca4096f59e063f8d"
+      "ca4096f59e063f8d",
+      "v2:35217c99439fa2d596f6b134"
     ],
     "title": "Affidamento allo studio notarile del Notaio Sandra Sabatelli per cessione particelle intestate al Comune di Roccabascerana C/O Ditta Galasso Elisabetta, per l'area di accesso alla guglia rocciosa e area pertinenziale in località Roccabascerana Capoluogo.",
     "num_pub": "522",
@@ -6947,12 +7066,12 @@
     "date_end": "20-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-09-24T18:30:45Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "revision_fingerprint": "f56f8b69bb8e5cae3e326513b3fbe0a893b8ae7192335b263623faf863e30345",
     "revision_snapshot": {
       "date": "23-09-2026",
       "date_end": "20-10-2026",
-      "sender": "provincia di avellino (sua)",
+      "sender": "PROVINCIA DI AVELLINO (SUA)",
       "act_number": "",
       "register_number": "",
       "attachment_count": 3,
@@ -6969,7 +7088,8 @@
     },
     "revision": 1,
     "legacy_ids": [
-      "2061456df0837721"
+      "2061456df0837721",
+      "v2:b6fd4e0093be593851f1e032"
     ],
     "incident_reconciled_from": "2061456df0837721",
     "identity_version": 2,
@@ -6986,13 +7106,13 @@
     "date": "23-09-2026",
     "date_end": "08-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-09-24T17:59:27Z",
+    "last_revision_check_at": "2026-09-25T00:30:52Z",
     "delivery_pending": false,
     "revision_fingerprint": "31bffa8a21b80acbd2c6b45f4fe69241e22b5d1c1ccca222eae3d5b22f913132",
     "revision_snapshot": {
       "date": "23-09-2026",
       "date_end": "08-10-2026",
-      "sender": "area amministrativa e finanziaria",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "210",
       "register_number": "",
       "attachment_count": 1,
@@ -7008,7 +7128,8 @@
     "identity_version": 2,
     "primary_id": "v2:e62cfb72f48a85a034a2b22a",
     "legacy_ids": [
-      "50a732d55e8ee34d"
+      "50a732d55e8ee34d",
+      "v2:e62cfb72f48a85a034a2b22a"
     ],
     "title": "Affidamento incarico legale per opposizione all'atto di precetto nella controversia BFF c/Comune di Roccabascerana - Impegno di spesa",
     "num_pub": "524",
