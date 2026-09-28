@@ -3613,7 +3613,8 @@ async def telegram_polling(app, stop):
             if claim_telegram_update(update.update_id):
                 message = update.effective_message
                 timestamp = message.date if message else None
-                command = (message.text or '').split(maxsplit=1)[0].split('@')[0] if message else ''
+                words = (message.text or '').split(maxsplit=1) if message else []
+                command = words[0].split('@')[0] if words else ''
                 known = {'/start', '/help', '/abbonati', '/disabbonati', '/abbonati_albo', '/disabbonati_albo', '/abbonati_news', '/disabbonati_news', '/atti', '/news', '/controlla', '/status', '/cerca', '/cerca_news'}
                 kind = 'callback' if update.callback_query else command if command in known else 'message'
                 age = int((datetime.now(timezone.utc) - timestamp).total_seconds()) if timestamp else None
