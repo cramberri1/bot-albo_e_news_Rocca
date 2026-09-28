@@ -7137,5 +7137,41 @@
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "210",
     "register_number": ""
+  },
+  "v2:a34ffe4241b8365db191dc71": {
+    "notified": true,
+    "date": "28-09-2026",
+    "date_end": "13-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:a34ffe4241b8365db191dc71",
+    "legacy_ids": [
+      "904c972b2fb9cce7",
+      "v2:a34ffe4241b8365db191dc71"
+    ],
+    "title": "Collocamento presso idonea comunità di quattro minori, su disposizione del tribunale dei Minori di Napoli - Impegno di spesa periodo maggio - dicembre 2026",
+    "num_pub": "525",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "202",
+    "register_number": "",
+    "last_revision_check_at": "2026-09-28T11:16:47Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "c31f93eee7faa613fe53c001375f0a49e1186cdd611ce3e9597c5bcab4ad6c41",
+    "revision_snapshot": {
+      "date": "28-09-2026",
+      "date_end": "13-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "202",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "b9558b7ceda188923b69be659a4146fdddeb81f1c9909a6e4e5c875cfd7493e6"
+      ],
+      "attachment_name_hashes": [
+        "4ac874150e330fa0"
+      ]
+    },
+    "revision": 1
   }
 }
