@@ -481,7 +481,7 @@ def _normalize_item_record(value: dict | list | str | None, *, default_notified:
     rec.setdefault("notified", default_notified)
     return rec
 
-def load_db() -> dict:
+def load_db(*, migrate: bool = True) -> dict:
     """
     Carica il database atti. Formato attuale:
     {
@@ -501,6 +501,9 @@ def load_db() -> dict:
     - vecchio formato lista di hash: tutti considerati già notificati;
     - vecchio formato dict senza `notified`: voci considerate già notificate
       per evitare reinvii massivi dopo l'upgrade.
+
+    ``migrate=False`` normalizza soltanto in memoria, per le richieste manuali
+    che devono lasciare lo stato persistente invariato.
     """
     if not DB_PATH.exists():
         return {}
@@ -508,7 +511,8 @@ def load_db() -> dict:
     if isinstance(raw, list):
         log.info(f"Migrazione seen_items.json: {len(raw)} hash -> formato con notified/cache")
         migrated = {h: {"notified": True} for h in raw}
-        _atomic_write_text(DB_PATH, json.dumps(migrated, ensure_ascii=False, indent=2) + "\n")
+        if migrate:
+            _atomic_write_text(DB_PATH, json.dumps(migrated, ensure_ascii=False, indent=2) + "\n")
         return migrated
     if isinstance(raw, dict):
         changed = False
@@ -518,7 +522,7 @@ def load_db() -> dict:
             if rec != value:
                 changed = True
             normalized[h] = rec
-        if changed:
+        if changed and migrate:
             _atomic_write_text(DB_PATH, json.dumps(normalized, ensure_ascii=False, indent=2) + "\n")
         return normalized
     raise RuntimeError(
@@ -1023,8 +1027,18 @@ async def open_session(client: httpx.AsyncClient) -> str | None:
 # Fetch lista atti con paginazione completa (senza PDF)
 # ---------------------------------------------------------------------------
 def has_next_page(html: str) -> bool:
-    """Controlla se esiste il bottone pagina successiva."""
+    """Usa i contatori Halley: btSucc resta presente anche all'ultima pagina."""
     soup = BeautifulSoup(html, "html.parser")
+    pagination = soup.select_one("ul.pagination")
+    if pagination:
+        current = pagination.find("span", id="pagCorrente")
+        total = pagination.find("span", id="totalePagine")
+        values = [tag.get_text(strip=True) if tag else "" for tag in (current, total)]
+        if all(re.fullmatch(r"[1-9][0-9]{0,5}", value) for value in values):
+            current_page, total_pages = map(int, values)
+            if current_page <= total_pages:
+                return current_page < total_pages
+    # Markup precedente o contatori non validi: non anticipare la fine lista.
     nxt  = soup.find("li", id="btSucc")
     return bool(nxt)
 
@@ -1038,7 +1052,8 @@ async def fetch_all_pages(
     Scarica tutte le pagine dell'albo nella sessione corrente.
     Pagina 1: POST &F=MC01
     Pagina N: POST &F=PMC02&1=N
-    Termina quando non c'è più il bottone "pagina successiva".
+    Termina all'ultima pagina indicata dai contatori Halley, oppure quando
+    non c'è più il bottone "pagina successiva" nel markup precedente.
 
     on_progress: callback opzionale async, chiamata dopo ogni pagina
     come on_progress(numero_pagina, totale_atti_finora) — usata da
@@ -1052,6 +1067,7 @@ async def fetch_all_pages(
     diagnostics.setdefault("partial_pages", [])
     diagnostics.setdefault("unreadable_pages", [])
     diagnostics.setdefault("pages_read", [])
+    diagnostics.setdefault("incomplete_pagination", [])
 
     async def report_progress(page_number: int):
         if not on_progress:
@@ -1095,6 +1111,8 @@ async def fetch_all_pages(
         diagnostics["pages_read"].append(page)
         page_unreadable = page in diagnostics.get("unreadable_pages", [])
         if not page_items and not page_unreadable:
+            if has_next_page(r.text):
+                diagnostics["incomplete_pagination"].append(page)
             # Pagina genuinamente vuota: non c'è altro da aggiungere.
             break
         new_count = 0
@@ -1106,6 +1124,7 @@ async def fetch_all_pages(
         log.info(f"Pagina {page}: {len(page_items)} atti ({new_count} nuovi)")
         await report_progress(page)
         if new_count == 0 and page_items:
+            diagnostics["incomplete_pagination"].append(page)
             break  # sicurezza anti-loop: Halley ha ripetuto una pagina già letta
         # Se la pagina è illeggibile, NON bloccare l'intero comando: proviamo
         # comunque la successiva quando Halley espone il pulsante avanti.
@@ -1120,6 +1139,8 @@ async def fetch_albo_html(
     on_progress=None,
     force_detail: bool = False,
     push_cache: bool = True,
+    write_cache: bool = True,
+    strict_attachments: bool = False,
     raise_on_failure: bool = False,
     diagnostics: dict | None = None,
 ) -> list | None:
@@ -1147,7 +1168,7 @@ async def fetch_albo_html(
                         on_progress=on_progress,
                         diagnostics=diagnostics,
                     )
-                    identity_db = load_db()
+                    identity_db = load_db(migrate=write_cache)
                     for item in items:
                         bind_identity(item, identity_db)
                     if detail_selector is not None and items:
@@ -1159,13 +1180,16 @@ async def fetch_albo_html(
                                 selected,
                                 push_cache=push_cache,
                                 force_detail=force_detail,
+                                write_cache=write_cache,
+                                strict_attachments=strict_attachments,
                             )
                     return items
             except (httpx.HTTPError, IncompleteAlboSnapshot) as e:
                 last_error = e
                 cleanup_attachment_files(items)
                 log.warning(
-                    f"Errore fetch_albo tentativo {attempt}/{MAX_RETRIES}: {_safe_error(e)}"
+                    f"Errore fetch_albo tentativo {attempt}/{MAX_RETRIES}: "
+                    f"{type(e).__name__ if strict_attachments else _safe_error(e)}"
                 )
             except BaseException:
                 # Gli errori applicativi dell'arricchimento sono gestiti per
@@ -1512,6 +1536,148 @@ async def _download_attachment_to_spool(
                 _release_attachment_spool(reserved)
 
 
+def _strict_detail_identity_matches(item: dict, soup: BeautifulSoup) -> bool:
+    """Require the exact normalized title and reject available strong conflicts."""
+    heading = soup.select_one(".cmp-heading h5")
+    if heading is None or normalize_field(heading.get_text(" ", strip=True)) != normalize_field(item.get("title")):
+        return False
+    info = soup.select_one("section#informazioni")
+    info_text = info.get_text(" ", strip=True) if info else ""
+    values = {}
+    if info:
+        for label in info.find_all("strong"):
+            key = {"mittente:": "sender", "tipo pubblicazione:": "tipo"}.get(
+                normalize_field(label.get_text(" ", strip=True))
+            )
+            if not key:
+                continue
+            parts = []
+            for sibling in label.next_siblings:
+                if getattr(sibling, "name", None) in {"strong", "br"}:
+                    break
+                parts.append(sibling.get_text(" ", strip=True) if getattr(sibling, "name", None) else str(sibling))
+            values[key] = " ".join(parts)
+    values["act_number"] = parse_act_number(info_text)
+    values["register_number"] = parse_register_number(info_text)
+    top = soup.select_one(".cmp-heading")
+    values["num_pub"] = parse_publication_number(top.get_text(" ", strip=True) if top else "")
+    dates = soup.select("section#date .calendar-date-day span strong")
+    for index, key in enumerate(("date", "date_end")):
+        if len(dates) > index:
+            values[key] = dates[index].get_text(strip=True)
+    for key, observed in values.items():
+        normalizer = (parse_publication_number if key == "num_pub" else
+                      normalize_number if key in {"act_number", "register_number"} else normalize_field)
+        expected, actual = normalizer(item.get(key)), normalizer(observed)
+        if key == 'num_pub' and expected.isdecimal():
+            # MC02 displays N/YYYY while MC01 and the identity database use N.
+            # Accept that presentation only when the explicit year also agrees;
+            # this does not change primary IDs, aliases or the stored number.
+            compound = re.fullmatch(r'([0-9]+)/([0-9]{4})', actual)
+            publication_date = _parse_albo_date(item.get('date'))
+            if compound and publication_date and int(compound.group(2)) == publication_date.year:
+                actual = normalize_number(compound.group(1))
+                if actual != expected:
+                    return False
+        if expected and actual and expected != actual:
+            return False
+    return True
+
+
+def _strict_attachment_references(soup: BeautifulSoup) -> tuple[list, list[str]]:
+    """Validate the complete MC02 fragment before claiming an empty attachment list.
+
+    These markers are the public Halley detail structure. The trailing footer
+    prevents a truncated response ending at the attachment heading from being
+    mistaken for a valid zero. Unknown document controls fail closed; the
+    advisory link in the section's alert is not an attachment.
+    """
+    errors = []
+    section = soup.select_one("section#allegati")
+    dates = soup.select("section#date .calendar-date-day span strong")
+    complete = (
+        soup.select_one(".cmp-heading h1") is not None
+        and soup.select_one(".cmp-heading h5") is not None
+        and soup.select_one("section#informazioni .richtext-wrapper") is not None
+        and section is not None
+        and section.find("h2") is not None
+        and soup.select_one(".mb-2.text-end") is not None
+        and len(dates) == 2
+    )
+    if complete:
+        try:
+            for date in dates:
+                datetime.strptime(date.get_text(strip=True), "%d-%m-%Y")
+        except ValueError:
+            complete = False
+    if not complete:
+        errors.append("MC02_incomplete_structure")
+    if section is None:
+        return [], errors
+
+    control_selector = "a, button, [onclick], [download], input[type=button]"
+    advisory_controls = set()
+    for alert in section.select(".alert"):
+        # This exact generic P7M notice/link was verified on the public portal.
+        # An arbitrary alert can instead report a failed or partial acquisition.
+        links = alert.select(control_selector)
+        known_advisory = (
+            "alert-info" in alert.get("class", [])
+            and not any(c.startswith("alert-") and c != "alert-info"
+                        for c in alert.get("class", []))
+            and normalize_field(alert.get_text(" ", strip=True)) == normalize_field(
+                "Per leggere i file firmati digitalmente (estensione '.p7m') è necessario "
+                "aver installato il software Dike (download)"
+            )
+            and len(links) == 1
+            and links[0].name == "a"
+            and links[0].get("href") == "https://www.firma.infocert.it/installazione/installazione_DiKe.php"
+            and normalize_field(links[0].get_text(" ", strip=True)) == "dike (download)"
+            and not alert.has_attr("onclick") and not alert.has_attr("download")
+            and not links[0].has_attr("onclick") and not links[0].has_attr("download")
+            and not alert.select(".card") and "card" not in alert.get("class", [])
+        )
+        if known_advisory:
+            advisory_controls.add(id(links[0]))
+        else:
+            errors.append("MC02_unrecognized_attachment_alert")
+
+    controls = section.select(control_selector)
+    # Also reject a malformed known reference appearing outside the section.
+    for control in soup.find_all(attrs={"onclick": re.compile(r"\bMC9[6-9]\b", re.I)}):
+        if not any(control is existing for existing in controls):
+            controls.append(control)
+    references = []
+    parsed_controls = set()
+    grammar = re.compile(
+        r"\s*(?:return\s+)?(MC9[6-9])\s*\(\s*(['\"]?)(\d+)\2\s*\)"
+        r"\s*;?\s*(?:return\s+false\s*;?\s*)?", re.I,
+    )
+    for control in controls:
+        onclick = control.get("onclick", "")
+        if id(control) in advisory_controls:
+            continue
+        match = grammar.fullmatch(onclick)
+        if not match or control.find_parent("section", id="allegati") is not section:
+            errors.append("MC02_unknown_attachment_reference")
+            continue
+        references.append((match.group(1).upper(), match.group(3), control))
+        parsed_controls.add(id(control))
+    for card in section.select(".card"):
+        if not any(id(control) in parsed_controls for control in card.find_all(True)):
+            errors.append("MC02_attachment_card_without_reference")
+    if not references and not errors:
+        empty_section = BeautifulSoup(str(section), "html.parser")
+        for non_document in empty_section.select("h2, .alert"):
+            non_document.decompose()
+        remaining = " ".join(empty_section.stripped_strings).casefold().strip(" .")
+        if remaining and not re.fullmatch(
+            r"(?:nessun allegato(?: presente)?|non (?:sono presenti|ci sono) allegati)", remaining,
+        ):
+            errors.append("MC02_unrecognized_empty_attachment_section")
+    return references, list(dict.fromkeys(errors))
+
+
 async def enrich_with_attachments(
     client: httpx.AsyncClient,
     session_url: str,
@@ -1519,6 +1685,8 @@ async def enrich_with_attachments(
     *,
     push_cache: bool = True,
     force_detail: bool = False,
+    write_cache: bool = True,
+    strict_attachments: bool = False,
 ) -> list:
     cache_updates = 0
     # Rientra nella sessione MC01 prima di richiedere i dettagli
@@ -1533,6 +1701,11 @@ async def enrich_with_attachments(
         item["_attachment_fetch_ok"] = False
         item["_attachment_expected_count"] = 0
         item["_attachment_errors"] = []
+        if strict_attachments:
+            item["_detail_captured"] = False
+            item["_attachment_list_complete"] = False
+            item["_attachment_zero_confirmed"] = False
+            item["_attachment_identity_uncertain"] = False
         allegati = []
         batch_bytes = 0
         num_riga = item.get("num_riga")
@@ -1554,17 +1727,36 @@ async def enrich_with_attachments(
                     break
                 except httpx.HTTPError as error:
                     detail_error = error
-                    log.warning(
-                        f"Dettaglio MC02 {attempt}/{MAX_RETRIES} fallito per "
-                        f"'{item.get('title', '')[:45]}': {_safe_error(error)}"
-                    )
+                    if strict_attachments:
+                        log.warning("Dettaglio MC02 fallito (%s/%s): %s",
+                                    attempt, MAX_RETRIES, type(error).__name__)
+                    else:
+                        log.warning(
+                            f"Dettaglio MC02 {attempt}/{MAX_RETRIES} fallito per "
+                            f"'{item.get('title', '')[:45]}': {_safe_error(error)}"
+                        )
                     if attempt < MAX_RETRIES:
                         await asyncio.sleep(RETRY_DELAY)
             if r2 is None or detail_error is not None:
                 raise detail_error or RuntimeError("dettaglio MC02 non disponibile")
             soup2 = BeautifulSoup(r2.text, "html.parser")
             item["_detail_text"] = soup2.get_text(" ", strip=True)
-            if not detail_identity_matches(item, item["_detail_text"]):
+            strict_refs = None
+            if strict_attachments:
+                strict_refs, parse_errors = _strict_attachment_references(soup2)
+                item["_attachment_errors"].extend(parse_errors)
+                item["_attachment_list_complete"] = not parse_errors
+                item["_attachment_zero_confirmed"] = not parse_errors and not strict_refs
+                if parse_errors:
+                    raise ValueError("struttura dettaglio o riferimenti allegati incompleti")
+                if (
+                    not _strict_detail_identity_matches(item, soup2)
+                    or not _strict_detail_identity_matches(item.get("_search_expected_identity", item), soup2)
+                ):
+                    item["_attachment_identity_uncertain"] = True
+                    item["_attachment_zero_confirmed"] = False
+                    raise ValueError("MC02_identity_conflict")
+            elif not detail_identity_matches(item, item["_detail_text"]):
                 raise ValueError(
                     "il dettaglio MC02 non corrisponde al titolo della riga; "
                     "allegati rifiutati per sicurezza"
@@ -1573,8 +1765,9 @@ async def enrich_with_attachments(
             item["_detail_captured_at"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
             # Se i dati sono in cache (attivo), salta solo il parsing date
-            if not force_detail and enrich_from_cache(item):
-                log.debug(f"Cache hit (attivo): {item['title'][:40]}")
+            if write_cache and not force_detail and enrich_from_cache(item):
+                if not strict_attachments:
+                    log.debug(f"Cache hit (attivo): {item['title'][:40]}")
             else:
                 cal_dates = soup2.select("div.calendar-date-day span strong")
                 date_vals = [d.get_text(strip=True) for d in cal_dates if d.get_text(strip=True)]
@@ -1593,7 +1786,7 @@ async def enrich_with_attachments(
                     except ValueError:
                         pass
                 # Salva in cache tecnica, senza marcarlo come notificato.
-                if update_item_cache(item, push=False):
+                if write_cache and update_item_cache(item, push=False):
                     cache_updates += 1
 
             seen_digests = set()
@@ -1601,12 +1794,19 @@ async def enrich_with_attachments(
             expected_attachments = 0
             for func in ["MC96", "MC97", "MC98", "MC99"]:
                 pattern = re.compile(rf"{func}\(")
-                tags    = soup2.find_all("a", attrs={"onclick": pattern})
-                for tag in tags:
-                    m = re.search(rf"{func}\(['\"]?(\d+)['\"]?\)", tag.get("onclick", ""))
-                    if not m:
-                        continue
-                    num_alleg = m.group(1)
+                tags = (
+                    [(number, tag) for function, number, tag in strict_refs if function == func]
+                    if strict_refs is not None else
+                    [(None, tag) for tag in soup2.find_all("a", attrs={"onclick": pattern})]
+                )
+                for strict_number, tag in tags:
+                    if strict_number is None:
+                        m = re.search(rf"{func}\(['\"]?(\d+)['\"]?\)", tag.get("onclick", ""))
+                        if not m:
+                            continue
+                        num_alleg = m.group(1)
+                    else:
+                        num_alleg = strict_number
                     attachment_ref = (func, num_alleg)
                     if attachment_ref in seen_attachment_refs:
                         continue
@@ -1642,24 +1842,32 @@ async def enrich_with_attachments(
                             break
                         except Exception as error:
                             last_error = error
-                            log.warning(
-                                f"Download immediato {attempt}/{MAX_RETRIES} fallito per "
-                                f"'{filename}' dell'atto '{item.get('title', '')[:45]}': "
-                                f"{_safe_error(error)}"
-                            )
+                            if strict_attachments:
+                                log.warning("Download allegato fallito (%s/%s): %s",
+                                            attempt, MAX_RETRIES, type(error).__name__)
+                            else:
+                                log.warning(
+                                    f"Download immediato {attempt}/{MAX_RETRIES} fallito per "
+                                    f"'{filename}' dell'atto '{item.get('title', '')[:45]}': "
+                                    f"{_safe_error(error)}"
+                                )
                             if attempt < MAX_RETRIES:
                                 await asyncio.sleep(RETRY_DELAY)
 
                     if downloaded is None:
                         item["_attachment_errors"].append(
-                            f"{filename}: {type(last_error).__name__ if last_error else 'errore sconosciuto'}"
+                            f"{'download allegato' if strict_attachments else filename}: "
+                            f"{type(last_error).__name__ if last_error else 'errore sconosciuto'}"
                         )
                         continue
                     digest = downloaded.sha256
                     if digest in seen_digests:
-                        log.warning(
-                            f"Contenuto allegato duplicato per '{item.get('title', '')[:45]}': {filename}"
-                        )
+                        if strict_attachments:
+                            log.warning("Contenuto allegato duplicato nella risposta dettaglio")
+                        else:
+                            log.warning(
+                                f"Contenuto allegato duplicato per '{item.get('title', '')[:45]}': {filename}"
+                            )
                     seen_digests.add(digest)
                     batch_bytes += downloaded.size
                     allegati.append({
@@ -1673,14 +1881,18 @@ async def enrich_with_attachments(
             item["_attachment_expected_count"] = expected_attachments
             item["_attachment_fetch_ok"] = len(allegati) == expected_attachments
             item["allegati"] = allegati
-            if allegati:
+            if strict_attachments:
+                log.info("Acquisizione allegati: previsti=%s acquisiti=%s errori=%s zero_confermato=%s",
+                         expected_attachments, len(allegati), len(item["_attachment_errors"]),
+                         item["_attachment_zero_confirmed"])
+            elif allegati:
                 log.info(f"'{item['title'][:40]}': {len(allegati)} allegato/i trovati")
-            if item["_attachment_errors"]:
+            if item["_attachment_errors"] and not strict_attachments:
                 log.warning(
                     f"'{item['title'][:40]}': {len(item['_attachment_errors'])} allegato/i non acquisiti; "
                     "l'atto resterà in stato da ritentare."
                 )
-            elif not allegati:
+            elif not allegati and not strict_attachments:
                 # Nessuna eccezione, ma nessun link MC96-99 trovato nella pagina:
                 # può essere un atto genuinamente senza allegati, o un codice
                 # funzione diverso da quelli che riconosciamo — non lo sappiamo
@@ -1691,21 +1903,25 @@ async def enrich_with_attachments(
             # La prima scrittura conserva le date; questa seconda marca il
             # backfill come concluso soltanto quando tutti i link rilevati sono
             # stati acquisiti. Gli errori parziali verranno quindi ritentati.
-            if update_item_cache(item, push=False):
+            if write_cache and update_item_cache(item, push=False):
                 cache_updates += 1
             await asyncio.sleep(0.3)
         except asyncio.CancelledError:
             cleanup_attachment_files({"allegati": allegati})
+            cleanup_attachment_files(items)
             raise
         except Exception as e:
             cleanup_attachment_files({"allegati": allegati})
             item["allegati"] = []
             item["_attachment_fetch_ok"] = False
             item["_attachment_errors"].append(f"dettaglio atto: {type(e).__name__}")
-            log.warning(
-                f"Errore durante il recupero allegati per '{item.get('title', '?')[:50]}' "
-                f"(riga presente): {_safe_error(e)}"
-            )
+            if strict_attachments:
+                log.warning("Recupero allegati incompleto: %s", type(e).__name__)
+            else:
+                log.warning(
+                    f"Errore durante il recupero allegati per '{item.get('title', '?')[:50]}' "
+                    f"(riga presente): {_safe_error(e)}"
+                )
     if cache_updates and push_cache:
         git_commit_and_push([str(DB_PATH)], message="aggiornamento cache albo [skip ci]")
     return items
@@ -2163,6 +2379,7 @@ async def _download_and_send_docs(
     sono stati consegnati. Un invio parziale resta quindi da ritentare.
     """
     allegati = item.get("allegati", []) or []
+    private_logs = bool(item.get('_search_manual'))
     try:
         expected = int(item.get("_attachment_expected_count", len(allegati)))
     except (TypeError, ValueError):
@@ -2200,10 +2417,13 @@ async def _download_and_send_docs(
             if preflight_error is not None:
                 # Non inviare un sottoinsieme: al ciclo successivo il bot
                 # riprova l'atto intero, evitando duplicati e documenti isolati.
-                log.warning(
-                    f"Allegati non completi per '{item.get('title', '')[:60]}': "
-                    f"{preflight_error}; nessun documento inviato."
-                )
+                if private_logs:
+                    log.warning('search_attachment_send preflight=failed')
+                else:
+                    log.warning(
+                        f"Allegati non completi per '{item.get('title', '')[:60]}': "
+                        f"{preflight_error}; nessun documento inviato."
+                    )
                 if report_incomplete:
                     title = escape_html(item.get("title") or "Atto Albo")
                     await send_text(
@@ -2234,22 +2454,30 @@ async def _download_and_send_docs(
                         sent = True
                         break
                     except Exception as error:
-                        log.warning(
-                            f"Invio {attempt}/{MAX_RETRIES} fallito per allegato "
-                            f"'{alleg['filename']}': {_safe_error(error)}"
-                        )
+                        if private_logs:
+                            log.warning('search_attachment_send attempt=%s error=%s', attempt, type(error).__name__)
+                        else:
+                            log.warning(
+                                f"Invio {attempt}/{MAX_RETRIES} fallito per allegato "
+                                f"'{alleg['filename']}': {_safe_error(error)}"
+                            )
                         if attempt < MAX_RETRIES:
                             await asyncio.sleep(RETRY_DELAY)
                 if not sent:
                     all_documents_sent = False
 
-            if all_documents_sent:
+            if private_logs:
+                log.info('search_attachment_send complete=%s', all_documents_sent)
+            elif all_documents_sent:
                 log.info(f"✓ Atto inviato integralmente: {item['title'][:60]}")
             else:
                 log.warning(f"Invio parziale, da ritentare: {item['title'][:60]}")
             return all_documents_sent
         except Exception as e:
-            log.error(f"Errore invio atto: {_safe_error(e)}")
+            if private_logs:
+                log.error('search_attachment_send error=%s', type(e).__name__)
+            else:
+                log.error(f"Errore invio atto: {_safe_error(e)}")
             return False
 
 async def send_item_to_chat(bot: Bot, chat_id: int, item: dict) -> bool:
@@ -2811,6 +3039,136 @@ async def cmd_news(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("✅ Fine." + MENU_TEXT, parse_mode=ParseMode.MARKDOWN)
 
 _search_sessions = {}
+_search_attachment_requests = {}
+SEARCH_TTL_SECONDS = 1800
+SEARCH_ATTACHMENT_TIMEOUT_SECONDS = 240
+SEARCH_ATTACHMENT_MESSAGES = {
+    'uncertain': "⚠️ Non riesco a identificare con certezza l'atto sul portale. Nessun allegato è stato inviato.",
+    'unavailable': "ℹ️ L'atto è presente nello storico del bot, ma al momento non riesco a recuperarne gli allegati dal portale Halley.",
+    'incomplete': '⚠️ Non sono riuscito a recuperare tutti gli allegati. Nessun documento è stato inviato; puoi riprovare.',
+    'network': '⚠️ Il portale Halley non è raggiungibile al momento. Nessun documento è stato inviato; puoi riprovare.',
+}
+SEARCH_ATTACHMENT_EXPIRED = '⌛ Questa richiesta di allegati è scaduta. Ripeti /cerca.'
+
+
+class SearchAttachmentError(RuntimeError):
+    def __init__(self, reason):
+        self.reason = reason
+        super().__init__(reason)
+
+
+def _purge_search_requests(now_ts=None):
+    now = datetime.now(timezone.utc).timestamp() if now_ts is None else now_ts
+    for ref, session in list(_search_sessions.items()):
+        if session['expires'] <= now:
+            _search_sessions.pop(ref, None)
+    for token, request in list(_search_attachment_requests.items()):
+        if request['expires'] <= now or request['session_ref'] not in _search_sessions:
+            _search_attachment_requests.pop(token, None)
+
+
+def _search_identity_metadata(record):
+    fields = ('num_pub', 'date', 'title', 'tipo', 'sender', 'act_number', 'register_number')
+    metadata = {key: record.get(key) for key in fields}
+    snapshot = record.get('revision_snapshot')
+    if isinstance(snapshot, dict):
+        for key in ('date', 'sender', 'act_number', 'register_number'):
+            if not metadata.get(key):
+                metadata[key] = snapshot.get(key)
+    return metadata
+
+
+def resolve_search_attachment(records, key, record):
+    """Use identity v2/legacy reconciliation, with stricter manual-download vetoes.
+
+    A delivery key alone is insufficient when historical metadata is missing.
+    In particular never use a saved num_riga, URL, PATH or attachment descriptor.
+    Conflicting metadata may be a real revision, but only the automatic check
+    can reconcile it: manual requests must not guess which documents to send.
+    """
+    if not isinstance(record, dict):
+        raise SearchAttachmentError('uncertain')
+    historical = dict(record)
+    historical.update(_search_identity_metadata(record))
+    if not _parse_albo_date(historical.get('date')) or not (
+        normalize_field(historical.get('title')) or parse_publication_number(historical.get('num_pub'))
+    ):
+        raise SearchAttachmentError('uncertain')
+    matches = [item for item in records
+               if find_existing_equivalent_item(item, {key: historical}) == key]
+    log.info('search_attachment_match candidate_matches=%s resolved=%s',
+             len(matches), 'pending' if len(matches) == 1 else 'no')
+    if not matches:
+        raise SearchAttachmentError('unavailable')
+    if len(matches) != 1:
+        raise SearchAttachmentError('uncertain')
+    item = matches[0]
+    for field in ('num_pub', 'date', 'title', 'tipo', 'sender', 'act_number', 'register_number'):
+        normalizer = (parse_publication_number if field == 'num_pub' else
+                      normalize_number if field in ('act_number', 'register_number') else normalize_field)
+        old, current = normalizer(historical.get(field)), normalizer(item.get(field))
+        if old and current and old != current:
+            raise SearchAttachmentError('uncertain')
+    if not item.get('num_riga') or not normalize_field(item.get('title')) or not _parse_albo_date(item.get('date')):
+        raise SearchAttachmentError('uncertain')
+    log.info('search_attachment_match resolved=yes')
+    return item
+
+
+async def fetch_search_attachment(item_key):
+    """Read-only wrapper: resolve and download exactly one act in a fresh session.
+
+    Ownership of successful spools passes to the caller, who must clean them.
+    No user_seen entry is written: asking for a document is independent of /atti
+    delivery checkpoints and must never suppress a future real revision.
+    """
+    db = load_db(migrate=False)
+    record = db.get(item_key)
+    if not isinstance(record, dict):
+        raise SearchAttachmentError('uncertain')
+    selected = []
+    diagnostics = {}
+
+    def select(items):
+        # A skipped card could hide a second equivalent candidate.
+        if any(diagnostics.get(k) for k in ('skipped_cards', 'unreadable_pages', 'partial_pages', 'incomplete_pagination')):
+            raise SearchAttachmentError('uncertain')
+        selected[:] = [resolve_search_attachment(items, item_key, record)]
+        # Do not hide alias ownership conflicts by looking only at one record.
+        if find_existing_equivalent_item(selected[0], db) != item_key:
+            raise SearchAttachmentError('uncertain')
+        expected = _search_identity_metadata(selected[0])
+        expected.update({key: value for key, value in _search_identity_metadata(record).items()
+                         if normalize_field(value)})
+        selected[0]['_search_expected_identity'] = expected
+        return selected
+
+    try:
+        items = await fetch_albo_html(
+            detail_selector=select, force_detail=True, push_cache=False,
+            write_cache=False, strict_attachments=True, raise_on_failure=True,
+            diagnostics=diagnostics,
+        )
+        if items is None:
+            raise SearchAttachmentError('network')
+        if any(diagnostics.get(k) for k in ('skipped_cards', 'unreadable_pages', 'partial_pages', 'incomplete_pagination')):
+            raise SearchAttachmentError('uncertain')
+        if not selected:
+            raise SearchAttachmentError('unavailable')
+        item = selected[0]
+        if item.get('_attachment_identity_uncertain'):
+            raise SearchAttachmentError('uncertain')
+        # MC02 may supply a date different from the list; re-check before send.
+        resolve_search_attachment([item], item_key, record)
+        if not item.get('_detail_captured') or not item.get('_attachment_fetch_ok'):
+            raise SearchAttachmentError('incomplete')
+        _, error = _preflight_attachments(item)
+        if error:
+            raise SearchAttachmentError('incomplete')
+        return item
+    except BaseException:
+        cleanup_attachment_files(selected)
+        raise
 
 
 def search_text(value):
@@ -2822,7 +3180,7 @@ def search_text(value):
 def search_records(db, query):
     needle = search_text(query)
     return [dict(record, _id=key) for key, record in db.items()
-            if needle and needle in search_text(' '.join(str(record.get(k, ''))
+            if isinstance(record, dict) and needle and needle in search_text(' '.join(str(record.get(k, ''))
             for k in ('title', 'sender', 'num_pub', 'tipo', 'description', 'category')))]
 
 
@@ -2830,35 +3188,72 @@ def render_search_page(records, page, ref):
     last = max(0, (len(records) - 1) // 5)
     page = min(max(page, 0), last)
     lines = [f'Risultati nello storico disponibile al bot · pagina {page + 1}/{last + 1}']
-    for record in records[page * 5:page * 5 + 5]:
-        lines.append(escape_html(f"{record.get('date', '')} · {record.get('title', '')[:500]}"))
+    session = _search_sessions.get(ref)
+    manual = session is not None and not session.get('news', False)
+    visible = records[page * 5:page * 5 + 5]
+    visible_keys = {record['_id'] for record in visible if '_id' in record}
+    # At most five active attachment tokens per search; pagination reuses only
+    # still-unconsumed tokens belonging to the displayed records.
+    for token, request in list(_search_attachment_requests.items()):
+        if request['session_ref'] == ref and request['item_key'] not in visible_keys:
+            _search_attachment_requests.pop(token, None)
+    attachment_buttons = []
+    for index, record in enumerate(visible, start=page * 5 + 1):
+        title = str(record.get('title') or 'Titolo non disponibile')[:400]
+        date = str(record.get('date') or '')[:30]
+        lines.append(escape_html(f'{index}. 📄 {title}\n📅 {date}'))
+        if manual:
+            lines[-1] += '\n' + escape_html(
+                f"🔢 Pubblicazione n. {str(record.get('num_pub') or 'non disponibile')[:60]}\n"
+                f"🏢 {str(record.get('sender') or 'Mittente non disponibile')[:100]}"
+            )
+            token = next((token for token, request in _search_attachment_requests.items()
+                          if request['session_ref'] == ref and request['item_key'] == record['_id']), None)
+            if token is None:
+                token = secrets.token_urlsafe(18)
+                _search_attachment_requests[token] = dict(
+                    chat_id=session['chat_id'], item_key=record['_id'],
+                    expires=session['expires'], session_ref=ref,
+                )
+            attachment_buttons.append([InlineKeyboardButton(
+                f'📎 Scarica allegati · {index}', callback_data=f'search_attach:{token}')])
     buttons = []
     if page:
         buttons.append(InlineKeyboardButton('Indietro', callback_data=f'search:{ref}:{page - 1}'))
     if page < last:
         buttons.append(InlineKeyboardButton('Avanti', callback_data=f'search:{ref}:{page + 1}'))
-    return '\n\n'.join(lines), InlineKeyboardMarkup([buttons]) if buttons else None
+    keyboard = attachment_buttons + ([buttons] if buttons else [])
+    return '\n\n'.join(lines), InlineKeyboardMarkup(keyboard) if keyboard else None
 
 
 async def _search_command(update, context, news=False):
+    _purge_search_requests()
     query = ' '.join(context.args).strip()
     if not query:
         await update.message.reply_text('Usa /cerca_news <testo>' if news else 'Usa /cerca <testo>')
         return
-    records = search_records(load_news_db() if news else load_db(), query)
+    records = search_records(load_news_db() if news else load_db(migrate=False), query)
     if not records:
         await update.message.reply_text('La ricerca non risulta nello storico disponibile al bot.')
         return
     now = datetime.now(timezone.utc).timestamp()
-    for key, session in list(_search_sessions.items()):
-        if session['expires'] <= now:
-            _search_sessions.pop(key, None)
     if len(_search_sessions) >= 100:
         _search_sessions.pop(next(iter(_search_sessions)))
+        _purge_search_requests(now)
     ref = secrets.token_urlsafe(9)
-    _search_sessions[ref] = dict(chat_id=update.effective_chat.id, records=records, expires=now + 1800)
+    # Store only display metadata and the canonical identity key, never a copy
+    # of old Halley session references or attachment URLs from historical data.
+    fields = ('_id', 'title', 'date', 'num_pub', 'sender', 'tipo')
+    records = [{key: record.get(key) for key in fields} for record in records]
+    _search_sessions[ref] = dict(chat_id=update.effective_chat.id, records=records,
+                                 expires=now + SEARCH_TTL_SECONDS, news=news)
     text, keyboard = render_search_page(records, 0, ref)
-    await update.message.reply_text(text, parse_mode=ParseMode.HTML, reply_markup=keyboard)
+    try:
+        await update.message.reply_text(text, parse_mode=ParseMode.HTML, reply_markup=keyboard)
+    except BaseException:
+        _search_sessions.pop(ref, None)
+        _purge_search_requests()
+        raise
 
 
 async def cmd_cerca(update, context):
@@ -2870,6 +3265,7 @@ async def cmd_cerca_news(update, context):
 
 
 async def cmd_search_page(update, context):
+    _purge_search_requests()
     query = update.callback_query
     _, ref, page = query.data.split(':')
     session = _search_sessions.get(ref)
@@ -2882,6 +3278,75 @@ async def cmd_search_page(update, context):
         await query.edit_message_text(text, parse_mode=ParseMode.HTML, reply_markup=keyboard)
     except Exception as error:
         log.warning('Paginazione ricerca: %s', _safe_error(error))
+
+
+@cleanup_spool_scope
+async def cmd_search_attachments(update, context):
+    query = update.callback_query
+    _purge_search_requests()
+    token = str(query.data or '').partition(':')[2]
+    request = _search_attachment_requests.get(token)
+    chat_id = update.effective_chat.id
+    if not request or request['chat_id'] != chat_id:
+        try:
+            await query.answer(SEARCH_ATTACHMENT_EXPIRED, show_alert=True)
+        except Exception as error:
+            log.warning('search_attachment_answer_failed error=%s', type(error).__name__)
+        return
+    # Consume synchronously, before the first await. A second click/update can
+    # never enter the retrieval, even while this request is waiting for Halley.
+    _search_attachment_requests.pop(token, None)
+    item = None
+    progress = None
+    sending = False
+    result = SEARCH_ATTACHMENT_MESSAGES['network']
+    log.info('search_attachment_requested')
+    try:
+        try:
+            await query.answer()
+        except Exception as error:
+            # Telegram can expire the toast while our chat-bound request is
+            # still valid. The progress message provides durable feedback.
+            log.warning('search_attachment_answer_failed error=%s', type(error).__name__)
+        progress = await context.bot.send_message(
+            chat_id=chat_id, text='🔎 Recupero gli allegati dal portale...')
+        async with asyncio.timeout(SEARCH_ATTACHMENT_TIMEOUT_SECONDS):
+            item = await fetch_search_attachment(request['item_key'])
+            attachments, error = _preflight_attachments(item)
+            if error:
+                raise SearchAttachmentError('incomplete')
+            log.info('search_attachment_ready attachments_expected=%s attachments_downloaded=%s',
+                     item.get('_attachment_expected_count', 0), len(attachments))
+            if not attachments:
+                result = "ℹ️ L'atto non presenta allegati disponibili sul portale."
+            else:
+                item['_search_manual'] = True
+                sending = True
+                if await send_item_to_chat(context.bot, chat_id, item):
+                    result = f'✅ Allegati recuperati: {len(attachments)}'
+                else:
+                    result = '⚠️ Invio Telegram non completato. Alcuni documenti potrebbero essere arrivati; ripeti /cerca per riprovare.'
+    except SearchAttachmentError as error:
+        result = SEARCH_ATTACHMENT_MESSAGES[error.reason]
+        log.info('search_attachment_failed reason=%s', error.reason)
+    except asyncio.CancelledError:
+        result = '⚠️ Recupero interrotto. Alcuni documenti potrebbero essere arrivati se l’invio era iniziato. Ripeti /cerca.'
+        raise
+    except Exception as error:
+        result = ('⚠️ Invio Telegram non completato. Alcuni documenti potrebbero essere arrivati; ripeti /cerca per riprovare.'
+                  if sending else SEARCH_ATTACHMENT_MESSAGES['network'])
+        log.warning('search_attachment_failed error=%s', type(error).__name__)
+    finally:
+        cleanup_attachment_files(item)
+        if progress is not None:
+            try:
+                await asyncio.wait_for(progress.edit_text(result), timeout=5)
+            except Exception as error:
+                log.warning('search_attachment_status_failed error=%s', type(error).__name__)
+                try:
+                    await asyncio.wait_for(context.bot.send_message(chat_id=chat_id, text=result), timeout=5)
+                except Exception as error:
+                    log.warning('search_attachment_status_failed error=%s', type(error).__name__)
 
 
 async def cmd_controlla(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -3600,6 +4065,8 @@ async def telegram_polling(app, stop):
     await app.bot.delete_webhook(drop_pending_updates=False)
     offset = None
     while not stop.is_set():
+        _purge_search_requests()
+        _purge_expired_resend_requests()
         try:
             updates = await app.bot.get_updates(offset=offset, timeout=25,
                 allowed_updates=['message', 'callback_query'])
@@ -3656,6 +4123,7 @@ async def main():
     app.add_handler(CommandHandler("cerca", cmd_cerca))
     app.add_handler(CommandHandler("cerca_news", cmd_cerca_news))
     app.add_handler(CallbackQueryHandler(cmd_search_page, pattern=r"^search:[A-Za-z0-9_-]+:[0-9]+$"))
+    app.add_handler(CallbackQueryHandler(cmd_search_attachments, pattern=r"^search_attach:"))
     app.add_handler(CommandHandler("controlla",         cmd_controlla))
     app.add_handler(CommandHandler("status",            cmd_status))
     app.add_handler(CallbackQueryHandler(cmd_atti_resend_callback, pattern=r"^resend:"))
@@ -3682,6 +4150,8 @@ async def main():
             for task in [*tasks, stop_task]:
                 task.cancel()
             await asyncio.gather(*tasks, stop_task, return_exceptions=True)
+            _search_sessions.clear()
+            _search_attachment_requests.clear()
             await app.stop()
             if not git_commit_and_push():
                 log.error('Flush Git finale fallito: conservare lo stato residuo del runner.')
