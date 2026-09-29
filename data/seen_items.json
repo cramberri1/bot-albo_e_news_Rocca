@@ -7391,21 +7391,40 @@
     "revision": 1
   },
   "v2:240350b44a95defcd7ce12f5": {
-    "notified": false,
+    "notified": true,
     "date": "29-09-2026",
     "date_end": "14-10-2026",
     "expired": false,
     "identity_version": 2,
     "primary_id": "v2:240350b44a95defcd7ce12f5",
     "legacy_ids": [
-      "bd76068222d480bd"
+      "bd76068222d480bd",
+      "v2:240350b44a95defcd7ce12f5"
     ],
     "title": "Liquidazione di spesa preventivamente impegnata per \"SERVIZI CIMITERIALI NEL TERRITORIO DEL COMUNE DI ROCCABASCERANA\" - Ditta: Partenio Service Roma Soc. Coop. - Periodo Agosto 2026",
     "num_pub": "529",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "35",
-    "register_number": ""
+    "register_number": "",
+    "last_revision_check_at": "2026-09-29T10:55:55Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "dae317eb112b154915753c91c69a130b49c57577a83f6df3d7c43f207c00aecc",
+    "revision_snapshot": {
+      "date": "29-09-2026",
+      "date_end": "14-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "35",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "afc084938f93a03f8896fff1e5b7788d77bffb7fe2170c0c8f4bdd0ac83482a3"
+      ],
+      "attachment_name_hashes": [
+        "a66e5ef98a59349c"
+      ]
+    },
+    "revision": 1
   },
   "v2:6cd29e7390a1b1677eaa53c7": {
     "notified": false,
