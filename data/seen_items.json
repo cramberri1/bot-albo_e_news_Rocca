@@ -7283,21 +7283,40 @@
     "revision": 1
   },
   "v2:1ea424aaccd4fc330205bf48": {
-    "notified": false,
+    "notified": true,
     "date": "29-09-2026",
     "date_end": "14-10-2026",
     "expired": false,
     "identity_version": 2,
     "primary_id": "v2:1ea424aaccd4fc330205bf48",
     "legacy_ids": [
-      "3862abe6633ec2bc"
+      "3862abe6633ec2bc",
+      "v2:1ea424aaccd4fc330205bf48"
     ],
     "title": "Conferimento rifiuti EER 170904 - rifiuti misti dell'attività di costruzione e demolizione. Periodo 2026/2028. Procedura ai sensi dell'art. 50 comma 1 lett. b) del D. Lgs. n. 36/2023 e s.m.i. con oggetto di prestazione il CPV n. 90514000-3. Provvedimenti. Liquidazione oneri di conferimento a discarica.",
     "num_pub": "532",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "40",
-    "register_number": ""
+    "register_number": "",
+    "last_revision_check_at": "2026-09-29T10:55:55Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "ed64053ee2f46f7c160692fcdbe19261baea4582998aa77fd7db7026c3ed1d8b",
+    "revision_snapshot": {
+      "date": "29-09-2026",
+      "date_end": "14-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "40",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "a7f421e4e33fbcd65b47712ab79a82d4cfa29c76f081d261ee2db17570288a81"
+      ],
+      "attachment_name_hashes": [
+        "6eadf45d88325aa3"
+      ]
+    },
+    "revision": 1
   },
   "v2:c8fc3141369fd95b1f288cd8": {
     "notified": false,
