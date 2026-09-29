@@ -7173,5 +7173,194 @@
       ]
     },
     "revision": 1
+  },
+  "v2:6e6174afe2d81629811b602a": {
+    "notified": true,
+    "date": "29-09-2026",
+    "date_end": "14-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:6e6174afe2d81629811b602a",
+    "legacy_ids": [
+      "25be41eac019d7dc",
+      "v2:6e6174afe2d81629811b602a"
+    ],
+    "title": "Intervento urgente di messa in sicurezza, caratterizzazione, rimozione, carico, trasporto e smaltimento di rifiuti combusti a seguito di incendio in Via Olivella. Affidamento diretto ai sensi dell'art. 50, comma 1, lett. b) del D.Lgs. n. 36/2023 alla società S.O.G.E.S.I. S.R.L.",
+    "num_pub": "535",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "45",
+    "register_number": "",
+    "last_revision_check_at": "2026-09-29T10:55:55Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "b213b36fdb3a405460d14d899c71db1b0697eac5a7ee8619e486821722722e8e",
+    "revision_snapshot": {
+      "date": "29-09-2026",
+      "date_end": "14-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "45",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "9a26a932c84153e5141c0c5066de12716dd6746c713716b2757936c5422ca314"
+      ],
+      "attachment_name_hashes": [
+        "a4b4faec3ba01919"
+      ]
+    },
+    "revision": 1
+  },
+  "v2:fdf77f8d1f530529a560253f": {
+    "notified": false,
+    "date": "29-09-2026",
+    "date_end": "14-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:fdf77f8d1f530529a560253f",
+    "legacy_ids": [
+      "e1781d4981135163"
+    ],
+    "title": "Intervento di manutenzione e ripristino automazione cancello carraio presso Centro di raccolta comunale in Roccabascerana.",
+    "num_pub": "534",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "44",
+    "register_number": ""
+  },
+  "v2:4d7436e715500b1e001d532f": {
+    "notified": false,
+    "date": "29-09-2026",
+    "date_end": "14-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:4d7436e715500b1e001d532f",
+    "legacy_ids": [
+      "a4337b51f80a18da"
+    ],
+    "title": "Affidamento dei servizi di << Ufficio Direzione Lavori >> per la realizzazione dei \" LAVORI DI MESSA IN SICUREZZA E RIAMMAGLIAMENO DELLE STRADE DI COLLEGAMENTO TRA LA ZONA INDUSTRIALE DEL COMUNE DI ROCCABASCERANA E LA ZONA ASI DELLA VALLE CAUDINA\". CUP G75F24000330006. Determina di liquidazione del contributo ANAC per gara SA ID Rag 199981.",
+    "num_pub": "533",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "43",
+    "register_number": ""
+  },
+  "v2:1ea424aaccd4fc330205bf48": {
+    "notified": false,
+    "date": "29-09-2026",
+    "date_end": "14-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:1ea424aaccd4fc330205bf48",
+    "legacy_ids": [
+      "3862abe6633ec2bc"
+    ],
+    "title": "Conferimento rifiuti EER 170904 - rifiuti misti dell'attività di costruzione e demolizione. Periodo 2026/2028. Procedura ai sensi dell'art. 50 comma 1 lett. b) del D. Lgs. n. 36/2023 e s.m.i. con oggetto di prestazione il CPV n. 90514000-3. Provvedimenti. Liquidazione oneri di conferimento a discarica.",
+    "num_pub": "532",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "40",
+    "register_number": ""
+  },
+  "v2:c8fc3141369fd95b1f288cd8": {
+    "notified": false,
+    "date": "29-09-2026",
+    "date_end": "14-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:c8fc3141369fd95b1f288cd8",
+    "legacy_ids": [
+      "9855ae134c84ab93"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"Conferimento Rifiuti Solidi Urbani\" - Ditta Irpiniambiente S.P.A. - Periodo Agosto 2026",
+    "num_pub": "531",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "37",
+    "register_number": ""
+  },
+  "v2:e54e156029eb5c82e7dbee6c": {
+    "notified": false,
+    "date": "29-09-2026",
+    "date_end": "14-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:e54e156029eb5c82e7dbee6c",
+    "legacy_ids": [
+      "a9453e2d34539d06"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"Fornitura materiali di consumo cantieri del Comune di Roccabascerana\" - Ditta: M.G. S.R.L.S.",
+    "num_pub": "530",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "36",
+    "register_number": ""
+  },
+  "v2:240350b44a95defcd7ce12f5": {
+    "notified": false,
+    "date": "29-09-2026",
+    "date_end": "14-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:240350b44a95defcd7ce12f5",
+    "legacy_ids": [
+      "bd76068222d480bd"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"SERVIZI CIMITERIALI NEL TERRITORIO DEL COMUNE DI ROCCABASCERANA\" - Ditta: Partenio Service Roma Soc. Coop. - Periodo Agosto 2026",
+    "num_pub": "529",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "35",
+    "register_number": ""
+  },
+  "v2:6cd29e7390a1b1677eaa53c7": {
+    "notified": false,
+    "date": "29-09-2026",
+    "date_end": "14-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:6cd29e7390a1b1677eaa53c7",
+    "legacy_ids": [
+      "4893ff8b49224f5b"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"SERVIZI DI SPAZZAMENTO E CURA DEL VERDE COMUNALE NEL COMUNE DI ROCCABASCERANA\" - Ditta: Partenio Service Roma Soc. Coop. - Periodo Agosto 2026",
+    "num_pub": "528",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "34",
+    "register_number": ""
+  },
+  "v2:dadee883ddaf9d66b1441800": {
+    "notified": false,
+    "date": "29-09-2026",
+    "date_end": "14-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:dadee883ddaf9d66b1441800",
+    "legacy_ids": [
+      "81fa408a3503170f"
+    ],
+    "title": "Approvvigionamento carburante automezzi ed attrezzature comunali. Adesione << convenzione CONSIP - Accordo Quadro \"AQFC3_Q8 - Fuel Card 3\", per la fornitura di carburante per autotrazione mediante Fuel Card >>, stipulata con Kuwait Petroleum Italia S.p.A. Liquidazione di spesa preventivamente impegnata - Periodo Agosto 2026",
+    "num_pub": "527",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "33",
+    "register_number": ""
+  },
+  "v2:b40e4a52e4f01f439ce983f2": {
+    "notified": false,
+    "date": "29-09-2026",
+    "date_end": "14-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:b40e4a52e4f01f439ce983f2",
+    "legacy_ids": [
+      "018b5fabbd34c607"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"Servizio di raccolta differenziata e trasporto a smaltimento di RR.SS.UU. e assimilati ed altri servizi di igiene urbana e gestione del centro di raccolta comunale nel comune di Roccabascerana\" - Ditta: S.O.G.E.S.I. s.r.l. - Periodo Agosto 2026",
+    "num_pub": "526",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "31",
+    "register_number": ""
   }
 }
