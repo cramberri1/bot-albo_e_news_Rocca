@@ -7355,21 +7355,40 @@
     "revision": 1
   },
   "v2:e54e156029eb5c82e7dbee6c": {
-    "notified": false,
+    "notified": true,
     "date": "29-09-2026",
     "date_end": "14-10-2026",
     "expired": false,
     "identity_version": 2,
     "primary_id": "v2:e54e156029eb5c82e7dbee6c",
     "legacy_ids": [
-      "a9453e2d34539d06"
+      "a9453e2d34539d06",
+      "v2:e54e156029eb5c82e7dbee6c"
     ],
     "title": "Liquidazione di spesa preventivamente impegnata per \"Fornitura materiali di consumo cantieri del Comune di Roccabascerana\" - Ditta: M.G. S.R.L.S.",
     "num_pub": "530",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "36",
-    "register_number": ""
+    "register_number": "",
+    "last_revision_check_at": "2026-09-29T10:55:55Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "ab58e98a1dbeba4fc56a3db87bfab0813dd6af075e4100db4e722184eae93ccc",
+    "revision_snapshot": {
+      "date": "29-09-2026",
+      "date_end": "14-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "36",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "70a47a8aa4b32cfd7337c7e5d4ac4213cd9471b2cefba2daf345806370a8ee46"
+      ],
+      "attachment_name_hashes": [
+        "99033498bd1c420b"
+      ]
+    },
+    "revision": 1
   },
   "v2:240350b44a95defcd7ce12f5": {
     "notified": false,
