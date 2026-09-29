@@ -7463,21 +7463,40 @@
     "revision": 1
   },
   "v2:dadee883ddaf9d66b1441800": {
-    "notified": false,
+    "notified": true,
     "date": "29-09-2026",
     "date_end": "14-10-2026",
     "expired": false,
     "identity_version": 2,
     "primary_id": "v2:dadee883ddaf9d66b1441800",
     "legacy_ids": [
-      "81fa408a3503170f"
+      "81fa408a3503170f",
+      "v2:dadee883ddaf9d66b1441800"
     ],
     "title": "Approvvigionamento carburante automezzi ed attrezzature comunali. Adesione << convenzione CONSIP - Accordo Quadro \"AQFC3_Q8 - Fuel Card 3\", per la fornitura di carburante per autotrazione mediante Fuel Card >>, stipulata con Kuwait Petroleum Italia S.p.A. Liquidazione di spesa preventivamente impegnata - Periodo Agosto 2026",
     "num_pub": "527",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "33",
-    "register_number": ""
+    "register_number": "",
+    "last_revision_check_at": "2026-09-29T10:55:55Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "8bb90b9ead57931f03f1579af7e1cd36ea4c4581fa91087b8f7a4a7ddb86e77c",
+    "revision_snapshot": {
+      "date": "29-09-2026",
+      "date_end": "14-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "33",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "ff7f70cb02d8016cf092735cef9846ab668a6f8fffb53e0eb954e678757a9aa1"
+      ],
+      "attachment_name_hashes": [
+        "f31d26af854e5c87"
+      ]
+    },
+    "revision": 1
   },
   "v2:b40e4a52e4f01f439ce983f2": {
     "notified": false,
