@@ -7247,21 +7247,40 @@
     "revision": 1
   },
   "v2:4d7436e715500b1e001d532f": {
-    "notified": false,
+    "notified": true,
     "date": "29-09-2026",
     "date_end": "14-10-2026",
     "expired": false,
     "identity_version": 2,
     "primary_id": "v2:4d7436e715500b1e001d532f",
     "legacy_ids": [
-      "a4337b51f80a18da"
+      "a4337b51f80a18da",
+      "v2:4d7436e715500b1e001d532f"
     ],
     "title": "Affidamento dei servizi di << Ufficio Direzione Lavori >> per la realizzazione dei \" LAVORI DI MESSA IN SICUREZZA E RIAMMAGLIAMENO DELLE STRADE DI COLLEGAMENTO TRA LA ZONA INDUSTRIALE DEL COMUNE DI ROCCABASCERANA E LA ZONA ASI DELLA VALLE CAUDINA\". CUP G75F24000330006. Determina di liquidazione del contributo ANAC per gara SA ID Rag 199981.",
     "num_pub": "533",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "43",
-    "register_number": ""
+    "register_number": "",
+    "last_revision_check_at": "2026-09-29T10:55:55Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "1b865b1582b84b68d80f6bdf481bac1ace59bc4ccf8c3e6f642693ecb476bd9e",
+    "revision_snapshot": {
+      "date": "29-09-2026",
+      "date_end": "14-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "43",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "f9c5ee994854ef5a3921d0696ecafc6a325565bd3e239d1ac38a8d95341940de"
+      ],
+      "attachment_name_hashes": [
+        "38fdfc92c2dcd908"
+      ]
+    },
+    "revision": 1
   },
   "v2:1ea424aaccd4fc330205bf48": {
     "notified": false,
