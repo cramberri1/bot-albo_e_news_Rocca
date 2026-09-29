@@ -7211,21 +7211,40 @@
     "revision": 1
   },
   "v2:fdf77f8d1f530529a560253f": {
-    "notified": false,
+    "notified": true,
     "date": "29-09-2026",
     "date_end": "14-10-2026",
     "expired": false,
     "identity_version": 2,
     "primary_id": "v2:fdf77f8d1f530529a560253f",
     "legacy_ids": [
-      "e1781d4981135163"
+      "e1781d4981135163",
+      "v2:fdf77f8d1f530529a560253f"
     ],
     "title": "Intervento di manutenzione e ripristino automazione cancello carraio presso Centro di raccolta comunale in Roccabascerana.",
     "num_pub": "534",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "44",
-    "register_number": ""
+    "register_number": "",
+    "last_revision_check_at": "2026-09-29T10:55:55Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "0eed83d0f96a073220bf20bff8edadaae25b40263897488ca18140c9af0a834d",
+    "revision_snapshot": {
+      "date": "29-09-2026",
+      "date_end": "14-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "44",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "6a1f5356c44fd0ebc6a5a35fce500302fee40b7007e69639cb2d4a71c5a89c9c"
+      ],
+      "attachment_name_hashes": [
+        "352afe7fd931eeb8"
+      ]
+    },
+    "revision": 1
   },
   "v2:4d7436e715500b1e001d532f": {
     "notified": false,
