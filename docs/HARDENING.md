@@ -159,3 +159,18 @@ zero chiamate notify, zero byte spool residui.
 
 Comando: `python -m unittest discover -s tests -v` dopo
 `pip install -r requirements-dev.txt` e clone con storia completa.
+
+## Estensione conservativa del 27–29 settembre 2026
+
+Baseline riconfermata: 37 test, 31 superati, 6 skip legacy invariati.
+I tre commit di riferimento sono antenati di main. Dry-run della riparazione:
+zero duplicati o revisioni da correggere; i 102 alias e le 19 riparazioni
+sono già presenti. Nessuna nuova riparazione o modifica ai file di stato.
+
+`/cerca` aggiunge allegati su richiesta del singolo utente, con sessione nuova,
+identità conservativa, callback monouso e nessuna scrittura dell'atto o di
+user_seen. Il percorso automatico mantiene i parametri precedenti; cifratura,
+safety fuse, algoritmo v2, checkpoint, Git e workflow restano invariati.
+Corretto separatamente un crash del polling per messaggi Telegram senza testo.
+Architettura, casi di errore, test e limiti sono documentati in
+[SEARCH_ATTACHMENTS.md](SEARCH_ATTACHMENTS.md).

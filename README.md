@@ -69,7 +69,7 @@ lo scheduling configurato, gratuitamente, nei limiti del piano free.
 | `/disabbonati_news` | Cancella solo l'iscrizione alle News |
 | `/atti` | Mostra l'elenco completo degli atti in albo, con stato e date. Per gli atti attivi/recenti invia anche i documenti allegati (chiede conferma se già ricevuti) |
 | `/news` | Mostra le ultime 10 news pubblicate sul sito del Comune |
-| `/cerca <testo>` | Cerca negli atti conservati; 5 risultati per pagina |
+| `/cerca <testo>` | Cerca negli atti conservati; 5 risultati per pagina, con recupero allegati su richiesta per il singolo atto |
 | `/cerca_news <testo>` | Cerca nelle news conservate; 5 risultati per pagina |
 | `/controlla` | Forza un controllo immediato di nuovi atti e nuove news (**solo amministratori**) |
 | `/status` | Statistiche del bot (solo amministratori) |
@@ -77,6 +77,16 @@ lo scheduling configurato, gratuitamente, nei limiti del piano free.
 Le due sottoscrizioni (albo / news) sono indipendenti: puoi iscriverti
 a una sola, a entrambe, o a nessuna. Gli amministratori (`CHAT_IDS`)
 ricevono sempre entrambe le notifiche indipendentemente dall'iscrizione.
+
+Nei risultati di `/cerca`, ogni pulsante **📎 Scarica allegati · N** corrisponde
+al risultato numerato N. Il bot ritrova l'atto in una nuova sessione Halley,
+verifica l'identità e scarica tutti i documenti prima di iniziare l'invio.
+Una richiesta ambigua, incompleta o scaduta non invia documenti. I pulsanti
+sono monouso, legati alla chat, validi 30 minuti e non sopravvivono al riavvio:
+in questi casi basta ripetere `/cerca`. Cambiare pagina disattiva i pulsanti
+allegati della pagina precedente. `/cerca_news` non scarica allegati.
+Il recupero manuale non cambia notifiche, revisioni o cronologia `/atti`.
+Vedi [dettagli e collaudo](docs/SEARCH_ATTACHMENTS.md).
 
 ---
 
@@ -140,9 +150,6 @@ assenti.
 | `data/last_check.txt` | Timestamp dell'ultimo controllo; aggiornato localmente a ogni check e committato al massimo una volta al giorno |
 | `data/seen_news.json` | Cache news: id, titolo, categoria, data, url |
 | `data/subscribers_news.json` 🔒 | Elenco chat_id iscritti alle notifiche delle News |
-| `data/public/albo-current.json` | Archivio pubblico cumulativo, pronto per il portale civico |
-| `data/public/albo-events.ndjson` | Cronologia append-only delle nuove pubblicazioni e variazioni |
-| `data/public/albo-manifest.json` | Stato, conteggi e checksum dell'ultimo aggiornamento |
 
 🔒 = contiene chat_id (dato personale) ed è **cifrato** con `Fernet`
 prima di ogni commit — vedi sezione [Cifratura dei dati personali](#cifratura-dei-dati-personali).
@@ -153,26 +160,10 @@ la cronologia tra un run e l'altro.
 
 ### Archivio pubblico per il portale appalti
 
-Il bot è anche la fonte unica dell'Albo per il portale civico. A ogni ciclo
-riporta tutti gli atti osservati in `data/public/albo-current.json` e non li
-cancella quando escono dall'Albo corrente. Se un atto cambia, aggiunge una
-nuova revisione a `data/public/albo-events.ndjson`; un controllo identico non
-crea duplicati.
-
-L'identità principale usa ente, anno e numero di pubblicazione. `NUMRIGA`
-rimane un dato di sessione e non entra mai nell'ID pubblico. CIG e CUP vengono
-normalizzati e gli atti potenzialmente collegati ad appalti sono classificati
-con regole verificabili (`procurement.reasons` e `filterVersion`).
-
-Gli allegati non vengono copiati nel repository pubblico: l'archivio conserva
-soltanto nome, conteggio e stato `metadata_only`. Gli URL Halley temporanei e i
-file contenenti chat_id non entrano mai nell'export. Il backfill dei dettagli è
-progressivo (25 atti per ciclo, configurabile con `PUBLIC_DETAIL_BACKFILL_LIMIT`)
-per non sovraccaricare l'Albo; i nuovi atti vengono comunque acquisiti subito.
-
-In caso di errore della fonte, l'ultimo `albo-current.json` valido viene
-mantenuto e marcato `stale`: un guasto temporaneo non può sostituire lo storico
-con un archivio vuoto.
+L'API della precedente integrazione dell'archivio pubblico è assente dal
+`main` attuale. I sei test legacy restano esplicitamente saltati; questo bot
+non mantiene attualmente gli export `data/public/albo-*.json` né esegue il
+relativo backfill. La ricerca usa lo storico locale `data/seen_items.json`.
 
 ---
 
