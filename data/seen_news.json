@@ -960,5 +960,14 @@
     "description": "Consegna libri di testo Scuola Primaria A.S. 2026/2027",
     "notified": true,
     "delivery_pending": false
+  },
+  "198": {
+    "title": "Concorso per n. 1 posto di istruttore tecnico a tempo pieno e indeterminato - area degli istruttori (ex cat. C)",
+    "category": "Avviso",
+    "date": "30-09-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_198.html",
+    "description": "Data,luogo e ora prova orale",
+    "notified": true,
+    "delivery_pending": false
   }
 }
