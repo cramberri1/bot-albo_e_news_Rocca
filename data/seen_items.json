@@ -7569,5 +7569,41 @@
       ]
     },
     "revision": 1
+  },
+  "v2:5240b4ac5b728f9d6c8f7b09": {
+    "notified": true,
+    "date": "30-09-2026",
+    "date_end": "31-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:5240b4ac5b728f9d6c8f7b09",
+    "legacy_ids": [
+      "6a137ae5d719f149",
+      "v2:5240b4ac5b728f9d6c8f7b09"
+    ],
+    "title": "Reperibilità ottobre 26 Dip.to Prevenzione ASL AV",
+    "num_pub": "537",
+    "tipo": "REPERIBILITA'  DEL PERSONALE",
+    "sender": "ASL DIPARTIMENTO E PREVENZIONE",
+    "act_number": "",
+    "register_number": "",
+    "last_revision_check_at": "2026-09-30T07:48:39Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "2fed61f118ae4d6a41d5c395991c64b470f5eb0dbc0fda0bddcdec60ad2510c8",
+    "revision_snapshot": {
+      "date": "30-09-2026",
+      "date_end": "31-10-2026",
+      "sender": "ASL DIPARTIMENTO E PREVENZIONE",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "4d71f41f87f3fefe93177ba0bb3c26c9bdba53c66793125a09f8034d05c042f1"
+      ],
+      "attachment_name_hashes": [
+        "66c078e03d9ca6bc"
+      ]
+    },
+    "revision": 1
   }
 }
