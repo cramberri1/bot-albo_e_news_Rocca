@@ -7605,5 +7605,41 @@
       ]
     },
     "revision": 1
+  },
+  "v2:f5595a0ddc033b8b7f033dbd": {
+    "notified": true,
+    "date": "30-09-2026",
+    "date_end": "15-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:f5595a0ddc033b8b7f033dbd",
+    "legacy_ids": [
+      "96461c170068ca55",
+      "v2:f5595a0ddc033b8b7f033dbd"
+    ],
+    "title": "\"REALIZZAZIONE DELLA NUOVA PALESTRA SCOLASTICA DELL'ISTITUTO COMPRENSIVO DON PEPPE DIANA -M.R. IMBRIANI.\" Missione 4 - Istruzione e Ricerca - Componente 1 - Potenziamento dell'offerta dei servizi di istruzione: dagli asili nido alle Università - Investimento 1.3 \"Piano per le infrastrutture per lo sport nelle scuole\", finanziato dall'Unione europea - Next Generation EU. CUP G11B22000730006. \nApprovazione atti tecnici relativi allo STATO FINALE, CERTIFICATO ULTIMAZIONE LAVORI, CERTIFICATO DI REGOLARE ESECUZIONE.",
+    "num_pub": "538",
+    "tipo": "DETERMINAZIONI",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "113",
+    "register_number": "",
+    "last_revision_check_at": "2026-09-30T10:46:39Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "875d31eb4890a455c7b8a3ec01df3580e65b851bfc31884624777c7c1f74bbf1",
+    "revision_snapshot": {
+      "date": "30-09-2026",
+      "date_end": "15-10-2026",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "113",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "fc1cae3ff39fbc129311bbf180a7bca91b630e7e0d56f1f3cddb5157ae2056b9"
+      ],
+      "attachment_name_hashes": [
+        "71f3c69cf673ebfc"
+      ]
+    },
+    "revision": 1
   }
 }
