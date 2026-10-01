@@ -7641,5 +7641,41 @@
       ]
     },
     "revision": 1
+  },
+  "v2:694a6a31b7964ae2b26f9eeb": {
+    "notified": true,
+    "date": "01-10-2026",
+    "date_end": "16-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:694a6a31b7964ae2b26f9eeb",
+    "legacy_ids": [
+      "bd3fdfc978f083d7",
+      "v2:694a6a31b7964ae2b26f9eeb"
+    ],
+    "title": "Revoca in autotutela, ai sensi dell'art. 21-quinquies della L. 241/1990 e s.m.i., della Determinazione del Responsabile dell'Area Tecnica n. 71 del 20/04/2026 ad oggetto: \"Servizio di noleggio a freddo di macchine operatrici (senza operatore e carburante) pala gommata compatta (Bobcat). Determina a contrarre, affidamento diretto ex art. 50, comma 1, lett. b) del D.Lgs 36/2023\".",
+    "num_pub": "539",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "25",
+    "register_number": "",
+    "last_revision_check_at": "2026-10-01T07:41:10Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "4b8c2eddac9505d4d95947107980c3de8a9f6a55c1cdf1aed78a829bc88bcfe7",
+    "revision_snapshot": {
+      "date": "01-10-2026",
+      "date_end": "16-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "25",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "4050263c5b692fd5b8905c627aabc00a56579f3cf9d43ee0fd97728a6ff20acb"
+      ],
+      "attachment_name_hashes": [
+        "aaecac967ce20b5d"
+      ]
+    },
+    "revision": 1
   }
 }
