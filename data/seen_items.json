@@ -7677,5 +7677,37 @@
       ]
     },
     "revision": 1
+  },
+  "v2:41b34a2d0da7e9a19b4ed994": {
+    "notified": true,
+    "date": "01-10-2026",
+    "date_end": "31-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:41b34a2d0da7e9a19b4ed994",
+    "legacy_ids": [
+      "fa87987142db1dad",
+      "v2:41b34a2d0da7e9a19b4ed994"
+    ],
+    "title": "Albo delle persone idonee all'ufficio di presidennte di seggio elettorale - Aggiornamento periodico",
+    "num_pub": "540",
+    "tipo": "AVVISO",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": "",
+    "last_revision_check_at": "2026-10-01T15:38:44Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "9424ebc97701917eeaae2cc8499fa92b114943320203f44d32c95e618dbf1120",
+    "revision_snapshot": {
+      "date": "01-10-2026",
+      "date_end": "31-10-2026",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 0,
+      "attachment_sha256": [],
+      "attachment_name_hashes": []
+    },
+    "revision": 1
   }
 }
