@@ -6843,7 +6843,7 @@
     "date": "21-09-2026",
     "date_end": "06-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "320b72718ebb4d2d8555739ddc7f4e13f30db6936e3566e36e89690ae68fdf13",
     "revision_snapshot": {
@@ -6881,7 +6881,7 @@
     "date_end": "07-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "revision_fingerprint": "1d4680e2a988f76e2cad533c47ff56371d1abb7a9a425377708a3450996ff1a4",
     "revision_snapshot": {
       "date": "22-09-2026",
@@ -6918,7 +6918,7 @@
     "date_end": "07-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "revision_fingerprint": "2146a9052646672c228e2987997c8d882cb517eb4cdef162626ed5292d0f324a",
     "revision_snapshot": {
       "date": "22-09-2026",
@@ -6954,7 +6954,7 @@
     "date": "22-09-2026",
     "date_end": "07-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "f3e8a6f76bc9b59997eba7b6eebeb3eda36114d6dc8e4332c4f090ba5027dabe",
     "revision_snapshot": {
@@ -6991,7 +6991,7 @@
     "date": "22-09-2026",
     "date_end": "07-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "cc452b58649a99663bcf994ef0de5f04f2582b322c3f7144e707a58076fdc9f5",
     "revision_snapshot": {
@@ -7028,7 +7028,7 @@
     "date": "23-09-2026",
     "date_end": "08-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "8ff3a1e8dc2aeae33cbd4c14fa2bd7114a094bbbaf2c95a3e7c712cdaff10996",
     "revision_snapshot": {
@@ -7066,7 +7066,7 @@
     "date_end": "20-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "revision_fingerprint": "f56f8b69bb8e5cae3e326513b3fbe0a893b8ae7192335b263623faf863e30345",
     "revision_snapshot": {
       "date": "23-09-2026",
@@ -7106,7 +7106,7 @@
     "date": "23-09-2026",
     "date_end": "08-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "31bffa8a21b80acbd2c6b45f4fe69241e22b5d1c1ccca222eae3d5b22f913132",
     "revision_snapshot": {
@@ -7155,7 +7155,7 @@
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "202",
     "register_number": "",
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "c31f93eee7faa613fe53c001375f0a49e1186cdd611ce3e9597c5bcab4ad6c41",
     "revision_snapshot": {
@@ -7191,7 +7191,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "45",
     "register_number": "",
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "b213b36fdb3a405460d14d899c71db1b0697eac5a7ee8619e486821722722e8e",
     "revision_snapshot": {
@@ -7227,7 +7227,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "44",
     "register_number": "",
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "0eed83d0f96a073220bf20bff8edadaae25b40263897488ca18140c9af0a834d",
     "revision_snapshot": {
@@ -7263,7 +7263,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "43",
     "register_number": "",
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "1b865b1582b84b68d80f6bdf481bac1ace59bc4ccf8c3e6f642693ecb476bd9e",
     "revision_snapshot": {
@@ -7299,7 +7299,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "40",
     "register_number": "",
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "ed64053ee2f46f7c160692fcdbe19261baea4582998aa77fd7db7026c3ed1d8b",
     "revision_snapshot": {
@@ -7335,7 +7335,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "37",
     "register_number": "",
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "90a1926c5255fac9d49637733c76cbbc9d231477f6e796ef29d6200b22e98459",
     "revision_snapshot": {
@@ -7371,7 +7371,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "36",
     "register_number": "",
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "ab58e98a1dbeba4fc56a3db87bfab0813dd6af075e4100db4e722184eae93ccc",
     "revision_snapshot": {
@@ -7407,7 +7407,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "35",
     "register_number": "",
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "dae317eb112b154915753c91c69a130b49c57577a83f6df3d7c43f207c00aecc",
     "revision_snapshot": {
@@ -7443,7 +7443,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "34",
     "register_number": "",
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "41f90a83d1e2c0e8f159ebd6a75818410d3ff46bbc52d403286c28f8acf98749",
     "revision_snapshot": {
@@ -7479,7 +7479,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "33",
     "register_number": "",
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "8bb90b9ead57931f03f1579af7e1cd36ea4c4581fa91087b8f7a4a7ddb86e77c",
     "revision_snapshot": {
@@ -7515,7 +7515,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "31",
     "register_number": "",
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "bca67a9fabca98f937a1a2f8fe83a6c4975ad5ff65356c675c21d4327f2aaf6d",
     "revision_snapshot": {
@@ -7623,7 +7623,7 @@
     "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
     "act_number": "113",
     "register_number": "",
-    "last_revision_check_at": "2026-10-01T00:33:18Z",
+    "last_revision_check_at": "2026-10-01T01:35:37Z",
     "delivery_pending": false,
     "revision_fingerprint": "875d31eb4890a455c7b8a3ec01df3580e65b851bfc31884624777c7c1f74bbf1",
     "revision_snapshot": {
