@@ -11,6 +11,8 @@ lo scheduling configurato, gratuitamente, nei limiti del piano free.
 
 > Aggiornamento 24/09/2026: identità v2, anti-raffica, deduplicazione Telegram, ricerca e nuovi orari.
 > Vedi [revisione e limiti operativi](docs/HARDENING.md) per configurazione e verifiche.
+> Aggiornamento 01/10/2026: [pannello amministratore `/status`](docs/ADMIN_STATUS.md)
+> e [revisione concettuale del progetto](docs/PROJECT_REVIEW.md).
 
 ---
 
@@ -71,12 +73,20 @@ lo scheduling configurato, gratuitamente, nei limiti del piano free.
 | `/news` | Mostra le ultime 10 news pubblicate sul sito del Comune |
 | `/cerca <testo>` | Cerca negli atti conservati; 5 risultati per pagina, con recupero allegati su richiesta per il singolo atto |
 | `/cerca_news <testo>` | Cerca nelle news conservate; 5 risultati per pagina |
-| `/controlla` | Forza un controllo immediato di nuovi atti e nuove news (**solo amministratori**) |
-| `/status` | Statistiche del bot (solo amministratori) |
+| `/controlla` | Forza un controllo immediato di nuovi atti e nuove news, con eventuali notifiche (**solo amministratori, in privato**) |
+| `/status` | Pannello con iscritti, destinatari, archivi, code, esiti e tempi dei controlli (**solo amministratori, in privato**) |
 
 Le due sottoscrizioni (albo / news) sono indipendenti: puoi iscriverti
 a una sola, a entrambe, o a nessuna. Gli amministratori (`CHAT_IDS`)
 ricevono sempre entrambe le notifiche indipendentemente dall'iscrizione.
+
+**Per l'amministratore:** apri la chat privata del bot e scrivi `/status`.
+Il tuo ID utente Telegram deve essere tra quelli del secret `CHAT_IDS`.
+Il riepilogo distingue le chat iscritte dai destinatari effettivi, che includono
+anche gli amministratori. Mostra l'ultimo tentativo e l'ultimo successo
+separatamente per Albo e News, le consegne pendenti e lo stato delle protezioni.
+Non avvia controlli sul portale né cambia iscrizioni, archivi o consegne.
+I dettagli sono [nella guida al pannello](docs/ADMIN_STATUS.md).
 
 Nei risultati di `/cerca`, ogni pulsante **📎 Scarica allegati · N** corrisponde
 al risultato numerato N. Il bot ritrova l'atto in una nuova sessione Halley,
@@ -124,7 +134,7 @@ Il workflow è definito in `.github/workflows/albo_check.yml`:
 | Secret | Descrizione |
 |---|---|
 | `BOT_TOKEN` | Il token del bot, ottenuto da [@BotFather](https://t.me/BotFather) |
-| `CHAT_IDS` | ID Telegram degli amministratori, separati da virgola |
+| `CHAT_IDS` | ID utente Telegram degli amministratori, separati da virgola; i comandi admin richiedono la loro chat privata. Eventuali ID di gruppi restano destinazioni delle notifiche, senza autorizzare comandi admin dal gruppo. |
 | `STATE_ENCRYPTION_KEY` | Chiave Fernet per cifrare i file con chat_id; generarla con `python3 -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"` |
 
 (`GITHUB_TOKEN` è fornito automaticamente da GitHub Actions, non va creato)
@@ -147,9 +157,10 @@ assenti.
 | `data/seen_items.json` | Stato atti albo: hash, flag `notified`, date pubblicazione/scadenza, stato/cache tecnica |
 | `data/subscribers.json` 🔒 | Elenco chat_id iscritti alle notifiche dell'Albo Pretorio |
 | `data/user_seen.json` 🔒 | Cronologia per utente degli atti già inviati |
-| `data/last_check.txt` | Timestamp dell'ultimo controllo; aggiornato localmente a ogni check e committato al massimo una volta al giorno |
+| `data/last_check.txt` | Timestamp dell'ultimo tentativo Albo arrivato al fetch, non prova di successo; aggiornato localmente e committato al massimo una volta al giorno |
 | `data/seen_news.json` | Cache news: id, titolo, categoria, data, url |
 | `data/subscribers_news.json` 🔒 | Elenco chat_id iscritti alle notifiche delle News |
+| `data/user_seen_news.json` 🔒 | Cronologia per destinatario delle news già inviate |
 
 🔒 = contiene chat_id (dato personale) ed è **cifrato** con `Fernet`
 prima di ogni commit — vedi sezione [Cifratura dei dati personali](#cifratura-dei-dati-personali).
@@ -169,9 +180,8 @@ relativo backfill. La ricerca usa lo storico locale `data/seen_items.json`.
 
 ## Cifratura dei dati personali
 
-Il repository è pubblico (necessario per i minuti GitHub Actions gratuiti
-illimitati), quindi `subscribers.json`, `subscribers_news.json` e
-`user_seen.json` — gli unici file che contengono chat_id Telegram —
+Il repository è pubblico, quindi `subscribers.json`, `subscribers_news.json`,
+`user_seen.json` e `user_seen_news.json` — i quattro file con chat_id Telegram —
 vengono cifrati con una chiave simmetrica (`Fernet`) prima di ogni commit.
 
 La chiave va impostata come secret del repository (`STATE_ENCRYPTION_KEY`).
@@ -181,9 +191,11 @@ Per generarla:
 python3 -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
 ```
 
-Senza questa chiave impostata, il bot funziona comunque ma salva questi
-tre file **in chiaro** (con un avviso nei log) — da evitare su un repository
-pubblico.
+Su GitHub Actions la chiave è obbligatoria: senza di essa il bot si ferma
+all'avvio. Solo in locale, senza `GITHUB_ACTIONS`, è previsto il salvataggio
+in chiaro per lo sviluppo; non usarlo per committare dati personali reali.
+Conserva una copia sicura della chiave: serve anche per leggere lo stato
+cifrato nei ripristini.
 
 ---
 
@@ -193,6 +205,7 @@ pubblico.
 .
 ├── .github/workflows/albo_check.yml   # Workflow GitHub Actions
 ├── bot.py                             # Logica del bot (albo + news)
+├── admin_status.py                    # Esiti e tempi dei controlli del processo
 ├── requirements.txt                   # Dipendenze Python
 └── data/                              # Stato generato automaticamente
     ├── seen_items.json
@@ -200,7 +213,8 @@ pubblico.
     ├── user_seen.json                 # 🔒 cifrato
     ├── last_check.txt
     ├── seen_news.json
-    └── subscribers_news.json          # 🔒 cifrato
+    ├── subscribers_news.json          # 🔒 cifrato
+    └── user_seen_news.json            # 🔒 cifrato
 ```
 
 ---

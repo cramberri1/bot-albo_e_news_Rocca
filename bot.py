@@ -30,6 +30,7 @@ import threading
 import signal
 import contextvars
 import functools
+from admin_status import CheckHealth
 from albo_identity import (normalize_field, normalize_number, parse_publication_number,
     parse_act_number, parse_register_number, legacy_item_id, item_id_v2,
     normalize_snapshot, find_existing_equivalent_item, flood_reason, _age)
@@ -131,10 +132,9 @@ validate_config()
 # Cifratura dei file contenenti dati personali (chat_id Telegram iscritti)
 # ---------------------------------------------------------------------------
 # subscribers.json, subscribers_news.json, user_seen.json e
-# user_seen_news.json contengono
-# chat_id — dato personale indiretto. Dato che il repository è pubblico
-# (necessario per i minuti GitHub Actions gratuiti illimitati), questi tre
-# file vengono cifrati prima di ogni commit con una chiave simmetrica letta
+# user_seen_news.json contengono chat_id — dato personale indiretto.
+# Dato che il repository è pubblico, questi quattro file vengono cifrati
+# prima di ogni commit con una chiave simmetrica letta
 # SOLO da un secret GHA (STATE_ENCRYPTION_KEY), mai presente nel repository.
 # Gli altri file di stato (seen_items.json, seen_news.json, last_check.txt)
 # non contengono dati personali e restano in chiaro.
@@ -411,8 +411,8 @@ MENU_TEXT = (
     "/news — mostra le ultime news\n"
     "/cerca <testo> — cerca nello storico atti\n"
     "/cerca\\_news <testo> — cerca nello storico news\n"
-    "/controlla — forza un controllo\n"
-    "/status — statistiche bot (solo admin)\n"
+    "/controlla — forza un controllo (admin, in privato)\n"
+    "/status — stato e iscritti (admin, in privato)\n"
     "/start — messaggio di benvenuto"
 )
 
@@ -459,6 +459,18 @@ def get_all_news_recipients() -> set:
 
 def is_admin(chat_id: int) -> bool:
     return chat_id in CONFIG["ADMIN_IDS"]
+
+
+def is_admin_request(update: Update) -> bool:
+    """I comandi operativi richiedono l'identità dell'admin in chat privata."""
+    chat = getattr(update, "effective_chat", None)
+    user = getattr(update, "effective_user", None)
+    return bool(
+        chat and user and getattr(chat, "type", None) == "private"
+        and type(getattr(user, "id", None)) is int and user.id > 0
+        and type(getattr(chat, "id", None)) is int
+        and chat.id == user.id and is_admin(user.id)
+    )
 
 # ---------------------------------------------------------------------------
 # Database atti visti
@@ -3351,8 +3363,8 @@ async def cmd_search_attachments(update, context):
 
 async def cmd_controlla(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Forza un controllo immediato usando la stessa logica produttiva del polling."""
-    if not is_admin(update.effective_chat.id):
-        await update.message.reply_text("⛔ Comando riservato agli amministratori.")
+    if not is_admin_request(update):
+        await update.message.reply_text("⛔ Comando riservato agli amministratori, nella chat privata del bot.")
         return
 
     await update.message.reply_text("🔍 Controllo in corso...")
@@ -3369,28 +3381,122 @@ async def cmd_controlla(update: Update, context: ContextTypes.DEFAULT_TYPE):
         parse_mode=ParseMode.MARKDOWN
     )
 
+def _status_subscriptions(path: Path) -> set[int]:
+    """Conta le iscrizioni esplicite, senza il fallback amministratori."""
+    if not path.exists():
+        return set()
+    raw = _decrypt_json(path.read_bytes())
+    if not isinstance(raw, list) or any(type(value) is not int or value == 0 for value in raw):
+        raise ValueError("Formato iscrizioni non valido")
+    return set(raw)
+
+
+def _status_archive(path: Path, *, albo: bool = False) -> dict:
+    """Lettura validata, anche legacy, senza migrazioni o scritture."""
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    if albo and isinstance(raw, list) and all(isinstance(key, str) for key in raw):
+        return {key: {"notified": True} for key in raw}
+    if not isinstance(raw, dict) or any(not isinstance(rec, dict) for rec in raw.values()):
+        raise ValueError("Formato archivio non valido")
+    for rec in raw.values():
+        for flag in ("notified", "delivery_pending"):
+            if flag in rec and type(rec[flag]) is not bool:
+                raise ValueError("Flag archivio non valido")
+    return raw
+
+
+def build_admin_status() -> str:
+    """Snapshot aggregato locale: nessuna rete, scrittura o modifica consegne."""
+    now = datetime.now(timezone.utc)
+    minutes = int(_CHECK_HEALTH.uptime_seconds // 60)
+    lines = [
+        "📊 Stato Albo Pretorio & News",
+        f"Rilevato: {now.strftime('%d/%m/%Y %H:%M:%S')} UTC",
+        f"Processo avviato da: {minutes // 60} h {minutes % 60} min",
+        f"Pausa tra cicli: {CONFIG['INTERVAL_MINUTES']} min",
+        "",
+        "👥 Iscrizioni e destinatari (chat, non persone)",
+    ]
+    try:
+        albo_subs = _status_subscriptions(SUBSCRIBERS_PATH)
+        news_subs = _status_subscriptions(SUBSCRIBERS_NEWS_PATH)
+        admins = set(CONFIG["ADMIN_IDS"])
+        lines.extend([
+            f"Iscrizioni — Albo: {len(albo_subs)} · News: {len(news_subs)}",
+            f"Chat iscritte uniche: {len(albo_subs | news_subs)}",
+            f"Solo Albo: {len(albo_subs - news_subs)} · Solo News: {len(news_subs - albo_subs)} · Entrambe: {len(albo_subs & news_subs)}",
+            f"Destinazioni admin configurate: {len(admins)}",
+            f"Destinatari Albo: {len(albo_subs | admins)} · Destinatari News: {len(news_subs | admins)}",
+            f"Destinatari unici: {len(albo_subs | news_subs | admins)}",
+            "I destinatari includono gli admin, senza duplicati; non attestano la raggiungibilità.",
+        ])
+    except (OSError, ValueError, TypeError, RuntimeError):
+        lines.append("Iscrizioni: dati non disponibili (file illeggibile o chiave non disponibile).")
+
+    lines.extend(["", "🗂 Archivio locale e code"])
+    try:
+        db = _status_archive(DB_PATH, albo=True)
+        notified = sum(rec.get("notified", True) for rec in db.values())
+        pending = [rec for rec in db.values() if rec.get("delivery_pending", False)]
+        revisions = sum(rec.get("pending_kind") == "revision" for rec in pending)
+        lines.extend([
+            f"Atti conservati: {len(db)} · Notificati/baseline: {notified}",
+            f"Atti non marcati come notificati: {len(db) - notified}",
+            f"Atti con consegne pendenti: {len(pending)} (revisioni: {revisions})",
+        ])
+    except (OSError, ValueError, TypeError):
+        lines.append("Archivio Albo: dati non disponibili")
+    try:
+        news_db = _status_archive(NEWS_DB_PATH)
+        pending_news = sum(rec.get("delivery_pending", False) for rec in news_db.values())
+        lines.extend([
+            f"News conservate: {len(news_db)}",
+            f"News con consegne pendenti: {pending_news}",
+        ])
+    except (OSError, ValueError, TypeError):
+        lines.append("Archivio News: dati non disponibili")
+    lines.append("Archivio ≠ elenco online; pendenti = record, non singoli invii.")
+
+    lines.extend(["", "🔄 Controlli del processo corrente", *_CHECK_HEALTH.lines()])
+    last_attempt = "non disponibile"
+    try:
+        stamp = datetime.fromisoformat(LAST_CHECK_PATH.read_text(encoding="utf-8").strip().replace("Z", "+00:00"))
+        if stamp.tzinfo is not None:
+            last_attempt = stamp.astimezone(timezone.utc).strftime("%d/%m/%Y %H:%M:%S UTC")
+    except (OSError, ValueError, OverflowError):
+        pass
+    lines.extend([
+        f"Ultimo tentativo Albo salvato: {last_attempt}",
+        "Il tentativo salvato non attesta l'esito; lo storico dei successi riparte a ogni avvio.",
+        "",
+        "🛡 Protezioni",
+        f"Chiave cifratura stato: {'configurata' if _fernet is not None else 'assente'}",
+    ])
+    try:
+        safety = json.loads(ALBO_SAFETY_PATH.read_text(encoding="utf-8"))
+        if not isinstance(safety, dict) or type(safety.get("identity_v2_ready", False)) is not bool:
+            raise ValueError("Formato protezioni non valido")
+        lines.extend([
+            f"Identità v2 inizializzata: {'sì' if safety.get('identity_v2_ready') else 'no'}",
+            f"Blocco Albo registrato: {'sì' if safety.get('last_stop') else 'no'}",
+        ])
+    except (OSError, ValueError, TypeError):
+        lines.append("Protezioni Albo: stato salvato non disponibile")
+    lines.extend([
+        f"Ricontrollo revisioni: ogni almeno {REVISION_RECHECK_MINUTES} min, massimo {REVISION_RECHECK_MAX_ITEMS} atti per ciclo",
+        "",
+        "/status aggiorna questo riepilogo; /controlla esegue un controllo e può inviare notifiche.",
+        "Il bot risponde quando il processo è attivo; i comandi precedenti possono ritardare la risposta.",
+    ])
+    return "\n".join(lines)
+
+
 async def cmd_status(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Statistiche bot — solo admin."""
-    if not is_admin(update.effective_chat.id):
-        await update.message.reply_text("⛔ Comando riservato agli amministratori.")
+    """Diagnostica aggregata, riservata all'admin in chat privata."""
+    if not is_admin_request(update):
+        await update.message.reply_text("⛔ Comando riservato agli amministratori, nella chat privata del bot.")
         return
-    seen       = load_seen()
-    subs       = load_subscribers()
-    seen_news  = load_seen_news()
-    subs_news  = load_subscribers_news()
-    now   = datetime.now(timezone.utc)
-    last  = LAST_CHECK_PATH.read_text().strip() if LAST_CHECK_PATH.exists() else "N/D"
-    await update.message.reply_text(
-        "📊 *Status Albo Pretorio Bot*\n\n"
-        f"🗂 Atti in archivio: *{len(seen)}*\n"
-        f"👥 Iscritti albo: *{len(subs)}*\n"
-        f"🗞 News in archivio: *{len(seen_news)}*\n"
-        f"👥 Iscritti news: *{len(subs_news)}*\n"
-        f"🕐 Ora UTC: {now.strftime('%d/%m/%Y %H:%M')}\n"
-        f"🔄 Ultimo check: {last}\n\n"
-        f"⚙️ Intervallo polling: {CONFIG['INTERVAL_MINUTES']} min",
-        parse_mode=ParseMode.MARKDOWN
-    )
+    await update.message.reply_text(build_admin_status())
 
 async def cmd_unknown(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.message:
@@ -3402,13 +3508,14 @@ async def cmd_unknown(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------------------------------------------------------
 _ALBO_CHECK_LOCK = asyncio.Lock()
 _NEWS_CHECK_LOCK = asyncio.Lock()
+_CHECK_HEALTH = CheckHealth()
 
 
 @cleanup_spool_scope
 async def run_check(bot: Bot) -> dict:
     """Serializza i controlli Albo per evitare doppioni tra loop e /controlla."""
     async with _ALBO_CHECK_LOCK:
-        return await _run_check_albo(bot)
+        return await _CHECK_HEALTH.run("Albo", _run_check_albo, bot)
 
 
 async def _run_check_albo(bot: Bot) -> dict:
@@ -3803,7 +3910,7 @@ def news_is_recent(item: dict, max_age_days: int = NEWS_NOTIFY_MAX_AGE_DAYS) -> 
 async def run_check_news(bot: Bot) -> dict:
     """Serializza i controlli News per evitare doppioni tra loop e /controlla."""
     async with _NEWS_CHECK_LOCK:
-        return await _run_check_news(bot)
+        return await _CHECK_HEALTH.run("News", _run_check_news, bot)
 
 
 async def _run_check_news(bot: Bot) -> dict:
@@ -3940,7 +4047,7 @@ async def _run_check_news(bot: Bot) -> dict:
         }
     else:
         log.info(f"Nessuna nuova news. (archivio: {len(seen_news)}, online ora: {len(news_items)})")
-        return {"ok": True, "new": 0, "total": len(seen_news)}
+        return {"ok": True, "new": 0, "total": len(seen_news), "failed": 0}
 
 # ---------------------------------------------------------------------------
 # Loop principale — check immediato all'avvio, poi ogni INTERVAL_MINUTES
