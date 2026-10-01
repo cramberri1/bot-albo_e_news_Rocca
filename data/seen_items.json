@@ -7709,5 +7709,43 @@
       "attachment_name_hashes": []
     },
     "revision": 1
+  },
+  "v2:1125defe9bc1d0c601673f7f": {
+    "notified": true,
+    "date": "01-10-2026",
+    "date_end": "30-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:1125defe9bc1d0c601673f7f",
+    "legacy_ids": [
+      "922efb6e86fcf5f1",
+      "v2:1125defe9bc1d0c601673f7f"
+    ],
+    "title": "Albo unico delle persone idonee all'ufficio di scrutatore di seggio elettorale - Aggiornamento periodico",
+    "num_pub": "541",
+    "tipo": "AVVISO",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "",
+    "register_number": "",
+    "last_revision_check_at": "2026-10-01T15:54:49Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "3bc7ee5eb95743391de5914b3aa692153d8e8cd66b4035810e9c3f5e166adc5b",
+    "revision_snapshot": {
+      "date": "01-10-2026",
+      "date_end": "30-11-2026",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "c2b9fa2ad470f72337cfc8de1275cf50116ded4d54d3dbff08bf0c3ab655660d",
+        "de8c59d5fc700ef0636a025bba7b2e1b9247f3211b456b8d6c648811be39d66c"
+      ],
+      "attachment_name_hashes": [
+        "6b5f79b72fa21b48",
+        "e74a6aee988a28d4"
+      ]
+    },
+    "revision": 1
   }
 }
