@@ -969,5 +969,14 @@
     "description": "Data,luogo e ora prova orale",
     "notified": true,
     "delivery_pending": false
+  },
+  "188": {
+    "title": "Servizio mensa -  Anno Scolastico 2026/2027",
+    "category": "Avviso",
+    "date": "01-10-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_188.html",
+    "description": "Iscrizione al servizio",
+    "notified": true,
+    "delivery_pending": false
   }
 }
