@@ -7790,5 +7790,41 @@
       ]
     },
     "revision": 1
+  },
+  "v2:13bb62810c0c25f4521eeabc": {
+    "notified": true,
+    "date": "02-10-2026",
+    "date_end": "17-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:13bb62810c0c25f4521eeabc",
+    "legacy_ids": [
+      "bf0a76187550c31c",
+      "v2:13bb62810c0c25f4521eeabc"
+    ],
+    "title": "Aggiudicazione del servizio di Mensa scolastica per l'anno accademico 2026/27 periodo ottobre-dicembre 2026, mediante procedura negoziata su MePa.",
+    "num_pub": "543",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "217",
+    "register_number": "",
+    "last_revision_check_at": "2026-10-02T12:04:26Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "c0ac56dba01424e058c9ee97e8456d3a19fb47890edb3c35806ac04496c243b2",
+    "revision_snapshot": {
+      "date": "02-10-2026",
+      "date_end": "17-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "217",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "fe88af16d8b8df9abea23c311e1642b558fc6aa9b704416b5e9499bc3502edf5"
+      ],
+      "attachment_name_hashes": [
+        "34ffe73b4fef076f"
+      ]
+    },
+    "revision": 1
   }
 }
