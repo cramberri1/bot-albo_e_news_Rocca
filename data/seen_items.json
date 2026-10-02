@@ -7754,5 +7754,41 @@
       ]
     },
     "revision": 1
+  },
+  "v2:084f22207cb8334e3d292ec2": {
+    "notified": true,
+    "date": "02-10-2026",
+    "date_end": "17-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:084f22207cb8334e3d292ec2",
+    "legacy_ids": [
+      "d60f86a5271a3793",
+      "v2:084f22207cb8334e3d292ec2"
+    ],
+    "title": "Accordo transattivo tra il Comune di Roccabascerana e l'Avv. Massimo Cosenza di cui alla Delibera di Consiglio Comunale n. 7 del 30.07.2024 - Liquidazione terzo acconto",
+    "num_pub": "542",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "208",
+    "register_number": "",
+    "last_revision_check_at": "2026-10-02T11:01:37Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "0c97e751dfb639a24055ea29d3982ce85a181728d45b1c4e990e697eb5f1e267",
+    "revision_snapshot": {
+      "date": "02-10-2026",
+      "date_end": "17-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "208",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "a7c44961e56b79971050cfc5702147e50288ee6748284cc27dc2905762ab4c9b"
+      ],
+      "attachment_name_hashes": [
+        "ebb734fa0bb23e6f"
+      ]
+    },
+    "revision": 1
   }
 }
