@@ -1,5 +1,10 @@
 # Revisione conservativa del 24 settembre 2026
 
+> Resoconto storico. Dal 3 ottobre scheduling e checkpoint News seguono
+> [ARCHITECTURE_REVIEW.md](ARCHITECTURE_REVIEW.md) e il README aggiornato:
+> runtime 07:00–23:00, worker uniforme di cinque ore, checkpoint per news.
+> Il checkpoint Albo resta per atto, non per singolo destinatario.
+
 ## Riscontro indipendente
 
 Base esaminata inizialmente: `d272349`, poi aggiornata prima della distribuzione.

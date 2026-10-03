@@ -1,5 +1,10 @@
 # Revisione concettuale del progetto
 
+> Documento storico del 1° ottobre. La [revisione architetturale del 3 ottobre](ARCHITECTURE_REVIEW.md)
+> ne corregge i limiti: scheduling dipendente dal cron, checkpoint News e falsa
+> salute su acquisizioni parziali. Per il comportamento attuale usare README e
+> ARCHITECTURE_REVIEW; le durate e i checkpoint descritti sotto sono pre-patch.
+
 Revisione del 30 settembre 2026, completata il 1° ottobre 2026.
 Esame del codice, dei workflow e della documentazione;
 non comprende lettura delle iscrizioni reali, nuovi invii Telegram o una prova

@@ -13,6 +13,8 @@ lo scheduling configurato, gratuitamente, nei limiti del piano free.
 > Vedi [revisione e limiti operativi](docs/HARDENING.md) per configurazione e verifiche.
 > Aggiornamento 01/10/2026: [pannello amministratore `/status`](docs/ADMIN_STATUS.md)
 > e [revisione concettuale del progetto](docs/PROJECT_REVIEW.md).
+> Aggiornamento 04/10/2026: [revisione architetturale e incidente scheduling](docs/ARCHITECTURE_REVIEW.md).
+> Polling automatico **07:00–23:00 Europe/Rome**; comandi Telegram indipendenti.
 
 ---
 
@@ -48,8 +50,9 @@ lo scheduling configurato, gratuitamente, nei limiti del piano free.
   nell'URL della news (es. `novita_166.html` → `166`).
 - **Early-stop sulla paginazione**: ad ogni controllo periodico, il bot
   si ferma alla prima pagina di news già completamente note in cache
-  (le news più vecchie di quelle già viste non cambiano mai), invece
-  di scaricare sempre tutte le pagine dell'archivio.
+  invece di scaricare sempre tutte le pagine dell'archivio. Questa ottimizzazione
+  presuppone un ordinamento coerente: non monitora le modifiche alle news vecchie.
+  Le consegne confermate vengono salvate su Git dopo ogni news, prima della successiva.
 - **Filtro età per le notifiche push**: le news "nuove" per il bot ma
   pubblicate da più di `NEWS_NOTIFY_MAX_AGE_DAYS` (default 60) giorni
   non generano una notifica push (es. dopo un downtime prolungato del
@@ -104,13 +107,19 @@ Vedi [dettagli e collaudo](docs/SEARCH_ATTACHMENTS.md).
 
 Il workflow è definito in `.github/workflows/albo_check.yml`:
 
-- **Scheduling GitHub Actions**: Europe/Rome: 06:57, 12:37, 18:17 (giorno); 00:07, 03:37 (notte)
-- **Durata massima per run**: 355 minuti; il processo Python viene chiuso
-  intenzionalmente dopo **343 minuti di giorno, 55 di notte, 10 con avvio manuale**. Il timeout usa `SIGINT` per consentire
-  una chiusura più ordinata e lascia un piccolo margine allo step finale
-- **Polling interno**: dentro ogni run il bot controlla Albo Pretorio e News
-  ogni `INTERVAL_MINUTES` minuti (nel workflow: 15 di giorno e 30 di notte), quindi non aspetta 6 ore
-  tra un controllo effettivo e l'altro
+- **Richieste di avvio**: ogni ora al minuto 17, Europe/Rome. Sono richieste
+  intercambiabili di avviare un worker; il cron originario non determina la politica.
+- **Durata**: processo al massimo **5 ore**, uguale per schedule e avvio manuale;
+  timeout job 355 minuti. Gli step hanno budget espliciti: la loro somma è 331
+  minuti. `SIGINT` chiede la chiusura e restano fino a 120 secondi prima di
+  `SIGKILL`, oltre agli step finali di persistenza e recupero.
+- **Polling automatico**: dalle **07:00 incluse alle 23:00 escluse**, Europe/Rome,
+  con pausa di **15 minuti** dopo il ciclo. Il runtime rivaluta l'ora reale anche
+  durante la run. Il bootstrap delle baseline è soggetto alla stessa fascia.
+  Il lavoro già iniziato può concludersi e salvare dopo le 23:00.
+- **Telegram**: long polling e comandi manuali restano attivi finché vive il
+  processo, anche di notte. `/controlla` può quindi generare normali notifiche
+  fuori fascia; `/status` mostra se il polling automatico è abilitato o sospeso.
 - **Persistenza dati**: il bot stesso esegue `git commit` + `git push`
   dei file di stato quando aggiorna dati importanti (notifiche, iscritti,
   cronologia utenti, cache), non solo a fine job, così lo stato non resta
@@ -118,16 +127,30 @@ Il workflow è definito in `.github/workflows/albo_check.yml`:
 - **Crash visibili**: il workflow non usa più `|| true` sull'esecuzione del
   bot; il timeout programmato è considerato normale, ma un crash reale fa
   fallire il job
-- **Anti-sovrapposizione tra run**: il workflow usa `concurrency` con
-  `cancel-in-progress: false` — se un nuovo trigger (schedulato o
-  manuale via `workflow_dispatch`) arriva mentre un run precedente è
-  ancora attivo, resta in coda e parte automaticamente non appena il
-  primo termina, invece di girare in parallelo (che causerebbe
-  conflitti di scrittura sui file di stato)
+- **Anti-sovrapposizione**: concurrency conserva una run attiva e al massimo
+  una pending. Un nuovo trigger sostituisce la pending precedente senza fermare
+  l'attiva (`cancel-in-progress: false`). Non è una coda FIFO di tutti gli avvii.
+  La prossima run usa la politica dell'ora in cui esegue realmente il bot.
 - **`permissions: contents: write`**: dichiarato esplicitamente nel
   workflow, necessario perché il bot possa fare `git push` — senza,
   alcuni repository (a seconda delle impostazioni di default) negano
   il permesso di scrittura al token automatico
+
+GitHub può ritardare o perdere trigger: questo schema migliora la staffetta ma
+**non garantisce disponibilità 24/7**. Durante setup o assenza di runner il bot
+non risponde. Il verde Actions non è monitoring del servizio; il progetto del
+watchdog e i limiti residui sono in [ARCHITECTURE_REVIEW](docs/ARCHITECTURE_REVIEW.md).
+
+Configurazione applicativa (variabili ambiente; nel workflow sono esplicite):
+
+| Variabile | Default | Significato |
+|---|---|---|
+| `AUTO_POLL_START` | `07:00` | Inizio incluso, Europe/Rome |
+| `AUTO_POLL_END` | `23:00` | Fine esclusa, Europe/Rome |
+| `AUTO_POLL_INTERVAL_MINUTES` | `15` | Pausa tra cicli automatici |
+
+`INTERVAL_MINUTES` non seleziona più profili; usa `AUTO_POLL_INTERVAL_MINUTES`.
+Il fuso IANA è obbligatorio e `tzdata` permette di verificarlo anche su Windows.
 
 ### Secrets richiesti nel repository
 
@@ -143,6 +166,8 @@ Il workflow è definito in `.github/workflows/albo_check.yml`:
 
 Dalla tab **Actions** del repository → workflow **Albo Pretorio Check**
 → **Run workflow**.
+È un avvio produttivo con la stessa durata e politica temporale delle run
+schedulate, non un dry-run di dieci minuti.
 
 ---
 
@@ -233,8 +258,9 @@ python bot.py
 ```
 
 In locale il bot resta in esecuzione continua (polling Telegram +
-controllo periodico ogni `INTERVAL_MINUTES`, default 180) finché non
-viene interrotto manualmente.
+controllo automatico nella fascia configurata, pausa predefinita 15 minuti)
+finché non viene interrotto manualmente. Anche localmente i comandi manuali
+restano indipendenti dalla pausa notturna.
 
 ---
 

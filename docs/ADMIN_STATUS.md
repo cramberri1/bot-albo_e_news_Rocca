@@ -15,6 +15,7 @@ Telegram, elenchi di utenti, token o dettagli grezzi delle eccezioni.
 |---|---|
 | Ora e durata del processo | Snapshot al momento della risposta, con orari esplicitamente in UTC. La durata riparte al riavvio. |
 | Pausa tra cicli | Attesa configurata dopo il completamento del ciclo; la durata del controllo si aggiunge a questa pausa. |
+| Polling automatico | Fascia 07:00–23:00 Europe/Rome e abilitazione attuale secondo l'ora reale. La sospensione notturna non sospende Telegram o i comandi manuali. |
 | Iscrizioni Albo e News | Chat presenti nei rispettivi file di iscrizione, senza aggiungere implicitamente gli amministratori. |
 | Chat iscritte uniche / solo Albo / solo News / entrambe | Unione, differenze e intersezione dei due elenchi, senza duplicati. Un gruppo conta come una chat: non è un conteggio delle persone. |
 | Destinatari | Unione degli iscritti e delle destinazioni `CHAT_IDS`. Gli amministratori presenti anche tra gli iscritti si contano una sola volta. Non è una verifica della raggiungibilità su Telegram. |
@@ -22,6 +23,7 @@ Telegram, elenchi di utenti, token o dettagli grezzi delle eccezioni.
 | Atti non marcati come notificati | Record con `notified=False`: non sono automaticamente nuovi atti da inviare. Un flag assente nei dati legacy conta invece come baseline. |
 | Consegne pendenti | Numero di record con `delivery_pending`, con distinzione delle revisioni Albo. Non è il numero di destinatari ancora da raggiungere. |
 | Stato Albo e News | `non ancora verificato`, `in corso`, `completato`, `incompleto o bloccato`, `errore` oppure `interrotto`, separatamente per fonte. |
+| Dettagli non verificati nel ciclo | Acquisizioni Albo selezionate ma non completate: rendono il ciclo incompleto anche se nessun invio Telegram è fallito. |
 | Ultimo tentativo e successo | Dati dei controlli effettuati dal processo corrente. Solo un risultato `ok=True` aggiorna il successo; un errore conserva la data del successo precedente. |
 | Durata e contatori del ciclo | Durata dell'ultimo tentativo o tempo trascorso se in corso; nuovi, revisioni e consegne fallite secondo il risultato restituito dal controllo. Contatori assenti o non validi risultano non disponibili. |
 | Ultimo tentativo Albo salvato | Timestamp storico di `last_check.txt`, aggiornato dopo il fetch Albo. Non dimostra il successo e non viene aggiornato dai blocchi che avvengono prima del fetch. Nel repository può essere meno recente: il commit è limitato a uno al giorno. |

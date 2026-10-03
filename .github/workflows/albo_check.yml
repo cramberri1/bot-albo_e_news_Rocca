@@ -2,15 +2,8 @@ name: Albo Pretorio Check
 
 on:
   schedule:
-    - cron: '57 6 * * *'
-      timezone: Europe/Rome
-    - cron: '37 12 * * *'
-      timezone: Europe/Rome
-    - cron: '17 18 * * *'
-      timezone: Europe/Rome
-    - cron: '7 0 * * *'
-      timezone: Europe/Rome
-    - cron: '37 3 * * *'
+    # Wake requests are interchangeable. Runtime owns the actual-time policy.
+    - cron: '17 * * * *'
       timezone: Europe/Rome
   workflow_dispatch:
 
@@ -24,6 +17,10 @@ concurrency:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   STATE_GIT_BRANCH: main
+  BOT_SECONDS: '18000'
+  AUTO_POLL_START: '07:00'
+  AUTO_POLL_END: '23:00'
+  AUTO_POLL_INTERVAL_MINUTES: '15'
 
 jobs:
   check:
@@ -31,40 +28,31 @@ jobs:
     timeout-minutes: 355
     steps:
       - name: Checkout repository
+        timeout-minutes: 3
         uses: actions/checkout@v4.2.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: main
           fetch-depth: 0
       - name: Assicura branch Git principale
+        timeout-minutes: 1
         run: |
           git switch main
           git branch --set-upstream-to=origin/main main
       - name: Configura Python
+        timeout-minutes: 3
         uses: actions/setup-python@v5.6.0
         with:
           python-version: '3.12'
           cache: pip
       - name: Installa dipendenze
+        timeout-minutes: 8
         run: pip install -r requirements-dev.txt
       - name: Test di regressione
+        timeout-minutes: 3
         run: python -m unittest discover -s tests -v
-      - name: Seleziona profilo
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          SCHEDULE: ${{ github.event.schedule }}
-        run: |
-          if [ "$EVENT_NAME" = workflow_dispatch ]; then
-            echo 'BOT_SECONDS=600' >> "$GITHUB_ENV"
-            echo 'INTERVAL_MINUTES=15' >> "$GITHUB_ENV"
-          elif [ "$SCHEDULE" = '7 0 * * *' ] || [ "$SCHEDULE" = '37 3 * * *' ]; then
-            echo 'BOT_SECONDS=3300' >> "$GITHUB_ENV"
-            echo 'INTERVAL_MINUTES=30' >> "$GITHUB_ENV"
-          else
-            echo 'BOT_SECONDS=20580' >> "$GITHUB_ENV"
-            echo 'INTERVAL_MINUTES=15' >> "$GITHUB_ENV"
-          fi
       - name: Esegui bot
+        timeout-minutes: 304
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_IDS: ${{ secrets.CHAT_IDS }}
@@ -80,6 +68,7 @@ jobs:
           exit "$code"
       - name: Salva eventuale stato residuo
         if: always()
+        timeout-minutes: 6
         run: |
           git config user.name AlboBot
           git config user.email bot@alborocca
@@ -105,6 +94,7 @@ jobs:
           exit 1
       - name: Conserva stato per recupero dopo errore
         if: failure()
+        timeout-minutes: 3
         uses: actions/upload-artifact@v4
         with:
           name: bot-state-recovery-${{ github.run_id }}

@@ -12,7 +12,7 @@ from typing import Any, Awaitable, Callable, TypeVar
 
 
 _Result = TypeVar("_Result")
-_COUNTERS = ("new", "updated", "failed", "total")
+_COUNTERS = ("new", "updated", "failed", "total", "detail_failures")
 
 
 def _counter(value: Any) -> int | None:
@@ -117,5 +117,6 @@ class CheckHealth:
             lines.append(f"Nuovi nel ciclo: {_number(state['new'])}")
             if name == "Albo":
                 lines.append(f"Revisioni nel ciclo: {_number(state['updated'])}")
+                lines.append(f"Dettagli non verificati nel ciclo: {_number(state['detail_failures'])}")
             lines.append(f"Consegne fallite nel ciclo: {_number(state['failed'])}")
         return lines

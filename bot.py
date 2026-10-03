@@ -30,7 +30,9 @@ import threading
 import signal
 import contextvars
 import functools
+import time
 from admin_status import CheckHealth
+from runtime_policy import RuntimePolicy
 from albo_identity import (normalize_field, normalize_number, parse_publication_number,
     parse_act_number, parse_register_number, legacy_item_id, item_id_v2,
     normalize_snapshot, find_existing_equivalent_item, flood_reason, _age)
@@ -55,7 +57,6 @@ def load_config():
         cfg["ADMIN_IDS"]        = [int(x.strip()) for x in os.environ.get("CHAT_IDS", "").split(",") if x.strip()]
         cfg["ALBO_URL"]         = os.environ.get("ALBO_URL", "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL")
         cfg["NEWS_URL"]         = os.environ.get("NEWS_URL", "https://www.comune.roccabascerana.av.it/EG0/EGSCHTST6.HBL")
-        cfg["INTERVAL_MINUTES"] = int(os.environ.get("INTERVAL_MINUTES", "180"))
     else:
         try:
             import config
@@ -63,13 +64,16 @@ def load_config():
             cfg["ADMIN_IDS"]        = config.CHAT_IDS
             cfg["ALBO_URL"]         = getattr(config, "ALBO_URL", "https://www.comune.roccabascerana.av.it/EG0/EGHOMEPAGE.HBL")
             cfg["NEWS_URL"]         = getattr(config, "NEWS_URL", "https://www.comune.roccabascerana.av.it/EG0/EGSCHTST6.HBL")
-            cfg["INTERVAL_MINUTES"] = getattr(config, "INTERVAL_MINUTES", 180)
         except ImportError:
             print("ERRORE: config.py non trovato e variabili d'ambiente mancanti.")
             sys.exit(1)
     return cfg
 
 CONFIG = load_config()
+RUNTIME_POLICY = RuntimePolicy.from_environment()
+# One source of truth for polling and its existing heartbeat/status consumers.
+# Legacy INTERVAL_MINUTES no longer carries a profile chosen by an old cron.
+CONFIG["INTERVAL_MINUTES"] = RUNTIME_POLICY.interval_minutes
 
 # ---------------------------------------------------------------------------
 # Logging
@@ -1596,13 +1600,17 @@ def _strict_detail_identity_matches(item: dict, soup: BeautifulSoup) -> bool:
     return True
 
 
-def _strict_attachment_references(soup: BeautifulSoup) -> tuple[list, list[str]]:
+def _strict_attachment_references(
+    soup: BeautifulSoup, *, require_dates: bool = True,
+) -> tuple[list, list[str]]:
     """Validate the complete MC02 fragment before claiming an empty attachment list.
 
     These markers are the public Halley detail structure. The trailing footer
     prevents a truncated response ending at the attachment heading from being
     mistaken for a valid zero. Unknown document controls fail closed; the
-    advisory link in the section's alert is not an attachment.
+    advisory link in the section's alert is not an attachment. Manual search
+    also requires both dates for its identity checks; automatic acquisition
+    may inspect a complete attachment section of an act without an expiry.
     """
     errors = []
     section = soup.select_one("section#allegati")
@@ -1614,9 +1622,9 @@ def _strict_attachment_references(soup: BeautifulSoup) -> tuple[list, list[str]]
         and section is not None
         and section.find("h2") is not None
         and soup.select_one(".mb-2.text-end") is not None
-        and len(dates) == 2
+        and (not require_dates or len(dates) == 2)
     )
-    if complete:
+    if complete and require_dates:
         try:
             for date in dates:
                 datetime.strptime(date.get_text(strip=True), "%d-%m-%Y")
@@ -1713,10 +1721,10 @@ async def enrich_with_attachments(
         item["_attachment_fetch_ok"] = False
         item["_attachment_expected_count"] = 0
         item["_attachment_errors"] = []
+        item["_detail_captured"] = False
+        item["_attachment_list_complete"] = False
+        item["_attachment_zero_confirmed"] = False
         if strict_attachments:
-            item["_detail_captured"] = False
-            item["_attachment_list_complete"] = False
-            item["_attachment_zero_confirmed"] = False
             item["_attachment_identity_uncertain"] = False
         allegati = []
         batch_bytes = 0
@@ -1753,14 +1761,17 @@ async def enrich_with_attachments(
                 raise detail_error or RuntimeError("dettaglio MC02 non disponibile")
             soup2 = BeautifulSoup(r2.text, "html.parser")
             item["_detail_text"] = soup2.get_text(" ", strip=True)
-            strict_refs = None
+            # Completeness is required for every delivery path: an unknown
+            # control or truncated section is not proof that files were removed.
+            strict_refs, parse_errors = _strict_attachment_references(
+                soup2, require_dates=strict_attachments,
+            )
+            item["_attachment_errors"].extend(parse_errors)
+            item["_attachment_list_complete"] = not parse_errors
+            item["_attachment_zero_confirmed"] = not parse_errors and not strict_refs
+            if parse_errors:
+                raise ValueError("struttura dettaglio o riferimenti allegati incompleti")
             if strict_attachments:
-                strict_refs, parse_errors = _strict_attachment_references(soup2)
-                item["_attachment_errors"].extend(parse_errors)
-                item["_attachment_list_complete"] = not parse_errors
-                item["_attachment_zero_confirmed"] = not parse_errors and not strict_refs
-                if parse_errors:
-                    raise ValueError("struttura dettaglio o riferimenti allegati incompleti")
                 if (
                     not _strict_detail_identity_matches(item, soup2)
                     or not _strict_detail_identity_matches(item.get("_search_expected_identity", item), soup2)
@@ -1805,20 +1816,8 @@ async def enrich_with_attachments(
             seen_attachment_refs = set()
             expected_attachments = 0
             for func in ["MC96", "MC97", "MC98", "MC99"]:
-                pattern = re.compile(rf"{func}\(")
-                tags = (
-                    [(number, tag) for function, number, tag in strict_refs if function == func]
-                    if strict_refs is not None else
-                    [(None, tag) for tag in soup2.find_all("a", attrs={"onclick": pattern})]
-                )
-                for strict_number, tag in tags:
-                    if strict_number is None:
-                        m = re.search(rf"{func}\(['\"]?(\d+)['\"]?\)", tag.get("onclick", ""))
-                        if not m:
-                            continue
-                        num_alleg = m.group(1)
-                    else:
-                        num_alleg = strict_number
+                tags = [(number, tag) for function, number, tag in strict_refs if function == func]
+                for num_alleg, tag in tags:
                     attachment_ref = (func, num_alleg)
                     if attachment_ref in seen_attachment_refs:
                         continue
@@ -1891,7 +1890,7 @@ async def enrich_with_attachments(
                     })
                     await asyncio.sleep(0.2)
             item["_attachment_expected_count"] = expected_attachments
-            item["_attachment_fetch_ok"] = len(allegati) == expected_attachments
+            item["_attachment_fetch_ok"] = not item["_attachment_errors"] and len(allegati) == expected_attachments
             item["allegati"] = allegati
             if strict_attachments:
                 log.info("Acquisizione allegati: previsti=%s acquisiti=%s errori=%s zero_confermato=%s",
@@ -1905,13 +1904,7 @@ async def enrich_with_attachments(
                     "l'atto resterà in stato da ritentare."
                 )
             elif not allegati and not strict_attachments:
-                # Nessuna eccezione, ma nessun link MC96-99 trovato nella pagina:
-                # può essere un atto genuinamente senza allegati, o un codice
-                # funzione diverso da quelli che riconosciamo — non lo sappiamo
-                # con certezza, ma almeno ora è visibile nei log invece di
-                # essere indistinguibile da un fallimento silenzioso.
-                log.info(f"'{item['title'][:40]}' (riga {num_riga}): nessun allegato rilevato "
-                          "(nessun link MC96-99 trovato — verifica manuale consigliata se inatteso).")
+                log.info(f"'{item['title'][:40]}': sezione completa, nessun allegato presente.")
             # La prima scrittura conserva le date; questa seconda marca il
             # backfill come concluso soltanto quando tutti i link rilevati sono
             # stati acquisiti. Gli errori parziali verranno quindi ritentati.
@@ -1926,6 +1919,7 @@ async def enrich_with_attachments(
             cleanup_attachment_files({"allegati": allegati})
             item["allegati"] = []
             item["_attachment_fetch_ok"] = False
+            item["_attachment_zero_confirmed"] = False
             item["_attachment_errors"].append(f"dettaglio atto: {type(e).__name__}")
             if strict_attachments:
                 log.warning("Recupero allegati incompleto: %s", type(e).__name__)
@@ -3414,6 +3408,8 @@ def build_admin_status() -> str:
         f"Rilevato: {now.strftime('%d/%m/%Y %H:%M:%S')} UTC",
         f"Processo avviato da: {minutes // 60} h {minutes % 60} min",
         f"Pausa tra cicli: {CONFIG['INTERVAL_MINUTES']} min",
+        f"Polling automatico: {RUNTIME_POLICY.start_label}–{RUNTIME_POLICY.end_label} Europe/Rome · {'abilitato' if RUNTIME_POLICY.allows(now) else 'sospeso'}",
+        "Telegram e comandi manuali: indipendenti dalla fascia automatica.",
         "",
         "👥 Iscrizioni e destinatari (chat, non persone)",
     ]
@@ -3512,9 +3508,11 @@ _CHECK_HEALTH = CheckHealth()
 
 
 @cleanup_spool_scope
-async def run_check(bot: Bot) -> dict:
+async def run_check(bot: Bot, *, automatic: bool = False) -> dict:
     """Serializza i controlli Albo per evitare doppioni tra loop e /controlla."""
     async with _ALBO_CHECK_LOCK:
+        if automatic and not RUNTIME_POLICY.allows(_runtime_now()):
+            return {"ok": False, "skipped": True, "new": 0, "updated": 0, "total": 0, "failed": 0}
         return await _CHECK_HEALTH.run("Albo", _run_check_albo, bot)
 
 
@@ -3549,7 +3547,8 @@ async def _run_check_albo(bot: Bot) -> dict:
             max_new=ALBO_MAX_NEW_PER_CYCLE, ratio=ALBO_NEW_RATIO,
             ratio_min=ALBO_RATIO_MIN_ITEMS, old_count=ALBO_MAX_OLD_CANDIDATES,
             max_age=ALBO_NOTIFY_MAX_AGE_DAYS, today=now.date())
-        if diagnostics.get('unreadable_pages') or diagnostics.get('skipped_cards', 0) > max(2, len(current_items) * .1):
+        if (diagnostics.get('incomplete_pagination') or diagnostics.get('unreadable_pages')
+                or diagnostics.get('skipped_cards', 0) > max(2, len(current_items) * .1)):
             safety_reason = 'SAFETY STOP: qualità dello snapshot Albo insufficiente.'
         if safety_reason:
             return []
@@ -3606,6 +3605,8 @@ async def _run_check_albo(bot: Bot) -> dict:
 
     if not items and db:
         safety_reason = 'SAFETY STOP: elenco Albo vuoto inatteso; baseline conservata.'
+    if diagnostics.get('incomplete_pagination'):
+        safety_reason = 'SAFETY STOP: paginazione Albo incompleta; baseline conservata.'
     if safety_reason:
         log.error(safety_reason)
         # Persist the diagnostic latch before sending it, including across restarts.
@@ -3620,6 +3621,10 @@ async def _run_check_albo(bot: Bot) -> dict:
                         log.warning('Diagnostica admin fallita: %s', _safe_error(error))
         cleanup_attachment_files(items)
         return {'ok': False, 'new': 0, 'updated': 0, 'total': len(seen), 'failed': 0}
+
+    # A successful listing does not certify that selected revisions were
+    # checked: failed details must leave the cycle observably incomplete.
+    detail_failures = sum(item_revision_snapshot(item) is None for item in enrichment_items)
 
     # enrich_with_attachments può aver aggiornato la cache date: ripartiamo dal
     # DB più recente prima di confrontare le revisioni.
@@ -3873,6 +3878,8 @@ async def _run_check_albo(bot: Bot) -> dict:
     current_seen = {h for h, rec in db.items() if rec.get("notified", True)}
     if failed_deliveries:
         log.warning(f"⚠️ {failed_deliveries} consegne Albo verranno ritentate.")
+    if detail_failures:
+        log.warning("Controllo Albo incompleto: %s dettagli selezionati non verificati.", detail_failures)
     if not git_ok:
         log.error("Stato Albo aggiornato localmente ma NON persistito su Git.")
     if updated_count:
@@ -3884,11 +3891,12 @@ async def _run_check_albo(bot: Bot) -> dict:
              sum(bool(r.get('delivery_pending')) for r in db.values()), failed_deliveries)
     cleanup_attachment_files(items)
     return {
-        "ok": failed_deliveries == 0 and git_ok,
+        "ok": failed_deliveries == 0 and detail_failures == 0 and git_ok,
         "new": notified_count,
         "updated": updated_count,
         "total": len(current_seen),
         "failed": failed_deliveries,
+        "detail_failures": detail_failures,
     }
 
 
@@ -3907,9 +3915,11 @@ def news_is_recent(item: dict, max_age_days: int = NEWS_NOTIFY_MAX_AGE_DAYS) -> 
         return True
     return (datetime.now(timezone.utc) - pub) <= timedelta(days=max_age_days)
 
-async def run_check_news(bot: Bot) -> dict:
+async def run_check_news(bot: Bot, *, automatic: bool = False) -> dict:
     """Serializza i controlli News per evitare doppioni tra loop e /controlla."""
     async with _NEWS_CHECK_LOCK:
+        if automatic and not RUNTIME_POLICY.allows(_runtime_now()):
+            return {"ok": False, "skipped": True, "new": 0, "total": 0, "failed": 0}
         return await _CHECK_HEALTH.run("News", _run_check_news, bot)
 
 
@@ -3927,6 +3937,10 @@ async def _run_check_news(bot: Bot) -> dict:
     un downtime prolungato del bot) vengono segnate come viste ma SENZA
     notifica push — restano comunque visibili con /news.
     """
+    if not git_commit_and_push():
+        log.error("SAFETY STOP: stato locale non sincronizzato; invii News sospesi.")
+        return {"ok": False, "new": 0, "total": 0, "failed": 0}
+
     news_db    = load_news_db()
     seen_news  = set(news_db.keys())
     news_items = await fetch_news_html(stop_at_known=seen_news)
@@ -4002,6 +4016,20 @@ async def _run_check_news(bot: Bot) -> dict:
                     f"News con {len(failed)} consegne in sospeso: "
                     f"{item.get('title', '?')[:80]}"
                 )
+
+            # Persisti ogni news prima di passare alla successiva: lo shutdown
+            # non può recuperare dal disco gli esiti ancora soltanto in memoria.
+            checkpoint_paths = [str(NEWS_DB_PATH)]
+            if delivered_changed:
+                save_user_seen_news(delivered_data, push=False)
+                checkpoint_paths.append(str(USER_SEEN_NEWS_PATH))
+            save_news_db(news_db, push=False)
+            if not git_commit_and_push(
+                checkpoint_paths, message="checkpoint consegna news [skip ci]"
+            ):
+                raise RuntimeError("Checkpoint consegna News fallito: ciclo interrotto per sicurezza")
+            delivered_changed = False
+            db_changed = False
             await asyncio.sleep(0.5)
 
         # Le news troppo vecchie vengono volutamente archiviate senza push.
@@ -4092,52 +4120,73 @@ async def _ensure_news_baseline() -> bool:
     return True
 
 
-async def polling_loop(app: Application):
-    bot = app.bot
+def _runtime_now() -> datetime:
+    return datetime.now(timezone.utc)
 
-    async def execute_cycle(label: str):
-        albo_ready = await _ensure_albo_baseline()
-        news_ready = await _ensure_news_baseline()
 
-        if albo_ready:
-            result = await run_check(bot)
-            seen = load_seen()
-        else:
-            result = {"ok": False, "new": 0, "updated": 0, "total": 0, "failed": 0}
-            seen = set()
+async def _automatic_cycle(bot: Bot):
+    """Admit each automatic source using current time, including bootstrap.
 
-        if news_ready:
-            result_news = await run_check_news(bot)
-            seen_news = load_seen_news()
-        else:
-            result_news = {"ok": False, "new": 0, "total": 0, "failed": 0}
-            seen_news = set()
-
-        await send_heartbeat(
-            bot,
-            seen,
-            seen_news,
-            albo_ok=bool(result.get("ok")),
-            news_ok=bool(result_news.get("ok")),
-        )
-        log.info(
-            f"{label}: albo nuovi={result['new']}, aggiornati={result.get('updated', 0)}, totale={result['total']} · "
-            f"news nuove={result_news['new']}, totale={result_news['total']}"
-        )
-
-    log.info("Check immediato all'avvio...")
-    try:
-        await execute_cycle("Check avvio")
-    except Exception as e:
-        log.error(f"Errore check avvio: {_safe_error(e)}")
-
-    log.info(f"Loop polling ogni {CONFIG['INTERVAL_MINUTES']} min.")
-    while True:
-        await asyncio.sleep(CONFIG["INTERVAL_MINUTES"] * 60)
+    An admitted acquisition/delivery may finish after the boundary. Cancelling
+    it merely because night begins would discard in-flight delivery receipts.
+    Manual commands use run_check directly and do not go through this gate.
+    """
+    results = {}
+    for name, baseline, check, seen_loader in (
+        ("Albo", _ensure_albo_baseline, run_check, load_seen),
+        ("News", _ensure_news_baseline, run_check_news, load_seen_news),
+    ):
+        if not RUNTIME_POLICY.allows(_runtime_now()):
+            break
         try:
-            await execute_cycle("Check periodico")
-        except Exception as e:
-            log.error(f"Errore loop: {_safe_error(e)}")
+            ready = await baseline()
+            # Bootstrap may itself have crossed the night boundary.
+            if not RUNTIME_POLICY.allows(_runtime_now()):
+                break
+            result = await check(bot, automatic=True) if ready else {"ok": False}
+            results[name] = (result, seen_loader() if ready else set())
+            log.info("Controllo automatico %s: ok=%s nuovi=%s", name,
+                     result.get("ok", False), result.get("new", 0))
+        except Exception as error:
+            # One failing source must not hide the other source's outcome.
+            results[name] = ({"ok": False}, set())
+            log.error("Errore controllo automatico %s: %s", name, _safe_error(error))
+    if len(results) == 2:
+        await send_heartbeat(
+            bot, results["Albo"][1], results["News"][1],
+            albo_ok=bool(results["Albo"][0].get("ok")),
+            news_ok=bool(results["News"][0].get("ok")),
+        )
+
+
+async def polling_loop(app: Application):
+    """Supervise automatic polling independently from Telegram availability."""
+    next_due = 0.0
+    previously_allowed = None
+    log.info("Politica automatica: %s–%s Europe/Rome, pausa %s min",
+             RUNTIME_POLICY.start_label, RUNTIME_POLICY.end_label,
+             RUNTIME_POLICY.interval_minutes)
+    while True:
+        now = _runtime_now()
+        allowed = RUNTIME_POLICY.allows(now)
+        if allowed != previously_allowed:
+            log.info("Polling automatico %s; Telegram resta indipendente",
+                     "abilitato" if allowed else "sospeso")
+        if allowed and (previously_allowed is False or time.monotonic() >= next_due):
+            try:
+                await _automatic_cycle(app.bot)
+            except Exception as error:
+                log.error("Errore ciclo automatico: %s", _safe_error(error))
+            next_due = time.monotonic() + RUNTIME_POLICY.interval_minutes * 60
+        previously_allowed = allowed
+        now = _runtime_now()
+        until_boundary = (RUNTIME_POLICY.next_transition(now) - now).total_seconds()
+        # Bound reevaluation even after wall-clock changes; intervals use a
+        # monotonic clock, policy uses actual civil time, never event.schedule.
+        delay = min(60.0, max(0.1, until_boundary))
+        if RUNTIME_POLICY.allows(now):
+            delay = min(delay, max(0.1, next_due - time.monotonic()))
+        await asyncio.sleep(delay)
 
 def load_telegram_updates():
     if not TELEGRAM_UPDATES_PATH.exists():

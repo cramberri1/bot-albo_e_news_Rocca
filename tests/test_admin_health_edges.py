@@ -8,6 +8,16 @@ from admin_status import CheckHealth
 
 
 class CheckHealthEdgeTests(unittest.IsolatedAsyncioTestCase):
+    async def test_incomplete_details_are_visible_even_without_delivery_failures(self):
+        monitor = CheckHealth()
+        await monitor.run("Albo", AsyncMock(return_value={
+            "ok": False, "failed": 0, "detail_failures": 2,
+        }), None)
+        self.assertIn("Albo: incompleto o bloccato", monitor.lines())
+        self.assertIn("Consegne fallite nel ciclo: 0", monitor.lines())
+        self.assertIn("Dettagli non verificati nel ciclo: 2", monitor.lines())
+        self.assertIsNone(monitor.checks["Albo"]["last_success"])
+
     async def test_malformed_results_are_preserved_but_not_reported_as_success(self):
         for result in (None, [], "secret-value", {"ok": "yes"}, {"ok": 1}):
             with self.subTest(result=result):

@@ -4,6 +4,7 @@ on:
     paths:
       - '**.py'
       - 'requirements.txt'
+      - 'requirements-dev.txt'
       - '.github/workflows/**'
   pull_request:
 permissions:

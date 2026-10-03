@@ -1,6 +1,6 @@
 # Revisione architetturale: servizio, invarianti e guasti
 
-Analisi iniziata il 1° ottobre e ripresa il 3 ottobre 2026. Questo documento
+Analisi iniziata il 1° ottobre, ripresa il 3 e completata il 4 ottobre 2026. Questo documento
 precede le modifiche applicative. Fotografia del codice: `8364ea9`; al riavvio
 dell'analisi `origin/main` è `3efcfd1`, con sole differenze nei dati operativi.
 Le sezioni sui difetti descrivono quella fotografia, non fingono che una
@@ -242,6 +242,10 @@ nuovi e nessuna perdita con metadati non affidabili. Il fusibile blocca l'intero
 episodio anomalo, non lo smaltisce in piccoli lotti automaticamente.
 
 Le revisioni richiedono snapshot completo, normalizzazione e differenze sostanziali.
+Lo snapshot corrente non include titolo e tipo: una modifica soltanto a questi
+campi, con identità v2 stabile, non genera una revisione. Aggiungerli richiede
+versionare la baseline e migrarla silenziosamente prima di confrontare nuovi
+fingerprint, altrimenti la correzione stessa potrebbe generare notifiche diffuse.
 Gli atti selezionati che falliscono sempre possono occupare il budget di ricontrollo
 e ritardare altri atti: servono in futuro priorità con backoff e distinzione tra
 ultimo tentativo e ultimo successo di dettaglio. Non si può dichiarare riuscita
@@ -267,6 +271,10 @@ monitoraggio sistematico delle vecchie revisioni e date assenti/illeggibili
 considerate recenti. Dopo downtime lungo, oltre 60 giorni si archivia senza push;
 una data ignota può invece autorizzare molti invii. Non esiste il medesimo fusibile
 Albo. Prima di convergere i motori serve decidere esplicitamente questa politica.
+Il rischio di raffica News dopo un cambiamento massivo di ID/date resta aperto:
+questa patch non introduce né modifica tali identificativi, ma non certifica
+che il rischio preesistente sia zero. Anche un HTML News HTTP200 privo di card
+può essere interpretato come lista vuota: non prova la disponibilità della sorgente.
 
 La prova D1 è concreta: prima news consegnata, cancellazione durante la seconda,
 nessun file di archivio/ricevute ancora scritto. Un flush Git finale non può
@@ -460,5 +468,72 @@ non introducano invii nei test; i limiti residui devono rimanere espliciti.
 
 ## 17. Esito dell'implementazione e delle verifiche
 
-Da compilare dopo le patch P0/P1 e il collaudo. Questa sezione vuota segnala
-esplicitamente che l'analisi è stata scritta prima dell'implementazione.
+L'analisi è stata salvata in un commit separato prima delle modifiche applicative;
+questa sezione registra il risultato successivo, senza riscrivere la fotografia
+iniziale delle sezioni precedenti.
+
+### Correzioni applicate
+
+- **S1/S2:** `RuntimePolicy` valuta l'ora corrente in Europe/Rome. Il runtime
+  rivaluta la fascia anche nello stesso processo e dopo l'attesa dei lock delle
+  sorgenti. Bootstrap e polling automatici sono ammessi dalle 07:00 alle 23:00,
+  con pausa di 15 minuti dopo il ciclo. Telegram e comandi manuali restano
+  indipendenti. Workflow con wake orario, processo di cinque ore per schedule
+  e dispatch, limiti di setup e chiusura espliciti; nessun uso di `event.schedule`.
+- **D1/D2:** gate Git anche per News; archivio e ricevute salvati dopo ogni news,
+  prima della successiva. Un checkpoint fallito interrompe ulteriori consegne.
+  Non è un checkpoint per destinatario e non risolve un timeout di esito incerto.
+- **A1/A2:** paginazione incompleta arresta il controllo; dettagli troncati o
+  controlli allegati sconosciuti non diventano falsi zero. Una sezione completa
+  senza documenti rimane valida; gli atti senza scadenza restano supportati.
+- **O1:** dettagli selezionati ma non verificati rendono il ciclo incompleto;
+  `/status` li distingue dalle consegne fallite e mostra la politica corrente.
+  Iscritti, destinatari, ultimo tentativo e ultimo successo restano disponibili
+  soltanto all'amministratore in chat privata.
+
+Identità, alias, baseline, soglie del fusibile, cifratura e chiavi delle ricevute
+sono preservati. Nessuna migrazione o riempimento retroattivo delle notifiche.
+README e guide storiche indicano quale descrizione operativa le sostituisce.
+
+### Collaudo e limiti verificati
+
+Le nuove prove comprendono politica temporale e simulatore offline, transizioni
+nello stesso processo, richieste manuali notturne, attesa del lock oltre le 23:00,
+qualità delle sorgenti, restart da checkpoint News, cancellazione a metà lotto,
+push fallito e ricevute cifrate. I due workflow vengono letti come YAML e ne
+vengono controllati budget, concurrency e recupero. Il test dei segnali avvia un
+vero sottoprocesso POSIX, invia SIGINT e SIGTERM e controlla cancellazione dei
+worker e flush: su Windows è dichiaratamente saltato e deve passare nella CI Linux.
+
+Tre test caratterizzano anche difetti residui, senza fingere di correggerli:
+claim persistito seguito da crash prima dell'handler perde il comando; un
+documento accettato con risposta persa può essere duplicato dal retry; Git
+sincrono blocca un callback già pronto nell'event loop. L'attesa Git iniettata
+è di 20 ms, senza rete. Il recupero di un artifact rispetto a uno stato remoto
+più recente non è ancora implementato né dichiarato verificato.
+
+La prova isolata sul portale reale ha letto **126 atti su 13 pagine complete**.
+**20/20 dettagli** superano il validatore strutturale. Un dettaglio presenta due
+riferimenti riconosciuti ma due errori nella successiva acquisizione: il ciclo
+risulta correttamente `ok=false`, con un dettaglio non verificato, zero nuovi
+atti e zero revisioni. La categoria precisa di quei due errori non è stata
+conservata e non viene attribuita a una causa non dimostrata. Zero chiamate
+Telegram/notify, spool finale vuoto e stato del repository identico. È una
+verifica parziale della sorgente, non una certificazione che ogni download riesca.
+
+### Interventi rinviati
+
+Restano aperti i P1 relativi alla finestra di consegna del singolo destinatario
+e al Git sincrono senza deadline globale. Risolverli richiede il contratto
+StateStore e un proprietario seriale delle mutazioni descritti nella sezione 11.
+P2/P3 non implementati: recovery con confronto semantico degli artifact, watchdog
+con heartbeat remoto affidabile, separazione del branch di stato, estrazioni
+modulari, revisione delle assunzioni News e delle revisioni di titolo/tipo,
+versioni delle dipendenze riproducibili. Il watchdog rimane un progetto con
+soglie e anti-spam espliciti, non un servizio già attivo.
+
+Non sono stati introdotti reset dello storico, nuovi identificativi o nuove
+vie di invio massivo. Le prove di snapshot incompleto e baseline non hanno
+prodotto notifiche; i test usano destinatari simulati. Questo non equivale a
+garantire rischio zero: restano le assunzioni della sezione 16, in particolare
+le date/identità News e gli esiti di rete incerti.
