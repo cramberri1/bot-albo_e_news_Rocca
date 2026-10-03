@@ -1,0 +1,676 @@
+{
+  "horizon_start": "2026-10-01T00:00:00+02:00",
+  "horizon_end": "2026-10-03T00:00:00+02:00",
+  "horizon_hours": 48,
+  "warmup_hours": 24,
+  "policy": {
+    "timezone": "Europe/Rome",
+    "start": "07:00",
+    "end": "23:00",
+    "interval_minutes": 15
+  },
+  "scenario": {
+    "setup_seconds_per_run": 120,
+    "cleanup_seconds_per_run": 60,
+    "shutdown_seconds": 0,
+    "runner_wait_seconds": 0,
+    "delay_applies_to_each_trigger": true,
+    "job_timeout_seconds": 21300,
+    "new_setup_cap_seconds": 1080,
+    "new_runtime_seconds": 18000,
+    "legacy_runtime_day_seconds": 20580,
+    "legacy_runtime_night_seconds": 3300
+  },
+  "interpretation": [
+    "Offline deterministic scenario; not observed production uptime and not an SLA.",
+    "Availability means a running process, without modelling network or handler latency.",
+    "Automatic minutes describe permission to start checks, not actual completed checks.",
+    "All metrics and queue/replacement events are clipped to the 48-hour observation horizon.",
+    "The preceding 24 hours initialize active and pending runs; those events are not counted.",
+    "Arrivals precede releases at identical instants, a declared simulator tie rule.",
+    "No provider-dropped triggers, crashes or resource exhaustion in this comparison matrix; tests cover separate pathological cases.",
+    "Setup aggregate cap represents an upper bound; individual workflow step caps can stop setup earlier."
+  ],
+  "matrix": [
+    {
+      "trigger_delay_minutes": 0,
+      "legacy": {
+        "telegram_structural_hours": 37.966667,
+        "telegram_gap_minutes": 602.0,
+        "max_gap_minutes": 147.0,
+        "automatic_allowed_minutes": 2278.0,
+        "night_automatic_allowed_minutes": 370.0,
+        "profile_mismatch_minutes": 370.0,
+        "queued_events_in_horizon": 6,
+        "pending_replacements_in_horizon": 0,
+        "runs_admitted_in_horizon": 10,
+        "gaps": [
+          {
+            "start": "2026-09-30T22:14:00+00:00",
+            "end": "2026-09-30T22:17:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-09-30T23:12:00+00:00",
+            "end": "2026-10-01T01:39:00+00:00",
+            "minutes": 147.0
+          },
+          {
+            "start": "2026-10-01T02:34:00+00:00",
+            "end": "2026-10-01T04:59:00+00:00",
+            "minutes": 145.0
+          },
+          {
+            "start": "2026-10-01T10:42:00+00:00",
+            "end": "2026-10-01T10:45:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T16:28:00+00:00",
+            "end": "2026-10-01T16:31:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T22:14:00+00:00",
+            "end": "2026-10-01T22:17:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T23:12:00+00:00",
+            "end": "2026-10-02T01:39:00+00:00",
+            "minutes": 147.0
+          },
+          {
+            "start": "2026-10-02T02:34:00+00:00",
+            "end": "2026-10-02T04:59:00+00:00",
+            "minutes": 145.0
+          },
+          {
+            "start": "2026-10-02T10:42:00+00:00",
+            "end": "2026-10-02T10:45:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T16:28:00+00:00",
+            "end": "2026-10-02T16:31:00+00:00",
+            "minutes": 3.0
+          }
+        ]
+      },
+      "actual": {
+        "telegram_structural_hours": 47.5,
+        "telegram_gap_minutes": 30.0,
+        "max_gap_minutes": 3.0,
+        "automatic_allowed_minutes": 1900.0,
+        "night_automatic_allowed_minutes": 0.0,
+        "profile_mismatch_minutes": 0.0,
+        "queued_events_in_horizon": 48,
+        "pending_replacements_in_horizon": 38,
+        "runs_admitted_in_horizon": 10,
+        "gaps": [
+          {
+            "start": "2026-09-30T23:31:00+00:00",
+            "end": "2026-09-30T23:34:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T04:34:00+00:00",
+            "end": "2026-10-01T04:37:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T09:37:00+00:00",
+            "end": "2026-10-01T09:40:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T14:40:00+00:00",
+            "end": "2026-10-01T14:43:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T19:43:00+00:00",
+            "end": "2026-10-01T19:46:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T00:46:00+00:00",
+            "end": "2026-10-02T00:49:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T05:49:00+00:00",
+            "end": "2026-10-02T05:52:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T10:52:00+00:00",
+            "end": "2026-10-02T10:55:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T15:55:00+00:00",
+            "end": "2026-10-02T15:58:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T20:58:00+00:00",
+            "end": "2026-10-02T21:01:00+00:00",
+            "minutes": 3.0
+          }
+        ]
+      }
+    },
+    {
+      "trigger_delay_minutes": 5,
+      "legacy": {
+        "telegram_structural_hours": 37.966667,
+        "telegram_gap_minutes": 602.0,
+        "max_gap_minutes": 147.0,
+        "automatic_allowed_minutes": 2278.0,
+        "night_automatic_allowed_minutes": 378.0,
+        "profile_mismatch_minutes": 378.0,
+        "queued_events_in_horizon": 6,
+        "pending_replacements_in_horizon": 0,
+        "runs_admitted_in_horizon": 10,
+        "gaps": [
+          {
+            "start": "2026-09-30T22:19:00+00:00",
+            "end": "2026-09-30T22:22:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-09-30T23:17:00+00:00",
+            "end": "2026-10-01T01:44:00+00:00",
+            "minutes": 147.0
+          },
+          {
+            "start": "2026-10-01T02:39:00+00:00",
+            "end": "2026-10-01T05:04:00+00:00",
+            "minutes": 145.0
+          },
+          {
+            "start": "2026-10-01T10:47:00+00:00",
+            "end": "2026-10-01T10:50:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T16:33:00+00:00",
+            "end": "2026-10-01T16:36:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T22:19:00+00:00",
+            "end": "2026-10-01T22:22:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T23:17:00+00:00",
+            "end": "2026-10-02T01:44:00+00:00",
+            "minutes": 147.0
+          },
+          {
+            "start": "2026-10-02T02:39:00+00:00",
+            "end": "2026-10-02T05:04:00+00:00",
+            "minutes": 145.0
+          },
+          {
+            "start": "2026-10-02T10:47:00+00:00",
+            "end": "2026-10-02T10:50:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T16:33:00+00:00",
+            "end": "2026-10-02T16:36:00+00:00",
+            "minutes": 3.0
+          }
+        ]
+      },
+      "actual": {
+        "telegram_structural_hours": 47.5,
+        "telegram_gap_minutes": 30.0,
+        "max_gap_minutes": 3.0,
+        "automatic_allowed_minutes": 1902.0,
+        "night_automatic_allowed_minutes": 0.0,
+        "profile_mismatch_minutes": 0.0,
+        "queued_events_in_horizon": 48,
+        "pending_replacements_in_horizon": 38,
+        "runs_admitted_in_horizon": 10,
+        "gaps": [
+          {
+            "start": "2026-09-30T23:36:00+00:00",
+            "end": "2026-09-30T23:39:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T04:39:00+00:00",
+            "end": "2026-10-01T04:42:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T09:42:00+00:00",
+            "end": "2026-10-01T09:45:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T14:45:00+00:00",
+            "end": "2026-10-01T14:48:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T19:48:00+00:00",
+            "end": "2026-10-01T19:51:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T00:51:00+00:00",
+            "end": "2026-10-02T00:54:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T05:54:00+00:00",
+            "end": "2026-10-02T05:57:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T10:57:00+00:00",
+            "end": "2026-10-02T11:00:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T16:00:00+00:00",
+            "end": "2026-10-02T16:03:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T21:03:00+00:00",
+            "end": "2026-10-02T21:06:00+00:00",
+            "minutes": 3.0
+          }
+        ]
+      }
+    },
+    {
+      "trigger_delay_minutes": 30,
+      "legacy": {
+        "telegram_structural_hours": 37.966667,
+        "telegram_gap_minutes": 602.0,
+        "max_gap_minutes": 147.0,
+        "automatic_allowed_minutes": 2278.0,
+        "night_automatic_allowed_minutes": 428.0,
+        "profile_mismatch_minutes": 428.0,
+        "queued_events_in_horizon": 6,
+        "pending_replacements_in_horizon": 0,
+        "runs_admitted_in_horizon": 10,
+        "gaps": [
+          {
+            "start": "2026-09-30T22:44:00+00:00",
+            "end": "2026-09-30T22:47:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-09-30T23:42:00+00:00",
+            "end": "2026-10-01T02:09:00+00:00",
+            "minutes": 147.0
+          },
+          {
+            "start": "2026-10-01T03:04:00+00:00",
+            "end": "2026-10-01T05:29:00+00:00",
+            "minutes": 145.0
+          },
+          {
+            "start": "2026-10-01T11:12:00+00:00",
+            "end": "2026-10-01T11:15:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T16:58:00+00:00",
+            "end": "2026-10-01T17:01:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T22:44:00+00:00",
+            "end": "2026-10-01T22:47:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T23:42:00+00:00",
+            "end": "2026-10-02T02:09:00+00:00",
+            "minutes": 147.0
+          },
+          {
+            "start": "2026-10-02T03:04:00+00:00",
+            "end": "2026-10-02T05:29:00+00:00",
+            "minutes": 145.0
+          },
+          {
+            "start": "2026-10-02T11:12:00+00:00",
+            "end": "2026-10-02T11:15:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T16:58:00+00:00",
+            "end": "2026-10-02T17:01:00+00:00",
+            "minutes": 3.0
+          }
+        ]
+      },
+      "actual": {
+        "telegram_structural_hours": 47.5,
+        "telegram_gap_minutes": 30.0,
+        "max_gap_minutes": 3.0,
+        "automatic_allowed_minutes": 1899.0,
+        "night_automatic_allowed_minutes": 0.0,
+        "profile_mismatch_minutes": 0.0,
+        "queued_events_in_horizon": 48,
+        "pending_replacements_in_horizon": 38,
+        "runs_admitted_in_horizon": 10,
+        "gaps": [
+          {
+            "start": "2026-10-01T00:01:00+00:00",
+            "end": "2026-10-01T00:04:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T05:04:00+00:00",
+            "end": "2026-10-01T05:07:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T10:07:00+00:00",
+            "end": "2026-10-01T10:10:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T15:10:00+00:00",
+            "end": "2026-10-01T15:13:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T20:13:00+00:00",
+            "end": "2026-10-01T20:16:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T01:16:00+00:00",
+            "end": "2026-10-02T01:19:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T06:19:00+00:00",
+            "end": "2026-10-02T06:22:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T11:22:00+00:00",
+            "end": "2026-10-02T11:25:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T16:25:00+00:00",
+            "end": "2026-10-02T16:28:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T21:28:00+00:00",
+            "end": "2026-10-02T21:31:00+00:00",
+            "minutes": 3.0
+          }
+        ]
+      }
+    },
+    {
+      "trigger_delay_minutes": 60,
+      "legacy": {
+        "telegram_structural_hours": 37.966667,
+        "telegram_gap_minutes": 602.0,
+        "max_gap_minutes": 147.0,
+        "automatic_allowed_minutes": 2278.0,
+        "night_automatic_allowed_minutes": 488.0,
+        "profile_mismatch_minutes": 488.0,
+        "queued_events_in_horizon": 6,
+        "pending_replacements_in_horizon": 0,
+        "runs_admitted_in_horizon": 10,
+        "gaps": [
+          {
+            "start": "2026-09-30T23:14:00+00:00",
+            "end": "2026-09-30T23:17:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T00:12:00+00:00",
+            "end": "2026-10-01T02:39:00+00:00",
+            "minutes": 147.0
+          },
+          {
+            "start": "2026-10-01T03:34:00+00:00",
+            "end": "2026-10-01T05:59:00+00:00",
+            "minutes": 145.0
+          },
+          {
+            "start": "2026-10-01T11:42:00+00:00",
+            "end": "2026-10-01T11:45:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T17:28:00+00:00",
+            "end": "2026-10-01T17:31:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T23:14:00+00:00",
+            "end": "2026-10-01T23:17:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T00:12:00+00:00",
+            "end": "2026-10-02T02:39:00+00:00",
+            "minutes": 147.0
+          },
+          {
+            "start": "2026-10-02T03:34:00+00:00",
+            "end": "2026-10-02T05:59:00+00:00",
+            "minutes": 145.0
+          },
+          {
+            "start": "2026-10-02T11:42:00+00:00",
+            "end": "2026-10-02T11:45:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T17:28:00+00:00",
+            "end": "2026-10-02T17:31:00+00:00",
+            "minutes": 3.0
+          }
+        ]
+      },
+      "actual": {
+        "telegram_structural_hours": 47.516667,
+        "telegram_gap_minutes": 29.0,
+        "max_gap_minutes": 3.0,
+        "automatic_allowed_minutes": 1899.0,
+        "night_automatic_allowed_minutes": 0.0,
+        "profile_mismatch_minutes": 0.0,
+        "queued_events_in_horizon": 48,
+        "pending_replacements_in_horizon": 39,
+        "runs_admitted_in_horizon": 10,
+        "gaps": [
+          {
+            "start": "2026-10-01T00:31:00+00:00",
+            "end": "2026-10-01T00:34:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T05:34:00+00:00",
+            "end": "2026-10-01T05:37:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T10:37:00+00:00",
+            "end": "2026-10-01T10:40:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T15:40:00+00:00",
+            "end": "2026-10-01T15:43:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T20:43:00+00:00",
+            "end": "2026-10-01T20:46:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T01:46:00+00:00",
+            "end": "2026-10-02T01:49:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T06:49:00+00:00",
+            "end": "2026-10-02T06:52:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T11:52:00+00:00",
+            "end": "2026-10-02T11:55:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T16:55:00+00:00",
+            "end": "2026-10-02T16:58:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T21:58:00+00:00",
+            "end": "2026-10-02T22:00:00+00:00",
+            "minutes": 2.0
+          }
+        ]
+      }
+    },
+    {
+      "trigger_delay_minutes": 180,
+      "legacy": {
+        "telegram_structural_hours": 37.966667,
+        "telegram_gap_minutes": 602.0,
+        "max_gap_minutes": 147.0,
+        "automatic_allowed_minutes": 2278.0,
+        "night_automatic_allowed_minutes": 660.0,
+        "profile_mismatch_minutes": 728.0,
+        "queued_events_in_horizon": 6,
+        "pending_replacements_in_horizon": 0,
+        "runs_admitted_in_horizon": 10,
+        "gaps": [
+          {
+            "start": "2026-10-01T01:14:00+00:00",
+            "end": "2026-10-01T01:17:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T02:12:00+00:00",
+            "end": "2026-10-01T04:39:00+00:00",
+            "minutes": 147.0
+          },
+          {
+            "start": "2026-10-01T05:34:00+00:00",
+            "end": "2026-10-01T07:59:00+00:00",
+            "minutes": 145.0
+          },
+          {
+            "start": "2026-10-01T13:42:00+00:00",
+            "end": "2026-10-01T13:45:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T19:28:00+00:00",
+            "end": "2026-10-01T19:31:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T01:14:00+00:00",
+            "end": "2026-10-02T01:17:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T02:12:00+00:00",
+            "end": "2026-10-02T04:39:00+00:00",
+            "minutes": 147.0
+          },
+          {
+            "start": "2026-10-02T05:34:00+00:00",
+            "end": "2026-10-02T07:59:00+00:00",
+            "minutes": 145.0
+          },
+          {
+            "start": "2026-10-02T13:42:00+00:00",
+            "end": "2026-10-02T13:45:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T19:28:00+00:00",
+            "end": "2026-10-02T19:31:00+00:00",
+            "minutes": 3.0
+          }
+        ]
+      },
+      "actual": {
+        "telegram_structural_hours": 47.55,
+        "telegram_gap_minutes": 27.0,
+        "max_gap_minutes": 3.0,
+        "automatic_allowed_minutes": 1902.0,
+        "night_automatic_allowed_minutes": 0.0,
+        "profile_mismatch_minutes": 0.0,
+        "queued_events_in_horizon": 48,
+        "pending_replacements_in_horizon": 38,
+        "runs_admitted_in_horizon": 9,
+        "gaps": [
+          {
+            "start": "2026-10-01T02:31:00+00:00",
+            "end": "2026-10-01T02:34:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T07:34:00+00:00",
+            "end": "2026-10-01T07:37:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T12:37:00+00:00",
+            "end": "2026-10-01T12:40:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T17:40:00+00:00",
+            "end": "2026-10-01T17:43:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-01T22:43:00+00:00",
+            "end": "2026-10-01T22:46:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T03:46:00+00:00",
+            "end": "2026-10-02T03:49:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T08:49:00+00:00",
+            "end": "2026-10-02T08:52:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T13:52:00+00:00",
+            "end": "2026-10-02T13:55:00+00:00",
+            "minutes": 3.0
+          },
+          {
+            "start": "2026-10-02T18:55:00+00:00",
+            "end": "2026-10-02T18:58:00+00:00",
+            "minutes": 3.0
+          }
+        ]
+      }
+    }
+  ]
+}

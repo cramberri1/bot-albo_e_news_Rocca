@@ -497,13 +497,62 @@ README e guide storiche indicano quale descrizione operativa le sostituisce.
 
 ### Collaudo e limiti verificati
 
+Suite finale: **201 test**, contro i 137 iniziali (**64 nuove prove**).
+Su Windows: 194 superati, 7 skip. In
+[CI Linux, run 37159287951](https://github.com/cramberri1/bot-albo_e_news_Rocca/actions/runs/37159287951):
+**195 superati, 6 skip legacy**, esecuzione riuscita sul commit
+[`247ff94`](https://github.com/cramberri1/bot-albo_e_news_Rocca/commit/247ff9494190ed71b1362f3657938b3b965907a3).
+Il test con SIGINT e SIGTERM reali è passato in CI. I sei skip riguardano
+l'API pubblica storica assente, non errori rimossi per rendere verde la suite.
+Verificati YAML e `git diff --check`; nessuna modifica dei file applicativi
+`data/` da parte delle patch. Gli aggiornamenti concorrenti dello stato remoto
+sono stati integrati prima del push, senza sovrascriverli.
+
 Le nuove prove comprendono politica temporale e simulatore offline, transizioni
 nello stesso processo, richieste manuali notturne, attesa del lock oltre le 23:00,
 qualità delle sorgenti, restart da checkpoint News, cancellazione a metà lotto,
 push fallito e ricevute cifrate. I due workflow vengono letti come YAML e ne
 vengono controllati budget, concurrency e recupero. Il test dei segnali avvia un
 vero sottoprocesso POSIX, invia SIGINT e SIGTERM e controlla cancellazione dei
-worker e flush: su Windows è dichiaratamente saltato e deve passare nella CI Linux.
+worker e flush: su Windows è dichiaratamente saltato e in CI Linux è passato.
+
+### Simulazione di 48 ore
+
+Il [riepilogo JSON](SCHEDULING_SIMULATION_48H.json) registra input, gap e conteggi.
+Finestra osservata: 1–3 ottobre 2026, mezzanotte Europe/Rome, preceduta da 24 ore
+per inizializzare processo attivo e pending. Setup di 2 minuti e salvataggio
+di 1 minuto per run; stesso ritardo per ciascun trigger nella singola riga.
+Vecchi cinque cron confrontati col nuovo wake orario. **Scenario sintetico senza
+trigger persi o guasti: non è uptime misurato né una garanzia di disponibilità.**
+
+| Ritardo trigger | Gap vecchio / nuovo (minuti) | Automatico notturno vecchio / nuovo (minuti) | Pending sostituite, nuovo |
+|---|---:|---:|---:|
+| 0 min | 602 / 30 | 370 / 0 | 38 |
+| 5 min | 602 / 30 | 378 / 0 | 38 |
+| 30 min | 602 / 30 | 428 / 0 | 38 |
+| 60 min | 602 / 29 | 488 / 0 | 39 |
+| 180 min | 602 / 27 | 660 / 0 | 38 |
+
+Il gap massimo nel modello scende da 147 a 3 minuti; la variazione del totale
+nuovo dipende da dove le staffette cadono rispetto ai bordi della finestra.
+Le pending sostituite sono richieste intercambiabili di avvio, non eventi Albo
+persi. I minuti automatici indicano permesso di iniziare controlli, non controlli
+riusciti. I contatori escludono le 24 ore preparatorie. Il simulatore restituisce
+anche intervalli Telegram, profili, ammissione automatica e dettagli delle run.
+
+I system test coprono separatamente 24/48 ore, ritardi diversi per trigger,
+run già attiva con pending, sostituzioni multiple, cambio giorno/notte e DST,
+dispatch, crash, attesa del runner e setup lungo. Nel vecchio modello un setup
+lento può consumare il timeout globale; nel nuovo viene fermato dal budget di
+setup, senza avvio abbreviato inventato dal simulatore. La proprietà di coerenza
+con l'ora corrente fallisce esplicitamente sul modello precedente e passa su
+quello nuovo, incluso il caso reale 03:37 -> 09:41.
+
+Riproduzione offline: `python -m unittest discover -s tests -p test_scheduling_system.py -v`.
+La latenza di rete, l'event loop bloccato e l'affidabilità dei cron non sono
+deducibili dai minuti di disponibilità strutturale del simulatore.
+
+### Finestre di guasto e prova sulla sorgente
 
 Tre test caratterizzano anche difetti residui, senza fingere di correggerli:
 claim persistito seguito da crash prima dell'handler perde il comando; un
