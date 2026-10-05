@@ -15,7 +15,7 @@ Telegram, elenchi di utenti, token o dettagli grezzi delle eccezioni.
 |---|---|
 | Ora e durata del processo | Snapshot al momento della risposta, con orari esplicitamente in UTC. La durata riparte al riavvio. |
 | Pausa tra cicli | Attesa configurata dopo il completamento del ciclo; la durata del controllo si aggiunge a questa pausa. |
-| Polling automatico | Fascia 07:00–23:00 Europe/Rome e abilitazione attuale secondo l'ora reale. La sospensione notturna non sospende Telegram o i comandi manuali. |
+| Polling automatico | Fascia predefinita 07:00–20:00 Europe/Rome e abilitazione attuale secondo l'ora reale. La sospensione fuori fascia non sospende Telegram o i comandi manuali. |
 | Iscrizioni Albo e News | Chat presenti nei rispettivi file di iscrizione, senza aggiungere implicitamente gli amministratori. |
 | Chat iscritte uniche / solo Albo / solo News / entrambe | Unione, differenze e intersezione dei due elenchi, senza duplicati. Un gruppo conta come una chat: non è un conteggio delle persone. |
 | Destinatari | Unione degli iscritti e delle destinazioni `CHAT_IDS`. Gli amministratori presenti anche tra gli iscritti si contano una sola volta. Non è una verifica della raggiungibilità su Telegram. |

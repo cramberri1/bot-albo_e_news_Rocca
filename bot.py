@@ -443,7 +443,8 @@ def load_subscribers() -> set:
 
 def save_subscribers(subs: set):
     _save_set(SUBSCRIBERS_PATH, subs)
-    git_commit_and_push([str(SUBSCRIBERS_PATH)], message="aggiornamento iscritti albo [skip ci]")
+    if not git_commit_and_push([str(SUBSCRIBERS_PATH)], message="aggiornamento iscritti albo [skip ci]"):
+        raise SubscriptionPersistenceError("Salvataggio iscritti Albo non confermato")
 
 def load_subscribers_news() -> set:
     """Iscritti News."""
@@ -451,7 +452,33 @@ def load_subscribers_news() -> set:
 
 def save_subscribers_news(subs: set):
     _save_set(SUBSCRIBERS_NEWS_PATH, subs)
-    git_commit_and_push([str(SUBSCRIBERS_NEWS_PATH)], message="aggiornamento iscritti news [skip ci]")
+    if not git_commit_and_push([str(SUBSCRIBERS_NEWS_PATH)], message="aggiornamento iscritti news [skip ci]"):
+        raise SubscriptionPersistenceError("Salvataggio iscritti News non confermato")
+
+
+class SubscriptionPersistenceError(RuntimeError):
+    """La modifica locale è conservata, ma la sua persistenza non è confermata."""
+
+
+def _subscription_command(handler):
+    """Conferma iscrizioni e disiscrizioni solo dopo la sincronizzazione.
+
+    Il gate iniziale copre anche i retry: dopo un push fallito il set locale
+    può contenere già la modifica, che il ramo «già iscritto» non riscrive.
+    """
+    @functools.wraps(handler)
+    async def wrapped(update, context):
+        try:
+            if not git_commit_and_push():
+                raise SubscriptionPersistenceError("Stato iscrizioni non sincronizzato")
+            await handler(update, context)
+        except SubscriptionPersistenceError:
+            await update.message.reply_text(
+                "⚠️ Non posso confermare la modifica alle iscrizioni: "
+                "il salvataggio persistente non è riuscito. "
+                "Riprova tra qualche minuto."
+            )
+    return wrapped
 
 def get_all_recipients() -> set:
     """Destinatari notifiche Albo Pretorio."""
@@ -893,10 +920,11 @@ def load_user_seen() -> dict:
         return {}
     return _decrypt_json(USER_SEEN_PATH.read_bytes())
 
-def save_user_seen(data: dict, *, push: bool = True):
+def save_user_seen(data: dict, *, push: bool = True) -> bool:
     _atomic_write_bytes(USER_SEEN_PATH, _encrypt_json(data))
     if push:
-        git_commit_and_push([str(USER_SEEN_PATH)], message="aggiornamento cronologia utenti [skip ci]")
+        return git_commit_and_push([str(USER_SEEN_PATH)], message="aggiornamento cronologia utenti [skip ci]")
+    return True
 
 def get_user_seen_hashes(chat_id: int) -> set:
     delivered = set(load_user_seen().get(str(chat_id), []))
@@ -906,14 +934,14 @@ def get_user_seen_hashes(chat_id: int) -> set:
     return delivered
 
 
-def mark_user_seen(chat_id: int, hashes: list):
+def mark_user_seen(chat_id: int, hashes: list) -> bool:
     """Aggiunge una lista di hash atto come 'visti' da questo utente."""
     data = load_user_seen()
     key  = str(chat_id)
     current = set(data.get(key, []))
     current.update(hashes)
     data[key] = sorted(current)
-    save_user_seen(data)
+    return save_user_seen(data)
 
 
 def load_user_seen_news() -> dict:
@@ -1301,6 +1329,10 @@ async def fetch_all_news_pages(client: httpx.AsyncClient, max_pages: int = 30, s
     r = await client.get(f"{NEWS_URL}?en={ENTE}&MESSA=PUBBLICA", headers=HEADERS)
     r.raise_for_status()
     page_items = parse_news_html(r.text)
+    if not page_items and has_next_news_page(r.text):
+        raise IncompleteNewsSnapshot(
+            "prima pagina news con paginazione ma priva di elementi parsabili"
+        )
     for item in page_items:
         if item["id"] not in seen_ids:
             seen_ids.add(item["id"])
@@ -1402,22 +1434,51 @@ _CONTENT_TYPE_SUFFIXES = {
     "application/vnd.ms-powerpoint": ".ppt",
     "application/vnd.openxmlformats-officedocument.presentationml.presentation": ".pptx",
     "application/rtf": ".rtf",
+    "text/rtf": ".rtf",
+    "application/x-rtf": ".rtf",
+    "application/vnd.oasis.opendocument.text": ".odt",
+    "application/vnd.oasis.opendocument.spreadsheet": ".ods",
+    "application/vnd.oasis.opendocument.presentation": ".odp",
+    "application/json": ".json",
+    "application/geo+json": ".geojson",
+    "application/xml": ".xml",
+    "text/xml": ".xml",
+    "text/html": ".html",
+    "application/xhtml+xml": ".html",
     "application/zip": ".zip",
     "application/x-7z-compressed": ".7z",
     "text/plain": ".txt",
     "text/csv": ".csv",
+    "text/tab-separated-values": ".tsv",
+    "message/rfc822": ".eml",
     "image/jpeg": ".jpg",
     "image/png": ".png",
     "image/gif": ".gif",
     "image/tiff": ".tif",
+    "image/svg+xml": ".svg",
+    "image/webp": ".webp",
 }
+
+
+def _attachment_basename(value: str, limit: int = 180) -> str:
+    """Normalize a remote filename on Linux and Windows, retaining its suffix."""
+    name = str(value or "").replace("\\", "/").rsplit("/", 1)[-1]
+    name = re.sub(r"[\x00-\x1f\x7f]", "", name).strip()
+    if name in {"", ".", ".."}:
+        return ""
+    if len(name) > limit:
+        suffix = Path(name).suffix
+        if not re.fullmatch(r"\.[a-zA-Z0-9]{1,10}", suffix):
+            suffix = ""
+        name = name[:limit - len(suffix)] + suffix
+    return name
 
 
 def _safe_attachment_suffix(value: str) -> str:
     suffix = Path(value or "").suffix.lower()
     if not re.fullmatch(r"\.[a-z0-9]{1,10}", suffix):
         return ""
-    if suffix in {".hbl", ".html", ".htm", ".php", ".asp", ".aspx", ".jsp"}:
+    if suffix in {".hbl", ".php", ".asp", ".aspx", ".jsp"}:
         return ""
     return suffix
 
@@ -1425,13 +1486,97 @@ def _safe_attachment_suffix(value: str) -> str:
 def _content_disposition_filename(header: str) -> str:
     if not header:
         return ""
-    match = re.search(r"filename\*\s*=\s*UTF-8''([^;]+)", header, re.I)
+    match = re.search(r"filename\*\s*=\s*([^']*)'[^']*'([^;]+)", header, re.I)
     if match:
-        return Path(unquote(match.group(1).strip().strip('"'))).name
+        try:
+            return _attachment_basename(unquote(match.group(2).strip().strip('"'),
+                                               encoding=match.group(1) or "utf-8"))
+        except LookupError:
+            pass
     match = re.search(r'filename\s*=\s*"([^"]+)"', header, re.I)
     if not match:
         match = re.search(r"filename\s*=\s*([^;]+)", header, re.I)
-    return Path(match.group(1).strip().strip('"')).name if match else ""
+    return _attachment_basename(match.group(1).strip().strip('"')) if match else ""
+
+
+def _attachment_text_prefix(head: bytes) -> str:
+    if head.startswith((b"\xff\xfe", b"\xfe\xff")):
+        return head.decode("utf-16", errors="replace").lstrip()
+    return head.decode("utf-8-sig", errors="replace").lstrip()
+
+
+def _validate_attachment_content(filename: str, attachment_url: str, content_type: str,
+                                 disposition: str, head: bytes, *, complete: bool):
+    """Reject portal responses, while permitting identified text documents.
+
+    A brace alone is not an error signature: RTF, JSON and plain text can all
+    start with it. Inspect only a bounded prefix; a long JSON document must not
+    be rejected merely because that prefix is not a complete JSON object.
+    """
+    prefix = _attachment_text_prefix(head)
+    clean_type = content_type.split(";", 1)[0].strip().lower()
+    expected_suffix = (_safe_attachment_suffix(filename)
+                       or _safe_attachment_suffix(_content_disposition_filename(disposition))
+                       or _safe_attachment_suffix(urlparse(attachment_url).path))
+    is_rtf = bool(re.match(r"^\{\\rtf[1-9][0-9]*(?=[\\\s}])", prefix, re.I))
+    if is_rtf:
+        return
+
+    html_prefix = re.match(
+        r"^(?:(?:<!--.*?-->|<\?.*?\?>)\s*)*"
+        r"(?:<!doctype\s+html\b|<(?:html|head|body|title|script|form|div)\b)",
+        prefix, re.I | re.S,
+    )
+    if html_prefix or clean_type in {"text/html", "application/xhtml+xml"}:
+        # An explicitly named HTML download is a file; a portal/login page is
+        # not. A generic MIME type or a .pdf label alone cannot authorize it.
+        if (expected_suffix not in {".html", ".htm"}
+                or not re.match(r"\s*attachment(?:\s*;|\s*$)", disposition, re.I)):
+            raise ValueError("il percorso allegato ha restituito una pagina HTML inattesa")
+
+    looks_json = bool(re.match(
+        r'^(?:\{\s*"|\{\s*\}|\[\s*(?:[\[\{"\]0-9-]|true\b|false\b|null\b))', prefix
+    ))
+    if looks_json or clean_type == "application/json" or clean_type.endswith("+json"):
+        text_suffixes = {".json", ".geojson", ".jsonl", ".ndjson", ".txt", ".csv", ".tsv"}
+        mime_identifies_json = clean_type == "application/json" or clean_type.endswith("+json")
+        if (expected_suffix not in text_suffixes
+                and not (not expected_suffix and mime_identifies_json)):
+            raise ValueError("il percorso allegato ha restituito JSON inatteso")
+        if not complete:
+            # A long diagnostic can exceed our prefix budget. Inspect the first
+            # root field without mistaking nested business data for an error.
+            first_error = re.match(r'^\{\s*"(?:error|errors|error_code|errorCode)"\s*:\s*', prefix)
+            if first_error:
+                value_prefix = prefix[first_error.end():]
+                try:
+                    error_value, _ = json.JSONDecoder().raw_decode(value_prefix)
+                except ValueError:
+                    error_value = value_prefix.startswith(('"', '{', '['))
+                if error_value:
+                    raise ValueError("il percorso allegato ha restituito un errore JSON")
+        if complete:
+            try:
+                envelope = json.loads(prefix)
+            except (ValueError, TypeError):
+                envelope = None  # JSONL or plain text is also a valid file.
+            if isinstance(envelope, dict):
+                error_keys = {"error", "errors", "message", "status", "code", "error_code",
+                              "errorCode", "description", "K", "PATH", "trace_id",
+                              "traceId", "request_id", "requestId", "timestamp",
+                              "detail", "details", "stack", "stacktrace"}
+                if set(envelope).issubset(error_keys) and (
+                    envelope.get("error") or envelope.get("errors")
+                    or envelope.get("error_code") or envelope.get("errorCode")
+                    or ("K" in envelope and ("PATH" in envelope or "message" in envelope)
+                        and str(envelope["K"]) != "000")
+                ):
+                    raise ValueError("il percorso allegato ha restituito un errore JSON")
+
+    # Typical XML storage/API error responses are not attachment contents.
+    if re.match(r"^(?:(?:<\?.*?\?>|<!--.*?-->)\s*)*<Error(?:\s|>)",
+                prefix, re.I | re.S):
+        raise ValueError("il percorso allegato ha restituito un errore XML")
 
 
 def _resolved_attachment_filename(
@@ -1442,7 +1587,7 @@ def _resolved_attachment_filename(
     head: bytes,
 ) -> str:
     """Mantiene il nome Halley e ricava l'estensione senza inventare `.pdf`."""
-    requested = Path(requested_name or "allegato").name[:170] or "allegato"
+    requested = _attachment_basename(requested_name or "allegato") or "allegato"
     if _safe_attachment_suffix(requested):
         return requested[:180]
 
@@ -1450,8 +1595,13 @@ def _resolved_attachment_filename(
     suffix = _safe_attachment_suffix(disposition_name)
     if not suffix:
         suffix = _safe_attachment_suffix(urlparse(attachment_url).path)
+        if suffix in {".html", ".htm"}:
+            suffix = ""  # A web endpoint is not evidence of the file format.
 
     clean_type = (content_type or "").split(";", 1)[0].strip().lower()
+    if not suffix and re.match(r"^\{\\rtf[1-9][0-9]*(?=[\\\s}])",
+                               _attachment_text_prefix(head or b""), re.I):
+        suffix = ".rtf"
     if not suffix:
         suffix = _CONTENT_TYPE_SUFFIXES.get(clean_type, "")
     if not suffix and clean_type and clean_type != "application/octet-stream":
@@ -1461,7 +1611,9 @@ def _resolved_attachment_filename(
 
     signature = (head or b"").lstrip()
     if not suffix:
-        if signature.startswith(b"%PDF-"):
+        if re.match(r"^\{\\rtf[1-9][0-9]*(?=[\\\s}])", _attachment_text_prefix(head or b""), re.I):
+            suffix = ".rtf"
+        elif signature.startswith(b"%PDF-"):
             suffix = ".pdf"
         elif signature.startswith(b"\x89PNG\r\n\x1a\n"):
             suffix = ".png"
@@ -1498,13 +1650,18 @@ async def _download_attachment_to_spool(
     completed = False
     content_type = ""
     content_disposition = ""
+    declared_length = None
     try:
         async with client.stream("GET", attachment_url) as response:
             response.raise_for_status()
+            if response.status_code != 200 or response.headers.get("content-range"):
+                raise ValueError("risposta allegato parziale o inattesa")
             content_type = response.headers.get("content-type", "").lower()
             content_disposition = response.headers.get("content-disposition", "")
-            if "text/html" in content_type or "application/json" in content_type:
-                raise ValueError(f"contenuto inatteso: {content_type}")
+            if not response.headers.get("content-encoding", "").strip() or response.headers.get("content-encoding", "").lower() == "identity":
+                length = response.headers.get("content-length", "")
+                if length.isdigit():
+                    declared_length = int(length)
             async for chunk in response.aiter_bytes(256 * 1024):
                 if not chunk:
                     continue
@@ -1526,9 +1683,10 @@ async def _download_attachment_to_spool(
 
         if not size:
             raise ValueError("allegato vuoto")
-        signature = bytes(head).lstrip().lower()
-        if signature.startswith((b"<!doctype html", b"<html", b"{")):
-            raise ValueError("il percorso allegato ha restituito una pagina di errore")
+        if declared_length is not None and size != declared_length:
+            raise ValueError("dimensione allegato diversa dalla risposta dichiarata")
+        _validate_attachment_content(filename, attachment_url, content_type,
+                                     content_disposition, bytes(head), complete=size <= len(head))
         temporary.flush()
         os.fsync(temporary.fileno())
         temporary.close()
@@ -1823,7 +1981,7 @@ async def enrich_with_attachments(
                         continue
                     seen_attachment_refs.add(attachment_ref)
                     expected_attachments += 1
-                    filename = Path(tag.get_text(strip=True) or f"allegato_{num_alleg}").name[:170] or f"allegato_{num_alleg}"
+                    filename = _attachment_basename(tag.get_text(strip=True)) or f"allegato_{num_alleg}"
 
                     downloaded = None
                     last_error = None
@@ -2277,9 +2435,29 @@ def merge_item_groups(*groups: list) -> list:
 # ---------------------------------------------------------------------------
 # Formattazione e invio messaggi
 # ---------------------------------------------------------------------------
+def _bounded_text(value, max_units: int) -> str:
+    """Bound visible Telegram text before HTML escaping, including emoji."""
+    text = str(value or "")
+    encoded = text.encode("utf-16-le", errors="replace")
+    if len(encoded) <= max_units * 2:
+        return text
+    return encoded[:max(0, max_units - 1) * 2].decode("utf-16-le", errors="ignore") + "…"
+
+
+def _document_caption(item: dict, attachment: dict, position: int, total: int) -> str:
+    publication = escape_html(_bounded_text(item.get("num_pub") or item.get("title") or "Atto Albo", 500))
+    caption = f"📎 Allegato {position}/{total} · {publication}"
+    if str(attachment.get("filename", "")).lower().endswith(".p7m"):
+        caption += (
+            "\n🔏 File P7M: per aprirlo e verificare la firma digitale serve un'app dedicata. "
+            '<a href="https://www.agid.gov.it/en/node/1534">Software di verifica (AgID)</a>.'
+        )
+    return caption
+
+
 def format_caption(item: dict) -> str:
     """Formatta una nuova pubblicazione o una revisione in HTML Telegram."""
-    tipo = f" ({escape_html(item['tipo'])})" if item.get("tipo") else ""
+    tipo = f" ({escape_html(_bounded_text(item['tipo'], 250))})" if item.get("tipo") else ""
     allegati = item.get("allegati", [])
     expected = int(item.get("_attachment_expected_count", len(allegati)))
     is_revision = item.get("_notification_kind") == "revision"
@@ -2288,19 +2466,19 @@ def format_caption(item: dict) -> str:
     else:
         lines = ["🏛 <b>Nuovo atto in Albo Pretorio</b>\n"]
 
-    lines.append(f"📄 <b>{escape_html(item['title'])}</b>{tipo}")
+    lines.append(f"📄 <b>{escape_html(_bounded_text(item['title'], 2000))}</b>{tipo}")
     if item.get("num_pub"):
-        lines.append(f"🔢 N° {escape_html(item['num_pub'])}")
+        lines.append(f"🔢 N° {escape_html(_bounded_text(item['num_pub'], 100))}")
     if item.get("date") and item.get("date_end"):
-        lines.append(f"📅 Dal {escape_html(item['date'])} al {escape_html(item['date_end'])}")
+        lines.append(f"📅 Dal {escape_html(_bounded_text(item['date'], 40))} al {escape_html(_bounded_text(item['date_end'], 40))}")
     elif item.get("date"):
-        lines.append(f"📅 Dal {escape_html(item['date'])} · scadenza non indicata")
+        lines.append(f"📅 Dal {escape_html(_bounded_text(item['date'], 40))} · scadenza non indicata")
     else:
         lines.append("📅 Scadenza non indicata")
 
     if is_revision and item.get("_revision_changes"):
         changes = ", ".join(item["_revision_changes"])
-        lines.append(f"🔄 Modifiche rilevate: {escape_html(changes)}")
+        lines.append(f"🔄 Modifiche rilevate: {escape_html(_bounded_text(changes, 500))}")
 
     if expected > 1:
         lines.append(f"📎 {expected} documenti allegati — seguono in sequenza")
@@ -2335,7 +2513,7 @@ def _preflight_attachments(item: dict) -> tuple[list[dict], str | None]:
     prepared = []
     positions = set()
     for index, attachment in enumerate(attachments, start=1):
-        filename = Path(str(attachment.get("filename") or "")).name
+        filename = _attachment_basename(attachment.get("filename"))
         if not filename or filename in {".", ".."}:
             return [], f"nome allegato {index} non valido"
         try:
@@ -2409,11 +2587,13 @@ async def _download_and_send_docs(
             await bot_or_update.message.reply_document(
                 document=content, filename=filename,
                 caption=document_caption, parse_mode=ParseMode.HTML,
+                disable_content_type_detection=True,
             )
         else:
             await bot_or_update.send_document(
                 chat_id=chat_id, document=content, filename=filename,
                 caption=document_caption, parse_mode=ParseMode.HTML,
+                disable_content_type_detection=True,
             )
 
     async with _chat_delivery_lock(int(target_chat_id or 0)):
@@ -2431,7 +2611,7 @@ async def _download_and_send_docs(
                         f"{preflight_error}; nessun documento inviato."
                     )
                 if report_incomplete:
-                    title = escape_html(item.get("title") or "Atto Albo")
+                    title = escape_html(_bounded_text(item.get("title") or "Atto Albo", 2000))
                     await send_text(
                         f"⚠️ Documenti non completi per <b>{title}</b>. "
                         "Nessun allegato è stato inviato; il bot ritenterà."
@@ -2443,9 +2623,8 @@ async def _download_and_send_docs(
 
             for index, alleg in enumerate(prepared, start=1):
                 await asyncio.sleep(0.3)
-                publication = escape_html(item.get("num_pub") or item.get("title") or "Atto Albo")
                 position = int(alleg.get("position", index))
-                document_caption = f"📎 Allegato {position}/{expected or len(allegati)} · {publication}"
+                document_caption = _document_caption(item, alleg, position, expected or len(allegati))
                 sent = False
                 for attempt in range(1, MAX_RETRIES + 1):
                     try:
@@ -2621,6 +2800,7 @@ async def cmd_help(update: Update, context: ContextTypes.DEFAULT_TYPE):
         parse_mode=ParseMode.MARKDOWN
     )
 
+@_subscription_command
 async def cmd_abbonati(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Iscrive a entrambe le notifiche: Albo Pretorio + News."""
     chat_id    = update.effective_chat.id
@@ -2650,6 +2830,7 @@ async def cmd_abbonati(update: Update, context: ContextTypes.DEFAULT_TYPE):
         parse_mode=ParseMode.MARKDOWN
     )
 
+@_subscription_command
 async def cmd_disabbonati(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Cancella entrambe le iscrizioni: Albo Pretorio + News."""
     chat_id = update.effective_chat.id
@@ -2680,6 +2861,7 @@ async def cmd_disabbonati(update: Update, context: ContextTypes.DEFAULT_TYPE):
         parse_mode=ParseMode.MARKDOWN
     )
 
+@_subscription_command
 async def cmd_abbonati_albo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
     subs    = load_subscribers()
@@ -2697,6 +2879,7 @@ async def cmd_abbonati_albo(update: Update, context: ContextTypes.DEFAULT_TYPE):
         parse_mode=ParseMode.MARKDOWN
     )
 
+@_subscription_command
 async def cmd_disabbonati_albo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
     subs    = load_subscribers()
@@ -2714,6 +2897,7 @@ async def cmd_disabbonati_albo(update: Update, context: ContextTypes.DEFAULT_TYP
         parse_mode=ParseMode.MARKDOWN
     )
 
+@_subscription_command
 async def cmd_abbonati_news(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
     subs    = load_subscribers_news()
@@ -2731,6 +2915,7 @@ async def cmd_abbonati_news(update: Update, context: ContextTypes.DEFAULT_TYPE):
         parse_mode=ParseMode.MARKDOWN
     )
 
+@_subscription_command
 async def cmd_disabbonati_news(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
     subs    = load_subscribers_news()
@@ -2907,21 +3092,26 @@ async def cmd_atti(update: Update, context: ContextTypes.DEFAULT_TYPE):
         and item_id(i) in user_seen
     ]
 
-    sent_hashes = []
     failed_hashes = []
     for item in da_inviare:
         await asyncio.sleep(0.5)
         if await reply_item(update, item):
-            sent_hashes.append(item_id(item))
+            # Ogni atto completo raggiunge il checkpoint prima del successivo:
+            # un arresto del comando non perde le ricevute già confermate.
+            if not mark_user_seen(chat_id, [item_id(item)]):
+                cleanup_attachment_files(items)
+                await update.message.reply_text(
+                    "⚠️ L'atto è stato inviato, ma il salvataggio persistente "
+                    "della consegna non è riuscito. Gli altri invii sono sospesi; "
+                    "riprova /atti tra qualche minuto."
+                )
+                return
         else:
             failed_hashes.append(item_id(item))
 
     # Gli atti già visti verranno scaricati di nuovo soltanto se l'utente
     # preme “Sì”: non trattenere nel frattempo file temporanei inutilizzati.
     cleanup_attachment_files(items)
-
-    if sent_hashes:
-        mark_user_seen(chat_id, sent_hashes)
 
     if gia_visti:
         ref = store_pending_resend(chat_id, [item_id(i) for i in gia_visti])
@@ -3364,7 +3554,10 @@ async def cmd_controlla(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("🔍 Controllo in corso...")
 
     result_albo = await run_check(context.bot)
-    result_news = await run_check_news(context.bot)
+    news_ready = await _ensure_news_baseline()
+    result_news = await run_check_news(context.bot) if news_ready else {
+        "ok": False, "new": 0, "total": 0,
+    }
 
     ok_albo = "✅" if result_albo.get("ok") else "❌"
     ok_news = "✅" if result_news.get("ok") else "❌"

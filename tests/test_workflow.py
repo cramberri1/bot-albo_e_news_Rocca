@@ -19,7 +19,7 @@ class WorkflowTests(unittest.TestCase):
         self.assertNotIn('github.event_name', source)
         self.assertEqual(workflow['env']['BOT_SECONDS'], '18000')
         self.assertEqual(workflow['env']['AUTO_POLL_START'], '07:00')
-        self.assertEqual(workflow['env']['AUTO_POLL_END'], '23:00')
+        self.assertEqual(workflow['env']['AUTO_POLL_END'], '20:00')
         self.assertEqual(workflow['env']['AUTO_POLL_INTERVAL_MINUTES'], '15')
         # Every potentially blocking step has a budget, including setup and
         # recovery, rather than an assumption that setup will take eight min.

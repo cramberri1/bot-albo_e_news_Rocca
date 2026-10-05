@@ -126,7 +126,7 @@ class SchedulingSystemTests(unittest.TestCase):
         self.assertEqual(legacy.runs[0].bot_stopped_at - legacy.runs[0].bot_started_at, timedelta(minutes=10))
 
     def test_day_and_night_boundaries_split_same_run_without_stopping_telegram(self):
-        for hour, enabled in ((6, [False, True]), (22, [True, False])):
+        for hour, enabled in ((6, [False, True]), (19, [True, False])):
             with self.subTest(hour=hour):
                 trigger = Trigger('crossing', START + timedelta(hours=hour), runtime_seconds=7200)
                 result = simulate([trigger], START, START + timedelta(hours=26))

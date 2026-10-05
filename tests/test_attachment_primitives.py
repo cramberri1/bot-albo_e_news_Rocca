@@ -241,6 +241,25 @@ class AttachmentPrimitiveTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(self.update_cache.call_count, 2)
         self.push.assert_called_once()
 
+    async def test_rtf_stream_is_preserved_in_manual_and_automatic_acquisition(self):
+        payload = b'\xef\xbb\xbf\r\n{\\rtf1\\ansi Documento originale.\\par}'
+        for strict in (True, False):
+            with self.subTest(strict_attachments=strict):
+                fixture = HalleyFixture(detail(attachments=reference(name='delibera.rtf')),
+                                        payloads={'MC96': payload})
+                item, = await self.fetch(fixture, strict_attachments=strict)
+                self.assertTrue(item['_attachment_fetch_ok'])
+                self.assertTrue(item['_attachment_list_complete'])
+                self.assertEqual(item['_attachment_expected_count'], 1)
+                attachment, = item['allegati']
+                self.assertEqual(attachment['filename'], 'delibera.rtf')
+                self.assertEqual(attachment['sha256'], hashlib.sha256(payload).hexdigest())
+                with attachment['_spool'].open() as document:
+                    self.assertEqual(document.read(), payload)
+                bot.cleanup_attachment_files(item)
+                self.assertEqual(list(bot._ATTACHMENT_TEMP_DIR.iterdir()), [])
+                self.assertEqual(bot._ATTACHMENT_SPOOL_BYTES, 0)
+
     async def test_historical_strong_identity_checked_when_live_listing_omits_it(self):
         for field, value in (('sender', 'Altro ente'), ('act_number', '99')):
             with self.subTest(field=field):

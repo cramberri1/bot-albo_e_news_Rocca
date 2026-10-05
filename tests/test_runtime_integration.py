@@ -47,7 +47,7 @@ class RuntimeIntegrationTests(unittest.IsolatedAsyncioTestCase):
         self.assertTrue(self.mocks['send_heartbeat'].call_args.kwargs['albo_ok'])
 
     async def test_crossing_night_finishes_albo_but_does_not_start_news(self):
-        self.now = datetime(2026, 10, 1, 20, 59, tzinfo=timezone.utc)
+        self.now = datetime(2026, 10, 1, 17, 59, tzinfo=timezone.utc)
         async def finish_albo(_, **kwargs):
             self.now += timedelta(minutes=2)
             return {'ok': True, 'new': 0}
@@ -59,7 +59,7 @@ class RuntimeIntegrationTests(unittest.IsolatedAsyncioTestCase):
         self.mocks['send_heartbeat'].assert_not_awaited()
 
     async def test_bootstrap_crossing_night_does_not_admit_a_following_check(self):
-        self.now = datetime(2026, 10, 1, 20, 59, tzinfo=timezone.utc)
+        self.now = datetime(2026, 10, 1, 17, 59, tzinfo=timezone.utc)
         async def bootstrap():
             self.now += timedelta(minutes=2)
             return True
@@ -89,8 +89,8 @@ class RuntimeIntegrationTests(unittest.IsolatedAsyncioTestCase):
         await self.drive_loop(datetime(2026, 10, 1, 4, 59, tzinfo=timezone.utc), 17 * 60,
                               [60, 960])
 
-    async def test_same_worker_stops_admitting_cycles_at_twenty_three(self):
-        await self.drive_loop(datetime(2026, 10, 1, 20, 59, tzinfo=timezone.utc), 32 * 60,
+    async def test_same_worker_stops_admitting_cycles_at_twenty(self):
+        await self.drive_loop(datetime(2026, 10, 1, 17, 59, tzinfo=timezone.utc), 32 * 60,
                               [0])
 
     async def drive_loop(self, start, horizon, expected):
@@ -168,7 +168,7 @@ class AutomaticQueueTests(unittest.IsolatedAsyncioTestCase):
             (bot.run_check_news, '_run_check_news', '_NEWS_CHECK_LOCK'),
         ):
             with self.subTest(source=inner):
-                now = datetime(2026, 10, 1, 20, 59, tzinfo=timezone.utc)
+                now = datetime(2026, 10, 1, 17, 59, tzinfo=timezone.utc)
                 lock = asyncio.Lock()
                 entered = asyncio.Event()
                 async def queued():
