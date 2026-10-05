@@ -14,7 +14,10 @@ lo scheduling configurato, gratuitamente, nei limiti del piano free.
 > Aggiornamento 01/10/2026: [pannello amministratore `/status`](docs/ADMIN_STATUS.md)
 > e [revisione concettuale del progetto](docs/PROJECT_REVIEW.md).
 > Aggiornamento 04/10/2026: [revisione architetturale e incidente scheduling](docs/ARCHITECTURE_REVIEW.md).
-> Polling automatico **07:00–23:00 Europe/Rome**; comandi Telegram indipendenti.
+> Aggiornamento 05/10/2026: polling automatico **07:00–20:00 Europe/Rome**;
+> comandi Telegram indipendenti. La revisione del 04/10 descrive la precedente fascia 07:00–23:00.
+> Corretto il riconoscimento degli RTF; ampliati i formati e i controlli di integrità
+> degli allegati. Vedi [gestione e collaudo degli allegati](docs/ATTACHMENT_FORMATS.md).
 
 ---
 
@@ -38,6 +41,20 @@ lo scheduling configurato, gratuitamente, nei limiti del piano free.
 - Ogni utente ha una propria cronologia di atti già ricevuti
   (`data/user_seen.json`): se richiedi `/atti` più volte, il bot non ti
   rispedisce gli stessi allegati senza chiedere conferma.
+
+Gli allegati vengono scaricati e inviati come file originali, senza convertirli
+in PDF: RTF, PDF, P7M/P7S, Word, Excel, PowerPoint, OpenDocument, ZIP/7Z,
+immagini, CSV/TSV, TXT, XML, JSON e altri formati riconoscibili. I documenti
+HTML richiedono un nome esplicito e una risposta di download; una pagina di
+errore del portale non viene inoltrata come allegato. Restano i limiti di
+dimensione e spazio temporaneo. Più di dieci documenti vengono inviati in
+sequenza, ciascuno con numero e riferimento all'atto.
+
+Per i file **P7M** la didascalia ricorda che serve un'app di verifica della
+firma digitale per aprire il documento contenuto e verificarne la firma,
+con collegamento ai [software indicati da AgID](https://www.agid.gov.it/en/node/1534).
+Il bot conserva la busta originale; non dichiara verificata la firma e non
+estrae automaticamente il documento firmato.
 
 **News:**
 - Le news vengono lette dalla pagina pubblica `EGSCHTST6.HBL` del
@@ -113,10 +130,10 @@ Il workflow è definito in `.github/workflows/albo_check.yml`:
   timeout job 355 minuti. Gli step hanno budget espliciti: la loro somma è 331
   minuti. `SIGINT` chiede la chiusura e restano fino a 120 secondi prima di
   `SIGKILL`, oltre agli step finali di persistenza e recupero.
-- **Polling automatico**: dalle **07:00 incluse alle 23:00 escluse**, Europe/Rome,
+- **Polling automatico**: dalle **07:00 incluse alle 20:00 escluse**, Europe/Rome,
   con pausa di **15 minuti** dopo il ciclo. Il runtime rivaluta l'ora reale anche
   durante la run. Il bootstrap delle baseline è soggetto alla stessa fascia.
-  Il lavoro già iniziato può concludersi e salvare dopo le 23:00.
+  Il lavoro già iniziato può concludersi e salvare dopo le 20:00.
 - **Telegram**: long polling e comandi manuali restano attivi finché vive il
   processo, anche di notte. `/controlla` può quindi generare normali notifiche
   fuori fascia; `/status` mostra se il polling automatico è abilitato o sospeso.
@@ -146,7 +163,7 @@ Configurazione applicativa (variabili ambiente; nel workflow sono esplicite):
 | Variabile | Default | Significato |
 |---|---|---|
 | `AUTO_POLL_START` | `07:00` | Inizio incluso, Europe/Rome |
-| `AUTO_POLL_END` | `23:00` | Fine esclusa, Europe/Rome |
+| `AUTO_POLL_END` | `20:00` | Fine esclusa, Europe/Rome |
 | `AUTO_POLL_INTERVAL_MINUTES` | `15` | Pausa tra cicli automatici |
 
 `INTERVAL_MINUTES` non seleziona più profili; usa `AUTO_POLL_INTERVAL_MINUTES`.

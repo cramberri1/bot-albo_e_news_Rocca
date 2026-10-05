@@ -38,7 +38,7 @@ class RuntimePolicy:
     """
 
     start_label: str = "07:00"
-    end_label: str = "23:00"
+    end_label: str = "20:00"
     interval_minutes: int = 15
     timezone_name: str = "Europe/Rome"
     _zone: ZoneInfo = field(init=False, repr=False, compare=False)
@@ -63,7 +63,7 @@ class RuntimePolicy:
             raise ValueError("AUTO_POLL_INTERVAL_MINUTES deve essere un intero positivo.")
         return cls(
             start_label=values.get("AUTO_POLL_START", "07:00"),
-            end_label=values.get("AUTO_POLL_END", "23:00"),
+            end_label=values.get("AUTO_POLL_END", "20:00"),
             interval_minutes=int(raw_interval),
         )
 

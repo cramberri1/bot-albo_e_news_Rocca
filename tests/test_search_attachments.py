@@ -561,7 +561,11 @@ class SearchTransportTests(IsolatedSearchState, unittest.IsolatedAsyncioTestCase
     async def test_all_supported_document_formats_use_real_spool_and_preflight(self):
         for extension, content in [('pdf', b'%PDF fixture'), ('p7m', b'\x30\x82signed'),
                                    ('doc', b'\xd0\xcf\x11\xe0doc'), ('docx', b'PK\x03\x04docx'),
-                                   ('zip', b'PK\x03\x04zip'), ('csv', b'one,two\n1,2')]:
+                                   ('zip', b'PK\x03\x04zip'), ('csv', b'one,two\n1,2'),
+                                   ('rtf', b'{\\rtf1\\ansi Documento autentico.}'),
+                                   ('json', b'{"documento":"autentico"}'),
+                                   ('xml', b'<?xml version="1.0"?><documento/>'),
+                                   ('odt', b'PK\x03\x04odt')]:
             with self.subTest(extension=extension):
                 filename = 'fixture.' + extension
                 item = await self.fetch({filename: content})

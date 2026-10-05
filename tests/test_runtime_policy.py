@@ -18,9 +18,9 @@ def instant(value):
 class RuntimePolicyTests(unittest.TestCase):
     def test_selected_window_is_half_open_and_independent_of_legacy_environment(self):
         policy = RuntimePolicy.from_environment({'INTERVAL_MINUTES': '30', 'SCHEDULE': '37 3 * * *'})
-        self.assertEqual((policy.start_label, policy.end_label, policy.interval_minutes), ('07:00', '23:00', 15))
+        self.assertEqual((policy.start_label, policy.end_label, policy.interval_minutes), ('07:00', '20:00', 15))
         for time, expected in [('06:59:59', False), ('07:00:00', True),
-                               ('22:59:59', True), ('23:00:00', False)]:
+                               ('19:59:59', True), ('20:00:00', False)]:
             with self.subTest(time=time):
                 self.assertEqual(policy.allows(instant(f'2026-10-01T{time}+02:00')), expected)
 
@@ -32,10 +32,16 @@ class RuntimePolicyTests(unittest.TestCase):
         self.assertTrue(policy.allows(instant('2026-10-02T05:59:00+02:00')))
         self.assertFalse(policy.allows(instant('2026-10-02T06:00:00+02:00')))
 
+    def test_end_override_keeps_evening_polling_available_when_explicitly_selected(self):
+        policy = RuntimePolicy.from_environment({'AUTO_POLL_END': '23:00'})
+        self.assertTrue(policy.allows(instant('2026-10-01T20:00:00+02:00')))
+        self.assertTrue(policy.allows(instant('2026-10-01T22:59:59+02:00')))
+        self.assertFalse(policy.allows(instant('2026-10-01T23:00:00+02:00')))
+
     def test_invalid_configuration_fails_instead_of_falling_back(self):
         for values in [
             {'AUTO_POLL_START': '7:00'}, {'AUTO_POLL_END': '24:00'},
-            {'AUTO_POLL_START': '23:00'}, {'AUTO_POLL_INTERVAL_MINUTES': '0'},
+            {'AUTO_POLL_START': '20:00'}, {'AUTO_POLL_INTERVAL_MINUTES': '0'},
             {'AUTO_POLL_INTERVAL_MINUTES': '-1'}, {'AUTO_POLL_INTERVAL_MINUTES': '1.5'},
             {'AUTO_POLL_INTERVAL_MINUTES': '1441'}, {'AUTO_POLL_INTERVAL_MINUTES': ''},
         ]:
@@ -60,12 +66,12 @@ class RuntimePolicyTests(unittest.TestCase):
         now = instant('2026-10-01T06:59:59.900000+02:00')
         self.assertEqual(policy.next_transition(now), instant('2026-10-01T05:00:00+00:00'))
         self.assertEqual(policy.next_transition(instant('2026-10-01T07:00:00+02:00')),
-                         instant('2026-10-01T21:00:00+00:00'))
+                         instant('2026-10-01T18:00:00+00:00'))
         self.assertEqual(policy.next_transition(now).tzinfo, timezone.utc)
 
-    def test_spring_and_autumn_nights_have_real_seven_and_nine_hour_durations(self):
+    def test_spring_and_autumn_nights_have_real_ten_and_twelve_hour_durations(self):
         policy = RuntimePolicy()
-        for evening, hours in [('2026-03-28T23:00:00+01:00', 7), ('2026-10-24T23:00:00+02:00', 9)]:
+        for evening, hours in [('2026-03-28T20:00:00+01:00', 10), ('2026-10-24T20:00:00+02:00', 12)]:
             now = instant(evening)
             with self.subTest(evening=evening):
                 self.assertEqual(policy.next_transition(now) - now, timedelta(hours=hours))
