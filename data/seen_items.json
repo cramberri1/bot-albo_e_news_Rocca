@@ -8040,6 +8040,29 @@
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "224",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "e9f43ce8ec06e0cfefaf1d39f11d69ec9b260df54d66394c53cc010b3313035c",
+    "revision_fingerprint": "e9f43ce8ec06e0cfefaf1d39f11d69ec9b260df54d66394c53cc010b3313035c",
+    "revision_snapshot": {
+      "date": "06-10-2026",
+      "date_end": "21-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "224",
+      "register_number": "",
+      "attachment_count": 3,
+      "attachment_sha256": [
+        "2574f987fecf6ca03f81896ebf9ac9f274b44ade8278a0cc3e3b2fe8217fed8d",
+        "98fdd80fdaad351d6b6cd9e3fc0e0bd8b49dc5031a7e5e6c7f2ebffc79a1ad1f",
+        "f0ce4a01b5a98afd7ef99a4be8a0b9e683d9e946f8df55c616fe824106aaea31"
+      ],
+      "attachment_name_hashes": [
+        "0b65307fa3715255",
+        "a9e48fdca97e6dd2",
+        "cdf3178c7d78ae15"
+      ]
+    },
+    "revision": 1
   }
 }
