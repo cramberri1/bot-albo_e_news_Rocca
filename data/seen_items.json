@@ -7937,5 +7937,86 @@
       ]
     },
     "revision": 1
+  },
+  "v2:05aeb609ff3c879568553691": {
+    "notified": false,
+    "date": "06-10-2026",
+    "date_end": "21-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:05aeb609ff3c879568553691",
+    "legacy_ids": [
+      "d4e2542a1dbead39",
+      "v2:05aeb609ff3c879568553691"
+    ],
+    "title": "Variazione urgente di bilancio di previsione 2026-2028 ex art. 175 TUEL",
+    "num_pub": "549",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "58",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "e86f6844c830a5cb5285f1460b169554af0cc3d836eb1c03c5cea92a259b4d88",
+    "revision_fingerprint": "e86f6844c830a5cb5285f1460b169554af0cc3d836eb1c03c5cea92a259b4d88",
+    "revision_snapshot": {
+      "date": "06-10-2026",
+      "date_end": "21-10-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "58",
+      "register_number": "",
+      "attachment_count": 6,
+      "attachment_sha256": [
+        "74e9fb632d1025002673af7fd9b484a042149bf9c2e04817fe3c336242509307",
+        "b7df14998c6a7d61f068fc20c42496efd7124c8f51d1963c09b2cdd75d687143",
+        "cf16aef596258553459e87d6bd66fb087f506b43a58f23b7ee50d24319958656",
+        "d7a4c86ade8f61631c003d01998b9f4981022e837b02c6f273ab8a4dcde77c68",
+        "de70e48f5824a0639776c227c84ad69bad9de95fbd2f00cf419e1e70ddf91a43",
+        "f60a371cfe3eab6b3e97484366674a0af9d757a6eceb1cab54c65d04fabcb01a"
+      ],
+      "attachment_name_hashes": [
+        "2cee15fdd4416478",
+        "44eb948e847dff4d",
+        "6e7988f85101f20a",
+        "81ea4c6cbb434fc1",
+        "a6f7d133b85a6a28",
+        "ee04aa713b923985"
+      ]
+    },
+    "revision": 1
+  },
+  "v2:7300df2d8ca827afc2c55a73": {
+    "notified": false,
+    "date": "06-10-2026",
+    "date_end": "21-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:7300df2d8ca827afc2c55a73",
+    "legacy_ids": [
+      "a64a586f46325c4f"
+    ],
+    "title": "AVVISO PUBBLICO PER L'ASSEGNAZIONE DEL BENEFICIO DELLA RIDUZIONE O DELL'ESENZIONE DEL TICKET MENSA SCOLASTICA A.S. 2026/2027",
+    "num_pub": "548",
+    "tipo": "AVVISO PUBBLICO",
+    "sender": "RESPONSABILE AREA AMMINISTRATIVA FINANZIARIA",
+    "act_number": "",
+    "register_number": ""
+  },
+  "v2:84f1ab542a182c4d22bcfeac": {
+    "notified": false,
+    "date": "06-10-2026",
+    "date_end": "21-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:84f1ab542a182c4d22bcfeac",
+    "legacy_ids": [
+      "cbed6442ebdb9295"
+    ],
+    "title": "APPROVAZIONE AVVISO PUBBLICO PER ISTANZA DI CONCESSIONE DEL BENEFICIO DELLA RIDUZIONE O DELL'ESENZIONE  DEL BUONO MENSA SCOLASTICA A.S. 2026/2027",
+    "num_pub": "547",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "224",
+    "register_number": ""
   }
 }
