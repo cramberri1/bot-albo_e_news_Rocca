@@ -7939,7 +7939,7 @@
     "revision": 1
   },
   "v2:05aeb609ff3c879568553691": {
-    "notified": false,
+    "notified": true,
     "date": "06-10-2026",
     "date_end": "21-10-2026",
     "expired": false,
