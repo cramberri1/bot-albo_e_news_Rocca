@@ -7901,5 +7901,41 @@
       ]
     },
     "revision": 1
+  },
+  "v2:7f44c2ed47d3635a18e50cfe": {
+    "notified": true,
+    "date": "06-10-2026",
+    "date_end": "21-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:7f44c2ed47d3635a18e50cfe",
+    "legacy_ids": [
+      "9f424bacffeac561",
+      "v2:7f44c2ed47d3635a18e50cfe"
+    ],
+    "title": "Patrocinio all'Associazione il Filo di Arianna per evento culturale",
+    "num_pub": "546",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "57",
+    "register_number": "",
+    "last_revision_check_at": "2026-10-06T12:32:26Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "61338d7ae421741ec97bf1cae2b06c07b91a5504074bea5c943ee707d10b683e",
+    "revision_snapshot": {
+      "date": "06-10-2026",
+      "date_end": "21-10-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "57",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "97ffaadc00cddef7503faf61ab4675b9f15f090dfe1dc32f30326e5cd3f05051"
+      ],
+      "attachment_name_hashes": [
+        "7d72382b1e5da54a"
+      ]
+    },
+    "revision": 1
   }
 }
