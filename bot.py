@@ -33,6 +33,7 @@ import functools
 import time
 from admin_status import CheckHealth
 from runtime_policy import RuntimePolicy
+from git_runtime import GitCommandRunner
 from albo_identity import (normalize_field, normalize_number, parse_publication_number,
     parse_act_number, parse_register_number, legacy_item_id, item_id_v2,
     normalize_snapshot, find_existing_equivalent_item, flood_reason, _age)
@@ -573,18 +574,24 @@ def load_db(*, migrate: bool = True) -> dict:
         "per evitare notifiche duplicate o perdita di stato."
     )
 
-def save_db(db: dict, *, push: bool = True, message: str = "aggiornamento database [skip ci]"):
+def save_db(db: dict, *, push: bool = True, message: str = "aggiornamento database [skip ci]") -> bool:
     _atomic_write_text(DB_PATH, json.dumps(db, ensure_ascii=False, indent=2) + "\n")
     if push:
-        git_commit_and_push([str(DB_PATH)], message=message)
+        return git_commit_and_push([str(DB_PATH)], message=message)
+    return True
 
 def git_commit_and_push(
     paths: list | None = None,
     message: str = "aggiornamento database [skip ci]",
     allow_delete: bool = False,
     max_retries: int = 3,
+    deadline: float | None = None,
 ) -> bool:
     """Committa e sincronizza lo stato su GitHub Actions.
+
+    Ogni transazione ha un budget totale di 30 secondi. I processi Git POSIX
+    sono isolati dai segnali inviati al worker e terminati come gruppo se
+    superano il budget; nessun retry può estendere indefinitamente la chiusura.
 
     Migliorie rispetto alla versione precedente:
     - individua il vero root Git con ``git rev-parse`` (BOT_STATE_DIR può essere
@@ -610,6 +617,8 @@ def git_commit_and_push(
                 SUBSCRIBERS_NEWS_PATH,
                 TELEGRAM_UPDATES_PATH,
                 ALBO_SAFETY_PATH,
+                ALBO_BASELINE_PATH,
+                NEWS_BASELINE_PATH,
             )
             if p.exists()
         ]
@@ -617,10 +626,14 @@ def git_commit_and_push(
             return True
 
     try:
-        import subprocess
+        run = GitCommandRunner(
+            seconds=30,
+            deadline_getter=lambda: deadline if deadline is not None else _SHUTDOWN_CHECKPOINT_DEADLINE,
+        ).run
 
         state_root = DATA_DIR.resolve()
         grouped: dict[Path, list[Path]] = {}
+        roots_by_directory: dict[Path, Path] = {}
 
         for raw_path in paths:
             resolved = Path(raw_path).resolve()
@@ -631,20 +644,22 @@ def git_commit_and_push(
                 return False
 
             probe_dir = resolved if resolved.is_dir() else resolved.parent
-            root_probe = subprocess.run(
-                ["git", "-C", str(probe_dir), "rev-parse", "--show-toplevel"],
-                capture_output=True,
-                text=True,
-                timeout=30,
-            )
-            if root_probe.returncode != 0:
-                log.error(
-                    f"Impossibile individuare il repository Git per {resolved}: "
-                    f"{_safe_error(root_probe.stderr)}"
+            repo_root = roots_by_directory.get(probe_dir)
+            if repo_root is None:
+                root_probe = run(
+                    ["git", "-C", str(probe_dir), "rev-parse", "--show-toplevel"],
+                    capture_output=True,
+                    text=True,
+                    timeout=30,
                 )
-                return False
-
-            repo_root = Path(root_probe.stdout.strip()).resolve()
+                if root_probe.returncode != 0:
+                    log.error(
+                        f"Impossibile individuare il repository Git per {resolved}: "
+                        f"codice={root_probe.returncode}, {_safe_error(root_probe.stderr)}"
+                    )
+                    return False
+                repo_root = Path(root_probe.stdout.strip()).resolve()
+                roots_by_directory[probe_dir] = repo_root
             try:
                 relative = resolved.relative_to(repo_root)
             except ValueError:
@@ -657,12 +672,12 @@ def git_commit_and_push(
             repo = str(repo_root)
             display_paths = [str(path) for path in relative_paths]
 
-            subprocess.run(
+            run(
                 ["git", "-C", repo, "config", "user.name", "AlboBot"],
                 check=False,
                 timeout=30,
             )
-            subprocess.run(
+            run(
                 ["git", "-C", repo, "config", "user.email", "bot@alborocca"],
                 check=False,
                 timeout=30,
@@ -672,7 +687,7 @@ def git_commit_and_push(
             if allow_delete:
                 add_args.append("-A")
             add_args.extend(["--", *display_paths])
-            add = subprocess.run(
+            add = run(
                 add_args,
                 capture_output=True,
                 text=True,
@@ -683,7 +698,7 @@ def git_commit_and_push(
                 all_ok = False
                 continue
 
-            diff = subprocess.run(
+            diff = run(
                 ["git", "-C", repo, "diff", "--staged", "--quiet"],
                 check=False,
                 timeout=30,
@@ -694,7 +709,7 @@ def git_commit_and_push(
                 continue
 
             if diff.returncode == 1:
-                commit = subprocess.run(
+                commit = run(
                     ["git", "-C", repo, "commit", "-m", message],
                     capture_output=True,
                     text=True,
@@ -709,7 +724,7 @@ def git_commit_and_push(
             # indietro per un precedente push fallito.
             for attempt in range(1, max_retries + 1):
                 target_branch = (os.environ.get("STATE_GIT_BRANCH") or "main").strip() or "main"
-                push = subprocess.run(
+                push = run(
                     ["git", "-C", repo, "push", "origin", f"HEAD:{target_branch}"],
                     capture_output=True,
                     text=True,
@@ -730,7 +745,7 @@ def git_commit_and_push(
                     all_ok = False
                     break
 
-                fetch = subprocess.run(
+                fetch = run(
                     ["git", "-C", repo, "fetch", "origin", target_branch],
                     capture_output=True,
                     text=True,
@@ -744,14 +759,26 @@ def git_commit_and_push(
                     all_ok = False
                     break
 
-                rebase = subprocess.run(
-                    ["git", "-C", repo, "rebase", "--autostash", f"origin/{target_branch}"],
-                    capture_output=True,
-                    text=True,
-                    timeout=90,
-                )
+                try:
+                    rebase = run(
+                        ["git", "-C", repo, "rebase", "--autostash", f"origin/{target_branch}"],
+                        capture_output=True,
+                        text=True,
+                        timeout=90,
+                    )
+                except Exception:
+                    # Reserve a small, independent cleanup budget even when
+                    # the transaction deadline expired inside Git's rebase.
+                    GitCommandRunner(seconds=3, deadline_getter=lambda: _SHUTDOWN_GIT_DEADLINE).run(
+                        ["git", "-C", repo, "rebase", "--abort"],
+                        capture_output=True, timeout=3,
+                    )
+                    raise
                 if rebase.returncode != 0:
-                    subprocess.run(["git", "-C", repo, "rebase", "--abort"], capture_output=True, timeout=30)
+                    GitCommandRunner(seconds=3, deadline_getter=lambda: _SHUTDOWN_GIT_DEADLINE).run(
+                        ["git", "-C", repo, "rebase", "--abort"],
+                        capture_output=True, timeout=3,
+                    )
                     log.warning(
                         f"git rebase origin/{target_branch} fallito in {repo}: "
                         f"{_safe_error(rebase.stderr)}"
@@ -773,12 +800,12 @@ def load_seen() -> set:
     db = load_db()
     return {h for h, rec in db.items() if rec.get("notified", True)}
 
-def save_seen(seen: set):
+def save_seen(seen: set, *, push: bool = True) -> bool:
     db = load_db()
     for h in seen:
         rec = db.setdefault(h, {})
         rec["notified"] = True
-    save_db(db)
+    return save_db(db, push=push)
 
 def update_item_cache(item: dict, *, push: bool = False) -> bool:
     """Salva date/stato di un atto senza marcarlo come notificato.
@@ -830,17 +857,24 @@ def load_news_db() -> dict:
     """
     if not NEWS_DB_PATH.exists():
         return {}
-    return json.loads(NEWS_DB_PATH.read_text(encoding="utf-8"))
+    db = json.loads(NEWS_DB_PATH.read_text(encoding="utf-8"))
+    if not isinstance(db, dict) or any(not isinstance(record, dict) for record in db.values()):
+        raise RuntimeError(
+            "seen_news.json ha un formato inatteso: archivio conservato, "
+            "inizializzazione e invii sospesi per sicurezza."
+        )
+    return db
 
-def save_news_db(db: dict, *, push: bool = True):
+def save_news_db(db: dict, *, push: bool = True) -> bool:
     _atomic_write_text(NEWS_DB_PATH, json.dumps(db, ensure_ascii=False, indent=2) + "\n")
     if push:
-        git_commit_and_push([str(NEWS_DB_PATH)], message="aggiornamento archivio news [skip ci]")
+        return git_commit_and_push([str(NEWS_DB_PATH)], message="aggiornamento archivio news [skip ci]")
+    return True
 
 def load_seen_news() -> set:
     return set(load_news_db().keys())
 
-def save_seen_news(seen_ids: set, items_by_id: dict, *, push: bool = True):
+def save_seen_news(seen_ids: set, items_by_id: dict, *, push: bool = True) -> bool:
     """
     Salva gli id visti, conservando i metadati (title/category/date/url)
     per ogni news passata in items_by_id.
@@ -861,7 +895,7 @@ def save_seen_news(seen_ids: set, items_by_id: dict, *, push: bool = True):
     for nid in list(db.keys()):
         if nid not in seen_ids:
             del db[nid]
-    save_news_db(db, push=push)
+    return save_news_db(db, push=push)
 
 # ---------------------------------------------------------------------------
 # Cache "atti visti" per singolo utente (diversa dalla cache globale atti)
@@ -959,7 +993,7 @@ def save_user_seen_news(data: dict, *, push: bool = True):
             message="aggiornamento consegne news [skip ci]",
         )
 
-def touch_last_check():
+def touch_last_check(*, push: bool = True) -> bool:
     """Aggiorna il timestamp locale dell'ultimo controllo.
 
     Su GitHub persiste il file al massimo una volta al giorno: il comando
@@ -978,11 +1012,12 @@ def touch_last_check():
 
     previous_day = previous[:10] if len(previous) >= 10 else ""
     current_day = now_text[:10]
-    if previous_day != current_day:
-        git_commit_and_push(
+    if push and previous_day != current_day:
+        return git_commit_and_push(
             [str(LAST_CHECK_PATH)],
             message="heartbeat giornaliero [skip ci]",
         )
+    return True
 
 # ---------------------------------------------------------------------------
 # Heartbeat — inviato solo se il run è quello delle 9:00 UTC (ora italiana 10/11)
@@ -2214,8 +2249,27 @@ def item_revision_fingerprint(snapshot: dict | None) -> str:
     return hashlib.sha256(raw).hexdigest()
 
 
-def revision_delivery_key(item_hash: str, fingerprint: str) -> str:
-    return f"{item_hash}@{fingerprint[:24]}"
+def revision_delivery_key(item_hash: str, fingerprint: str, epoch: int | None = None) -> str:
+    """Deduplicate one observed revision, including returns to earlier bytes.
+
+    The legacy form remains readable for an already pending pre-migration
+    delivery. New revisions use a persisted epoch which is stable on retry.
+    """
+    key = f"{item_hash}@{fingerprint[:24]}"
+    return f'{key}:{epoch}' if epoch is not None else key
+
+
+def _merge_albo_delivery_record(latest: dict, current: dict) -> dict:
+    """Merge cache fields without resurrecting finalized pending delivery keys."""
+    merged = {**latest, **current}
+    for key in ('pending_kind', 'pending_version', 'pending_revision_changes',
+                'pending_delivery_key', 'pending_revision_snapshot'):
+        if key not in current:
+            merged.pop(key, None)
+    for key in ('date', 'date_end', 'expired'):
+        if key in latest:
+            merged[key] = latest[key]
+    return merged
 
 
 def revision_changes(previous_snapshot: dict | None, current_snapshot: dict) -> list[str]:
@@ -2676,22 +2730,28 @@ async def reply_item(update: Update, item: dict) -> bool:
     finally:
         cleanup_attachment_files(item)
 
-async def notify(bot: Bot, item: dict, recipients: set | None = None) -> tuple[set, set]:
+async def notify(bot: Bot, item: dict, recipients: set | None = None, *,
+                 on_delivery=None) -> tuple[set, set]:
     """Invia un atto e restituisce (destinatari riusciti, destinatari falliti).
 
-    La cronologia viene salvata in blocco dal ciclo chiamante: in questo modo
-    una raffica di atti non genera un commit Git per ogni singolo destinatario.
+    Il callback sincrono persiste ogni esito prima della pausa o del prossimo
+    destinatario. Un atto parziale non produce una ricevuta di consegna.
     """
     successful = set()
     failed = set()
     targets = recipients if recipients is not None else get_all_recipients()
     try:
-        for chat_id in targets:
+        for chat_id in sorted(targets):
+            if shutdown_requested():
+                failed.update(targets - successful)
+                break
             ok = await send_item_to_chat(bot, chat_id, item)
             if ok:
                 successful.add(chat_id)
             else:
                 failed.add(chat_id)
+            if on_delivery is not None:
+                on_delivery(chat_id, ok)
             await asyncio.sleep(1.0)  # evita flood verso Telegram
         return successful, failed
     finally:
@@ -2752,15 +2812,22 @@ async def send_news_to_chat(bot: Bot, chat_id: int, item: dict) -> bool:
         log.error(f"Errore invio news: {_safe_error(e)}")
         return False
 
-async def notify_news(bot: Bot, item: dict, recipients: set | None = None) -> tuple[set, set]:
+async def notify_news(bot: Bot, item: dict, recipients: set | None = None, *,
+                      on_delivery=None) -> tuple[set, set]:
     successful = set()
     failed = set()
     targets = recipients if recipients is not None else get_all_news_recipients()
-    for chat_id in targets:
-        if await send_news_to_chat(bot, chat_id, item):
+    for chat_id in sorted(targets):
+        if shutdown_requested():
+            failed.update(targets - successful)
+            break
+        ok = await send_news_to_chat(bot, chat_id, item)
+        if ok:
             successful.add(chat_id)
         else:
             failed.add(chat_id)
+        if on_delivery is not None:
+            on_delivery(chat_id, ok)
         await asyncio.sleep(1.0)  # evita flood verso Telegram
     return successful, failed
 
@@ -3553,11 +3620,20 @@ async def cmd_controlla(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text("🔍 Controllo in corso...")
 
-    result_albo = await run_check(context.bot)
-    news_ready = await _ensure_news_baseline()
-    result_news = await run_check_news(context.bot) if news_ready else {
-        "ok": False, "new": 0, "total": 0,
-    }
+    results = {}
+    for name, baseline, check in (
+        ("Albo", _ensure_albo_baseline, run_check),
+        ("News", _ensure_news_baseline, run_check_news),
+    ):
+        try:
+            ready = await baseline()
+            results[name] = await check(context.bot) if ready else {"ok": False}
+        except Exception as error:
+            # A corrupt archive or failed source must not hide the independent
+            # source's result, and the command must never report false success.
+            log.error("Errore controllo manuale %s: %s", name, _safe_error(error))
+            results[name] = {"ok": False}
+    result_albo, result_news = results["Albo"], results["News"]
 
     ok_albo = "✅" if result_albo.get("ok") else "❌"
     ok_news = "✅" if result_news.get("ok") else "❌"
@@ -3734,7 +3810,8 @@ async def _run_check_albo(bot: Bot) -> dict:
         for item in current_items:
             if bind_identity(item, db):
                 reconciled += 1
-        new_now = [i for i in current_items if item_id(i) not in seen]
+        new_now = [i for i in current_items if item_id(i) not in seen
+                   and not db.get(item_id(i), {}).get('delivery_pending')]
         candidate_count = len(new_now)
         safety_reason = flood_reason(current_items, new_now,
             max_new=ALBO_MAX_NEW_PER_CYCLE, ratio=ALBO_NEW_RATIO,
@@ -3747,7 +3824,7 @@ async def _run_check_albo(bot: Bot) -> dict:
             return []
         pending_now = [
             i for i in current_items
-            if item_id(i) in seen and db.get(item_id(i), {}).get("delivery_pending", False)
+            if db.get(item_id(i), {}).get("delivery_pending", False)
         ]
 
         revision_due = []
@@ -3834,7 +3911,11 @@ async def _run_check_albo(bot: Bot) -> dict:
         remember_identity(rec, item)
         if h not in seen:
             age = _age(item, now.date())
-            if migration or age is None or age < 0 or age > ALBO_NOTIFY_MAX_AGE_DAYS:
+            if rec.get('delivery_pending'):
+                # A failed initial delivery remains retryable after its age
+                # threshold. It must not be swallowed by a historical baseline.
+                new_items.append(item)
+            elif migration or age is None or age < 0 or age > ALBO_NOTIFY_MAX_AGE_DAYS:
                 rec['notified'] = True
                 rec['baseline_reason'] = 'identity_migration' if migration else 'historical_or_unknown_date'
                 seen.add(h)
@@ -3864,22 +3945,43 @@ async def _run_check_albo(bot: Bot) -> dict:
                 changes = revision_changes(rec.get('revision_snapshot'), snapshot)
                 # Same pending version may already have reached some recipients.
                 if not changes and fingerprint != rec.get('pending_version'):
-                    rec['delivery_pending'] = False
-                    for key in ('pending_kind', 'pending_version', 'pending_revision_changes'):
-                        rec.pop(key, None)
-                    suppressed_revisions += 1
-                    db_changed = True
-                    continue
+                    pending_key = rec.get('pending_delivery_key') or revision_delivery_key(
+                        h, str(rec.get('pending_version') or ''))
+                    confirmed = any(pending_key in hashes for hashes in load_user_seen().values())
+                    if not confirmed:
+                        rec['delivery_pending'] = False
+                        for key in ('pending_kind', 'pending_version', 'pending_revision_changes',
+                                    'pending_delivery_key', 'pending_revision_snapshot'):
+                            rec.pop(key, None)
+                        suppressed_revisions += 1
+                        db_changed = True
+                        continue
+                    # A recipient saw the abandoned pending version. Returning
+                    # to the baseline is now a real update for that recipient.
+                    changes = revision_changes(rec.get('pending_revision_snapshot'), snapshot)
                 item["_notification_kind"] = "revision"
                 item["_revision_hash"] = fingerprint
                 item["_revision_changes"] = changes or list(rec.get('pending_revision_changes') or [])
+                item['_legacy_pending_delivery'] = (
+                    'delivery_epoch' not in rec and not rec.get('pending_delivery_key')
+                    and fingerprint == rec.get('pending_version'))
                 if not item['_revision_changes']:
                     log.warning('Revisione pending senza modifica concreta: invio sospeso')
                     continue
                 revision_items.append(item)
             else:
-                item["_notification_kind"] = "new"
-                pending_initial.append(item)
+                previous_version = str(rec.get('pending_version') or rec.get('revision_fingerprint') or '')
+                changes = revision_changes(rec.get('revision_snapshot'), snapshot) if snapshot else []
+                if fingerprint and previous_version and fingerprint != previous_version and changes:
+                    # Some chats already received the initial version. A new
+                    # source version must reach those chats too, under a new key.
+                    item['_notification_kind'] = 'revision'
+                    item['_revision_hash'] = fingerprint
+                    item['_revision_changes'] = changes
+                    revision_items.append(item)
+                else:
+                    item["_notification_kind"] = "new"
+                    pending_initial.append(item)
             continue
 
         # Se il recupero dettaglio/allegati non è completo non consideriamo il
@@ -3916,6 +4018,8 @@ async def _run_check_albo(bot: Bot) -> dict:
             rec["pending_kind"] = "revision"
             rec["pending_version"] = fingerprint
             rec["pending_revision_changes"] = changes
+            rec.pop('pending_delivery_key', None)
+            rec.pop('pending_revision_snapshot', None)
             rec["delivery_pending"] = True
             revision_items.append(item)
             db_changed = True
@@ -3937,8 +4041,12 @@ async def _run_check_albo(bot: Bot) -> dict:
     notified_count = 0
     updated_count = 0
     failed_deliveries = 0
+    interrupted = False
 
     for item in work_items:
+        if shutdown_requested():
+            interrupted = True
+            break
         h = item_id(item)
         rec = db.setdefault(h, {"notified": False})
         kind = item.get("_notification_kind") or "new"
@@ -3949,7 +4057,17 @@ async def _run_check_albo(bot: Bot) -> dict:
 
         delivery_key = h
         if kind == "revision" and fingerprint:
-            delivery_key = revision_delivery_key(h, fingerprint)
+            if rec.get('pending_delivery_key') and rec.get('pending_version') == fingerprint:
+                delivery_key = rec['pending_delivery_key']
+            elif item.get('_legacy_pending_delivery'):
+                delivery_key = revision_delivery_key(h, fingerprint)
+            else:
+                epoch = rec.get('delivery_epoch', 0)
+                if type(epoch) is not int or epoch < 0:
+                    raise RuntimeError('Contatore consegne Albo non valido')
+                rec['delivery_epoch'] = epoch + 1
+                delivery_key = revision_delivery_key(h, fingerprint, epoch + 1)
+            rec['pending_delivery_key'] = delivery_key
 
         already_delivered = {
             chat_id for chat_id in recipients
@@ -3958,7 +4076,52 @@ async def _run_check_albo(bot: Bot) -> dict:
         }
         targets = recipients - already_delivered
 
-        successful, failed = await notify(bot, item, targets)
+        def checkpoint_albo(*, with_history: bool):
+            paths = [str(DB_PATH)]
+            if with_history:
+                latest_history = load_user_seen()
+                for key, delivered in user_seen_data.items():
+                    latest_history[key] = sorted(set(latest_history.get(key, [])) | set(delivered))
+                save_user_seen(latest_history, push=False)
+                paths.append(str(USER_SEEN_PATH))
+            latest_records = load_db()
+            latest_records[h] = _merge_albo_delivery_record(latest_records.get(h, {}), rec)
+            save_db(latest_records, push=False)
+            if not git_commit_and_push(paths, message='checkpoint consegna albo [skip ci]'):
+                raise RuntimeError('Checkpoint consegna fallito: ciclo Albo interrotto per sicurezza')
+
+        # Persist intent before side effects. In-progress work remains pending
+        # until the complete fanout has been finalized below.
+        rec['delivery_pending'] = bool(targets)
+        if targets:
+            rec['pending_kind'] = kind
+            if fingerprint:
+                rec['pending_version'] = fingerprint
+            if kind == 'revision':
+                rec['pending_revision_changes'] = list(item.get('_revision_changes') or [])
+                if snapshot:
+                    rec['pending_revision_snapshot'] = snapshot
+        if kind == 'new' and snapshot and fingerprint:
+            rec['revision_fingerprint'] = fingerprint
+            rec['revision_snapshot'] = snapshot
+            rec['revision'] = max(1, int(rec.get('revision') or 1))
+        checkpoint_albo(with_history=False)
+
+        def recipient_completed(chat_id, ok):
+            nonlocal user_seen_changed
+            if ok:
+                key = str(chat_id)
+                delivered = set(user_seen_data.get(key, []))
+                delivered.add(delivery_key)
+                if kind == 'revision':
+                    delivered.add(h)
+                user_seen_data[key] = sorted(delivered)
+                user_seen_changed = True
+                if kind == 'new':
+                    rec['notified'] = True
+            checkpoint_albo(with_history=ok)
+
+        successful, failed = await notify(bot, item, targets, on_delivery=recipient_completed)
 
         for chat_id in successful:
             key = str(chat_id)
@@ -3975,7 +4138,7 @@ async def _run_check_albo(bot: Bot) -> dict:
 
         if kind == "revision":
             rec["notified"] = True
-            if successful or not targets:
+            if not failed:
                 if fingerprint and fingerprint != previous_fp:
                     rec["revision"] = max(1, int(rec.get("revision") or 1)) + 1
                 if fingerprint:
@@ -3993,10 +4156,12 @@ async def _run_check_albo(bot: Bot) -> dict:
                 rec.pop("pending_kind", None)
                 rec.pop("pending_version", None)
                 rec.pop("pending_revision_changes", None)
+                rec.pop('pending_delivery_key', None)
+                rec.pop('pending_revision_snapshot', None)
         else:
             if successful or not targets:
                 rec["notified"] = True
-            rec["delivery_pending"] = bool(failed) if rec.get("notified") else False
+            rec["delivery_pending"] = bool(failed)
             if rec.get("delivery_pending"):
                 rec["pending_kind"] = "new"
                 rec["pending_version"] = fingerprint
@@ -4004,6 +4169,8 @@ async def _run_check_albo(bot: Bot) -> dict:
                 rec.pop("pending_kind", None)
                 rec.pop("pending_version", None)
                 rec.pop("pending_revision_changes", None)
+                rec.pop('pending_delivery_key', None)
+                rec.pop('pending_revision_snapshot', None)
 
             # La prima versione diventa subito baseline per confronti futuri.
             if snapshot and fingerprint:
@@ -4021,15 +4188,8 @@ async def _run_check_albo(bot: Bot) -> dict:
                 f"{label.capitalize()} con {len(failed)} consegne in sospeso: "
                 f"{item.get('title', '?')[:80]}"
             )
-        latest_history = load_user_seen()
-        for key, delivered in user_seen_data.items():
-            latest_history[key] = sorted(set(latest_history.get(key, [])) | set(delivered))
-        save_user_seen(latest_history, push=False)
-        latest_records = load_db()
-        latest_records[h] = {**latest_records.get(h, {}), **rec}
-        save_db(latest_records, push=False)
-        if not git_commit_and_push([str(DB_PATH), str(USER_SEEN_PATH)]):
-            raise RuntimeError('Checkpoint consegna fallito: ciclo interrotto per sicurezza')
+        checkpoint_albo(with_history=bool(successful))
+        interrupted = interrupted or shutdown_requested()
         await asyncio.sleep(1.5)
 
     safety_state['identity_v2_ready'] = True
@@ -4049,14 +4209,9 @@ async def _run_check_albo(bot: Bot) -> dict:
         latest_db = load_db()
         # I record in memoria contengono stato consegne/revisioni; la cache date
         # può invece essere stata aggiornata durante l'arricchimento. La uniamo.
-        cache_fields = ("date", "date_end", "expired")
         for item_hash, record in db.items():
             latest_record = latest_db.get(item_hash, {})
-            merged_record = {**latest_record, **record}
-            for field in cache_fields:
-                if field in latest_record:
-                    merged_record[field] = latest_record[field]
-            latest_db[item_hash] = merged_record
+            latest_db[item_hash] = _merge_albo_delivery_record(latest_record, record)
         db = latest_db
         save_db(db, push=False)
         paths_to_push.append(str(DB_PATH))
@@ -4084,7 +4239,7 @@ async def _run_check_albo(bot: Bot) -> dict:
              sum(bool(r.get('delivery_pending')) for r in db.values()), failed_deliveries)
     cleanup_attachment_files(items)
     return {
-        "ok": failed_deliveries == 0 and detail_failures == 0 and git_ok,
+        "ok": not interrupted and failed_deliveries == 0 and detail_failures == 0 and git_ok,
         "new": notified_count,
         "updated": updated_count,
         "total": len(current_seen),
@@ -4165,16 +4320,53 @@ async def _run_check_news(bot: Bot) -> dict:
         db_changed = False
         notified_count = 0
         failed_deliveries = 0
+        interrupted = False
 
         for item in to_notify + pending_news:
+            if shutdown_requested():
+                interrupted = True
+                break
             nid = news_id(item)
             is_new = nid not in news_db
+            was_notified = bool(news_db.get(nid, {}).get('notified', not is_new))
             already_delivered = {
                 chat_id for chat_id in recipients
                 if nid in set(delivered_data.get(str(chat_id), []))
             }
             targets = recipients - already_delivered
-            successful, failed = await notify_news(bot, item, targets)
+
+            def checkpoint_news(*, with_history: bool):
+                paths = [str(NEWS_DB_PATH)]
+                if with_history:
+                    latest_history = load_user_seen_news()
+                    for key, delivered in delivered_data.items():
+                        latest_history[key] = sorted(set(latest_history.get(key, [])) | set(delivered))
+                    save_user_seen_news(latest_history, push=False)
+                    paths.append(str(USER_SEEN_NEWS_PATH))
+                save_news_db(news_db, push=False)
+                if not git_commit_and_push(paths, message='checkpoint consegna news [skip ci]'):
+                    raise RuntimeError('Checkpoint consegna News fallito: ciclo interrotto per sicurezza')
+
+            news_db[nid] = {
+                'title': item.get('title', ''), 'category': item.get('category', ''),
+                'date': item.get('date', ''), 'url': item.get('url', ''),
+                'description': item.get('description', ''),
+                'notified': was_notified, 'delivery_pending': bool(targets),
+            }
+            checkpoint_news(with_history=False)
+
+            def recipient_completed(chat_id, ok):
+                nonlocal delivered_changed
+                if ok:
+                    key = str(chat_id)
+                    delivered = set(delivered_data.get(key, []))
+                    delivered.add(nid)
+                    delivered_data[key] = sorted(delivered)
+                    delivered_changed = True
+                    news_db[nid]['notified'] = True
+                checkpoint_news(with_history=ok)
+
+            successful, failed = await notify_news(bot, item, targets, on_delivery=recipient_completed)
 
             for chat_id in successful:
                 key = str(chat_id)
@@ -4183,8 +4375,6 @@ async def _run_check_news(bot: Bot) -> dict:
                 delivered_data[key] = sorted(delivered)
                 delivered_changed = True
 
-            previous_rec = news_db.get(nid, {})
-            was_notified = bool(previous_rec.get("notified", not is_new))
             now_notified = was_notified or bool(successful) or not targets
 
             # Persistiamo ANCHE una news nuova fallita per tutti i destinatari:
@@ -4210,19 +4400,10 @@ async def _run_check_news(bot: Bot) -> dict:
                     f"{item.get('title', '?')[:80]}"
                 )
 
-            # Persisti ogni news prima di passare alla successiva: lo shutdown
-            # non può recuperare dal disco gli esiti ancora soltanto in memoria.
-            checkpoint_paths = [str(NEWS_DB_PATH)]
-            if delivered_changed:
-                save_user_seen_news(delivered_data, push=False)
-                checkpoint_paths.append(str(USER_SEEN_NEWS_PATH))
-            save_news_db(news_db, push=False)
-            if not git_commit_and_push(
-                checkpoint_paths, message="checkpoint consegna news [skip ci]"
-            ):
-                raise RuntimeError("Checkpoint consegna News fallito: ciclo interrotto per sicurezza")
+            checkpoint_news(with_history=bool(successful))
             delivered_changed = False
             db_changed = False
+            interrupted = interrupted or shutdown_requested()
             await asyncio.sleep(0.5)
 
         # Le news troppo vecchie vengono volutamente archiviate senza push.
@@ -4261,7 +4442,7 @@ async def _run_check_news(bot: Bot) -> dict:
             f"{failed_deliveries} consegne in sospeso)."
         )
         return {
-            "ok": failed_deliveries == 0 and git_ok,
+            "ok": not interrupted and failed_deliveries == 0 and git_ok,
             "new": notified_count,
             "total": len(news_db),
             "failed": failed_deliveries,
@@ -4273,48 +4454,171 @@ async def _run_check_news(bot: Bot) -> dict:
 # ---------------------------------------------------------------------------
 # Loop principale — check immediato all'avvio, poi ogni INTERVAL_MINUTES
 # ---------------------------------------------------------------------------
-async def _ensure_albo_baseline() -> bool:
-    """Crea la baseline solo se il DB non esiste davvero.
+ALBO_BASELINE_PATH = DATA_DIR / "albo_baseline.json"
+NEWS_BASELINE_PATH = DATA_DIR / "news_baseline.json"
+_BASELINE_CONFIRMATIONS: dict[str, str] = {}
 
-    Un errore di rete durante il bootstrap non deve trasformarsi in una raffica
-    di notifiche storiche: in quel caso il check Albo resta sospeso e si ritenta.
+
+def _baseline_marker_signature(path: Path) -> str | None:
+    """Valida il marker senza trasformare uno stato corrotto in un primo avvio."""
+    if not path.exists():
+        return None
+    raw = path.read_bytes()
+    marker = json.loads(raw.decode("utf-8"))
+    if (not isinstance(marker, dict) or type(marker.get("version")) is not int
+            or marker["version"] != 1 or marker.get("initialized") is not True):
+        raise RuntimeError("Marker baseline invalido: inizializzazione sospesa per sicurezza")
+    return hashlib.sha256(raw).hexdigest()
+
+
+def _confirm_baseline(marker_path: Path, paths: list[str]) -> bool:
+    """Conferma una volta per processo il medesimo snapshot già scritto.
+
+    Se un push fallisce il marker locale rimane intatto, ma non è pronto:
+    il retry sincronizza gli stessi file prima di ammettere un controllo.
     """
-    if DB_PATH.exists():
+    signature = _baseline_marker_signature(marker_path)
+    if signature is None:
+        raise RuntimeError("Marker baseline assente durante la conferma")
+    key = str(marker_path.resolve())
+    if _BASELINE_CONFIRMATIONS.get(key) == signature:
         return True
-
-    log.info("Prima esecuzione: costruisco baseline albo senza notifiche...")
-    items = await fetch_albo_html()
-    if items is None:
-        log.error("Baseline Albo non creata: fetch fallito. Nessun atto storico verrà notificato.")
+    if not git_commit_and_push(paths, message="checkpoint baseline iniziale [skip ci]"):
+        log.error("Baseline presente localmente ma persistenza non confermata: controlli sospesi.")
         return False
-
-    seen = {item_id(i) for i in items}
-    save_seen(seen)
-    touch_last_check()
-    log.info(f"Baseline albo: {len(seen)} atti salvati.")
+    _BASELINE_CONFIRMATIONS[key] = signature
     return True
+
+
+def _write_baseline_marker(path: Path):
+    # La generazione identifica questo bootstrap; non è un token di accesso.
+    marker = {"version": 1, "initialized": True, "generation": secrets.token_hex(16)}
+    _atomic_write_text(path, json.dumps(marker) + "\n")
+
+
+def _legacy_albo_baseline_ready(db: dict) -> bool:
+    """Distingue un archivio inizializzato dalla sola cache di /atti.
+
+    Il DB vuoto legacy è un archivio inizializzato valido. I campi del motore
+    automatico preservano anche le prime consegne fallite tutte insieme.
+    identity_v2_ready, da solo, può sopravvivere alla perdita del DB.
+    """
+    return not db or any(
+        record.get("notified", True)
+        or any(field in record for field in (
+            "delivery_pending", "revision_fingerprint", "baseline_reason",
+        ))
+        for record in db.values()
+    )
+
+
+async def _ensure_albo_baseline() -> bool:
+    """Bootstrap silenzioso completo, separato dalla cache manuale e durevole."""
+    async with _ALBO_CHECK_LOCK:
+        key = str(ALBO_BASELINE_PATH.resolve())
+        exists = DB_PATH.exists()
+        if not exists:
+            _BASELINE_CONFIRMATIONS.pop(key, None)
+        db = load_db(migrate=False)  # Corruzione e formati inattesi non diventano {}.
+        marker = _baseline_marker_signature(ALBO_BASELINE_PATH)
+        paths = [str(DB_PATH), str(ALBO_BASELINE_PATH)]
+        if LAST_CHECK_PATH.exists():
+            paths.append(str(LAST_CHECK_PATH))
+        if exists and marker is not None:
+            return _confirm_baseline(ALBO_BASELINE_PATH, paths)
+        if exists and _legacy_albo_baseline_ready(db):
+            return True
+
+        _BASELINE_CONFIRMATIONS.pop(key, None)
+        log.info("Prima esecuzione: costruisco baseline albo senza notifiche...")
+        diagnostics = {}
+        items = await fetch_albo_html(write_cache=False, diagnostics=diagnostics)
+        if (items is None or diagnostics.get("incomplete_pagination")
+                or diagnostics.get("unreadable_pages") or diagnostics.get("partial_pages")
+                or diagnostics.get("skipped_cards")):
+            log.error("Baseline Albo non creata: lettura fallita o incompleta. Controlli sospesi.")
+            return False
+
+        # Mantieni cache, chiavi canoniche, alias e ricevute precedenti. Nessun
+        # record viene eliminato soltanto perché assente dall'elenco corrente.
+        latest = load_db(migrate=False)
+        for item in items:
+            bind_identity(item, latest)
+            h = item_id(item)
+            record = latest.setdefault(h, {})
+            remember_identity(record, item)
+            record["notified"] = True
+        save_db(latest, push=False)
+        _write_baseline_marker(ALBO_BASELINE_PATH)
+        touch_last_check(push=False)
+        paths = [str(DB_PATH), str(ALBO_BASELINE_PATH), str(LAST_CHECK_PATH)]
+        ready = _confirm_baseline(ALBO_BASELINE_PATH, paths)
+        if ready:
+            log.info("Baseline albo: %s atti salvati senza notifiche.", len(items))
+        return ready
 
 
 async def _ensure_news_baseline() -> bool:
-    """Come per l'Albo: baseline solo su stato realmente assente."""
-    if NEWS_DB_PATH.exists():
-        return True
+    """Non ripete il bootstrap dopo un push fallito né svuota archivi esistenti."""
+    async with _NEWS_CHECK_LOCK:
+        key = str(NEWS_BASELINE_PATH.resolve())
+        exists = NEWS_DB_PATH.exists()
+        if not exists:
+            _BASELINE_CONFIRMATIONS.pop(key, None)
+        db = load_news_db()
+        marker = _baseline_marker_signature(NEWS_BASELINE_PATH)
+        paths = [str(NEWS_DB_PATH), str(NEWS_BASELINE_PATH)]
+        if exists and marker is not None:
+            return _confirm_baseline(NEWS_BASELINE_PATH, paths)
+        if exists:
+            return True  # Anche {} e consegne pending sono archivi legacy validi.
 
-    log.info("Prima esecuzione: costruisco baseline news senza notifiche...")
-    news_items = await fetch_news_html()
-    if news_items is None:
-        log.error("Baseline News non creata: fetch fallito. Il check News resta sospeso.")
-        return False
+        log.info("Prima esecuzione: costruisco baseline news senza notifiche...")
+        news_items = await fetch_news_html()
+        if news_items is None:
+            log.error("Baseline News non creata: fetch fallito. Il check News resta sospeso.")
+            return False
 
-    seen_news = {news_id(i) for i in news_items}
-    items_by_id = {news_id(i): i for i in news_items}
-    save_seen_news(seen_news, items_by_id)
-    log.info(f"Baseline news: {len(seen_news)} news salvate.")
-    return True
+        latest = load_news_db()
+        for item in news_items:
+            nid = news_id(item)
+            latest.setdefault(nid, {
+                "title": item.get("title", ""), "category": item.get("category", ""),
+                "date": item.get("date", ""), "url": item.get("url", ""),
+                "description": item.get("description", ""),
+                "notified": True, "delivery_pending": False,
+            })
+        save_news_db(latest, push=False)
+        _write_baseline_marker(NEWS_BASELINE_PATH)
+        ready = _confirm_baseline(NEWS_BASELINE_PATH, paths)
+        if ready:
+            log.info("Baseline news: %s news salvate senza notifiche.", len(news_items))
+        return ready
 
 
 def _runtime_now() -> datetime:
     return datetime.now(timezone.utc)
+
+
+_SHUTDOWN_REQUESTED = False
+_SHUTDOWN_DRAIN_SECONDS = 20.0
+_SHUTDOWN_CHECKPOINT_DEADLINE = None
+_SHUTDOWN_GIT_DEADLINE = None
+
+
+def shutdown_requested() -> bool:
+    return _SHUTDOWN_REQUESTED
+
+
+def _mark_shutdown_requested():
+    global _SHUTDOWN_REQUESTED, _SHUTDOWN_CHECKPOINT_DEADLINE, _SHUTDOWN_GIT_DEADLINE
+    if not _SHUTDOWN_REQUESTED:
+        now = time.monotonic()
+        # All workers share these budgets. Reserve the final 20 seconds for
+        # the last flush, instead of granting each checkpoint a fresh timeout.
+        _SHUTDOWN_CHECKPOINT_DEADLINE = now + 40.0
+        _SHUTDOWN_GIT_DEADLINE = now + 60.0
+    _SHUTDOWN_REQUESTED = True
 
 
 async def _automatic_cycle(bot: Bot):
@@ -4329,12 +4633,12 @@ async def _automatic_cycle(bot: Bot):
         ("Albo", _ensure_albo_baseline, run_check, load_seen),
         ("News", _ensure_news_baseline, run_check_news, load_seen_news),
     ):
-        if not RUNTIME_POLICY.allows(_runtime_now()):
+        if shutdown_requested() or not RUNTIME_POLICY.allows(_runtime_now()):
             break
         try:
             ready = await baseline()
             # Bootstrap may itself have crossed the night boundary.
-            if not RUNTIME_POLICY.allows(_runtime_now()):
+            if shutdown_requested() or not RUNTIME_POLICY.allows(_runtime_now()):
                 break
             result = await check(bot, automatic=True) if ready else {"ok": False}
             results[name] = (result, seen_loader() if ready else set())
@@ -4344,7 +4648,7 @@ async def _automatic_cycle(bot: Bot):
             # One failing source must not hide the other source's outcome.
             results[name] = ({"ok": False}, set())
             log.error("Errore controllo automatico %s: %s", name, _safe_error(error))
-    if len(results) == 2:
+    if len(results) == 2 and not shutdown_requested():
         await send_heartbeat(
             bot, results["Albo"][1], results["News"][1],
             albo_ok=bool(results["Albo"][0].get("ok")),
@@ -4352,14 +4656,14 @@ async def _automatic_cycle(bot: Bot):
         )
 
 
-async def polling_loop(app: Application):
+async def polling_loop(app: Application, stop=None):
     """Supervise automatic polling independently from Telegram availability."""
     next_due = 0.0
     previously_allowed = None
     log.info("Politica automatica: %s–%s Europe/Rome, pausa %s min",
              RUNTIME_POLICY.start_label, RUNTIME_POLICY.end_label,
              RUNTIME_POLICY.interval_minutes)
-    while True:
+    while not shutdown_requested() and not (stop and stop.is_set()):
         now = _runtime_now()
         allowed = RUNTIME_POLICY.allows(now)
         if allowed != previously_allowed:
@@ -4379,7 +4683,13 @@ async def polling_loop(app: Application):
         delay = min(60.0, max(0.1, until_boundary))
         if RUNTIME_POLICY.allows(now):
             delay = min(delay, max(0.1, next_due - time.monotonic()))
-        await asyncio.sleep(delay)
+        if stop is None:
+            await asyncio.sleep(delay)
+        else:
+            try:
+                await asyncio.wait_for(stop.wait(), timeout=delay)
+            except asyncio.TimeoutError:
+                pass
 
 def load_telegram_updates():
     if not TELEGRAM_UPDATES_PATH.exists():
@@ -4450,6 +4760,10 @@ async def telegram_polling(app, stop):
 # Entry point
 # ---------------------------------------------------------------------------
 async def main():
+    global _SHUTDOWN_REQUESTED, _SHUTDOWN_CHECKPOINT_DEADLINE, _SHUTDOWN_GIT_DEADLINE
+    _SHUTDOWN_REQUESTED = False
+    _SHUTDOWN_CHECKPOINT_DEADLINE = None
+    _SHUTDOWN_GIT_DEADLINE = None
     log.info("=== Albo Pretorio Bot avviato ===")
     from telegram.request import HTTPXRequest
     request = HTTPXRequest(
@@ -4480,30 +4794,51 @@ async def main():
 
     stop = asyncio.Event()
     loop = asyncio.get_running_loop()
+
+    def request_stop(signum, _frame):
+        _mark_shutdown_requested()
+        log.info('Arresto richiesto (segnale %s): completo il lavoro in corso entro il budget.', signum)
+        loop.call_soon_threadsafe(stop.set)
+
     for sig in (signal.SIGINT, signal.SIGTERM):
-        signal.signal(sig, lambda *_: loop.call_soon_threadsafe(stop.set))
+        signal.signal(sig, request_stop)
     async def handle_error(update, context):
         log.error('Errore handler Telegram: %s', _safe_error(context.error))
     app.add_error_handler(handle_error)
     async with app:
         await app.start()
-        tasks = [asyncio.create_task(polling_loop(app)), asyncio.create_task(telegram_polling(app, stop))]
+        tasks = [asyncio.create_task(polling_loop(app, stop), name='automatic-polling'),
+                 asyncio.create_task(telegram_polling(app, stop), name='telegram-polling')]
         stop_task = asyncio.create_task(stop.wait())
         try:
             done, _ = await asyncio.wait([*tasks, stop_task], return_when=asyncio.FIRST_COMPLETED)
             for task in done:
                 if task is not stop_task:
                     task.result()
+                    if not stop.is_set():
+                        raise RuntimeError(f'Worker {task.get_name()} terminato senza richiesta di arresto')
         finally:
+            _mark_shutdown_requested()
             stop.set()
-            for task in [*tasks, stop_task]:
+            # Give completed sends time to reach their receipt checkpoint.
+            # Idle automatic waits wake immediately; an unresponsive request
+            # is cancelled after a bounded drain instead of blocking shutdown.
+            _, pending = await asyncio.wait(tasks, timeout=_SHUTDOWN_DRAIN_SECONDS)
+            for task in [*pending, stop_task]:
                 task.cancel()
-            await asyncio.gather(*tasks, stop_task, return_exceptions=True)
+            outcomes = await asyncio.gather(*tasks, stop_task, return_exceptions=True)
+            drain_error = next((outcome for outcome in outcomes[:len(tasks)]
+                                if isinstance(outcome, Exception)), None)
             _search_sessions.clear()
             _search_attachment_requests.clear()
-            await app.stop()
-            if not git_commit_and_push():
-                log.error('Flush Git finale fallito: conservare lo stato residuo del runner.')
+            try:
+                await asyncio.wait_for(app.stop(), timeout=10)
+            finally:
+                git_ok = git_commit_and_push(deadline=_SHUTDOWN_GIT_DEADLINE)
+            if not git_ok:
+                raise RuntimeError('Flush Git finale fallito: stato locale non confermato sul remoto')
+            if drain_error is not None:
+                raise RuntimeError('Errore worker durante la chiusura: ' + _safe_error(drain_error)) from None
 
 if __name__ == "__main__":
     asyncio.run(main())

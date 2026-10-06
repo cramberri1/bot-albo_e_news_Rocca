@@ -139,13 +139,14 @@ async def worker(*args):
         await asyncio.Event().wait()
     finally:
         stopped.append(True)
-def flush():
+def flush(**_kwargs):
     Path(os.environ['BOT_STATE_DIR'], 'flushed').write_text(str(len(stopped)))
     return True
 with patch.object(bot.Application, 'builder', return_value=builder), \
      patch('telegram.request.HTTPXRequest'), \
      patch.object(bot, 'polling_loop', side_effect=worker), \
      patch.object(bot, 'telegram_polling', side_effect=worker), \
+     patch.object(bot, '_SHUTDOWN_DRAIN_SECONDS', 0.1), \
      patch.object(bot, 'git_commit_and_push', side_effect=flush):
     asyncio.run(bot.main())
 assert len(stopped) == 2

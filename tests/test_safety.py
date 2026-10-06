@@ -273,6 +273,10 @@ class CycleTests(unittest.IsolatedAsyncioTestCase):
             if sig == bot.signal.SIGTERM:
                 bot.asyncio.get_running_loop().call_soon(callback, sig, None)
         with patch.object(bot.Application, 'builder', return_value=builder), \
+             patch.object(bot, '_SHUTDOWN_REQUESTED', False), \
+             patch.object(bot, '_SHUTDOWN_CHECKPOINT_DEADLINE', None), \
+             patch.object(bot, '_SHUTDOWN_GIT_DEADLINE', None), \
+             patch.object(bot, '_SHUTDOWN_DRAIN_SECONDS', 0.1), \
              patch('telegram.request.HTTPXRequest'), \
              patch.object(bot.signal, 'signal', side_effect=register), \
              patch.object(bot, 'polling_loop', side_effect=worker), \

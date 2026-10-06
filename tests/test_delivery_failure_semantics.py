@@ -119,7 +119,7 @@ class DeliveryFailureSemanticsTests(unittest.IsolatedAsyncioTestCase):
 
             with patch.dict(os.environ, {"GITHUB_ACTIONS": "true", "STATE_GIT_BRANCH": "main"}), \
                     patch.object(bot, "DATA_DIR", state_dir), \
-                    patch("subprocess.run", side_effect=git_process) as run:
+                    patch("bot.GitCommandRunner.run", side_effect=git_process) as run:
                 self.assertTrue(bot.git_commit_and_push([str(state)]))
             self.assertTrue(any("push" in call.args[0] for call in run.call_args_list))
             self.assertEqual(events, ["push_started", "push_finished"])
