@@ -7809,24 +7809,26 @@
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "217",
     "register_number": "",
-    "last_revision_check_at": "2026-10-03T07:01:38Z",
+    "last_revision_check_at": "2026-10-06T05:00:00Z",
     "delivery_pending": false,
-    "revision_fingerprint": "c0ac56dba01424e058c9ee97e8456d3a19fb47890edb3c35806ac04496c243b2",
+    "revision_fingerprint": "f705975d9e9e8b64b4bd98b474d469f540404fd0a16b3ea0dda35a31e8fd4725",
     "revision_snapshot": {
       "date": "02-10-2026",
       "date_end": "17-10-2026",
       "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
       "act_number": "217",
       "register_number": "",
-      "attachment_count": 1,
+      "attachment_count": 2,
       "attachment_sha256": [
-        "fe88af16d8b8df9abea23c311e1642b558fc6aa9b704416b5e9499bc3502edf5"
+        "7fffa540d429191347e0143acf551350ebb57a84fba442e0836993858ebdfc47",
+        "aebae10781dc9a80e0e3004d2fb663a5abd4892cd038833afe5a7d6ad55f4b0d"
       ],
       "attachment_name_hashes": [
-        "34ffe73b4fef076f"
+        "89fef8e7b1a61f2e",
+        "a3e399380d80724b"
       ]
     },
-    "revision": 1
+    "revision": 2
   },
   "v2:7f0415bdeeda85e6b6c666af": {
     "notified": true,
