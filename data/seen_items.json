@@ -7992,14 +7992,36 @@
     "identity_version": 2,
     "primary_id": "v2:7300df2d8ca827afc2c55a73",
     "legacy_ids": [
-      "a64a586f46325c4f"
+      "a64a586f46325c4f",
+      "v2:7300df2d8ca827afc2c55a73"
     ],
     "title": "AVVISO PUBBLICO PER L'ASSEGNAZIONE DEL BENEFICIO DELLA RIDUZIONE O DELL'ESENZIONE DEL TICKET MENSA SCOLASTICA A.S. 2026/2027",
     "num_pub": "548",
     "tipo": "AVVISO PUBBLICO",
     "sender": "RESPONSABILE AREA AMMINISTRATIVA FINANZIARIA",
     "act_number": "",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "1b7de4126050c63b50d663c0a189f13361d86a34ffa8e2a857286ec4cef67155",
+    "revision_fingerprint": "1b7de4126050c63b50d663c0a189f13361d86a34ffa8e2a857286ec4cef67155",
+    "revision_snapshot": {
+      "date": "06-10-2026",
+      "date_end": "21-10-2026",
+      "sender": "RESPONSABILE AREA AMMINISTRATIVA FINANZIARIA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "2574f987fecf6ca03f81896ebf9ac9f274b44ade8278a0cc3e3b2fe8217fed8d",
+        "f0ce4a01b5a98afd7ef99a4be8a0b9e683d9e946f8df55c616fe824106aaea31"
+      ],
+      "attachment_name_hashes": [
+        "891c88f5500374e7",
+        "a1300188add4aef0"
+      ]
+    },
+    "revision": 1
   },
   "v2:84f1ab542a182c4d22bcfeac": {
     "notified": false,
