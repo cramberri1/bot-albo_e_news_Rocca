@@ -85,12 +85,13 @@ class NewsCheckpointTests(unittest.IsolatedAsyncioTestCase):
             await bot._run_check_news(self.telegram)
         self.assertEqual(self.remote_history(), {"1": ["1"]})
         self.assertTrue(self.remote_archive()["1"]["delivery_pending"])
-        self.assertNotIn("2", self.remote_archive())
+        self.assertFalse(self.remote_archive()['2']['notified'])
+        self.assertTrue(self.remote_archive()['2']['delivery_pending'])
 
         self.restart_from_remote()
         self.notify.reset_mock()
 
-        async def deliver(_bot, _item, targets):
+        async def deliver(_bot, _item, targets, **kwargs):
             return set(targets), set()
 
         self.notify.side_effect = deliver
@@ -104,7 +105,7 @@ class NewsCheckpointTests(unittest.IsolatedAsyncioTestCase):
     async def test_each_news_reaches_remote_before_next_delivery(self):
         self.fetch.return_value = [self.news(1), self.news(2)]
 
-        async def deliver(_bot, item, targets):
+        async def deliver(_bot, item, targets, **kwargs):
             if item["id"] == "2":
                 self.assertTrue(self.remote_archive()["1"]["notified"])
                 self.assertEqual(self.remote_history(), {"1": ["1"], "2": ["1"]})
@@ -115,11 +116,11 @@ class NewsCheckpointTests(unittest.IsolatedAsyncioTestCase):
         self.assertTrue(result["ok"])
         self.assertEqual(result["new"], 2)
         self.assertEqual(set(self.remote_archive()), {"1", "2"})
-        self.assertEqual(self.push.call_count, 3)  # Initial gate plus two checkpoints.
+        self.assertEqual(self.push.call_count, 5)  # Initial gate, two intents and two final checkpoints.
 
     async def test_failed_checkpoint_stops_before_second_news(self):
         self.fetch.return_value = [self.news(1), self.news(2)]
-        self.push.side_effect = [True, False]
+        self.push.side_effect = [True, True, False]
         with self.assertRaisesRegex(RuntimeError, "Checkpoint consegna News"):
             await bot._run_check_news(self.telegram)
         self.notify.assert_awaited_once()

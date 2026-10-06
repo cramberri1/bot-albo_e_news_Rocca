@@ -18,6 +18,8 @@ lo scheduling configurato, gratuitamente, nei limiti del piano free.
 > comandi Telegram indipendenti. La revisione del 04/10 descrive la precedente fascia 07:00–23:00.
 > Corretto il riconoscimento degli RTF; ampliati i formati e i controlli di integrità
 > degli allegati. Vedi [gestione e collaudo degli allegati](docs/ATTACHMENT_FORMATS.md).
+> Aggiornamento 06/10/2026: [recupero limitato dopo un runner perso](docs/WORKFLOW_RECOVERY.md),
+> checkpoint per destinatario e revisioni ripetute, bootstrap e shutdown verificati.
 
 ---
 
@@ -126,10 +128,13 @@ Il workflow è definito in `.github/workflows/albo_check.yml`:
 
 - **Richieste di avvio**: ogni ora al minuto 17, Europe/Rome. Sono richieste
   intercambiabili di avviare un worker; il cron originario non determina la politica.
-- **Durata**: processo al massimo **5 ore**, uguale per schedule e avvio manuale;
+- **Durata**: processo ordinario al massimo **5 ore**; l'avvio manuale può usare
+  `run_seconds` tra 60 e 18000 per un collaudo breve;
   timeout job 355 minuti. Gli step hanno budget espliciti: la loro somma è 331
   minuti. `SIGINT` chiede la chiusura e restano fino a 120 secondi prima di
   `SIGKILL`, oltre agli step finali di persistenza e recupero.
+  Gli errori di chiusura conservano il loro exit code. Le operazioni Git hanno
+  un budget per transazione e condividono una deadline durante lo shutdown.
 - **Polling automatico**: dalle **07:00 incluse alle 20:00 escluse**, Europe/Rome,
   con pausa di **15 minuti** dopo il ciclo. Il runtime rivaluta l'ora reale anche
   durante la run. Il bootstrap delle baseline è soggetto alla stessa fascia.
@@ -141,6 +146,13 @@ Il workflow è definito in `.github/workflows/albo_check.yml`:
   dei file di stato quando aggiorna dati importanti (notifiche, iscritti,
   cronologia utenti, cache), non solo a fine job, così lo stato non resta
   solo nel filesystem temporaneo del runner
+- **Consegne interrotte**: la ricevuta viene salvata dopo ciascun destinatario
+  completato; le revisioni hanno una sequenza persistente, così anche un ritorno
+  A→B→A viene notificato. Invii parziali restano da ritentare.
+- **Recupero**: un workflow separato può richiedere un solo nuovo worker dopo
+  una run scheduled fallita o scaduta, se non esiste già un successore.
+  I dispatch di recupero non generano catene di retry e le cancellazioni manuali
+  sono rispettate. Vedi [contratto e limiti](docs/WORKFLOW_RECOVERY.md).
 - **Crash visibili**: il workflow non usa più `|| true` sull'esecuzione del
   bot; il timeout programmato è considerato normale, ma un crash reale fa
   fallire il job

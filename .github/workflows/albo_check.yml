@@ -1,4 +1,6 @@
 name: Albo Pretorio Check
+run-name: >-
+  ${{ inputs.recovery_from_run_id && format('Albo recovery #{0}', inputs.recovery_from_run_id) || 'Albo Pretorio Check' }}
 
 on:
   schedule:
@@ -6,6 +8,17 @@ on:
     - cron: '17 * * * *'
       timezone: Europe/Rome
   workflow_dispatch:
+    inputs:
+      run_seconds:
+        description: 'Durata del processo in secondi (60–18000; 18000 normalmente)'
+        required: false
+        default: '18000'
+        type: string
+      recovery_from_run_id:
+        description: 'ID run originale, riservato al recupero automatico'
+        required: false
+        default: ''
+        type: string
 
 permissions:
   contents: write
@@ -54,17 +67,16 @@ jobs:
       - name: Esegui bot
         timeout-minutes: 304
         env:
+          BOT_SECONDS_INPUT: ${{ inputs.run_seconds }}
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_IDS: ${{ secrets.CHAT_IDS }}
           STATE_ENCRYPTION_KEY: ${{ secrets.STATE_ENCRYPTION_KEY }}
         run: |
+          # Validate before set +e: invalid input must fail, never enter timeout.
+          BOT_SECONDS="$(python workflow_recovery.py duration)"
           set +e
-          timeout --signal=INT --kill-after=120s "$BOT_SECONDS" python bot.py
+          timeout --preserve-status --signal=INT --kill-after=120s "$BOT_SECONDS" python bot.py
           code=$?
-          if [ "$code" -eq 124 ]; then
-            echo 'Durata programmata raggiunta; arresto richiesto con SIGINT.'
-            exit 0
-          fi
           exit "$code"
       - name: Salva eventuale stato residuo
         if: always()
@@ -72,7 +84,7 @@ jobs:
         run: |
           git config user.name AlboBot
           git config user.email bot@alborocca
-          files=(data/seen_items.json data/seen_news.json data/subscribers.json data/subscribers_news.json data/user_seen.json data/user_seen_news.json data/last_check.txt data/telegram_updates.json data/albo_safety.json)
+          files=(data/seen_items.json data/seen_news.json data/subscribers.json data/subscribers_news.json data/user_seen.json data/user_seen_news.json data/last_check.txt data/telegram_updates.json data/albo_safety.json data/albo_baseline.json data/news_baseline.json)
           existing=()
           for file in "${files[@]}"; do
             if [ -e "$file" ]; then existing+=("$file"); fi
@@ -108,4 +120,6 @@ jobs:
             data/last_check.txt
             data/telegram_updates.json
             data/albo_safety.json
+            data/albo_baseline.json
+            data/news_baseline.json
           retention-days: 3

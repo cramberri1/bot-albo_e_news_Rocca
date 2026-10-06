@@ -28,7 +28,8 @@ class StateCommandRegressionTests(unittest.IsolatedAsyncioTestCase):
         self.root = Path(self.stack.enter_context(tempfile.TemporaryDirectory()))
         for name in ("DB_PATH", "NEWS_DB_PATH", "USER_SEEN_PATH", "USER_SEEN_NEWS_PATH",
                      "SUBSCRIBERS_PATH", "SUBSCRIBERS_NEWS_PATH", "LAST_CHECK_PATH",
-                     "ALBO_SAFETY_PATH", "TELEGRAM_UPDATES_PATH"):
+                     "ALBO_SAFETY_PATH", "TELEGRAM_UPDATES_PATH",
+                     "ALBO_BASELINE_PATH", "NEWS_BASELINE_PATH"):
             self.stack.enter_context(patch.object(bot, name, self.root / name))
         self.stack.enter_context(patch.object(bot, "_fernet", None))
         self.stack.enter_context(patch.dict(bot.CONFIG, {"ADMIN_IDS": [1]}))
@@ -182,7 +183,8 @@ class StateCommandRegressionTests(unittest.IsolatedAsyncioTestCase):
     async def test_first_manual_check_initializes_news_without_historical_notifications(self):
         news = self.news()
         context = SimpleNamespace(bot=AsyncMock())
-        with patch.object(bot, "run_check", new_callable=AsyncMock, return_value={"ok": True}), \
+        with patch.object(bot, "_ensure_albo_baseline", new_callable=AsyncMock, return_value=True), \
+                patch.object(bot, "run_check", new_callable=AsyncMock, return_value={"ok": True}), \
                 patch.object(bot, "run_check_news", side_effect=bot._run_check_news), \
                 patch.object(bot, "fetch_news_html", new_callable=AsyncMock, return_value=[news]) as fetch, \
                 patch.object(bot, "notify_news", new_callable=AsyncMock) as notify:
@@ -194,7 +196,8 @@ class StateCommandRegressionTests(unittest.IsolatedAsyncioTestCase):
     async def test_manual_check_existing_news_archive_still_notifies_real_new_items(self):
         bot.save_news_db({"old": {"notified": True}}, push=False)
         context = SimpleNamespace(bot=AsyncMock())
-        with patch.object(bot, "run_check", new_callable=AsyncMock, return_value={"ok": True}), \
+        with patch.object(bot, "_ensure_albo_baseline", new_callable=AsyncMock, return_value=True), \
+                patch.object(bot, "run_check", new_callable=AsyncMock, return_value={"ok": True}), \
                 patch.object(bot, "run_check_news", side_effect=bot._run_check_news), \
                 patch.object(bot, "fetch_news_html", new_callable=AsyncMock,
                              return_value=[self.news()]) as fetch, \
@@ -208,7 +211,8 @@ class StateCommandRegressionTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_manual_check_failed_news_bootstrap_does_not_run_news_delivery(self):
         context = SimpleNamespace(bot=AsyncMock())
-        with patch.object(bot, "run_check", new_callable=AsyncMock, return_value={"ok": True}), \
+        with patch.object(bot, "_ensure_albo_baseline", new_callable=AsyncMock, return_value=True), \
+                patch.object(bot, "run_check", new_callable=AsyncMock, return_value={"ok": True}), \
                 patch.object(bot, "run_check_news", new_callable=AsyncMock) as check, \
                 patch.object(bot, "fetch_news_html", new_callable=AsyncMock, return_value=None):
             await bot.cmd_controlla(self.update(1), context)
