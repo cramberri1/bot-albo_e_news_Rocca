@@ -16,6 +16,9 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(dispatch_inputs['run_seconds']['default'], '18000')
         self.assertEqual(dispatch_inputs['run_seconds']['type'], 'string')
         self.assertIn('recovery_from_run_id', dispatch_inputs)
+        # An unquoted # in a YAML plain scalar truncates GitHub's expression.
+        self.assertIn("format('Albo recovery #{0}', inputs.recovery_from_run_id)", workflow['run-name'])
+        self.assertTrue(workflow['run-name'].endswith('}}'))
         self.assertLess(int(workflow['jobs']['check']['timeout-minutes']), 360)
         steps = workflow['jobs']['check']['steps']
         source = Path('.github/workflows/albo_check.yml').read_text(encoding='utf-8-sig')

@@ -1,5 +1,6 @@
 name: Albo Pretorio Check
-run-name: ${{ inputs.recovery_from_run_id && format('Albo recovery #{0}', inputs.recovery_from_run_id) || 'Albo Pretorio Check' }}
+run-name: >-
+  ${{ inputs.recovery_from_run_id && format('Albo recovery #{0}', inputs.recovery_from_run_id) || 'Albo Pretorio Check' }}
 
 on:
   schedule:
