@@ -7865,5 +7865,41 @@
       ]
     },
     "revision": 1
+  },
+  "v2:24ac762e48db0a827021b37c": {
+    "notified": true,
+    "date": "06-10-2026",
+    "date_end": "21-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:24ac762e48db0a827021b37c",
+    "legacy_ids": [
+      "e9425869b40314ab",
+      "v2:24ac762e48db0a827021b37c"
+    ],
+    "title": "Comunicazione dati mensili art.31 comma 7 DPR 380/2001. Monitoraggio abusivismo mese di settembre 2026.",
+    "num_pub": "545",
+    "tipo": "ABUSIVISMO EDILIZIO",
+    "sender": "SEGRETARIO COMUNALE SEDE",
+    "act_number": "",
+    "register_number": "",
+    "last_revision_check_at": "2026-10-06T08:52:49Z",
+    "delivery_pending": false,
+    "revision_fingerprint": "8433ae00796d79bc48f1fc363fbbd00a5cde32cab2e8919a12424ee716e00696",
+    "revision_snapshot": {
+      "date": "06-10-2026",
+      "date_end": "21-10-2026",
+      "sender": "SEGRETARIO COMUNALE SEDE",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "7f4d6edd27aa1cc193f6764011a0e4e1cd8c19b63aa7e3b80dd13020a0d78e47"
+      ],
+      "attachment_name_hashes": [
+        "aab7adbfa5e7d2f6"
+      ]
+    },
+    "revision": 1
   }
 }
