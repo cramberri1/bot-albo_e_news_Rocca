@@ -986,6 +986,6 @@
     "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_200.html",
     "description": "esenzione ticket mensa scolastica",
     "notified": true,
-    "delivery_pending": true
+    "delivery_pending": false
   }
 }
