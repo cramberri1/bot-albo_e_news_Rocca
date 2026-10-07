@@ -8142,14 +8142,34 @@
     "identity_version": 2,
     "primary_id": "v2:5b7d0d0d9158096f8a995b6f",
     "legacy_ids": [
-      "7de4e96b6a3fc189"
+      "7de4e96b6a3fc189",
+      "v2:5b7d0d0d9158096f8a995b6f"
     ],
     "title": "Assegnazione contributi per acquisto testi scolastici per la scuola secondaria di primo grado a.s. 2026/2027",
     "num_pub": "551",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "212",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "65c85deb8692bad2eeaaf6e403aa29f96ff5a5d6b28744f54772fcaa16455571",
+    "revision_fingerprint": "65c85deb8692bad2eeaaf6e403aa29f96ff5a5d6b28744f54772fcaa16455571",
+    "revision_snapshot": {
+      "date": "07-10-2026",
+      "date_end": "22-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "212",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "a7d3a9ef4b361fb902089562972ebcb415d77885466d6d0d9656081b5d72cd7a"
+      ],
+      "attachment_name_hashes": [
+        "2a48c44a5042a321"
+      ]
+    },
+    "revision": 1
   },
   "v2:d43990ba5f0c626e177a497e": {
     "notified": false,
