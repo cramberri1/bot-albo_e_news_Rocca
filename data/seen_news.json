@@ -978,5 +978,14 @@
     "description": "Iscrizione al servizio",
     "notified": true,
     "delivery_pending": false
+  },
+  "200": {
+    "title": "Avviso pubblico per l'assegnazione del beneficio della riduzione o dell'esenzione del ticket mensa scolastica a.s. 2026/2027",
+    "category": "Avviso",
+    "date": "07-10-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_200.html",
+    "description": "esenzione ticket mensa scolastica",
+    "notified": false,
+    "delivery_pending": true
   }
 }
