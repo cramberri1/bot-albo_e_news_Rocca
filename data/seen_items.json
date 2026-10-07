@@ -8061,5 +8061,93 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-07T08:17:03Z"
+  },
+  "v2:1517f788b717d738bcb9e4ce": {
+    "notified": false,
+    "date": "07-10-2026",
+    "date_end": "22-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:1517f788b717d738bcb9e4ce",
+    "legacy_ids": [
+      "e18dd842a9ab710e",
+      "v2:1517f788b717d738bcb9e4ce"
+    ],
+    "title": "Liquidazione fornitura dei libri di testo per gli alunni della scuola primaria anno scolastico 2026/2027",
+    "num_pub": "553",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "215",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "8a123226a5f28d96db0f281dca615a6b97817952a3bc91508a5c5353be2c1896",
+    "revision_fingerprint": "8a123226a5f28d96db0f281dca615a6b97817952a3bc91508a5c5353be2c1896",
+    "revision_snapshot": {
+      "date": "07-10-2026",
+      "date_end": "22-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "215",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "e7a4f5ae594674769cf3583877eea5f83b86436075d95a6cb0d3a4fd394da2e0"
+      ],
+      "attachment_name_hashes": [
+        "88b718e84db92e41"
+      ]
+    },
+    "revision": 1
+  },
+  "v2:c1dd7aa61ebdb5ff3d3b121b": {
+    "notified": false,
+    "date": "07-10-2026",
+    "date_end": "22-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:c1dd7aa61ebdb5ff3d3b121b",
+    "legacy_ids": [
+      "be04c0bf1bd12aee"
+    ],
+    "title": "Collocamento presso idonea comunità di quattro minori, su disposizione del tribunale dei Minori di Napoli - Liquidazione di spesa periodo maggio - agosto 2026",
+    "num_pub": "552",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "213",
+    "register_number": ""
+  },
+  "v2:5b7d0d0d9158096f8a995b6f": {
+    "notified": false,
+    "date": "07-10-2026",
+    "date_end": "22-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:5b7d0d0d9158096f8a995b6f",
+    "legacy_ids": [
+      "7de4e96b6a3fc189"
+    ],
+    "title": "Assegnazione contributi per acquisto testi scolastici per la scuola secondaria di primo grado a.s. 2026/2027",
+    "num_pub": "551",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "212",
+    "register_number": ""
+  },
+  "v2:d43990ba5f0c626e177a497e": {
+    "notified": false,
+    "date": "07-10-2026",
+    "date_end": "22-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:d43990ba5f0c626e177a497e",
+    "legacy_ids": [
+      "c3ca2230301410be"
+    ],
+    "title": "Liquidazione Stampa imbustamento e spedizione ruolo TARI 2026",
+    "num_pub": "550",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "211",
+    "register_number": ""
   }
 }
