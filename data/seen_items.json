@@ -8063,7 +8063,7 @@
     "last_revision_check_at": "2026-10-07T08:17:03Z"
   },
   "v2:1517f788b717d738bcb9e4ce": {
-    "notified": false,
+    "notified": true,
     "date": "07-10-2026",
     "date_end": "22-10-2026",
     "expired": false,
