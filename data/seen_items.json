@@ -8178,13 +8178,33 @@
     "identity_version": 2,
     "primary_id": "v2:d43990ba5f0c626e177a497e",
     "legacy_ids": [
-      "c3ca2230301410be"
+      "c3ca2230301410be",
+      "v2:d43990ba5f0c626e177a497e"
     ],
     "title": "Liquidazione Stampa imbustamento e spedizione ruolo TARI 2026",
     "num_pub": "550",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "211",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "92d270ba59b2bfc1a2f3b4e09e0dd186fda1150023f5f12fc01aa33338565dd2",
+    "revision_fingerprint": "92d270ba59b2bfc1a2f3b4e09e0dd186fda1150023f5f12fc01aa33338565dd2",
+    "revision_snapshot": {
+      "date": "07-10-2026",
+      "date_end": "22-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "211",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "c035e546a680c0cd89f3aad7922afe28aaea4c5c436dfe5ca8b17d64922de151"
+      ],
+      "attachment_name_hashes": [
+        "32ae24e4beeeef3d"
+      ]
+    },
+    "revision": 1
   }
 }
