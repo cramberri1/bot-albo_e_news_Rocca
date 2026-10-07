@@ -987,5 +987,14 @@
     "description": "esenzione ticket mensa scolastica",
     "notified": true,
     "delivery_pending": false
+  },
+  "199": {
+    "title": "Contributo libri di testo Scuola Secondaria",
+    "category": "Avviso",
+    "date": "07-10-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_199.html",
+    "description": "Graduatoria ammessi",
+    "notified": false,
+    "delivery_pending": true
   }
 }
