@@ -8243,7 +8243,7 @@
     "last_revision_check_at": "2026-10-08T11:52:37Z"
   },
   "v2:0b8c7ad60c3682eaef6ba86a": {
-    "notified": false,
+    "notified": true,
     "date": "08-10-2026",
     "date_end": "23-10-2026",
     "expired": false,
