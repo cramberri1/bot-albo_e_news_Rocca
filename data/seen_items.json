@@ -8290,14 +8290,34 @@
     "identity_version": 2,
     "primary_id": "v2:c19eb9580546975893d488b4",
     "legacy_ids": [
-      "2afc3a1cd172d7a2"
+      "2afc3a1cd172d7a2",
+      "v2:c19eb9580546975893d488b4"
     ],
     "title": "Interventi di manutenzione e ripristino tratti fognari del comune di Roccabascerana e completamento sistemazione area di accesso depuratore comunale. Procedura per attivazione dell'estensione dell'affidamento diretto, ai sensi dell'articolo 120, comma 9 del D.lgs. n. 36/2023",
     "num_pub": "562",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "51",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "9ed3370c972edcca658b1caadc5d09c20ae378621ac28b0e23aeeee4eef6a58d",
+    "revision_fingerprint": "9ed3370c972edcca658b1caadc5d09c20ae378621ac28b0e23aeeee4eef6a58d",
+    "revision_snapshot": {
+      "date": "08-10-2026",
+      "date_end": "23-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "51",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "65af0376972f04fbc424366307412b16d652008f5eaeeaee3e576d647cf4567b"
+      ],
+      "attachment_name_hashes": [
+        "5c58d734376c585b"
+      ]
+    },
+    "revision": 1
   },
   "v2:5d876e94d5448ed78d99d780": {
     "notified": false,
