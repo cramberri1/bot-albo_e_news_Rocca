@@ -8398,14 +8398,34 @@
     "identity_version": 2,
     "primary_id": "v2:0cc5328f3b7f9897dd11383f",
     "legacy_ids": [
-      "e9f3b02a6a970c7b"
+      "e9f3b02a6a970c7b",
+      "v2:0cc5328f3b7f9897dd11383f"
     ],
     "title": "Liquidazione di spesa preventivamente impegnata per \"Servizio di raccolta differenziata e trasporto a smaltimento di RR.SS.UU. e assimilati ed altri servizi di igiene urbana e gestione del centro di raccolta comunale nel comune di Roccabascerana\" - Ditta: S.O.G.E.S.I. s.r.l. - Periodo Settembre 2026",
     "num_pub": "559",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "48",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "1819235e0a4559c5af449d8f1367e2ed111def972f19c12a108e0ecab29c2469",
+    "revision_fingerprint": "1819235e0a4559c5af449d8f1367e2ed111def972f19c12a108e0ecab29c2469",
+    "revision_snapshot": {
+      "date": "08-10-2026",
+      "date_end": "23-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "48",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "33efab9380b6508fdeffcec82b7bef1050e95110f8aea83a202a5dfa2cb29d27"
+      ],
+      "attachment_name_hashes": [
+        "078e3ed778ed3299"
+      ]
+    },
+    "revision": 1
   },
   "v2:d8c5b2df42851ae808166e7f": {
     "notified": false,
