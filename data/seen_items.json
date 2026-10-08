@@ -8542,13 +8542,33 @@
     "identity_version": 2,
     "primary_id": "v2:9983dd93c34c14cb5955ef9e",
     "legacy_ids": [
-      "3e20e74ecc0b6683"
+      "3e20e74ecc0b6683",
+      "v2:9983dd93c34c14cb5955ef9e"
     ],
     "title": "Affidamento ai sensi dell'articolo 1, comma 2 lettera a) Legge 120/2020, delle attività di \"Relazione geologica sismica e studio di compatibilità geologica e geotecnica comprensivo della modellazione geologica relativa all'intervento di \"MESSA IN SICUREZZA DEL CENTRO ABITATO AD ELEVATO RISCHIO DI FRANA PER L'AUMENTO DELLA RESILIENZA DEL TERRITORIO LOCALITÀ RURALE ZOLLI\". CUP G18H21000110006. Provvedimenti: determina di liquidazione saldo competenze tecniche",
     "num_pub": "555",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "39",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "4627f6d5093b3a21c55f27fcd0355b9bb8a2ea6e88d157fcb9cc36cc0d81e6f4",
+    "revision_fingerprint": "4627f6d5093b3a21c55f27fcd0355b9bb8a2ea6e88d157fcb9cc36cc0d81e6f4",
+    "revision_snapshot": {
+      "date": "08-10-2026",
+      "date_end": "23-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "39",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "9d0401bf53121e02e5e1bdecb64e8a609beb43bc0cace0fdeb31e69302f2e6a0"
+      ],
+      "attachment_name_hashes": [
+        "8a5656d040998885"
+      ]
+    },
+    "revision": 1
   }
 }
