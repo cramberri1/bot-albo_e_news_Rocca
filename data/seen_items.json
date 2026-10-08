@@ -8506,14 +8506,34 @@
     "identity_version": 2,
     "primary_id": "v2:29bdc29781c65b31cc094b86",
     "legacy_ids": [
-      "f7cc33a179dec318"
+      "f7cc33a179dec318",
+      "v2:29bdc29781c65b31cc094b86"
     ],
     "title": "\"APPALTO INTEGRATO DELLA PROGETTAZIONE ESECUTIVA E REALIZZAZIONE DEI LAVORI INERENTI Interventi finanziati con risorse FSC 2014-2020 per la riduzione della dispersione idrica delle reti di distribuzione nel Distretto Calore Irpino\". CUP H13E19000300006. Approvazione Stato Avanzamento Lavori n. 2",
     "num_pub": "556",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "41",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "5cce3303f22e792b71765edf18210ff893bf62f83f6788ebe95e480d7f204841",
+    "revision_fingerprint": "5cce3303f22e792b71765edf18210ff893bf62f83f6788ebe95e480d7f204841",
+    "revision_snapshot": {
+      "date": "08-10-2026",
+      "date_end": "23-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "41",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "5fc47450d8f2ecd5fad7a6b98235c5e0623c25e7d5d30dd95f25f7ede8703cc5"
+      ],
+      "attachment_name_hashes": [
+        "3a8a7d752315a1e3"
+      ]
+    },
+    "revision": 1
   },
   "v2:9983dd93c34c14cb5955ef9e": {
     "notified": false,
