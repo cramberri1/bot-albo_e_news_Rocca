@@ -8434,14 +8434,34 @@
     "identity_version": 2,
     "primary_id": "v2:d8c5b2df42851ae808166e7f",
     "legacy_ids": [
-      "073898f535595de1"
+      "073898f535595de1",
+      "v2:d8c5b2df42851ae808166e7f"
     ],
     "title": "PR FESR 2021-2027 - Avviso pubblico D.D. n. 566 del 25/11/2024 - Pianificazione di protezione civile su scala provinciale/città metropolitana, intercomunale, comunale\". Beneficiario: Comune di Roccabascerana. CF: 80009710643.  Affidamento delle attività per redazione << aggiornamento del Piano di Protezione Civile >>. Procedura per l'affidamento diretto, ai sensi dell'art. 50, comma 1, lettera b) del D.Lgs 36/2023. Determina a contrarre, affidamento diretto. CUP: G12B25005980002",
     "num_pub": "558",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "47",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "9818734a181cb74e2cd66d92d7d3fd4b0dd6c4f64c2787e903a596eac24f4f18",
+    "revision_fingerprint": "9818734a181cb74e2cd66d92d7d3fd4b0dd6c4f64c2787e903a596eac24f4f18",
+    "revision_snapshot": {
+      "date": "08-10-2026",
+      "date_end": "23-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "47",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "cc3d0aefd30995d5b7eee2261e0492708cd477ecc2621f049eb20b7005433354"
+      ],
+      "attachment_name_hashes": [
+        "4660d30626007bae"
+      ]
+    },
+    "revision": 1
   },
   "v2:a7c96c14064de46e83cb2d07": {
     "notified": false,
