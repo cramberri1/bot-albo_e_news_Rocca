@@ -8241,5 +8241,182 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-08T11:52:37Z"
+  },
+  "v2:0b8c7ad60c3682eaef6ba86a": {
+    "notified": false,
+    "date": "08-10-2026",
+    "date_end": "23-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:0b8c7ad60c3682eaef6ba86a",
+    "legacy_ids": [
+      "1aa3cc3b29b016ea",
+      "v2:0b8c7ad60c3682eaef6ba86a"
+    ],
+    "title": "Autorizzazione alla sottoscrizione definitiva del Contratto Collettivo Decentrato Integrativo di destinazione delle risorse decentrate per anno 2026.",
+    "num_pub": "563",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "59",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "399cd2acb30a7322c92388a47461bebef875fa38f0634e22c738d6ff3435b8aa",
+    "revision_fingerprint": "399cd2acb30a7322c92388a47461bebef875fa38f0634e22c738d6ff3435b8aa",
+    "revision_snapshot": {
+      "date": "08-10-2026",
+      "date_end": "23-10-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "59",
+      "register_number": "",
+      "attachment_count": 3,
+      "attachment_sha256": [
+        "24f3b206d5c8be7b7d3711156553a34b2cc474782f2bc8dd68aa07e47be4068f",
+        "40ea348ea9e197c75e7ea574f576cee769cdaa61a53a840b8cc6db95715feb8f",
+        "dc6c71265b97a7dd8a2263aa721a8733fe679e7486f70a3088696a7d79dc9c43"
+      ],
+      "attachment_name_hashes": [
+        "09fc1492c4816024",
+        "6df1e7caaaa4c73b",
+        "883e5c4e975c3f41"
+      ]
+    },
+    "revision": 1
+  },
+  "v2:c19eb9580546975893d488b4": {
+    "notified": false,
+    "date": "08-10-2026",
+    "date_end": "23-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:c19eb9580546975893d488b4",
+    "legacy_ids": [
+      "2afc3a1cd172d7a2"
+    ],
+    "title": "Interventi di manutenzione e ripristino tratti fognari del comune di Roccabascerana e completamento sistemazione area di accesso depuratore comunale. Procedura per attivazione dell'estensione dell'affidamento diretto, ai sensi dell'articolo 120, comma 9 del D.lgs. n. 36/2023",
+    "num_pub": "562",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "51",
+    "register_number": ""
+  },
+  "v2:5d876e94d5448ed78d99d780": {
+    "notified": false,
+    "date": "08-10-2026",
+    "date_end": "23-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:5d876e94d5448ed78d99d780",
+    "legacy_ids": [
+      "d95da46d1e3d44fe"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"Servizio di pulizia nell'edificio pubblico adibito a Sede Municipale Piazza Michele Imbriani\" - Ditta: PRINCIPE TERESA. Periodo Luglio - Agosto - Settembre 2026",
+    "num_pub": "561",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "50",
+    "register_number": ""
+  },
+  "v2:e5777cb600d894ffdea7f3f9": {
+    "notified": false,
+    "date": "08-10-2026",
+    "date_end": "23-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:e5777cb600d894ffdea7f3f9",
+    "legacy_ids": [
+      "47976046af1f3d3e"
+    ],
+    "title": "Approvvigionamento carburante automezzi ed attrezzature comunali. Adesione << convenzione CONSIP - Accordo Quadro \"AQFC3_Q8 - Fuel Card 3\", per la fornitura di carburante per autotrazione mediante Fuel Card >>, stipulata con Kuwait Petroleum Italia S.p.A. Liquidazione di spesa preventivamente impegnata - Periodo Settembre 2026",
+    "num_pub": "560",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "49",
+    "register_number": ""
+  },
+  "v2:0cc5328f3b7f9897dd11383f": {
+    "notified": false,
+    "date": "08-10-2026",
+    "date_end": "23-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:0cc5328f3b7f9897dd11383f",
+    "legacy_ids": [
+      "e9f3b02a6a970c7b"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"Servizio di raccolta differenziata e trasporto a smaltimento di RR.SS.UU. e assimilati ed altri servizi di igiene urbana e gestione del centro di raccolta comunale nel comune di Roccabascerana\" - Ditta: S.O.G.E.S.I. s.r.l. - Periodo Settembre 2026",
+    "num_pub": "559",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "48",
+    "register_number": ""
+  },
+  "v2:d8c5b2df42851ae808166e7f": {
+    "notified": false,
+    "date": "08-10-2026",
+    "date_end": "23-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:d8c5b2df42851ae808166e7f",
+    "legacy_ids": [
+      "073898f535595de1"
+    ],
+    "title": "PR FESR 2021-2027 - Avviso pubblico D.D. n. 566 del 25/11/2024 - Pianificazione di protezione civile su scala provinciale/città metropolitana, intercomunale, comunale\". Beneficiario: Comune di Roccabascerana. CF: 80009710643.  Affidamento delle attività per redazione << aggiornamento del Piano di Protezione Civile >>. Procedura per l'affidamento diretto, ai sensi dell'art. 50, comma 1, lettera b) del D.Lgs 36/2023. Determina a contrarre, affidamento diretto. CUP: G12B25005980002",
+    "num_pub": "558",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "47",
+    "register_number": ""
+  },
+  "v2:a7c96c14064de46e83cb2d07": {
+    "notified": false,
+    "date": "08-10-2026",
+    "date_end": "23-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:a7c96c14064de46e83cb2d07",
+    "legacy_ids": [
+      "70642391ac00a3db"
+    ],
+    "title": "Affidamento delle attività per << Rilievi topografici, Frazionamenti, Accatastamenti e Picchettamenti >>. Provvedimenti. Determina a contrarre, impegno ed affidamento diretto, ai sensi dell'art. 50 comma 1 del D.lgs. n. 36/2023",
+    "num_pub": "557",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "46",
+    "register_number": ""
+  },
+  "v2:29bdc29781c65b31cc094b86": {
+    "notified": false,
+    "date": "08-10-2026",
+    "date_end": "23-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:29bdc29781c65b31cc094b86",
+    "legacy_ids": [
+      "f7cc33a179dec318"
+    ],
+    "title": "\"APPALTO INTEGRATO DELLA PROGETTAZIONE ESECUTIVA E REALIZZAZIONE DEI LAVORI INERENTI Interventi finanziati con risorse FSC 2014-2020 per la riduzione della dispersione idrica delle reti di distribuzione nel Distretto Calore Irpino\". CUP H13E19000300006. Approvazione Stato Avanzamento Lavori n. 2",
+    "num_pub": "556",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "41",
+    "register_number": ""
+  },
+  "v2:9983dd93c34c14cb5955ef9e": {
+    "notified": false,
+    "date": "08-10-2026",
+    "date_end": "23-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:9983dd93c34c14cb5955ef9e",
+    "legacy_ids": [
+      "3e20e74ecc0b6683"
+    ],
+    "title": "Affidamento ai sensi dell'articolo 1, comma 2 lettera a) Legge 120/2020, delle attività di \"Relazione geologica sismica e studio di compatibilità geologica e geotecnica comprensivo della modellazione geologica relativa all'intervento di \"MESSA IN SICUREZZA DEL CENTRO ABITATO AD ELEVATO RISCHIO DI FRANA PER L'AUMENTO DELLA RESILIENZA DEL TERRITORIO LOCALITÀ RURALE ZOLLI\". CUP G18H21000110006. Provvedimenti: determina di liquidazione saldo competenze tecniche",
+    "num_pub": "555",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "39",
+    "register_number": ""
   }
 }
