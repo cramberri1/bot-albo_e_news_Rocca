@@ -8326,14 +8326,34 @@
     "identity_version": 2,
     "primary_id": "v2:5d876e94d5448ed78d99d780",
     "legacy_ids": [
-      "d95da46d1e3d44fe"
+      "d95da46d1e3d44fe",
+      "v2:5d876e94d5448ed78d99d780"
     ],
     "title": "Liquidazione di spesa preventivamente impegnata per \"Servizio di pulizia nell'edificio pubblico adibito a Sede Municipale Piazza Michele Imbriani\" - Ditta: PRINCIPE TERESA. Periodo Luglio - Agosto - Settembre 2026",
     "num_pub": "561",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "50",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "873f5ff701a8f614f14ae526c700a6555482c202cc49f5be430028657a031a63",
+    "revision_fingerprint": "873f5ff701a8f614f14ae526c700a6555482c202cc49f5be430028657a031a63",
+    "revision_snapshot": {
+      "date": "08-10-2026",
+      "date_end": "23-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "50",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "be05f42c7b8dbc932d70f93fd5ffe1c6a2b3ea00c2a4b5b5bc453bdce0b467a5"
+      ],
+      "attachment_name_hashes": [
+        "9c9dfd1a3ec4a918"
+      ]
+    },
+    "revision": 1
   },
   "v2:e5777cb600d894ffdea7f3f9": {
     "notified": false,
