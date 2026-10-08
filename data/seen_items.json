@@ -1528,7 +1528,7 @@
     "date": "10-09-2026",
     "date_end": "09-11-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "delivery_pending": false,
     "revision_fingerprint": "3aaeadbeb571dc866d68a6b382354455ac9c7edf719039007f939dde6ef393d5",
     "revision_snapshot": {
@@ -6527,7 +6527,7 @@
     "date": "14-09-2026",
     "date_end": "14-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "delivery_pending": false,
     "revision_fingerprint": "eeeb2c45115bb8c4179d06e3cad10c8dd72563bf79564e4716cb45effe4bcbec",
     "revision_snapshot": {
@@ -6642,7 +6642,7 @@
     "date": "16-09-2026",
     "date_end": "20-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "delivery_pending": false,
     "revision_fingerprint": "defc395be8c89e5256cf32d3799a82a8108c52a37708ce2fada0ea2cec3dfb50",
     "revision_snapshot": {
@@ -6686,7 +6686,7 @@
     "date_end": "17-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "revision_fingerprint": "f2d00b2ed2ebe8d23314928574460e393e0a18a36bcb27655e784faa2d48473e",
     "revision_snapshot": {
       "date": "17-09-2026",
@@ -6800,7 +6800,7 @@
     "date": "18-09-2026",
     "date_end": "18-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "delivery_pending": false,
     "revision_fingerprint": "d6fb2f5a065e46666b0258fc4e4ab7d9f5554cd58adc178989ce3f9f52a1475b",
     "revision_snapshot": {
@@ -7028,7 +7028,7 @@
     "date": "23-09-2026",
     "date_end": "08-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "delivery_pending": false,
     "revision_fingerprint": "8ff3a1e8dc2aeae33cbd4c14fa2bd7114a094bbbaf2c95a3e7c712cdaff10996",
     "revision_snapshot": {
@@ -7066,7 +7066,7 @@
     "date_end": "20-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "revision_fingerprint": "f56f8b69bb8e5cae3e326513b3fbe0a893b8ae7192335b263623faf863e30345",
     "revision_snapshot": {
       "date": "23-09-2026",
@@ -7191,7 +7191,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "45",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "delivery_pending": false,
     "revision_fingerprint": "b213b36fdb3a405460d14d899c71db1b0697eac5a7ee8619e486821722722e8e",
     "revision_snapshot": {
@@ -7227,7 +7227,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "44",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "delivery_pending": false,
     "revision_fingerprint": "0eed83d0f96a073220bf20bff8edadaae25b40263897488ca18140c9af0a834d",
     "revision_snapshot": {
@@ -7551,7 +7551,7 @@
     "sender": "ASL DIPARTIMENTO E PREVENZIONE",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "delivery_pending": false,
     "revision_fingerprint": "a949fb0eecf4eaec05a0254cb5b210e8235d9099a8b4179d91e60e942cb335e1",
     "revision_snapshot": {
@@ -7587,7 +7587,7 @@
     "sender": "ASL DIPARTIMENTO E PREVENZIONE",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "delivery_pending": false,
     "revision_fingerprint": "2fed61f118ae4d6a41d5c395991c64b470f5eb0dbc0fda0bddcdec60ad2510c8",
     "revision_snapshot": {
@@ -7623,7 +7623,7 @@
     "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
     "act_number": "113",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "delivery_pending": false,
     "revision_fingerprint": "875d31eb4890a455c7b8a3ec01df3580e65b851bfc31884624777c7c1f74bbf1",
     "revision_snapshot": {
@@ -7659,7 +7659,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "25",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "delivery_pending": false,
     "revision_fingerprint": "4b8c2eddac9505d4d95947107980c3de8a9f6a55c1cdf1aed78a829bc88bcfe7",
     "revision_snapshot": {
@@ -7883,7 +7883,7 @@
     "sender": "SEGRETARIO COMUNALE SEDE",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "delivery_pending": false,
     "revision_fingerprint": "8433ae00796d79bc48f1fc363fbbd00a5cde32cab2e8919a12424ee716e00696",
     "revision_snapshot": {
@@ -7919,7 +7919,7 @@
     "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
     "act_number": "57",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T08:27:27Z",
+    "last_revision_check_at": "2026-10-08T09:30:18Z",
     "delivery_pending": false,
     "revision_fingerprint": "61338d7ae421741ec97bf1cae2b06c07b91a5504074bea5c943ee707d10b683e",
     "revision_snapshot": {
@@ -8060,7 +8060,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-08T08:27:27Z"
+    "last_revision_check_at": "2026-10-08T09:30:18Z"
   },
   "v2:1517f788b717d738bcb9e4ce": {
     "notified": true,
@@ -8096,7 +8096,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-08T08:27:27Z"
+    "last_revision_check_at": "2026-10-08T09:30:18Z"
   },
   "v2:c1dd7aa61ebdb5ff3d3b121b": {
     "notified": true,
@@ -8132,7 +8132,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-08T08:27:27Z"
+    "last_revision_check_at": "2026-10-08T09:30:18Z"
   },
   "v2:5b7d0d0d9158096f8a995b6f": {
     "notified": true,
@@ -8168,7 +8168,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-08T08:27:27Z"
+    "last_revision_check_at": "2026-10-08T09:30:18Z"
   },
   "v2:d43990ba5f0c626e177a497e": {
     "notified": true,
@@ -8204,7 +8204,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-08T08:27:27Z"
+    "last_revision_check_at": "2026-10-08T09:30:18Z"
   },
   "v2:0f28bbb7e9fde138f62f2426": {
     "notified": true,
