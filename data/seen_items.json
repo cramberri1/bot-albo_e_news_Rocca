@@ -8205,5 +8205,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-08T07:24:17Z"
+  },
+  "v2:0f28bbb7e9fde138f62f2426": {
+    "notified": false,
+    "date": "08-10-2026",
+    "date_end": "07-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:0f28bbb7e9fde138f62f2426",
+    "legacy_ids": [
+      "2c40fb30f61528c7",
+      "v2:0f28bbb7e9fde138f62f2426"
+    ],
+    "title": "Ord. dir. 09/2026 - Ordinanza chiusura strada comunale \"Vernilli, dall'incrocio con SP134 al civico di via Vernilli n. 22\", divieto temporaneo di transito per lavori di rifacimento della rete idrica.",
+    "num_pub": "554",
+    "tipo": "ORDINANZA DIRIGENZIALE",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "fdba66329914ce3aeac31f92ac3b0c6cf74e08a36ddd5cab7e8d59cc902ff3b3",
+    "revision_fingerprint": "fdba66329914ce3aeac31f92ac3b0c6cf74e08a36ddd5cab7e8d59cc902ff3b3",
+    "revision_snapshot": {
+      "date": "08-10-2026",
+      "date_end": "07-12-2026",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "1b169b0615e622504875ec7305acca347866d5bc3b6a1ab2f8f15038e84f288b"
+      ],
+      "attachment_name_hashes": [
+        "789e7e38f178fd98"
+      ]
+    },
+    "revision": 1
   }
 }
