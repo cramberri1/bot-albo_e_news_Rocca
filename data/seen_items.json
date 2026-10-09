@@ -8571,7 +8571,7 @@
     "last_revision_check_at": "2026-10-09T11:09:15Z"
   },
   "v2:7741f9abe485cc75f1e62f78": {
-    "notified": false,
+    "notified": true,
     "date": "09-10-2026",
     "date_end": "24-10-2026",
     "expired": false,
