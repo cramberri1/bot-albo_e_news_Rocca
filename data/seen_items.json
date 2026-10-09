@@ -8569,5 +8569,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-09T11:09:15Z"
+  },
+  "v2:7741f9abe485cc75f1e62f78": {
+    "notified": false,
+    "date": "09-10-2026",
+    "date_end": "24-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:7741f9abe485cc75f1e62f78",
+    "legacy_ids": [
+      "36f034a6fcabc744",
+      "v2:7741f9abe485cc75f1e62f78"
+    ],
+    "title": "Affidamento servizio manutenzione gruppo di pompaggio a servizio dell'impianto idrico antincendio dell'Istituto Comprensivo \"Don Peppe Diana - M.R. Imbriani\".",
+    "num_pub": "564",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "55",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "e02420f27838611dc47aaa48a54c284bbd05359a4997d58a2563bf3c435547b2",
+    "revision_fingerprint": "e02420f27838611dc47aaa48a54c284bbd05359a4997d58a2563bf3c435547b2",
+    "revision_snapshot": {
+      "date": "09-10-2026",
+      "date_end": "24-10-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "55",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "e5fc7bab4ebbbd5f49bca51be24621a979cbebd8303477bb92bcf49ceb595b6c"
+      ],
+      "attachment_name_hashes": [
+        "20caab072d9ce514"
+      ]
+    },
+    "revision": 1
   }
 }
