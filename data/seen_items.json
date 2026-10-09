@@ -7551,7 +7551,7 @@
     "sender": "ASL DIPARTIMENTO E PREVENZIONE",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T17:47:35Z",
+    "last_revision_check_at": "2026-10-09T05:32:44Z",
     "delivery_pending": false,
     "revision_fingerprint": "a949fb0eecf4eaec05a0254cb5b210e8235d9099a8b4179d91e60e942cb335e1",
     "revision_snapshot": {
@@ -7587,7 +7587,7 @@
     "sender": "ASL DIPARTIMENTO E PREVENZIONE",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T17:47:35Z",
+    "last_revision_check_at": "2026-10-09T05:32:44Z",
     "delivery_pending": false,
     "revision_fingerprint": "2fed61f118ae4d6a41d5c395991c64b470f5eb0dbc0fda0bddcdec60ad2510c8",
     "revision_snapshot": {
@@ -7623,7 +7623,7 @@
     "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
     "act_number": "113",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T17:47:35Z",
+    "last_revision_check_at": "2026-10-09T05:32:44Z",
     "delivery_pending": false,
     "revision_fingerprint": "875d31eb4890a455c7b8a3ec01df3580e65b851bfc31884624777c7c1f74bbf1",
     "revision_snapshot": {
@@ -7659,7 +7659,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "25",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T17:47:35Z",
+    "last_revision_check_at": "2026-10-09T05:32:44Z",
     "delivery_pending": false,
     "revision_fingerprint": "4b8c2eddac9505d4d95947107980c3de8a9f6a55c1cdf1aed78a829bc88bcfe7",
     "revision_snapshot": {
@@ -7883,7 +7883,7 @@
     "sender": "SEGRETARIO COMUNALE SEDE",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T17:47:35Z",
+    "last_revision_check_at": "2026-10-09T05:32:44Z",
     "delivery_pending": false,
     "revision_fingerprint": "8433ae00796d79bc48f1fc363fbbd00a5cde32cab2e8919a12424ee716e00696",
     "revision_snapshot": {
@@ -7919,7 +7919,7 @@
     "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
     "act_number": "57",
     "register_number": "",
-    "last_revision_check_at": "2026-10-08T17:47:35Z",
+    "last_revision_check_at": "2026-10-09T05:32:44Z",
     "delivery_pending": false,
     "revision_fingerprint": "61338d7ae421741ec97bf1cae2b06c07b91a5504074bea5c943ee707d10b683e",
     "revision_snapshot": {
@@ -8060,7 +8060,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-08T17:47:35Z"
+    "last_revision_check_at": "2026-10-09T05:32:44Z"
   },
   "v2:1517f788b717d738bcb9e4ce": {
     "notified": true,
@@ -8204,7 +8204,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-08T17:47:35Z"
+    "last_revision_check_at": "2026-10-09T05:32:44Z"
   },
   "v2:0f28bbb7e9fde138f62f2426": {
     "notified": true,
