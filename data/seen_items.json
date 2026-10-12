@@ -8660,7 +8660,26 @@
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "225",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "a79e2b28c13b4be69a6485898bffbe67a542051ce8eb0551bbd497b52b9dde31",
+    "revision_fingerprint": "a79e2b28c13b4be69a6485898bffbe67a542051ce8eb0551bbd497b52b9dde31",
+    "revision_snapshot": {
+      "date": "12-10-2026",
+      "date_end": "27-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "225",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "ded7cf704d319263c812ff5ef651ea70adc6e921fef5670e8e25d6e139115d9e"
+      ],
+      "attachment_name_hashes": [
+        "e5ccb8f74405a290"
+      ]
+    },
+    "revision": 1
   },
   "v2:683f9d85bf38669166a8b75b": {
     "notified": false,
