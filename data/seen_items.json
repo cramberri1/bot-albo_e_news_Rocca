@@ -1528,7 +1528,7 @@
     "date": "10-09-2026",
     "date_end": "09-11-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-12T16:44:13Z",
+    "last_revision_check_at": "2026-10-12T17:47:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "3aaeadbeb571dc866d68a6b382354455ac9c7edf719039007f939dde6ef393d5",
     "revision_snapshot": {
@@ -6527,7 +6527,7 @@
     "date": "14-09-2026",
     "date_end": "14-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-12T16:44:13Z",
+    "last_revision_check_at": "2026-10-12T17:47:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "eeeb2c45115bb8c4179d06e3cad10c8dd72563bf79564e4716cb45effe4bcbec",
     "revision_snapshot": {
@@ -6642,7 +6642,7 @@
     "date": "16-09-2026",
     "date_end": "20-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-12T16:44:13Z",
+    "last_revision_check_at": "2026-10-12T17:47:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "defc395be8c89e5256cf32d3799a82a8108c52a37708ce2fada0ea2cec3dfb50",
     "revision_snapshot": {
@@ -6686,7 +6686,7 @@
     "date_end": "17-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-10-12T16:44:13Z",
+    "last_revision_check_at": "2026-10-12T17:47:38Z",
     "revision_fingerprint": "f2d00b2ed2ebe8d23314928574460e393e0a18a36bcb27655e784faa2d48473e",
     "revision_snapshot": {
       "date": "17-09-2026",
@@ -7155,7 +7155,7 @@
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "202",
     "register_number": "",
-    "last_revision_check_at": "2026-10-12T16:44:13Z",
+    "last_revision_check_at": "2026-10-12T17:47:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "c31f93eee7faa613fe53c001375f0a49e1186cdd611ce3e9597c5bcab4ad6c41",
     "revision_snapshot": {
@@ -7443,7 +7443,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "34",
     "register_number": "",
-    "last_revision_check_at": "2026-10-12T16:44:13Z",
+    "last_revision_check_at": "2026-10-12T17:47:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "41f90a83d1e2c0e8f159ebd6a75818410d3ff46bbc52d403286c28f8acf98749",
     "revision_snapshot": {
@@ -7479,7 +7479,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "33",
     "register_number": "",
-    "last_revision_check_at": "2026-10-12T16:44:13Z",
+    "last_revision_check_at": "2026-10-12T17:47:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "8bb90b9ead57931f03f1579af7e1cd36ea4c4581fa91087b8f7a4a7ddb86e77c",
     "revision_snapshot": {
@@ -7515,7 +7515,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "31",
     "register_number": "",
-    "last_revision_check_at": "2026-10-12T16:44:13Z",
+    "last_revision_check_at": "2026-10-12T17:47:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "bca67a9fabca98f937a1a2f8fe83a6c4975ad5ff65356c675c21d4327f2aaf6d",
     "revision_snapshot": {
@@ -7734,7 +7734,7 @@
     "sender": "SINDACO COMUNE DI ROCCABASCERANA",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-12T16:44:13Z",
+    "last_revision_check_at": "2026-10-12T17:47:38Z",
     "delivery_pending": false,
     "revision_fingerprint": "3bc7ee5eb95743391de5914b3aa692153d8e8cd66b4035810e9c3f5e166adc5b",
     "revision_snapshot": {
@@ -8096,7 +8096,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-12T16:44:13Z"
+    "last_revision_check_at": "2026-10-12T17:47:38Z"
   },
   "v2:c1dd7aa61ebdb5ff3d3b121b": {
     "notified": true,
@@ -8280,7 +8280,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-12T16:44:13Z"
+    "last_revision_check_at": "2026-10-12T17:47:38Z"
   },
   "v2:c19eb9580546975893d488b4": {
     "notified": true,
@@ -8316,7 +8316,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-12T16:44:13Z"
+    "last_revision_check_at": "2026-10-12T17:47:38Z"
   },
   "v2:5d876e94d5448ed78d99d780": {
     "notified": true,
@@ -8352,7 +8352,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-12T16:44:13Z"
+    "last_revision_check_at": "2026-10-12T17:47:38Z"
   },
   "v2:e5777cb600d894ffdea7f3f9": {
     "notified": true,
@@ -8388,7 +8388,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-12T16:44:13Z"
+    "last_revision_check_at": "2026-10-12T17:47:38Z"
   },
   "v2:0cc5328f3b7f9897dd11383f": {
     "notified": true,
@@ -8424,7 +8424,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-12T16:44:13Z"
+    "last_revision_check_at": "2026-10-12T17:47:38Z"
   },
   "v2:d8c5b2df42851ae808166e7f": {
     "notified": true,
@@ -8460,7 +8460,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-12T16:44:13Z"
+    "last_revision_check_at": "2026-10-12T17:47:38Z"
   },
   "v2:a7c96c14064de46e83cb2d07": {
     "notified": true,
@@ -8496,7 +8496,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-12T16:44:13Z"
+    "last_revision_check_at": "2026-10-12T17:47:38Z"
   },
   "v2:29bdc29781c65b31cc094b86": {
     "notified": true,
@@ -8532,7 +8532,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-12T16:44:13Z"
+    "last_revision_check_at": "2026-10-12T17:47:38Z"
   },
   "v2:9983dd93c34c14cb5955ef9e": {
     "notified": true,
@@ -8568,7 +8568,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-12T16:44:13Z"
+    "last_revision_check_at": "2026-10-12T17:47:38Z"
   },
   "v2:7741f9abe485cc75f1e62f78": {
     "notified": true,
@@ -8641,7 +8641,7 @@
       ]
     },
     "revision": 2,
-    "last_revision_check_at": "2026-10-12T16:44:13Z",
+    "last_revision_check_at": "2026-10-12T17:47:38Z",
     "delivery_epoch": 1
   },
   "v2:f87630a66f757dc6790bf226": {
