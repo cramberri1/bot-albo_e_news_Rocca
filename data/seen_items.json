@@ -8643,5 +8643,56 @@
     "revision": 2,
     "last_revision_check_at": "2026-10-12T11:10:04Z",
     "delivery_epoch": 1
+  },
+  "v2:f87630a66f757dc6790bf226": {
+    "notified": false,
+    "date": "12-10-2026",
+    "date_end": "27-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:f87630a66f757dc6790bf226",
+    "legacy_ids": [
+      "77f33f6b4b0b7bd9"
+    ],
+    "title": "Rinnovo polizza Fiat Ducato tg. AS481KY e Peugeot GS157ZA",
+    "num_pub": "568",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "225",
+    "register_number": ""
+  },
+  "v2:683f9d85bf38669166a8b75b": {
+    "notified": false,
+    "date": "12-10-2026",
+    "date_end": "27-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:683f9d85bf38669166a8b75b",
+    "legacy_ids": [
+      "03e6d54d7e0f6d94"
+    ],
+    "title": "Liquidazione software modulo Gestione Rifiuti annualità 2026 alla Digitense Srl",
+    "num_pub": "567",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "218",
+    "register_number": ""
+  },
+  "v2:b129b9d5d8f461f440339711": {
+    "notified": false,
+    "date": "12-10-2026",
+    "date_end": "27-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:b129b9d5d8f461f440339711",
+    "legacy_ids": [
+      "afeed5a5be038c9e"
+    ],
+    "title": "Consorzio Pubblico di Servizi Sociali Ambito A4 in liquidazione (art. 31 D.Lgs. 267/2000 e L.R. Campania n. 11/2007). Accordo transattivo - Saldo",
+    "num_pub": "566",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "209",
+    "register_number": ""
   }
 }
