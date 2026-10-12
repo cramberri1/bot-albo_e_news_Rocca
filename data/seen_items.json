@@ -8624,32 +8624,9 @@
     "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
     "act_number": "60",
     "register_number": "",
-    "delivery_pending": true,
-    "revision_fingerprint": "f1e58355793e23aca6210e03da24d416c7e8dfe03de2f8fa735d9fa2030a4a98",
+    "delivery_pending": false,
+    "revision_fingerprint": "83b3816f30f573e07017c8e513b93007d42656c8271b5a197acf9d64a4b76cb6",
     "revision_snapshot": {
-      "date": "12-10-2026",
-      "date_end": "27-10-2026",
-      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
-      "act_number": "60",
-      "register_number": "",
-      "attachment_count": 1,
-      "attachment_sha256": [
-        "924b80fdcb9f53d2a71ec3f8d071018a4242ecda49e72633cc7fd652f5be37c9"
-      ],
-      "attachment_name_hashes": [
-        "10c07355c3ad6fd3"
-      ]
-    },
-    "revision": 1,
-    "last_revision_check_at": "2026-10-12T10:07:01Z",
-    "pending_kind": "revision",
-    "pending_version": "83b3816f30f573e07017c8e513b93007d42656c8271b5a197acf9d64a4b76cb6",
-    "pending_revision_changes": [
-      "allegati"
-    ],
-    "delivery_epoch": 1,
-    "pending_delivery_key": "v2:5ec57ec5dc0b6f888121c53e@83b3816f30f573e07017c8e5:1",
-    "pending_revision_snapshot": {
       "date": "12-10-2026",
       "date_end": "27-10-2026",
       "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
@@ -8662,6 +8639,9 @@
       "attachment_name_hashes": [
         "a42bbae1ebcc4e41"
       ]
-    }
+    },
+    "revision": 2,
+    "last_revision_check_at": "2026-10-12T11:10:04Z",
+    "delivery_epoch": 1
   }
 }
