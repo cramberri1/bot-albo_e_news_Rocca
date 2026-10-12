@@ -8645,7 +8645,7 @@
     "delivery_epoch": 1
   },
   "v2:f87630a66f757dc6790bf226": {
-    "notified": false,
+    "notified": true,
     "date": "12-10-2026",
     "date_end": "27-10-2026",
     "expired": false,
