@@ -8652,7 +8652,8 @@
     "identity_version": 2,
     "primary_id": "v2:f87630a66f757dc6790bf226",
     "legacy_ids": [
-      "77f33f6b4b0b7bd9"
+      "77f33f6b4b0b7bd9",
+      "v2:f87630a66f757dc6790bf226"
     ],
     "title": "Rinnovo polizza Fiat Ducato tg. AS481KY e Peugeot GS157ZA",
     "num_pub": "568",
@@ -8669,7 +8670,8 @@
     "identity_version": 2,
     "primary_id": "v2:683f9d85bf38669166a8b75b",
     "legacy_ids": [
-      "03e6d54d7e0f6d94"
+      "03e6d54d7e0f6d94",
+      "v2:683f9d85bf38669166a8b75b"
     ],
     "title": "Liquidazione software modulo Gestione Rifiuti annualità 2026 alla Digitense Srl",
     "num_pub": "567",
@@ -8686,7 +8688,8 @@
     "identity_version": 2,
     "primary_id": "v2:b129b9d5d8f461f440339711",
     "legacy_ids": [
-      "afeed5a5be038c9e"
+      "afeed5a5be038c9e",
+      "v2:b129b9d5d8f461f440339711"
     ],
     "title": "Consorzio Pubblico di Servizi Sociali Ambito A4 in liquidazione (art. 31 D.Lgs. 267/2000 e L.R. Campania n. 11/2007). Accordo transattivo - Saldo",
     "num_pub": "566",
@@ -8694,5 +8697,42 @@
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "209",
     "register_number": ""
+  },
+  "v2:3c3297188ca748887de5a23e": {
+    "notified": false,
+    "date": "12-10-2026",
+    "date_end": "27-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:3c3297188ca748887de5a23e",
+    "legacy_ids": [
+      "184dde5e79959332",
+      "v2:3c3297188ca748887de5a23e"
+    ],
+    "title": "Servizio noleggio fotocopiatrici - Liquidazione canone Luglio/Agosto/Settembre 2026 (CIG: B59A3DDEA7 e CIG B06B8852F6).",
+    "num_pub": "569",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "226",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "d1c8f7f6a63b97bda85822e22856f18f7d23e566304c6028415ac6e0a2973fd4",
+    "revision_fingerprint": "d1c8f7f6a63b97bda85822e22856f18f7d23e566304c6028415ac6e0a2973fd4",
+    "revision_snapshot": {
+      "date": "12-10-2026",
+      "date_end": "27-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "226",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "e34a7f936a3e249595057abf96cc408fcd63ff2725a05c2dca93737f82d346ef"
+      ],
+      "attachment_name_hashes": [
+        "77251670f731817f"
+      ]
+    },
+    "revision": 1
   }
 }
