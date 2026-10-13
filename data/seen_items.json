@@ -8843,9 +8843,7 @@
     "sender": "D'AMELIO  MASSIMILIANO",
     "act_number": "",
     "register_number": "",
-    "delivery_pending": true,
-    "pending_kind": "new",
-    "pending_version": "00ff46e64d95aa7aa5c1aaa82d4f4b81fba2b45bee4ff1c63cf36c2e96cb3667",
+    "delivery_pending": false,
     "revision_fingerprint": "00ff46e64d95aa7aa5c1aaa82d4f4b81fba2b45bee4ff1c63cf36c2e96cb3667",
     "revision_snapshot": {
       "date": "13-10-2026",
@@ -8865,7 +8863,8 @@
         "896adddee490ad12"
       ]
     },
-    "revision": 1
+    "revision": 1,
+    "last_revision_check_at": "2026-10-13T11:47:12Z"
   },
   "v2:3fe0f4f476aa1beb3d36b427": {
     "notified": false,
