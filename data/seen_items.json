@@ -8825,5 +8825,97 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-13T08:42:54Z"
+  },
+  "v2:454eab4b13a0e3ffc59dd175": {
+    "notified": false,
+    "date": "13-10-2026",
+    "date_end": "28-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:454eab4b13a0e3ffc59dd175",
+    "legacy_ids": [
+      "20a3f941d9ecc19c",
+      "v2:454eab4b13a0e3ffc59dd175"
+    ],
+    "title": "Permesso di costruire in sanatoria ai sensi dell'art. 36 del D.P.R. 6 giugno 2001 n. 380 di un Fabbricato e di un manufatto accessorio alla via Vittorio Veneto  in catasto al Fg. 2, P.lla 1423, sub 1-8- Rich. Parrella Giovann",
+    "num_pub": "574",
+    "tipo": "SVINCOLO IDROGEOLOGICO",
+    "sender": "D'AMELIO  MASSIMILIANO",
+    "act_number": "",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "00ff46e64d95aa7aa5c1aaa82d4f4b81fba2b45bee4ff1c63cf36c2e96cb3667",
+    "revision_fingerprint": "00ff46e64d95aa7aa5c1aaa82d4f4b81fba2b45bee4ff1c63cf36c2e96cb3667",
+    "revision_snapshot": {
+      "date": "13-10-2026",
+      "date_end": "28-10-2026",
+      "sender": "D'AMELIO  MASSIMILIANO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 3,
+      "attachment_sha256": [
+        "5e9163b75b36ab4e746f7afda6aa0b5978c2dc3bc38550a94754230008432251",
+        "b38e959e41d3df7de605639f4b42a44810569aee36b0da849ff4db3cab3ccfab",
+        "e519011614974e0328eeb54319292ee19c09cb7e22e49b40e5394f3d0f02af65"
+      ],
+      "attachment_name_hashes": [
+        "56603e23354001a1",
+        "617ef8b118e261ee",
+        "896adddee490ad12"
+      ]
+    },
+    "revision": 1
+  },
+  "v2:3fe0f4f476aa1beb3d36b427": {
+    "notified": false,
+    "date": "13-10-2026",
+    "date_end": "28-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:3fe0f4f476aa1beb3d36b427",
+    "legacy_ids": [
+      "60069ec83aced6a8"
+    ],
+    "title": "Determina a contrarre per l'affidamento ai sensi dell'articolo 1, comma 2 lettera a) Legge 120/2020, per l'affidamento delle attività per << Costituzione Ufficio Direzione >> per la \"Realizzazione delle infrastrutture dell'area P.I.P. alla località Tufara Valle Patto territoriale Sviluppo 2000 Valle del Sabato\". 3° perizia di variante/secondo funzionale di completamento. CUP G19J21009640003 - CIG 88702623C4.Provvedimenti. Determina di liquidazione V acconto Coordinatore della Sicurezza in fase di Esecuzione.",
+    "num_pub": "573",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "206",
+    "register_number": ""
+  },
+  "v2:1bcf2af9312206a34c1d0e2c": {
+    "notified": false,
+    "date": "13-10-2026",
+    "date_end": "28-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:1bcf2af9312206a34c1d0e2c",
+    "legacy_ids": [
+      "bbfe2bd7fe1aae70"
+    ],
+    "title": "Determina a contrarre per l'affidamento ai sensi dell'articolo 1, comma 2 lettera a) Legge 120/2020, per l'affidamento delle attività per << Costituzione Ufficio Direzione >> per la \"Realizzazione delle infrastrutture dell'area P.I.P. alla località Tufara Valle Patto territoriale Sviluppo 2000 Valle del Sabato\". 3° perizia di variante/secondo funzionale di completamento. CUP G19J21009640003 - CIG 887025914B. Provvedimenti. Determina di liquidazione V acconto Direzione dei Lavori.",
+    "num_pub": "572",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "205",
+    "register_number": ""
+  },
+  "v2:e73d911217d1191976f165d6": {
+    "notified": false,
+    "date": "13-10-2026",
+    "date_end": "28-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:e73d911217d1191976f165d6",
+    "legacy_ids": [
+      "1dca48fd7e20b53c"
+    ],
+    "title": "Realizzazione delle infrastrutture dell'area P.I.P. alla località Tufara Valle - Patto territoriale \"Sviluppo 2000 Valle del Sabato\". 3° perizia di variante/secondo stralcio funzionale di completamento. CUP: G19J21009640003.Approvazione e liquidazione STATO AVANZAMENTO LAVORI N 5. \nCIG: 8998161D59",
+    "num_pub": "571",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "204",
+    "register_number": ""
   }
 }
