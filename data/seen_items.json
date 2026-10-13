@@ -8946,13 +8946,33 @@
     "identity_version": 2,
     "primary_id": "v2:e73d911217d1191976f165d6",
     "legacy_ids": [
-      "1dca48fd7e20b53c"
+      "1dca48fd7e20b53c",
+      "v2:e73d911217d1191976f165d6"
     ],
     "title": "Realizzazione delle infrastrutture dell'area P.I.P. alla località Tufara Valle - Patto territoriale \"Sviluppo 2000 Valle del Sabato\". 3° perizia di variante/secondo stralcio funzionale di completamento. CUP: G19J21009640003.Approvazione e liquidazione STATO AVANZAMENTO LAVORI N 5. \nCIG: 8998161D59",
     "num_pub": "571",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "204",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "422a7b12833c095d1cf42f2ee96e6108c5f19bedb11f31b040ec10deffcbb078",
+    "revision_fingerprint": "422a7b12833c095d1cf42f2ee96e6108c5f19bedb11f31b040ec10deffcbb078",
+    "revision_snapshot": {
+      "date": "13-10-2026",
+      "date_end": "28-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "204",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "f595ed6589e429f84ff9bf69b162a202081ef48370ebf4c182bbc9f729bf4853"
+      ],
+      "attachment_name_hashes": [
+        "619533147c57d55c"
+      ]
+    },
+    "revision": 1
   }
 }
