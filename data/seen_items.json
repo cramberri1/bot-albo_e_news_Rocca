@@ -8787,5 +8787,44 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-13T07:07:01Z"
+  },
+  "v2:f2da6f06fbba5b750535a72b": {
+    "notified": false,
+    "date": "13-10-2026",
+    "date_end": "28-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:f2da6f06fbba5b750535a72b",
+    "legacy_ids": [
+      "8a1ff534f0d5359a",
+      "v2:f2da6f06fbba5b750535a72b"
+    ],
+    "title": "Accesso telematico in sola consultazione alla banca dati anagrafica comunale da parte della Questura di Avellino  Commissariato di Pubblica Sicurezza distaccato di Cervinara. Approvazione dello schema di convenzione ai sensi dell'art. 37, comma 4, del d.P.R. n. 223/1989",
+    "num_pub": "570",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "61",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "4b9016fe3cdaf1796b0f3d017ea3beb15999a26a8d61b63c47736a1265570794",
+    "revision_fingerprint": "4b9016fe3cdaf1796b0f3d017ea3beb15999a26a8d61b63c47736a1265570794",
+    "revision_snapshot": {
+      "date": "13-10-2026",
+      "date_end": "28-10-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "61",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "d297ed5fca8a689829423deb823ec462f69ec53a842043252dcec19e5ca8fedd",
+        "edbca3f6e030c50054658609886f46bdf95a474d031573163b09cb3ffc890c2b"
+      ],
+      "attachment_name_hashes": [
+        "89abf5d2beca34e5",
+        "e197140c59f88e5c"
+      ]
+    },
+    "revision": 1
   }
 }
