@@ -8789,7 +8789,7 @@
     "last_revision_check_at": "2026-10-13T07:07:01Z"
   },
   "v2:f2da6f06fbba5b750535a72b": {
-    "notified": false,
+    "notified": true,
     "date": "13-10-2026",
     "date_end": "28-10-2026",
     "expired": false,
