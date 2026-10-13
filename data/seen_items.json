@@ -8910,14 +8910,34 @@
     "identity_version": 2,
     "primary_id": "v2:1bcf2af9312206a34c1d0e2c",
     "legacy_ids": [
-      "bbfe2bd7fe1aae70"
+      "bbfe2bd7fe1aae70",
+      "v2:1bcf2af9312206a34c1d0e2c"
     ],
     "title": "Determina a contrarre per l'affidamento ai sensi dell'articolo 1, comma 2 lettera a) Legge 120/2020, per l'affidamento delle attività per << Costituzione Ufficio Direzione >> per la \"Realizzazione delle infrastrutture dell'area P.I.P. alla località Tufara Valle Patto territoriale Sviluppo 2000 Valle del Sabato\". 3° perizia di variante/secondo funzionale di completamento. CUP G19J21009640003 - CIG 887025914B. Provvedimenti. Determina di liquidazione V acconto Direzione dei Lavori.",
     "num_pub": "572",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "205",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "a10bbfe7c6b97ad8ba502e806dd97bb9feec61f11b160653278b167b4f9de4a7",
+    "revision_fingerprint": "a10bbfe7c6b97ad8ba502e806dd97bb9feec61f11b160653278b167b4f9de4a7",
+    "revision_snapshot": {
+      "date": "13-10-2026",
+      "date_end": "28-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "205",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "20b421de5e54b586f8b7e7064477b508f51569d9562980e277cc6c6a9a06bee1"
+      ],
+      "attachment_name_hashes": [
+        "3a0c0f9ee8c3fa7c"
+      ]
+    },
+    "revision": 1
   },
   "v2:e73d911217d1191976f165d6": {
     "notified": false,
