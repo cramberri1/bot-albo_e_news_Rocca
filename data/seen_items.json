@@ -8874,14 +8874,34 @@
     "identity_version": 2,
     "primary_id": "v2:3fe0f4f476aa1beb3d36b427",
     "legacy_ids": [
-      "60069ec83aced6a8"
+      "60069ec83aced6a8",
+      "v2:3fe0f4f476aa1beb3d36b427"
     ],
     "title": "Determina a contrarre per l'affidamento ai sensi dell'articolo 1, comma 2 lettera a) Legge 120/2020, per l'affidamento delle attività per << Costituzione Ufficio Direzione >> per la \"Realizzazione delle infrastrutture dell'area P.I.P. alla località Tufara Valle Patto territoriale Sviluppo 2000 Valle del Sabato\". 3° perizia di variante/secondo funzionale di completamento. CUP G19J21009640003 - CIG 88702623C4.Provvedimenti. Determina di liquidazione V acconto Coordinatore della Sicurezza in fase di Esecuzione.",
     "num_pub": "573",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "206",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "e3c9e67a2af4ffb65980926ba13227a2ef79350115417b8baca9045874969ec0",
+    "revision_fingerprint": "e3c9e67a2af4ffb65980926ba13227a2ef79350115417b8baca9045874969ec0",
+    "revision_snapshot": {
+      "date": "13-10-2026",
+      "date_end": "28-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "206",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "4a2f9b40160aa0e594eea502d01b75ef6d16ad6ec1c10274fca7edf04d9e5d72"
+      ],
+      "attachment_name_hashes": [
+        "f07fe0a0aa396711"
+      ]
+    },
+    "revision": 1
   },
   "v2:1bcf2af9312206a34c1d0e2c": {
     "notified": false,
