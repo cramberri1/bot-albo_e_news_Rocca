@@ -8973,5 +8973,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-15T14:50:40Z"
+  },
+  "v2:e44f80f0c37c6242ca6a5327": {
+    "notified": false,
+    "date": "15-10-2026",
+    "date_end": "30-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:e44f80f0c37c6242ca6a5327",
+    "legacy_ids": [
+      "069df03b01d9090d",
+      "v2:e44f80f0c37c6242ca6a5327"
+    ],
+    "title": "ORD. DIR. N.10/2026 - Ordinanza chiusura strada comunale \"Via Orsini\", divieto temporaneo di transito per lavori di rifacimento della rete idrica.",
+    "num_pub": "575",
+    "tipo": "ORDINANZA DIRIGENZIALE",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "10",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "a9be59104d165c382979529628a75f1728f3c2b6d8e8ecdb68293d8a2a68807a",
+    "revision_fingerprint": "a9be59104d165c382979529628a75f1728f3c2b6d8e8ecdb68293d8a2a68807a",
+    "revision_snapshot": {
+      "date": "15-10-2026",
+      "date_end": "30-10-2026",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "10",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "fa70484522bf9ddf4bc2cb411e9d4f83c5d4e17d03eecb0b278ba544df01698c"
+      ],
+      "attachment_name_hashes": [
+        "8c1708a4a56a8e38"
+      ]
+    },
+    "revision": 1
   }
 }
