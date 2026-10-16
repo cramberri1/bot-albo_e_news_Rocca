@@ -2745,7 +2745,7 @@
     "date": "19-06-2026",
     "date_end": "17-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-16T07:40:40Z",
+    "last_revision_check_at": "2026-10-16T08:44:06Z",
     "delivery_pending": false,
     "revision_fingerprint": "bf12f8e2da17f527342ea27a70ad8c6c7a67d8d159e54a62d7b480247c649881",
     "revision_snapshot": {
@@ -2893,7 +2893,7 @@
     "date": "30-01-2026",
     "date_end": "31-01-2027",
     "expired": false,
-    "last_revision_check_at": "2026-10-16T07:40:40Z",
+    "last_revision_check_at": "2026-10-16T08:44:06Z",
     "delivery_pending": false,
     "revision_fingerprint": "0dffd967df4bf5de1b04a968ffb6044aa2399e9fad137cb63273ca5d7dd73b38",
     "revision_snapshot": {
@@ -2936,7 +2936,7 @@
     "date": "30-12-2025",
     "date_end": "31-12-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-16T07:40:40Z",
+    "last_revision_check_at": "2026-10-16T08:44:06Z",
     "delivery_pending": false,
     "revision_fingerprint": "274da7318cb2de3c4bd1835a7e1f91b0012d7f9f9925298c141f489a585bf8a0",
     "revision_snapshot": {
@@ -7772,7 +7772,7 @@
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "208",
     "register_number": "",
-    "last_revision_check_at": "2026-10-16T07:40:40Z",
+    "last_revision_check_at": "2026-10-16T08:44:06Z",
     "delivery_pending": false,
     "revision_fingerprint": "0c97e751dfb639a24055ea29d3982ce85a181728d45b1c4e990e697eb5f1e267",
     "revision_snapshot": {
@@ -7809,7 +7809,7 @@
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "217",
     "register_number": "",
-    "last_revision_check_at": "2026-10-16T07:40:40Z",
+    "last_revision_check_at": "2026-10-16T08:44:06Z",
     "delivery_pending": false,
     "revision_fingerprint": "f705975d9e9e8b64b4bd98b474d469f540404fd0a16b3ea0dda35a31e8fd4725",
     "revision_snapshot": {
@@ -7883,7 +7883,7 @@
     "sender": "SEGRETARIO COMUNALE SEDE",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-16T07:40:40Z",
+    "last_revision_check_at": "2026-10-16T08:44:06Z",
     "delivery_pending": false,
     "revision_fingerprint": "8433ae00796d79bc48f1fc363fbbd00a5cde32cab2e8919a12424ee716e00696",
     "revision_snapshot": {
