@@ -9009,5 +9009,44 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-16T08:27:54Z"
+  },
+  "v2:836a751165c53fb4f2b75a37": {
+    "notified": false,
+    "date": "16-10-2026",
+    "date_end": "31-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:836a751165c53fb4f2b75a37",
+    "legacy_ids": [
+      "f8b1468e8c446620",
+      "v2:836a751165c53fb4f2b75a37"
+    ],
+    "title": "RENDICONTAZIONE TERZO TRIMESTRE FONDO ECONOMATO ANNO 2026.",
+    "num_pub": "576",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "214",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "3e4d313614cc3a9ba93560c21bff02be6b2a1738fbe70a0444c055b589fdd0b5",
+    "revision_fingerprint": "3e4d313614cc3a9ba93560c21bff02be6b2a1738fbe70a0444c055b589fdd0b5",
+    "revision_snapshot": {
+      "date": "16-10-2026",
+      "date_end": "31-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "214",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "3a81cf63bb0774d99bebdd0df4f27a9a3be569115880af07f955f81835c5f962",
+        "abc38bec7b3927869a132ddaa0e8f4bc377265dfb985e2ae333c4ef79d27d0e5"
+      ],
+      "attachment_name_hashes": [
+        "c8f13d9647bb850f",
+        "f4e2430ccacd1a05"
+      ]
+    },
+    "revision": 1
   }
 }
