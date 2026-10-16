@@ -996,5 +996,14 @@
     "description": "Graduatoria ammessi",
     "notified": true,
     "delivery_pending": false
+  },
+  "201": {
+    "title": "Servizio di mensa scolastica",
+    "category": "Avviso",
+    "date": "16-10-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_201.html",
+    "description": "Ricarica Ticket su App_Servizi Digitali",
+    "notified": false,
+    "delivery_pending": true
   }
 }
