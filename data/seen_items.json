@@ -9049,7 +9049,7 @@
     "last_revision_check_at": "2026-10-16T11:22:30Z"
   },
   "v2:09bcf33162edd81a8ad7ab8f": {
-    "notified": false,
+    "notified": true,
     "date": "16-10-2026",
     "date_end": "31-10-2026",
     "expired": false,
