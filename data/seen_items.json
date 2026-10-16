@@ -9047,5 +9047,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-16T11:22:30Z"
+  },
+  "v2:09bcf33162edd81a8ad7ab8f": {
+    "notified": false,
+    "date": "16-10-2026",
+    "date_end": "31-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:09bcf33162edd81a8ad7ab8f",
+    "legacy_ids": [
+      "1ae72dbae29ef429",
+      "v2:09bcf33162edd81a8ad7ab8f"
+    ],
+    "title": "APPROVAZIONE ELENCO BENEFICIARI AMMESSI PER ESENZIONE/RIDUZIONE TICKET MENSA SCOLASTICA  A.S. 2026/2027",
+    "num_pub": "577",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "233",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "f1d386be14cf96bb2abf9adeb5fc29bd35e785d976ca1ebfeb3642349024e127",
+    "revision_fingerprint": "f1d386be14cf96bb2abf9adeb5fc29bd35e785d976ca1ebfeb3642349024e127",
+    "revision_snapshot": {
+      "date": "16-10-2026",
+      "date_end": "31-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "233",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "cd2d2a930a651215a3b68a90a6b4e8c6922f81cf17874e97dd77bb996c62a9a5"
+      ],
+      "attachment_name_hashes": [
+        "9463037d39ff3091"
+      ]
+    },
+    "revision": 1
   }
 }
