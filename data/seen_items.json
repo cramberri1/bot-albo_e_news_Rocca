@@ -1528,7 +1528,7 @@
     "date": "10-09-2026",
     "date_end": "09-11-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-18T13:01:11Z",
+    "last_revision_check_at": "2026-10-18T14:04:00Z",
     "delivery_pending": false,
     "revision_fingerprint": "3aaeadbeb571dc866d68a6b382354455ac9c7edf719039007f939dde6ef393d5",
     "revision_snapshot": {
@@ -7587,7 +7587,7 @@
     "sender": "ASL DIPARTIMENTO E PREVENZIONE",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-18T13:01:11Z",
+    "last_revision_check_at": "2026-10-18T14:04:00Z",
     "delivery_pending": false,
     "revision_fingerprint": "2fed61f118ae4d6a41d5c395991c64b470f5eb0dbc0fda0bddcdec60ad2510c8",
     "revision_snapshot": {
@@ -7696,7 +7696,7 @@
     "sender": "SINDACO COMUNE DI ROCCABASCERANA",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-18T13:01:11Z",
+    "last_revision_check_at": "2026-10-18T14:04:00Z",
     "delivery_pending": false,
     "revision_fingerprint": "93ea82da06fc5badea43a14293895050a0bba7878a209dbaa46d9e3966954b40",
     "revision_snapshot": {
