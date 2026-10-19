@@ -9027,7 +9027,7 @@
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "214",
     "register_number": "",
-    "delivery_pending": false,
+    "delivery_pending": true,
     "revision_fingerprint": "3e4d313614cc3a9ba93560c21bff02be6b2a1738fbe70a0444c055b589fdd0b5",
     "revision_snapshot": {
       "date": "16-10-2026",
@@ -9046,7 +9046,30 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-19T06:26:50Z"
+    "last_revision_check_at": "2026-10-19T06:26:50Z",
+    "pending_kind": "revision",
+    "pending_version": "217113482f5e27faa44dd7bbcb51e4b733315dd0aeb08be3c4aa792138eacfc3",
+    "pending_revision_changes": [
+      "allegati"
+    ],
+    "delivery_epoch": 1,
+    "pending_delivery_key": "v2:836a751165c53fb4f2b75a37@217113482f5e27faa44dd7bb:1",
+    "pending_revision_snapshot": {
+      "date": "16-10-2026",
+      "date_end": "31-10-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "214",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "3a81cf63bb0774d99bebdd0df4f27a9a3be569115880af07f955f81835c5f962",
+        "3dc2dd1e01e46d8971694a7c04885b0f0018c16f33e0652d62a380c9ff151b40"
+      ],
+      "attachment_name_hashes": [
+        "4ecb1361ed124ea2",
+        "c8f13d9647bb850f"
+      ]
+    }
   },
   "v2:09bcf33162edd81a8ad7ab8f": {
     "notified": true,
