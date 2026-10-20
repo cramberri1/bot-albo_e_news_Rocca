@@ -1023,5 +1023,14 @@
     "description": "Sogesi s.r.l",
     "notified": true,
     "delivery_pending": false
+  },
+  "204": {
+    "title": "AVVIO del Servizio di Mensa Scolastica - a.s. 2026/2027",
+    "category": "Avviso",
+    "date": "20-10-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_204.html",
+    "description": "Lunedì 26.10.2026",
+    "notified": false,
+    "delivery_pending": true
   }
 }
