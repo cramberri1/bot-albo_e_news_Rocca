@@ -1012,7 +1012,7 @@
     "date": "20-10-2026",
     "url": "https://www.comune.roccabascerana.av.it/novita/comunicati_stampa/novita_203.html",
     "description": "Comunicazione urgente ai cittadini a causa del blocco nazionale dei trasporti e della carenza di carburante.",
-    "notified": false,
+    "notified": true,
     "delivery_pending": true
   }
 }
