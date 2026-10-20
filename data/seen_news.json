@@ -1005,5 +1005,14 @@
     "description": "Ricarica Ticket su App_Servizi Digitali",
     "notified": true,
     "delivery_pending": false
+  },
+  "203": {
+    "title": "Raccolta rifiuti: possibili sospensioni e disservizi nel territorio comunale",
+    "category": "Comunicati",
+    "date": "20-10-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/comunicati_stampa/novita_203.html",
+    "description": "Comunicazione urgente ai cittadini a causa del blocco nazionale dei trasporti e della carenza di carburante.",
+    "notified": false,
+    "delivery_pending": true
   }
 }
