@@ -2936,7 +2936,7 @@
     "date": "30-12-2025",
     "date_end": "31-12-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-20T11:44:17Z",
+    "last_revision_check_at": "2026-10-20T13:04:19Z",
     "delivery_pending": false,
     "revision_fingerprint": "274da7318cb2de3c4bd1835a7e1f91b0012d7f9f9925298c141f489a585bf8a0",
     "revision_snapshot": {
@@ -6642,7 +6642,7 @@
     "date": "16-09-2026",
     "date_end": "20-10-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-20T12:00:43Z",
+    "last_revision_check_at": "2026-10-20T13:04:19Z",
     "delivery_pending": false,
     "revision_fingerprint": "defc395be8c89e5256cf32d3799a82a8108c52a37708ce2fada0ea2cec3dfb50",
     "revision_snapshot": {
@@ -7066,7 +7066,7 @@
     "date_end": "20-10-2026",
     "expired": false,
     "delivery_pending": false,
-    "last_revision_check_at": "2026-10-20T12:00:43Z",
+    "last_revision_check_at": "2026-10-20T13:04:19Z",
     "revision_fingerprint": "f56f8b69bb8e5cae3e326513b3fbe0a893b8ae7192335b263623faf863e30345",
     "revision_snapshot": {
       "date": "23-09-2026",
