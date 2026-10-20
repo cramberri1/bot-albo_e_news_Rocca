@@ -1030,7 +1030,7 @@
     "date": "20-10-2026",
     "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_204.html",
     "description": "Lunedì 26.10.2026",
-    "notified": false,
+    "notified": true,
     "delivery_pending": true
   }
 }
