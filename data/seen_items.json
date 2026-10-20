@@ -9084,5 +9084,48 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-20T10:40:17Z"
+  },
+  "v2:d05619da50aa006ed8305ec1": {
+    "notified": false,
+    "date": "20-10-2026",
+    "date_end": "04-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:d05619da50aa006ed8305ec1",
+    "legacy_ids": [
+      "e78f257eb7e6525e",
+      "v2:d05619da50aa006ed8305ec1"
+    ],
+    "title": "LEGGE 353/2000 ART. 10 - O.P.C.M. n. 3606/07. Aggiornamento censimento, tramite apposito catasto, dei soprassuoli percorsi dal fuoco. Anno 2025",
+    "num_pub": "578",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "62",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "f385b1ceb00a953ab0faf29f83a9e00311221b33c8eb18e04763c12f3ad0d4ea",
+    "revision_fingerprint": "f385b1ceb00a953ab0faf29f83a9e00311221b33c8eb18e04763c12f3ad0d4ea",
+    "revision_snapshot": {
+      "date": "20-10-2026",
+      "date_end": "04-11-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "62",
+      "register_number": "",
+      "attachment_count": 4,
+      "attachment_sha256": [
+        "0c0e89a6a9ba80be841789e80eaf5a832d98412bc8970c30a7b44be2f71c18a5",
+        "218981bc80fa8e8d0a5b79eca73b7cb14b1d69761e3072dd164a93dfa510bf06",
+        "41f7e79d600d09944e86de2678283a9584acb7d7ab9cc75a3705d6c03a6b4b9c",
+        "7ebc33787991ca89336384b9c5a0ec0cbcce85b7b1dfb07b3f6f4dd9dc5672e1"
+      ],
+      "attachment_name_hashes": [
+        "b3c4ee768e853c57",
+        "b3e318d2ed468e1b",
+        "dfbc4bc755244991",
+        "f019a152faa3e12a"
+      ]
+    },
+    "revision": 1
   }
 }
