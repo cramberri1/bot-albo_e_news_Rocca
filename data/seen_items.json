@@ -9126,5 +9126,68 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-21T15:05:59Z"
+  },
+  "v2:f981f3346c284a1b8f08022b": {
+    "notified": false,
+    "date": "21-10-2026",
+    "date_end": "05-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:f981f3346c284a1b8f08022b",
+    "legacy_ids": [
+      "cdd4e6f34d903fcb",
+      "v2:f981f3346c284a1b8f08022b"
+    ],
+    "title": "Servizio di ristorazione scolastica in favore degli alunni e del personale dei plessi dell'Istituto Comprensivo Carlo Del Balzo presenti sul territorio comunale - periodo gennaio 2027 / maggio 2028. Determinazione a contrarre ai sensi dell'art. 17 del d.lgs. n. 36/2023 e dell'art. 192 del d.lgs. n. 267/2000: approvazione del progetto e degli atti di gara e indizione di procedura aperta sotto soglia, da espletarsi su piattaforma di approvvigionamento digitale certificata, con aggiudicazione secondo il criterio dell'offerta economicamente più vantaggiosa. Importo a base di gara  139.964,40",
+    "num_pub": "579",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "236",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "ffd7eb79d5e8f50c39a409a3ff26746e1667a9dbd15592c43a434ffa028d7699",
+    "revision_fingerprint": "ffd7eb79d5e8f50c39a409a3ff26746e1667a9dbd15592c43a434ffa028d7699",
+    "revision_snapshot": {
+      "date": "21-10-2026",
+      "date_end": "05-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "236",
+      "register_number": "",
+      "attachment_count": 14,
+      "attachment_sha256": [
+        "56a3b80d2e50a0e552b3520d3066fb8700de11b57ec540e8569e156a34c3592c",
+        "5e2bde2a3e787f7ed513f7f31f87fc1517bbecc5e224be71796f448cfd76b639",
+        "6afac9d29661545eafed6815d5ae1143a9dadb800f9b00b2a016eca02a3b2b42",
+        "6fe54622c0ffac711c9d2cf76ac89bc7ca912ac50fa30981dfa9c1e51e78ac9a",
+        "7ea255c2a720b4d402e9ee401c81110d9e904da8d8b0572658c0ebddc5422a47",
+        "88bf5f7a5307dcc9c1a3f47710c24463c843c0cd05279b657102774708bf7c08",
+        "91c32ee6283dc3c56d1aa3162973e2552e62c1f6fe85118837e6814b68b1008d",
+        "92c99ef9e8a9d3130854f0bcb9b9dc555051b0efd8c774d1a3dd4025432444d2",
+        "a6a472efa8015ff360cd4b6f1f45ed3a076f2039ddf7b7e006378f10771fbdf3",
+        "a7105a9f68823d81efb47268d0989291b5c8a0fc81fb392225a4f42092de6fcd",
+        "bb2f23b3cbbdef96f550623f808cd5483d52d0b43e16a5cb20d70e507327af08",
+        "c282fc6be104c82c425ec6a8306d752aa63a7c7d8d48ddd79d53c84b37c36481",
+        "cc968c75b2d7a936775c0b6a53462f8965c81797982310d0e83f6b44b266b78e",
+        "f4c07cdc00a2e5732c88c7bf0c7f097bb58557070af734782de8d123eefa7a88"
+      ],
+      "attachment_name_hashes": [
+        "0974b8215e80f2c6",
+        "0e22882f8a51f909",
+        "1e126eeddc239ef1",
+        "232db660aaff89b2",
+        "7b97a9a7c04a2741",
+        "7c93fcd82cfe8a33",
+        "8dc187ad252acc3d",
+        "8e435c483fb1bee9",
+        "8f1bad0e925dba0b",
+        "91b70a3c7052c6dd",
+        "9422a8ebc154eb04",
+        "9bea07b53f35a08e",
+        "efd753c5d487d167",
+        "fe37e452beb40b49"
+      ]
+    },
+    "revision": 1
   }
 }
