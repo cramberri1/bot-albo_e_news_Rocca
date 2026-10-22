@@ -9188,5 +9188,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-22T10:36:51Z"
+  },
+  "v2:9a92d8df6743c4a0fe9d4ee7": {
+    "notified": false,
+    "date": "22-10-2026",
+    "date_end": "06-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:9a92d8df6743c4a0fe9d4ee7",
+    "legacy_ids": [
+      "dea51299fe54fe6a",
+      "v2:9a92d8df6743c4a0fe9d4ee7"
+    ],
+    "title": "Anticipazione fondi economato quarto trimestre 2026",
+    "num_pub": "580",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "216",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "7fcaf79ed3b063d71e84a12cec2e1ae2b43b5460a37e86310278d2d272a912d0",
+    "revision_fingerprint": "7fcaf79ed3b063d71e84a12cec2e1ae2b43b5460a37e86310278d2d272a912d0",
+    "revision_snapshot": {
+      "date": "22-10-2026",
+      "date_end": "06-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "216",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "828e984ba752118680691f9d7c5fe7e1d01217b897b5d7cb13aea87e61276b87"
+      ],
+      "attachment_name_hashes": [
+        "28a71c44bb4f2d85"
+      ]
+    },
+    "revision": 1
   }
 }
