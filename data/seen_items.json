@@ -9190,7 +9190,7 @@
     "last_revision_check_at": "2026-10-22T10:36:51Z"
   },
   "v2:9a92d8df6743c4a0fe9d4ee7": {
-    "notified": false,
+    "notified": true,
     "date": "22-10-2026",
     "date_end": "06-11-2026",
     "expired": false,
