@@ -9224,5 +9224,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-22T14:03:15Z"
+  },
+  "v2:6f848bdbf8abd303284c781f": {
+    "notified": false,
+    "date": "22-10-2026",
+    "date_end": "06-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:6f848bdbf8abd303284c781f",
+    "legacy_ids": [
+      "de781d9109bf1dd3",
+      "v2:6f848bdbf8abd303284c781f"
+    ],
+    "title": "Patrocinio morale per presentazione libro",
+    "num_pub": "581",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "63",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "6da981f2ac57e02a300478c089bcf93eb15d382ab192accfa92a3c142f09eada",
+    "revision_fingerprint": "6da981f2ac57e02a300478c089bcf93eb15d382ab192accfa92a3c142f09eada",
+    "revision_snapshot": {
+      "date": "22-10-2026",
+      "date_end": "06-11-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "63",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "ae6cd1c0ec81098de1c19b5c4ec11636e3aa349b0a0a2fa1e1cefc333dcbe456"
+      ],
+      "attachment_name_hashes": [
+        "9dc66307ddcf1f87"
+      ]
+    },
+    "revision": 1
   }
 }
