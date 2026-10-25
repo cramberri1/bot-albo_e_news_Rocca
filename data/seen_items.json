@@ -1528,7 +1528,7 @@
     "date": "10-09-2026",
     "date_end": "09-11-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-25T08:15:15Z",
+    "last_revision_check_at": "2026-10-25T09:17:24Z",
     "delivery_pending": false,
     "revision_fingerprint": "3aaeadbeb571dc866d68a6b382354455ac9c7edf719039007f939dde6ef393d5",
     "revision_snapshot": {
@@ -7551,7 +7551,7 @@
     "sender": "ASL DIPARTIMENTO E PREVENZIONE",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-25T08:15:15Z",
+    "last_revision_check_at": "2026-10-25T09:17:24Z",
     "delivery_pending": false,
     "revision_fingerprint": "a949fb0eecf4eaec05a0254cb5b210e8235d9099a8b4179d91e60e942cb335e1",
     "revision_snapshot": {
@@ -7696,7 +7696,7 @@
     "sender": "SINDACO COMUNE DI ROCCABASCERANA",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-25T08:15:15Z",
+    "last_revision_check_at": "2026-10-25T09:17:24Z",
     "delivery_pending": false,
     "revision_fingerprint": "93ea82da06fc5badea43a14293895050a0bba7878a209dbaa46d9e3966954b40",
     "revision_snapshot": {
@@ -8641,7 +8641,7 @@
       ]
     },
     "revision": 2,
-    "last_revision_check_at": "2026-10-25T08:15:15Z",
+    "last_revision_check_at": "2026-10-25T09:17:24Z",
     "delivery_epoch": 1
   },
   "v2:f87630a66f757dc6790bf226": {
@@ -8678,7 +8678,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:683f9d85bf38669166a8b75b": {
     "notified": true,
@@ -8714,7 +8714,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:b129b9d5d8f461f440339711": {
     "notified": true,
@@ -8750,7 +8750,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:3c3297188ca748887de5a23e": {
     "notified": true,
@@ -8786,7 +8786,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:f2da6f06fbba5b750535a72b": {
     "notified": true,
@@ -8824,7 +8824,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:454eab4b13a0e3ffc59dd175": {
     "notified": true,
@@ -8864,7 +8864,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:3fe0f4f476aa1beb3d36b427": {
     "notified": true,
@@ -8900,7 +8900,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:1bcf2af9312206a34c1d0e2c": {
     "notified": true,
@@ -8936,7 +8936,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:e73d911217d1191976f165d6": {
     "notified": true,
@@ -8972,7 +8972,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:e44f80f0c37c6242ca6a5327": {
     "notified": true,
@@ -9008,7 +9008,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:836a751165c53fb4f2b75a37": {
     "notified": true,
@@ -9046,7 +9046,7 @@
       ]
     },
     "revision": 2,
-    "last_revision_check_at": "2026-10-25T08:15:15Z",
+    "last_revision_check_at": "2026-10-25T09:17:24Z",
     "delivery_epoch": 1
   },
   "v2:09bcf33162edd81a8ad7ab8f": {
@@ -9083,7 +9083,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:d05619da50aa006ed8305ec1": {
     "notified": true,
@@ -9125,7 +9125,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:f981f3346c284a1b8f08022b": {
     "notified": true,
@@ -9187,7 +9187,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:9a92d8df6743c4a0fe9d4ee7": {
     "notified": true,
@@ -9223,7 +9223,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   },
   "v2:6f848bdbf8abd303284c781f": {
     "notified": true,
@@ -9259,6 +9259,6 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-25T08:15:15Z"
+    "last_revision_check_at": "2026-10-25T09:17:24Z"
   }
 }
