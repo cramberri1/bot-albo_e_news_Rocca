@@ -9262,7 +9262,7 @@
     "last_revision_check_at": "2026-10-26T15:37:29Z"
   },
   "v2:6e7f0d84885f8c5841cb2165": {
-    "notified": false,
+    "notified": true,
     "date": "26-10-2026",
     "date_end": "10-11-2026",
     "expired": false,
