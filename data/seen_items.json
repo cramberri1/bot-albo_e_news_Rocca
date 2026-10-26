@@ -9260,5 +9260,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-26T15:37:29Z"
+  },
+  "v2:6e7f0d84885f8c5841cb2165": {
+    "notified": false,
+    "date": "26-10-2026",
+    "date_end": "10-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:6e7f0d84885f8c5841cb2165",
+    "legacy_ids": [
+      "bb4b137300f77430",
+      "v2:6e7f0d84885f8c5841cb2165"
+    ],
+    "title": "Intervento di riparazione risarcimento danni del veicolo Jeep Renegade tg. GR(omissis)DK - Impegno di spesa",
+    "num_pub": "582",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "235",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "810bd1427c8569f0502095fbf1ffb986c3c695d274cbde7d3247c0ebebfb1a80",
+    "revision_fingerprint": "810bd1427c8569f0502095fbf1ffb986c3c695d274cbde7d3247c0ebebfb1a80",
+    "revision_snapshot": {
+      "date": "26-10-2026",
+      "date_end": "10-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "235",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "5da64195e74828092fa44d3a022cbeaab43469e222eb5515ce84ae81a50403ba"
+      ],
+      "attachment_name_hashes": [
+        "5c26b0893c6f79af"
+      ]
+    },
+    "revision": 1
   }
 }
