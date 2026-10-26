@@ -9296,5 +9296,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-26T16:39:59Z"
+  },
+  "v2:c5eefac18bc883a8aa7d2573": {
+    "notified": false,
+    "date": "26-10-2026",
+    "date_end": "10-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:c5eefac18bc883a8aa7d2573",
+    "legacy_ids": [
+      "dfc93efb0f47f871",
+      "v2:c5eefac18bc883a8aa7d2573"
+    ],
+    "title": "Atto di impegno di spesa - Quota per l'anno 2026 per il mantenimento dei servizi base del CST Asmenet.",
+    "num_pub": "583",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "237",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "a798ef6c0b7c3c707f55ab8b1f9e145f182c8d2145ee9fd45cb4daa3d5b8d0ad",
+    "revision_fingerprint": "a798ef6c0b7c3c707f55ab8b1f9e145f182c8d2145ee9fd45cb4daa3d5b8d0ad",
+    "revision_snapshot": {
+      "date": "26-10-2026",
+      "date_end": "10-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "237",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "1a2407385c978c4712a742384c4eaffa74034e3ded88e075b41ecdaca40cf540"
+      ],
+      "attachment_name_hashes": [
+        "889005bcd8a253bc"
+      ]
+    },
+    "revision": 1
   }
 }
