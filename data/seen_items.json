@@ -9298,7 +9298,7 @@
     "last_revision_check_at": "2026-10-26T16:39:59Z"
   },
   "v2:c5eefac18bc883a8aa7d2573": {
-    "notified": false,
+    "notified": true,
     "date": "26-10-2026",
     "date_end": "10-11-2026",
     "expired": false,
