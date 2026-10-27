@@ -9332,5 +9332,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-27T07:07:04Z"
+  },
+  "v2:c6c7daef22c72dd1cb8f2d60": {
+    "notified": false,
+    "date": "27-10-2026",
+    "date_end": "11-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:c6c7daef22c72dd1cb8f2d60",
+    "legacy_ids": [
+      "765cd91e5daa3624",
+      "v2:c6c7daef22c72dd1cb8f2d60"
+    ],
+    "title": "Ord.Dir.11/2026 - Regolamentazione e disciplina della circolazione veicolare ai cimiteri comunali di Cassano Caudino e di Tufara valle in occasione della prossima commemorazione die defunti nei giorni 31 ottobre 1 e 2 novembre 2026.",
+    "num_pub": "584",
+    "tipo": "ORDINANZA DIRIGENZIALE",
+    "sender": "RESPONSABILE AREA TECNICA E DI VIGILANZA",
+    "act_number": "11",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "63e2bcf3a91ca3ec42fd00125274bbf885cbc412aa3fd14f6ce7987b99ac7c0f",
+    "revision_fingerprint": "63e2bcf3a91ca3ec42fd00125274bbf885cbc412aa3fd14f6ce7987b99ac7c0f",
+    "revision_snapshot": {
+      "date": "27-10-2026",
+      "date_end": "11-11-2026",
+      "sender": "RESPONSABILE AREA TECNICA E DI VIGILANZA",
+      "act_number": "11",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "365234623821cf601a95011d447314ca175f091151fd7eeb33a06f13ae21669d"
+      ],
+      "attachment_name_hashes": [
+        "46361da3b0cbee12"
+      ]
+    },
+    "revision": 1
   }
 }
