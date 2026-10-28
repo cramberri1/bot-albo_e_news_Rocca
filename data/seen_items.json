@@ -7696,7 +7696,7 @@
     "sender": "SINDACO COMUNE DI ROCCABASCERANA",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-28T16:18:30Z",
+    "last_revision_check_at": "2026-10-28T17:21:13Z",
     "delivery_pending": false,
     "revision_fingerprint": "93ea82da06fc5badea43a14293895050a0bba7878a209dbaa46d9e3966954b40",
     "revision_snapshot": {
@@ -8824,7 +8824,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-28T16:18:30Z"
+    "last_revision_check_at": "2026-10-28T17:21:13Z"
   },
   "v2:454eab4b13a0e3ffc59dd175": {
     "notified": true,
@@ -8972,7 +8972,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-28T16:18:30Z"
+    "last_revision_check_at": "2026-10-28T17:21:13Z"
   },
   "v2:e44f80f0c37c6242ca6a5327": {
     "notified": true,
@@ -9403,7 +9403,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-28T16:18:30Z"
+    "last_revision_check_at": "2026-10-28T17:21:13Z"
   },
   "v2:c79b11f234ab5d0a20948fce": {
     "notified": true,
@@ -9439,6 +9439,6 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-28T16:18:30Z"
+    "last_revision_check_at": "2026-10-28T17:21:13Z"
   }
 }
