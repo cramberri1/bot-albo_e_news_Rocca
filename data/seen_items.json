@@ -9368,5 +9368,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-28T11:37:31Z"
+  },
+  "v2:c9485573507ce49562644486": {
+    "notified": false,
+    "date": "28-10-2026",
+    "date_end": "12-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:c9485573507ce49562644486",
+    "legacy_ids": [
+      "4e86b9d0aa844e6e",
+      "v2:c9485573507ce49562644486"
+    ],
+    "title": "Decreto sindacale n. 4/2026 - Nomina RUP per l'ndividuazione di un soggetto del terzo settore quale ente attuatore per la prosecuzione delle azione del sistema per i servizi di accoglienza, tutela ed integrazione a favore di richiedenti asilo e rifug",
+    "num_pub": "585",
+    "tipo": "DECRETO SINDACALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "4",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "6974444053dc94c0205b9c1b451fe47f3044a533b75a8e70079d88d95ac38be9",
+    "revision_fingerprint": "6974444053dc94c0205b9c1b451fe47f3044a533b75a8e70079d88d95ac38be9",
+    "revision_snapshot": {
+      "date": "28-10-2026",
+      "date_end": "12-11-2026",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "4",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "ce1fd9a3ddfc81c7f842fb2f8d2417f335eb0a84e8a84ea769395e0475287683"
+      ],
+      "attachment_name_hashes": [
+        "3f9496c896969827"
+      ]
+    },
+    "revision": 1
   }
 }
