@@ -9404,5 +9404,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-28T12:09:30Z"
+  },
+  "v2:c79b11f234ab5d0a20948fce": {
+    "notified": false,
+    "date": "28-10-2026",
+    "date_end": "12-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:c79b11f234ab5d0a20948fce",
+    "legacy_ids": [
+      "e14a9bfc6ace9edc",
+      "v2:c79b11f234ab5d0a20948fce"
+    ],
+    "title": "Nomina  Direttore dell'Esecuzione del Contratto (DEC) delle attività del progetto SAI Siproimi triennio 2026/28",
+    "num_pub": "586",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "7",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "743904dc462e74322f733ce8ee76fff4dee5e036d71922b95c263784954991db",
+    "revision_fingerprint": "743904dc462e74322f733ce8ee76fff4dee5e036d71922b95c263784954991db",
+    "revision_snapshot": {
+      "date": "28-10-2026",
+      "date_end": "12-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "7",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "c3317b37a82158256a9447714453fc3176e9ce7c1abe53dd2e3fc6ec0b15fcea"
+      ],
+      "attachment_name_hashes": [
+        "04f025ede8d4840d"
+      ]
+    },
+    "revision": 1
   }
 }
