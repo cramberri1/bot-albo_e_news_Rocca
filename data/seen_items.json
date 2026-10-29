@@ -9530,9 +9530,7 @@
     "sender": "agenzia delle entrate",
     "act_number": "",
     "register_number": "",
-    "delivery_pending": true,
-    "pending_kind": "new",
-    "pending_version": "fe67a41037d5c65eb264e852fb43bd58c2c83f07dcf581a548625881f6fc3273",
+    "delivery_pending": false,
     "revision_fingerprint": "fe67a41037d5c65eb264e852fb43bd58c2c83f07dcf581a548625881f6fc3273",
     "revision_snapshot": {
       "date": "29-10-2026",
@@ -9548,6 +9546,7 @@
         "5c95356dc13bb1fc"
       ]
     },
-    "revision": 1
+    "revision": 1,
+    "last_revision_check_at": "2026-10-29T11:13:42Z"
   }
 }
