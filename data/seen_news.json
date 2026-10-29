@@ -1039,7 +1039,7 @@
     "date": "29-10-2026",
     "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_206.html",
     "description": "Screening gratuiti, consulenze specialistiche e consigli utili per la salute dei cittadini",
-    "notified": false,
+    "notified": true,
     "delivery_pending": true
   }
 }
