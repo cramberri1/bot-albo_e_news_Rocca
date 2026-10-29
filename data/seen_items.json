@@ -9440,5 +9440,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-29T08:06:01Z"
+  },
+  "v2:26620e21e2b6a140aad2996a": {
+    "notified": false,
+    "date": "29-10-2026",
+    "date_end": "13-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:26620e21e2b6a140aad2996a",
+    "legacy_ids": [
+      "c873520b501abb16",
+      "v2:26620e21e2b6a140aad2996a"
+    ],
+    "title": "Risarcimento danni  autovettura di proprietà del sig. E.M.",
+    "num_pub": "587",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "229",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "2e6dbd7a64ee3e52da62c1511ea1300ad1cea2b8ed2126b328e0c365e6385e4b",
+    "revision_fingerprint": "2e6dbd7a64ee3e52da62c1511ea1300ad1cea2b8ed2126b328e0c365e6385e4b",
+    "revision_snapshot": {
+      "date": "29-10-2026",
+      "date_end": "13-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "229",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "d076b017658ae1a5b1f73cfeb968cc9cbdaf740a927f0506c0d58d9a052d9413"
+      ],
+      "attachment_name_hashes": [
+        "9253878448de7492"
+      ]
+    },
+    "revision": 1
   }
 }
