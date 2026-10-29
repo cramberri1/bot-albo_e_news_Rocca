@@ -2936,7 +2936,7 @@
     "date": "30-12-2025",
     "date_end": "31-12-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-29T11:13:42Z",
+    "last_revision_check_at": "2026-10-29T14:34:09Z",
     "delivery_pending": false,
     "revision_fingerprint": "274da7318cb2de3c4bd1835a7e1f91b0012d7f9f9925298c141f489a585bf8a0",
     "revision_snapshot": {
@@ -9475,7 +9475,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-29T11:30:18Z"
+    "last_revision_check_at": "2026-10-29T14:34:09Z"
   },
   "v2:db8ee3f225e63a2bf9860dab": {
     "notified": true,
@@ -9511,7 +9511,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-10-29T12:00:57Z"
+    "last_revision_check_at": "2026-10-29T14:34:09Z"
   },
   "v2:33eda3f2d10f97b0cfe0d171": {
     "notified": true,
