@@ -9476,5 +9476,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-29T09:24:52Z"
+  },
+  "v2:db8ee3f225e63a2bf9860dab": {
+    "notified": false,
+    "date": "29-10-2026",
+    "date_end": "13-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:db8ee3f225e63a2bf9860dab",
+    "legacy_ids": [
+      "ba1888250583c278",
+      "v2:db8ee3f225e63a2bf9860dab"
+    ],
+    "title": "Ordinanza Dir. n.12/2026 -  Chiusura strada comunale \"Roschi, alla Fraz. Cassano C.\", divieto temporaneo di transito per lavori di rifacimento della rete idrica.",
+    "num_pub": "588",
+    "tipo": "ORDINANZA DIRIGENZIALE",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "12",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "12bc320eb61dfcf180b910074051a5f7815f52163c924d23687d6be6604ed7c2",
+    "revision_fingerprint": "12bc320eb61dfcf180b910074051a5f7815f52163c924d23687d6be6604ed7c2",
+    "revision_snapshot": {
+      "date": "29-10-2026",
+      "date_end": "13-11-2026",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "12",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "0b8bd89ce5c184b49df276308f4eaee0ac290e5592a1a95d24eac9542500c6cb"
+      ],
+      "attachment_name_hashes": [
+        "d8132107c2e96492"
+      ]
+    },
+    "revision": 1
   }
 }
