@@ -9512,5 +9512,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-10-29T10:58:21Z"
+  },
+  "v2:33eda3f2d10f97b0cfe0d171": {
+    "notified": false,
+    "date": "29-10-2026",
+    "date_end": "30-10-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:33eda3f2d10f97b0cfe0d171",
+    "legacy_ids": [
+      "a5a84c1a5d3c2c3e",
+      "v2:33eda3f2d10f97b0cfe0d171"
+    ],
+    "title": "Deposito atti nella casa del comune",
+    "num_pub": "589",
+    "tipo": "DEPOSITO",
+    "sender": "agenzia delle entrate",
+    "act_number": "",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "fe67a41037d5c65eb264e852fb43bd58c2c83f07dcf581a548625881f6fc3273",
+    "revision_fingerprint": "fe67a41037d5c65eb264e852fb43bd58c2c83f07dcf581a548625881f6fc3273",
+    "revision_snapshot": {
+      "date": "29-10-2026",
+      "date_end": "30-10-2026",
+      "sender": "agenzia delle entrate",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "58226e18d91a9883cb8426b867b630d1c16a796af18ddde1ddfad654f81a0575"
+      ],
+      "attachment_name_hashes": [
+        "5c95356dc13bb1fc"
+      ]
+    },
+    "revision": 1
   }
 }
