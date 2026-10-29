@@ -1032,5 +1032,14 @@
     "description": "Lunedì 26.10.2026",
     "notified": true,
     "delivery_pending": false
+  },
+  "206": {
+    "title": "Giornata della Prevenzione Primaria del Diabete - Sabato 14 novembre 2026",
+    "category": "Avviso",
+    "date": "29-10-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_206.html",
+    "description": "Screening gratuiti, consulenze specialistiche e consigli utili per la salute dei cittadini",
+    "notified": false,
+    "delivery_pending": true
   }
 }
