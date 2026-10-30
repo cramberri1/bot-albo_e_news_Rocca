@@ -1528,7 +1528,7 @@
     "date": "10-09-2026",
     "date_end": "09-11-2026",
     "expired": false,
-    "last_revision_check_at": "2026-10-30T11:12:26Z",
+    "last_revision_check_at": "2026-10-30T13:10:36Z",
     "delivery_pending": false,
     "revision_fingerprint": "3aaeadbeb571dc866d68a6b382354455ac9c7edf719039007f939dde6ef393d5",
     "revision_snapshot": {
@@ -2893,7 +2893,7 @@
     "date": "30-01-2026",
     "date_end": "31-01-2027",
     "expired": false,
-    "last_revision_check_at": "2026-10-30T11:12:26Z",
+    "last_revision_check_at": "2026-10-30T13:10:36Z",
     "delivery_pending": false,
     "revision_fingerprint": "0dffd967df4bf5de1b04a968ffb6044aa2399e9fad137cb63273ca5d7dd73b38",
     "revision_snapshot": {
@@ -7551,7 +7551,7 @@
     "sender": "ASL DIPARTIMENTO E PREVENZIONE",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-10-30T11:12:26Z",
+    "last_revision_check_at": "2026-10-30T13:10:36Z",
     "delivery_pending": false,
     "revision_fingerprint": "a949fb0eecf4eaec05a0254cb5b210e8235d9099a8b4179d91e60e942cb335e1",
     "revision_snapshot": {
