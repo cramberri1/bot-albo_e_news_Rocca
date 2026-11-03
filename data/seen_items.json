@@ -9620,5 +9620,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-03T13:27:00Z"
+  },
+  "v2:0e217ee5ce837be66d207aec": {
+    "notified": false,
+    "date": "03-11-2026",
+    "date_end": "18-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:0e217ee5ce837be66d207aec",
+    "legacy_ids": [
+      "385670e8ae807b9b",
+      "v2:0e217ee5ce837be66d207aec"
+    ],
+    "title": "Collocamento presso idonea comunità di quattro minori con madre, su disposizione del tribunale dei Minori di Napoli - Affidamento ed impegno di spesa.",
+    "num_pub": "592",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "240",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "02471e3f8c289a6fbf2e53dc0c7f073dc1f1519c3f08f12d82157d5dfdb90ebd",
+    "revision_fingerprint": "02471e3f8c289a6fbf2e53dc0c7f073dc1f1519c3f08f12d82157d5dfdb90ebd",
+    "revision_snapshot": {
+      "date": "03-11-2026",
+      "date_end": "18-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "240",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "63b9fef977f323dba51541fbcd1c5e31e39dcab84260794e918f33f6135e0ef6"
+      ],
+      "attachment_name_hashes": [
+        "395003eaf6a89d9c"
+      ]
+    },
+    "revision": 1
   }
 }
