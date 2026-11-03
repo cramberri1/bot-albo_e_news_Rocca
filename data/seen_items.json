@@ -9584,5 +9584,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-03T11:53:37Z"
+  },
+  "v2:8a81b4e274e4588b89fba7ec": {
+    "notified": false,
+    "date": "03-11-2026",
+    "date_end": "18-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:8a81b4e274e4588b89fba7ec",
+    "legacy_ids": [
+      "384cab71fefb6794",
+      "v2:8a81b4e274e4588b89fba7ec"
+    ],
+    "title": "Patrocinio morale per manifestazione mercatini di Natale del 12 e 13 dicembre 2026",
+    "num_pub": "591",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "64",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "75ab87776059e7873f1999668289a8278589966501cdff17579522f7a43e0e21",
+    "revision_fingerprint": "75ab87776059e7873f1999668289a8278589966501cdff17579522f7a43e0e21",
+    "revision_snapshot": {
+      "date": "03-11-2026",
+      "date_end": "18-11-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "64",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "5a649e72010aa74c83bcb2992794f528348e55fb7f67d1b582f4d810d23f625f"
+      ],
+      "attachment_name_hashes": [
+        "67d2d0e946a266a0"
+      ]
+    },
+    "revision": 1
   }
 }
