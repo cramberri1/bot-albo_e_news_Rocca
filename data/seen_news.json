@@ -1048,7 +1048,7 @@
     "date": "05-11-2026",
     "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_207.html",
     "description": "Elenco Beneficiari",
-    "notified": false,
+    "notified": true,
     "delivery_pending": true
   }
 }
