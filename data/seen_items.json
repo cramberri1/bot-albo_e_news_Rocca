@@ -9688,6 +9688,7 @@
     "act_number": "65",
     "register_number": "",
     "delivery_pending": true,
-    "pending_kind": "new"
+    "pending_kind": "new",
+    "pending_version": ""
   }
 }
