@@ -9673,5 +9673,21 @@
     "delivery_pending": true,
     "pending_kind": "new",
     "pending_version": ""
+  },
+  "v2:2f29f666389e653841293b53": {
+    "notified": false,
+    "identity_version": 2,
+    "primary_id": "v2:2f29f666389e653841293b53",
+    "legacy_ids": [
+      "8e614ab9b49dbe80"
+    ],
+    "title": "Patrocinio all'Associazione il Filo di Arianna per visite mediche gratuite",
+    "num_pub": "593",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "65",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new"
   }
 }
