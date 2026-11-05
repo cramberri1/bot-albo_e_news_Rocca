@@ -9815,13 +9815,41 @@
     "identity_version": 2,
     "primary_id": "v2:bf40c0459d012cc8c3f60dff",
     "legacy_ids": [
-      "a092f974ded2cec1"
+      "a092f974ded2cec1",
+      "v2:bf40c0459d012cc8c3f60dff"
     ],
     "title": "Programma Nazionale \"Scuola e competenze\" 2021-2027 - FESR - Azione RSO4.2.A5.A \"Ambienti innovativi destinati ai servizi per l'infanzia\". Progetto di rafforzamento dell'offerta educativa: fornitura di arredi didattici innovativi per la fascia di età 0-6 anni, in forma aggregata con i Comuni di Sant'Angelo a Scala, Cervinara e Pietrastornina. CUP G44D25005770007. Approvazione del progetto ai sensi dell'art. 41, commi 13 e 14, del d.lgs. n. 36/2023 e dell'Allegato I.7, art. 4-bis, del medesimo decreto",
     "num_pub": "595",
     "tipo": "DELIBERE DI GIUNTA",
     "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
     "act_number": "67",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "d07ea9eefa116161ec256255e53a604c38d7c0888bef1b60d9358ce4cf7e046c",
+    "revision_fingerprint": "d07ea9eefa116161ec256255e53a604c38d7c0888bef1b60d9358ce4cf7e046c",
+    "revision_snapshot": {
+      "date": "05-11-2026",
+      "date_end": "20-11-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "67",
+      "register_number": "",
+      "attachment_count": 5,
+      "attachment_sha256": [
+        "1617dc61e6126dbb58dc2fbb2bca6eabf0f2565bfd43a7fd23568c717a15e585",
+        "2123a9c29461e259b4962bb67b000e0a6f061c3abbc60dc88b80d2783552c0d9",
+        "498f26c817cd0d24bee5ef103a11927a97f12a1a3afaec2eeb2e640900d23eec",
+        "e88ff15226dd27fb42b8d21cf4890f817c85441a3a42f3ba54e7621315664f2f",
+        "eb4b14c796bef42c6b729559b99bf5c645a9b2f97a5e784ab755739f22ff6020"
+      ],
+      "attachment_name_hashes": [
+        "5c66fdb1fd0c427f",
+        "6f459dc875128fde",
+        "71cd04113c55e35a",
+        "b1d46fd557b27812",
+        "fb5054e5ee8595b9"
+      ]
+    },
+    "revision": 1
   }
 }
