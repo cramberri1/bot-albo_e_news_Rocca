@@ -9656,5 +9656,21 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-05T13:59:33Z"
+  },
+  "v2:a5b56da70f4e586f9abdbd42": {
+    "notified": false,
+    "identity_version": 2,
+    "primary_id": "v2:a5b56da70f4e586f9abdbd42",
+    "legacy_ids": [
+      "b0249195e49b5646"
+    ],
+    "title": "Concessione patrocinio comunale richiesto da ASL Avellino per la giornata della prevenzione primaria del diabete",
+    "num_pub": "594",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "66",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new"
   }
 }
