@@ -9711,9 +9711,25 @@
     "register_number": "",
     "delivery_pending": true,
     "pending_kind": "new",
-    "pending_version": "",
+    "pending_version": "3a4ed4da5fc2b18de1c9d7db2341b11c49868c0517ffe7435bd8646c4458d564",
     "date": "05-11-2026",
     "date_end": "20-11-2026",
-    "expired": false
+    "expired": false,
+    "revision_fingerprint": "3a4ed4da5fc2b18de1c9d7db2341b11c49868c0517ffe7435bd8646c4458d564",
+    "revision_snapshot": {
+      "date": "05-11-2026",
+      "date_end": "20-11-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "65",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "452b72ab732cfebf9857da38d05713965a2a53c8ad4c531ae6015ccf6cf728e5"
+      ],
+      "attachment_name_hashes": [
+        "3939d8ac2d4f1d7f"
+      ]
+    },
+    "revision": 1
   }
 }
