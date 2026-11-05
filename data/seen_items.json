@@ -9770,7 +9770,7 @@
     "last_revision_check_at": "2026-11-05T18:45:03Z"
   },
   "v2:ace4e2a796e7d2b308f26f6f": {
-    "notified": false,
+    "notified": true,
     "date": "05-11-2026",
     "date_end": "20-11-2026",
     "expired": false,
