@@ -9662,7 +9662,8 @@
     "identity_version": 2,
     "primary_id": "v2:a5b56da70f4e586f9abdbd42",
     "legacy_ids": [
-      "b0249195e49b5646"
+      "b0249195e49b5646",
+      "v2:a5b56da70f4e586f9abdbd42"
     ],
     "title": "Concessione patrocinio comunale richiesto da ASL Avellino per la giornata della prevenzione primaria del diabete",
     "num_pub": "594",
@@ -9672,14 +9673,34 @@
     "register_number": "",
     "delivery_pending": true,
     "pending_kind": "new",
-    "pending_version": ""
+    "pending_version": "3d69d7d1a050cc8f3a5e24589a55c57663a802e4c770cc33e2bdc273f5719e5b",
+    "date": "05-11-2026",
+    "date_end": "20-11-2026",
+    "expired": false,
+    "revision_fingerprint": "3d69d7d1a050cc8f3a5e24589a55c57663a802e4c770cc33e2bdc273f5719e5b",
+    "revision_snapshot": {
+      "date": "05-11-2026",
+      "date_end": "20-11-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "66",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "727e23e47afcbde17b112a5880598827b3991f3dc9b7a21faceba6676a7a8990"
+      ],
+      "attachment_name_hashes": [
+        "f0d37ca7ff69ca6e"
+      ]
+    },
+    "revision": 1
   },
   "v2:2f29f666389e653841293b53": {
     "notified": false,
     "identity_version": 2,
     "primary_id": "v2:2f29f666389e653841293b53",
     "legacy_ids": [
-      "8e614ab9b49dbe80"
+      "8e614ab9b49dbe80",
+      "v2:2f29f666389e653841293b53"
     ],
     "title": "Patrocinio all'Associazione il Filo di Arianna per visite mediche gratuite",
     "num_pub": "593",
@@ -9689,6 +9710,9 @@
     "register_number": "",
     "delivery_pending": true,
     "pending_kind": "new",
-    "pending_version": ""
+    "pending_version": "",
+    "date": "05-11-2026",
+    "date_end": "20-11-2026",
+    "expired": false
   }
 }
