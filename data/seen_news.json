@@ -1041,5 +1041,14 @@
     "description": "Screening gratuiti, consulenze specialistiche e consigli utili per la salute dei cittadini",
     "notified": true,
     "delivery_pending": false
+  },
+  "207": {
+    "title": "Carta dedicata a te anno 2026",
+    "category": "Avviso",
+    "date": "05-11-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_207.html",
+    "description": "Elenco Beneficiari",
+    "notified": false,
+    "delivery_pending": true
   }
 }
