@@ -9730,5 +9730,78 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-05T15:31:39Z"
+  },
+  "v2:4aad3fbcc54f9c781d3d1213": {
+    "notified": false,
+    "date": "05-11-2026",
+    "date_end": "20-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:4aad3fbcc54f9c781d3d1213",
+    "legacy_ids": [
+      "7b721308aec8f850",
+      "v2:4aad3fbcc54f9c781d3d1213"
+    ],
+    "title": "Linee guida organizzative ed indirizzi operativi per l'accelerazione dell'istruttoria delle pratiche di condono edilizio pendenti (L. 47/85, L. 724/94, L. 326/03) ed applicazione delle modalità di rateizzazione ex D.C.C. n. 7/2025",
+    "num_pub": "597",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "69",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "33dfaa3857b53778b8ec9fcac257785ac6e82b6cb4a90a4b6e6c007c44148c3d",
+    "revision_fingerprint": "33dfaa3857b53778b8ec9fcac257785ac6e82b6cb4a90a4b6e6c007c44148c3d",
+    "revision_snapshot": {
+      "date": "05-11-2026",
+      "date_end": "20-11-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "69",
+      "register_number": "",
+      "attachment_count": 2,
+      "attachment_sha256": [
+        "2754de8619f324d7c5157b529323655ad2cefede5897a731994a12865f28effb",
+        "586a019fdb6482d6765d4daf8b67fca2a0fac1e3eb21f4a9a37aa3a57885ad2d"
+      ],
+      "attachment_name_hashes": [
+        "992992e752ad5fef",
+        "aa79c65a5d97e0a3"
+      ]
+    },
+    "revision": 1
+  },
+  "v2:ace4e2a796e7d2b308f26f6f": {
+    "notified": false,
+    "date": "05-11-2026",
+    "date_end": "20-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:ace4e2a796e7d2b308f26f6f",
+    "legacy_ids": [
+      "c01935b3536da2e9"
+    ],
+    "title": "Aggiornamento schema del programma triennale dei beni e servizi relativo agli anni 2026/2028",
+    "num_pub": "596",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "68",
+    "register_number": ""
+  },
+  "v2:bf40c0459d012cc8c3f60dff": {
+    "notified": false,
+    "date": "05-11-2026",
+    "date_end": "20-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:bf40c0459d012cc8c3f60dff",
+    "legacy_ids": [
+      "a092f974ded2cec1"
+    ],
+    "title": "Programma Nazionale \"Scuola e competenze\" 2021-2027 - FESR - Azione RSO4.2.A5.A \"Ambienti innovativi destinati ai servizi per l'infanzia\". Progetto di rafforzamento dell'offerta educativa: fornitura di arredi didattici innovativi per la fascia di età 0-6 anni, in forma aggregata con i Comuni di Sant'Angelo a Scala, Cervinara e Pietrastornina. CUP G44D25005770007. Approvazione del progetto ai sensi dell'art. 41, commi 13 e 14, del d.lgs. n. 36/2023 e dell'Allegato I.7, art. 4-bis, del medesimo decreto",
+    "num_pub": "595",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "67",
+    "register_number": ""
   }
 }
