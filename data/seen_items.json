@@ -9658,7 +9658,7 @@
     "last_revision_check_at": "2026-11-05T15:02:11Z"
   },
   "v2:a5b56da70f4e586f9abdbd42": {
-    "notified": false,
+    "notified": true,
     "identity_version": 2,
     "primary_id": "v2:a5b56da70f4e586f9abdbd42",
     "legacy_ids": [
