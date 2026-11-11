@@ -1,9 +1,8 @@
-"""Recovery limits are exercised without credentials, Git or live dispatches."""
+"""Exercise worker shutdown and recovery without credentials or live dispatches."""
 from copy import deepcopy
 import json
 import os
 from pathlib import Path
-import shutil
 import subprocess
 import sys
 import unittest
@@ -217,24 +216,73 @@ class WorkerDurationTests(unittest.TestCase):
                 self.assertEqual(result.stdout, expected_stdout)
                 self.assertNotIn("injected", result.stdout + result.stderr)
 
+    def test_supervisor_cli_rejects_invalid_duration_before_starting_bot(self):
+        result = subprocess.run([sys.executable, 'worker_runtime.py'],
+                                env=dict(os.environ, BOT_SECONDS_INPUT='59'),
+                                capture_output=True, text=True, timeout=10)
+        self.assertEqual(result.returncode, 1, result.stderr)
+        self.assertEqual(result.stdout, '')
+        self.assertIn('run_seconds deve essere tra 60 e 18000', result.stderr)
 
-@unittest.skipUnless(os.name != "nt" and shutil.which("timeout") and shutil.which("bash"),
-                     "Real GNU timeout and POSIX signals are verified on Linux CI")
-class WorkerTimeoutExitTests(unittest.TestCase):
+
+@unittest.skipUnless(os.name == "posix", "Worker signal handling requires POSIX")
+class WorkerSupervisorTests(unittest.TestCase):
+    def run_worker(self, worker, *args, duration=1.5, grace=0.5):
+        wrapper = """
+import asyncio
+import sys
+
+from worker_runtime import supervise
+
+duration, grace, worker, *args = sys.argv[1:]
+code = asyncio.run(supervise([sys.executable, '-c', worker, *args],
+                             duration=float(duration), grace=float(grace)))
+raise SystemExit(code)
+"""
+        return subprocess.run([sys.executable, "-c", wrapper, str(duration), str(grace), worker, *args],
+                              capture_output=True, text=True, timeout=10)
+
     def test_programmed_shutdown_keeps_normal_flush_failure_and_forced_kill_distinct(self):
-        wrapper = ('set +e\n'
-                   'timeout --preserve-status --signal=INT --kill-after=0.2s 0.4s "$1" -c "$2"\n'
-                   'code=$?\nexit "$code"')
-        for exit_code in (0, 1, None):
-            with self.subTest(worker_exit=exit_code):
-                handler = ('signal.SIG_IGN' if exit_code is None else
-                           f'lambda *_: sys.exit({exit_code})')
-                worker = (f'import signal,sys,time; signal.signal(signal.SIGINT, {handler}); '
-                          'time.sleep(10)')
-                result = subprocess.run(["bash", "-c", wrapper, "fixture", sys.executable, worker],
-                                        capture_output=True, text=True, timeout=5)
-                self.assertEqual(result.returncode, 137 if exit_code is None else exit_code,
-                                 result.stderr)
+        worker = """
+import signal
+import sys
+import time
+
+def stop(signum, _frame):
+    print('SIGINT received', flush=True)
+    if len(sys.argv) > 1:
+        sys.exit(int(sys.argv[1]))
+
+signal.signal(signal.SIGINT, stop)
+time.sleep(7)
+"""
+        for args, expected in ((('0',), 0), (('1',), 1), ((), 137)):
+            with self.subTest(expected=expected):
+                result = self.run_worker(worker, *args)
+                self.assertEqual(result.returncode, expected, result.stderr)
+                self.assertIn('SIGINT received', result.stdout)
+
+    def test_external_termination_is_forwarded_before_the_scheduled_deadline(self):
+        worker = """
+import os
+import signal
+import sys
+import time
+
+def stop(signum, _frame):
+    sys.exit(23)
+
+signal.signal(signal.SIGTERM, stop)
+os.kill(os.getppid(), signal.SIGTERM)
+time.sleep(3)
+sys.exit(99)
+"""
+        result = self.run_worker(worker, duration=30)
+        self.assertEqual(result.returncode, 23, result.stderr)
+
+    def test_failure_before_the_scheduled_deadline_keeps_its_status(self):
+        result = self.run_worker('raise SystemExit(42)', duration=30)
+        self.assertEqual(result.returncode, 42, result.stderr)
 
 
 if __name__ == "__main__":

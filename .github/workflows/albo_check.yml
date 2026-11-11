@@ -37,7 +37,7 @@ env:
 
 jobs:
   check:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 355
     steps:
       - name: Checkout repository
@@ -71,13 +71,7 @@ jobs:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_IDS: ${{ secrets.CHAT_IDS }}
           STATE_ENCRYPTION_KEY: ${{ secrets.STATE_ENCRYPTION_KEY }}
-        run: |
-          # Validate before set +e: invalid input must fail, never enter timeout.
-          BOT_SECONDS="$(python workflow_recovery.py duration)"
-          set +e
-          timeout --preserve-status --signal=INT --kill-after=120s "$BOT_SECONDS" python bot.py
-          code=$?
-          exit "$code"
+        run: exec python worker_runtime.py
       - name: Salva eventuale stato residuo
         if: always()
         timeout-minutes: 6

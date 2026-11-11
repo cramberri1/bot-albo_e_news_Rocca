@@ -77,7 +77,8 @@ class CheckHealthEdgeTests(unittest.IsolatedAsyncioTestCase):
             await task
 
     async def test_duration_and_uptime_use_monotonic_time(self):
-        with patch("admin_status.time.monotonic", side_effect=[100.0, 105.0, 109.5, 112.0]):
+        with patch("admin_status.time") as clock:
+            clock.monotonic.side_effect = [100.0, 105.0, 109.5, 112.0]
             monitor = CheckHealth()
             await monitor.run("Albo", AsyncMock(return_value={"ok": True}), None)
             self.assertEqual(monitor.checks["Albo"]["duration_seconds"], 4.5)
