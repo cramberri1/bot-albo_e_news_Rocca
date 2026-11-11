@@ -6,10 +6,11 @@ era già sospeso secondo la fascia 07:00–20:00 Europe/Rome; prima dell'arresto
 non risulta un'eccezione applicativa. La perdita del runner può saltare anche
 gli step finali: `always()` non può ricreare una macchina già persa.
 
-Il timeout usa `--preserve-status`: una chiusura normale del bot resta verde,
-un errore di flush conserva l'exit code di errore e un processo ucciso dopo la
-grazia resta fallito. Non viene più convertito indiscriminatamente il codice
-124 del timeout in successo, perché poteva nascondere un errore dopo SIGINT.
+`worker_runtime.py` invia SIGINT alla scadenza e concede fino a 120 secondi
+per completare la chiusura. Conserva il codice di uscita del bot e restituisce
+137 se deve terminare il gruppo del worker con SIGKILL. Il job di produzione
+usa Ubuntu 24.04. La CI verifica l'arresto con segnali reali su Ubuntu 24.04 e
+`ubuntu-latest`, senza dipendere dal comando `timeout` dell'immagine.
 
 ## Checkpoint e chiusura del processo
 
@@ -21,6 +22,9 @@ timeout, viene terminato anche il relativo helper di rete.
 Alla prima richiesta di arresto viene fissata una deadline comune: i checkpoint
 dei worker possono usare i primi 40 secondi, il flush finale può usare il
 budget restante entro 60 secondi. Altri segnali non estendono questi limiti.
+Il supervisore inoltra anche SIGINT e SIGTERM del runner. Una cancellazione
+da GitHub può terminare il processo prima della fine della grazia prevista
+per l'arresto programmato.
 Il drain cooperativo è di 20 secondi; un'operazione sincrona in corso resta
 soggetta alla deadline Git comune. Gli errori dei worker durante il drain e
 quelli del flush non vengono trasformati in una chiusura riuscita.
@@ -74,8 +78,7 @@ degli artifact, insieme agli altri file di stato.
 L'input facoltativo `run_seconds` accetta solo cifre, tra **60 e 18.000**, con
 default **18.000**. Per collaudare avvio, shutdown e persistenza si può avviare
 una run manuale di **120 secondi**, poi richiedere una run ordinaria.
-La validazione avviene prima del comando di timeout; l'input non viene
-interpolato in codice shell. Tutte le durate mantengono la stessa politica
+Il supervisore valida l'input prima di avviare il bot. Tutte le durate mantengono la stessa politica
 07:00–20:00 e i comandi Telegram restano indipendenti durante il processo.
 
 Una run manuale breve non rappresenta un servizio continuo e non viene

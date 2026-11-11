@@ -1,7 +1,8 @@
 from pathlib import Path
 import unittest
 import yaml
-from runtime_policy import JOB_TIMEOUT_SECONDS, SETUP_BUDGET_SECONDS, FINALIZATION_BUDGET_SECONDS
+from runtime_policy import (FINALIZATION_BUDGET_SECONDS, JOB_TIMEOUT_SECONDS, MAX_RUNTIME_SECONDS,
+                            SETUP_BUDGET_SECONDS, SHUTDOWN_GRACE_SECONDS)
 
 
 class WorkflowTests(unittest.TestCase):
@@ -40,16 +41,10 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(sum(int(s['timeout-minutes']) for s in steps[execution_index + 1:]) * 60,
                          FINALIZATION_BUDGET_SECONDS)
         self.assertEqual(int(workflow['jobs']['check']['timeout-minutes']) * 60, JOB_TIMEOUT_SECONDS)
-        self.assertIn('--signal=INT --kill-after=120s', execution['run'])
-        self.assertIn('timeout --preserve-status', execution['run'])
-        self.assertNotIn('"$code" -eq 124', execution['run'])
-        self.assertGreater(int(execution['timeout-minutes']) * 60, 18000 + 120)
-        self.assertIn('exit "$code"', execution['run'])
+        self.assertEqual(execution['run'], 'exec python worker_runtime.py')
+        self.assertGreater(int(execution['timeout-minutes']) * 60,
+                           MAX_RUNTIME_SECONDS + SHUTDOWN_GRACE_SECONDS)
         self.assertEqual(execution['env']['BOT_SECONDS_INPUT'], '${{ inputs.run_seconds }}')
-        self.assertIn('BOT_SECONDS="$(python workflow_recovery.py duration)"', execution['run'])
-        self.assertLess(execution['run'].index('workflow_recovery.py duration'),
-                        execution['run'].index('\nset +e'))
-        self.assertNotIn('${{ inputs.run_seconds }}', execution['run'])
         final = next(s for s in steps if s['name'] == 'Salva eventuale stato residuo')
         self.assertEqual(final['if'], 'always()')
         self.assertIn('HEAD:main', final['run'])
@@ -93,3 +88,12 @@ class WorkflowTests(unittest.TestCase):
         checkout = workflow['jobs']['tests']['steps'][0]
         self.assertEqual(checkout['with']['fetch-depth'], '0')
         self.assertIn('requirements-dev.txt', workflow['on']['push']['paths'])
+
+    def test_ci_exercises_production_runner_and_latest_image(self):
+        production = yaml.load(Path('.github/workflows/albo_check.yml').read_text(encoding='utf-8-sig'),
+                               Loader=yaml.BaseLoader)['jobs']['check']['runs-on']
+        ci = yaml.load(Path('.github/workflows/tests.yml').read_text(encoding='utf-8-sig'),
+                       Loader=yaml.BaseLoader)['jobs']['tests']
+        self.assertEqual(production, 'ubuntu-24.04')
+        self.assertEqual(ci['runs-on'], '${{ matrix.runner }}')
+        self.assertEqual(set(ci['strategy']['matrix']['runner']), {production, 'ubuntu-latest'})

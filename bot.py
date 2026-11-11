@@ -1332,15 +1332,30 @@ def parse_news_html(html: str) -> list:
         })
     return items
 
-def has_next_news_page(html: str) -> bool:
-    """Stesso pattern dell'albo: controlla presenza bottone pagina successiva."""
+def has_next_news_page(html: str, page: int, *, has_items: bool) -> bool:
+    """Validate Halley's counters, which also drive the browser's next button."""
     soup = BeautifulSoup(html, "html.parser")
-    return bool(soup.find("li", id="btSucc"))
+    current = soup.find(id="pagCorrente")
+    total = soup.find(id="totalePagine")
+    next_button = soup.find("li", id="btSucc")
+    if not has_items and (page > 1 or current or total or next_button):
+        raise IncompleteNewsSnapshot(f"pagina news {page} priva di elementi parsabili")
+    if current is None and total is None:
+        return next_button is not None
+    try:
+        current_page = int(current.get_text(strip=True)) if current is not None else 0
+        total_pages = int(total.get_text(strip=True)) if total is not None else 0
+    except ValueError:
+        raise IncompleteNewsSnapshot(f"paginazione news non valida a pagina {page}") from None
+    if current_page != page or not 1 <= page <= total_pages:
+        raise IncompleteNewsSnapshot(f"paginazione news incoerente a pagina {page}")
+    # Halley emits btSucc even on the last page and disables it with JavaScript.
+    return current_page < total_pages
 
 async def fetch_all_news_pages(client: httpx.AsyncClient, max_pages: int = 30, stop_at_known: set | None = None) -> list:
     """
     Scarica le pagine di News in ordine, fermandosi quando:
-    - non c'è più il bottone 'pagina successiva', oppure
+    - la pagina corrente coincide con il totale dichiarato dal portale, oppure
     - le news cominciano a ripetersi (sicurezza anti-loop, come per l'albo), oppure
     - se `stop_at_known` è fornito (gli ID già noti in cache): la pagina corrente
       non contiene NESSUN ID nuovo rispetto a quelli già visti. Dato che il sito
@@ -1364,10 +1379,7 @@ async def fetch_all_news_pages(client: httpx.AsyncClient, max_pages: int = 30, s
     r = await client.get(f"{NEWS_URL}?en={ENTE}&MESSA=PUBBLICA", headers=HEADERS)
     r.raise_for_status()
     page_items = parse_news_html(r.text)
-    if not page_items and has_next_news_page(r.text):
-        raise IncompleteNewsSnapshot(
-            "prima pagina news con paginazione ma priva di elementi parsabili"
-        )
+    has_next = has_next_news_page(r.text, 1, has_items=bool(page_items))
     for item in page_items:
         if item["id"] not in seen_ids:
             seen_ids.add(item["id"])
@@ -1379,7 +1391,7 @@ async def fetch_all_news_pages(client: httpx.AsyncClient, max_pages: int = 30, s
         return all_items
 
     page = 2
-    while has_next_news_page(r.text) and page <= max_pages:
+    while has_next and page <= max_pages:
         await asyncio.sleep(0.5)
         r = await client.get(
             f"{NEWS_URL}?en={ENTE}&MESSA=PAGSUCC={page}",
@@ -1387,10 +1399,7 @@ async def fetch_all_news_pages(client: httpx.AsyncClient, max_pages: int = 30, s
         )
         r.raise_for_status()
         page_items = parse_news_html(r.text)
-        if not page_items:
-            raise IncompleteNewsSnapshot(
-                f"pagina news {page} indicata dal portale ma priva di elementi parsabili"
-            )
+        has_next = has_next_news_page(r.text, page, has_items=bool(page_items))
         new_count = 0
         for item in page_items:
             if item["id"] not in seen_ids:
