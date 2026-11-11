@@ -237,6 +237,38 @@ class StateCommandRegressionTests(unittest.IsolatedAsyncioTestCase):
         )
         self.assertEqual(await bot.fetch_all_news_pages(client, stop_at_known={"old"}), [])
 
+    @staticmethod
+    def news_page(current, total, news_id=None):
+        card = '' if news_id is None else (
+            f'<div class="card-wrapper"><h3 class="card-title">'
+            f'<a href="/novita/novita_{news_id}.html">Notizia</a></h3></div>'
+        )
+        return httpx.Response(
+            200, text=card + '<ul class="pagination">'
+            f'<li><span id="pagCorrente">{current}</span></li>'
+            f'<li><span id="totalePagine">{total}</span></li>'
+            '<li id="btSucc"><a>Pagina successiva</a></li></ul>',
+            request=httpx.Request("GET", "https://example.invalid/news"),
+        )
+
+    async def test_news_ends_at_declared_last_page_despite_stale_next_button(self):
+        client = AsyncMock()
+        client.get.side_effect = [self.news_page(1, 2, 20), self.news_page(2, 2, 10)]
+        items = await bot.fetch_all_news_pages(client)
+        self.assertEqual([item['id'] for item in items], ['20', '10'])
+        self.assertEqual(client.get.await_count, 2)
+        self.assertTrue(client.get.await_args.args[0].endswith('MESSA=PAGSUCC=2'))
+
+    async def test_news_rejects_empty_or_inconsistent_advertised_pages(self):
+        for current, total, news_id in ((2, 3, None), (2, 2, None), (1, 2, 10),
+                                        (2, 1, 10), (2, '?', 10)):
+            with self.subTest(current=current, total=total, news_id=news_id):
+                client = AsyncMock()
+                client.get.side_effect = [self.news_page(1, 3, 20),
+                                          self.news_page(current, total, news_id)]
+                with self.assertRaises(bot.IncompleteNewsSnapshot):
+                    await bot.fetch_all_news_pages(client)
+
 
 if __name__ == "__main__":
     unittest.main()
