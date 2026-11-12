@@ -9929,14 +9929,34 @@
     "identity_version": 2,
     "primary_id": "v2:7b6d82aa7420961be1da4c64",
     "legacy_ids": [
-      "2cccc5a11c2ed6aa"
+      "2cccc5a11c2ed6aa",
+      "v2:7b6d82aa7420961be1da4c64"
     ],
     "title": "Liquidazione di spesa preventivamente impegnata per \"SERVIZI DI SPAZZAMENTO E CURA DEL VERDE COMUNALE NEL COMUNE DI ROCCABASCERANA\" - Ditta: Partenio Service Roma Soc. Coop. - Periodo Ottobre 2026",
     "num_pub": "623",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "71",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "2d8c69fe7fa152125ca1a2efd6e50540ea5fc811cc8d535e260e7a5655d40030",
+    "revision_fingerprint": "2d8c69fe7fa152125ca1a2efd6e50540ea5fc811cc8d535e260e7a5655d40030",
+    "revision_snapshot": {
+      "date": "10-11-2026",
+      "date_end": "25-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "71",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "8759473b987f93df7d63e9e9972225476e62078f7db63f1a33597a1e06befd39"
+      ],
+      "attachment_name_hashes": [
+        "bd6c49722f6ccdc5"
+      ]
+    },
+    "revision": 1
   },
   "v2:e3b2282d4f6269cdc4ca5a9b": {
     "notified": false,
