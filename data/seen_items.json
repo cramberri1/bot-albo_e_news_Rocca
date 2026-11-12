@@ -10433,14 +10433,34 @@
     "identity_version": 2,
     "primary_id": "v2:47b3c03905f42331ef2b48f5",
     "legacy_ids": [
-      "07e1f03862c6c043"
+      "07e1f03862c6c043",
+      "v2:47b3c03905f42331ef2b48f5"
     ],
     "title": "Collocamento presso idonea comunità di quattro minori, su disposizione del tribunale dei Minori di Napoli - Liquidazione di spesa - settembre 2026",
     "num_pub": "609",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "239",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "6c14714f46c9c403728b58e1e2f86efa0e6fb1d7395d5d6814a87008bbdc4df4",
+    "revision_fingerprint": "6c14714f46c9c403728b58e1e2f86efa0e6fb1d7395d5d6814a87008bbdc4df4",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "239",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "5d4b78221878e6c880f57e9fc19d1099bdd20626be641b05ea5afbaa7fe0a419"
+      ],
+      "attachment_name_hashes": [
+        "1dba0c953a9c9dd3"
+      ]
+    },
+    "revision": 1
   },
   "v2:4d1862fe3a8291a1c11026ac": {
     "notified": false,
