@@ -10109,14 +10109,34 @@
     "identity_version": 2,
     "primary_id": "v2:a97e0477a2956bb83b86bdc2",
     "legacy_ids": [
-      "c7755abf74853446"
+      "c7755abf74853446",
+      "v2:a97e0477a2956bb83b86bdc2"
     ],
     "title": "Affidamento delle attività integrative di Progettazione e Direzione Lavori, relative all'intervento di \"Realizzazione della nuova palestra scolastica dell'Istituto Comprensivo Don Peppe Diana M.R. Imbriani\". Missione 4 - Istruzione e Ricerca Componente 1 Potenziamento dell'offerta dei servizi di istruzione: dagli asili nido alle Università. Investimento 1.3 - Piano per le infrastrutture per lo sport nelle scuole, finanziato dall'Unione europea - Next Generation EU. CUP G11B22000730006. CIG: 98873470DD (principale).\nProvvedimenti. Determina di liquidazione saldo Direzione dei Lavori.",
     "num_pub": "618",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "65",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "e67951a9b12b66d80993b2a0cc7e53d5595dfaae5aef555eb8242be4fa8e9e5d",
+    "revision_fingerprint": "e67951a9b12b66d80993b2a0cc7e53d5595dfaae5aef555eb8242be4fa8e9e5d",
+    "revision_snapshot": {
+      "date": "10-11-2026",
+      "date_end": "25-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "65",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "46dad073fe04b1ed8d3c2166fdc0d67bf417194dfc015a55f371f7ceead35ce8"
+      ],
+      "attachment_name_hashes": [
+        "eeba8a3e9bf5fd94"
+      ]
+    },
+    "revision": 1
   },
   "v2:07c5fa97e91e7528c976030e": {
     "notified": false,
