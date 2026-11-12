@@ -10289,14 +10289,34 @@
     "identity_version": 2,
     "primary_id": "v2:a9f3fe3baab7a9ef07d1d7cd",
     "legacy_ids": [
-      "88c136d1308cd1a4"
+      "88c136d1308cd1a4",
+      "v2:a9f3fe3baab7a9ef07d1d7cd"
     ],
     "title": "Liquidazione competenze al Consorzio Matrix Cooperativa Sociale - II Acconto anno 2026 - Servizio di gestione ed organizzazione dei servizi di accoglienza SAI - SIPROIMI",
     "num_pub": "613",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "246",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "fb6968448c9e7e211dd56f4cb31f001b1b4c00d2ba600b223d37c8054b752baa",
+    "revision_fingerprint": "fb6968448c9e7e211dd56f4cb31f001b1b4c00d2ba600b223d37c8054b752baa",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "246",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "d285ae35770c78fb86ec459d7d93ecbb5ca6feaa13cc1393f4baad3f1e0e2dc9"
+      ],
+      "attachment_name_hashes": [
+        "c60627c55436cec4"
+      ]
+    },
+    "revision": 1
   },
   "v2:4d2ec95d54d54dc4e7af3758": {
     "notified": false,
