@@ -9922,7 +9922,7 @@
     "last_revision_check_at": "2026-11-12T06:00:00Z"
   },
   "v2:7b6d82aa7420961be1da4c64": {
-    "notified": false,
+    "notified": true,
     "date": "10-11-2026",
     "date_end": "25-11-2026",
     "expired": false,
