@@ -10757,14 +10757,34 @@
     "identity_version": 2,
     "primary_id": "v2:a2b13d9581296bf7b1c90846",
     "legacy_ids": [
-      "ae1487b4d41e95ff"
+      "ae1487b4d41e95ff",
+      "v2:a2b13d9581296bf7b1c90846"
     ],
     "title": "Liquidazione di spesa preventivamente impegnata per intervento di manutenzione straordinaria caldaia \"Istituto Comprensivo Don Peppe Diana - M.R. Imbriani\" di Roccabascerana.",
     "num_pub": "600",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "54",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "5d0d077e2dcff4d4f88968ebbe58e9f17f5834cddbbb60d7477a2cc2a59a5616",
+    "revision_fingerprint": "5d0d077e2dcff4d4f88968ebbe58e9f17f5834cddbbb60d7477a2cc2a59a5616",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "54",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "cabaa47ee82141d83ba39820f9e98e04431476790fa3afe6bc166a86185d24f0"
+      ],
+      "attachment_name_hashes": [
+        "5f066ae28bbc7e77"
+      ]
+    },
+    "revision": 1
   },
   "v2:bcad1994733c06366e752a28": {
     "notified": false,
