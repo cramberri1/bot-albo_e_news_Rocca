@@ -10361,14 +10361,34 @@
     "identity_version": 2,
     "primary_id": "v2:2df19a4adb8a27d3b12abc06",
     "legacy_ids": [
-      "44c96a764c4cf0f8"
+      "44c96a764c4cf0f8",
+      "v2:2df19a4adb8a27d3b12abc06"
     ],
     "title": "Asmenet quota mantenimento servizi anno 2026 - Liquidazione",
     "num_pub": "611",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "242",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "092d4c678d3c29f6f5e7843a2ef6a1688792151fb90086037c9b52d82e6021b4",
+    "revision_fingerprint": "092d4c678d3c29f6f5e7843a2ef6a1688792151fb90086037c9b52d82e6021b4",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "242",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "13a7f3d90870127715a5ed78f3b86b628bc072e97aeb0ecf3cda4650d0725349"
+      ],
+      "attachment_name_hashes": [
+        "4dc5abc7ec93cfda"
+      ]
+    },
+    "revision": 1
   },
   "v2:1d2721ce14b34df77b294698": {
     "notified": false,
