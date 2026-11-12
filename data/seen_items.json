@@ -10001,14 +10001,34 @@
     "identity_version": 2,
     "primary_id": "v2:7f853c4f076c481056caadce",
     "legacy_ids": [
-      "47fd73da42068e71"
+      "47fd73da42068e71",
+      "v2:7f853c4f076c481056caadce"
     ],
     "title": "Lavori di ripristino della funzionalità della nuova palestra scolastica dell'Istituto Comprensivo \"Don Peppe Diana - M.R. Imbriani\", via Pansini, a seguito degli atti vandalici accertati in data 03/07/2026. Affidamento diretto ai sensi dell'art. 50, comma 1, lett. a), del D.Lgs. 36/2023, con deroga motivata al principio di rotazione ai sensi dell'art. 49, comma 4, in favore della ditta DI.GI. Lavori S.R.L. (P.IVA 02804100648). Determina a contrarre e di affidamento. Impegno di spesa.",
     "num_pub": "621",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "69",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "10a72c16e4d1d787ac976d1c354e43dff102e6d3fca4d81a7daab93d09da7aaa",
+    "revision_fingerprint": "10a72c16e4d1d787ac976d1c354e43dff102e6d3fca4d81a7daab93d09da7aaa",
+    "revision_snapshot": {
+      "date": "10-11-2026",
+      "date_end": "25-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "69",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "d760bc6b0d6d1d05badf7f9c980fdf4411667b4fb9ddb3b70e420bb469a1c778"
+      ],
+      "attachment_name_hashes": [
+        "270becca97ddde64"
+      ]
+    },
+    "revision": 1
   },
   "v2:b9c7beddd45db112a9b78a37": {
     "notified": false,
