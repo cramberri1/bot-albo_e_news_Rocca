@@ -10613,14 +10613,34 @@
     "identity_version": 2,
     "primary_id": "v2:fdb78686ebe62d722859d3b8",
     "legacy_ids": [
-      "559933952403d236"
+      "559933952403d236",
+      "v2:fdb78686ebe62d722859d3b8"
     ],
     "title": "Liquidazione di spesa preventivamente impegnata per \"Interventi di manutenzione e ripristino tratti fognari del comune di Roccabascerana e completamento sistemazione area di accesso depuratore comunale\"",
     "num_pub": "604",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "62",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "e2e1aa15b10b06e149199e11cc3e073ebbef04de02d60fa6a5b81e6c1c3924f7",
+    "revision_fingerprint": "e2e1aa15b10b06e149199e11cc3e073ebbef04de02d60fa6a5b81e6c1c3924f7",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "62",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "34a97aef571d9a1ed1c7b9e6232568fc6bcf47bab671c44b3771b50eefdddf66"
+      ],
+      "attachment_name_hashes": [
+        "62fe7e0c709e350c"
+      ]
+    },
+    "revision": 1
   },
   "v2:635f045f36360a689aac15d8": {
     "notified": false,
