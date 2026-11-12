@@ -10577,14 +10577,34 @@
     "identity_version": 2,
     "primary_id": "v2:f60cee25527b00a704d1921a",
     "legacy_ids": [
-      "bf1a424b05c802b2"
+      "bf1a424b05c802b2",
+      "v2:f60cee25527b00a704d1921a"
     ],
     "title": "Lavori urgenti di sistemazione della rete fognaria in prossimità della SP2. Affidamento diretto ai sensi dell'art. 50, comma 1, lett. a), del D.Lgs. 36/2023.",
     "num_pub": "605",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "67",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "9b8833828d634aac185c34217b1354986e0eccd7e2b71deebaeff16921687ca1",
+    "revision_fingerprint": "9b8833828d634aac185c34217b1354986e0eccd7e2b71deebaeff16921687ca1",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "67",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "f2f4931443b31eb0db46e581a4faeafa53b4cce4748acd365889b8ff6fd87fec"
+      ],
+      "attachment_name_hashes": [
+        "05836f373d3bf38f"
+      ]
+    },
+    "revision": 1
   },
   "v2:fdb78686ebe62d722859d3b8": {
     "notified": false,
