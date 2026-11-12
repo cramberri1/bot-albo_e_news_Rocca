@@ -10469,14 +10469,34 @@
     "identity_version": 2,
     "primary_id": "v2:4d1862fe3a8291a1c11026ac",
     "legacy_ids": [
-      "60194dc349b62288"
+      "60194dc349b62288",
+      "v2:4d1862fe3a8291a1c11026ac"
     ],
     "title": "Liquidazione fornitura materiale di ferramenta",
     "num_pub": "608",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "230",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "c20ebaefc4b8aeb911a745a53bda61832cf2c2b57c38fc5424e5e63608e6659e",
+    "revision_fingerprint": "c20ebaefc4b8aeb911a745a53bda61832cf2c2b57c38fc5424e5e63608e6659e",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "230",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "2fd7f842017252efc0fcf2e80cdc4c8c9b728aff167740de6cf4b2b00662bd26"
+      ],
+      "attachment_name_hashes": [
+        "091f579855edf365"
+      ]
+    },
+    "revision": 1
   },
   "v2:a148cb9a1844498ed380cbb3": {
     "notified": false,
