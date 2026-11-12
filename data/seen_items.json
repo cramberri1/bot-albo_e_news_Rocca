@@ -9848,5 +9848,501 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-07T18:09:58Z"
+  },
+  "v2:a4ba10a72d99f86aa77a150c": {
+    "notified": false,
+    "date": "10-11-2026",
+    "date_end": "25-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:a4ba10a72d99f86aa77a150c",
+    "legacy_ids": [
+      "f0e3405947da7c6f",
+      "v2:a4ba10a72d99f86aa77a150c"
+    ],
+    "title": "Adesione a convenzione CONSIP \"telefonia mobile 9\" - CIG \"originario\" della convenzione 9458158EE1- Liquidazione periodo 23/08/2026 - 22/10/2026",
+    "num_pub": "625",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "74",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "bc92adfbf9028f238c9271dbd15b336bf542ce68b6d2cb1c8052745c92b886cb",
+    "revision_fingerprint": "bc92adfbf9028f238c9271dbd15b336bf542ce68b6d2cb1c8052745c92b886cb",
+    "revision_snapshot": {
+      "date": "10-11-2026",
+      "date_end": "25-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "74",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "abc228dfdc12385ed27e02b3a906e6ca011e0778c2ea8c525c3b216b5ad68324"
+      ],
+      "attachment_name_hashes": [
+        "ae877a898efad5fb"
+      ]
+    },
+    "revision": 1
+  },
+  "v2:80f9826aecdc3378005d1a3a": {
+    "notified": false,
+    "date": "10-11-2026",
+    "date_end": "25-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:80f9826aecdc3378005d1a3a",
+    "legacy_ids": [
+      "75c6e4861e73d202"
+    ],
+    "title": "Incarico di Collaudatore statico per l'intervento di realizzazione della nuova palestra scolastica dell'Istituto Comprensivo \"Don Peppe Diana M.R. Imbriani\". Missione 4 - Istruzione e Ricerca - Componente 1 - Potenziamento dell'offerta dei servizi di istruzione: dagli asili nido alle Università - Investimento 1.3 \"Piano per le infrastrutture per lo sport nelle scuole, finanziato dall'Unione europea - Next Generation EU. CUP G11B22000730006. Determina di liquidazione saldo competenze tecniche.",
+    "num_pub": "624",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "73",
+    "register_number": ""
+  },
+  "v2:7b6d82aa7420961be1da4c64": {
+    "notified": false,
+    "date": "10-11-2026",
+    "date_end": "25-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:7b6d82aa7420961be1da4c64",
+    "legacy_ids": [
+      "2cccc5a11c2ed6aa"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"SERVIZI DI SPAZZAMENTO E CURA DEL VERDE COMUNALE NEL COMUNE DI ROCCABASCERANA\" - Ditta: Partenio Service Roma Soc. Coop. - Periodo Ottobre 2026",
+    "num_pub": "623",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "71",
+    "register_number": ""
+  },
+  "v2:e3b2282d4f6269cdc4ca5a9b": {
+    "notified": false,
+    "date": "10-11-2026",
+    "date_end": "25-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:e3b2282d4f6269cdc4ca5a9b",
+    "legacy_ids": [
+      "a1565cb292b3d022"
+    ],
+    "title": "Approvvigionamento carburante automezzi ed attrezzature comunali. Adesione << convenzione CONSIP - Accordo Quadro \"AQFC3_Q8 - Fuel Card 3\", per la fornitura di carburante per autotrazione mediante Fuel Card >>, stipulata con Kuwait Petroleum Italia S.p.A. Liquidazione di spesa preventivamente impegnata - Periodo Ottobre 2026",
+    "num_pub": "622",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "70",
+    "register_number": ""
+  },
+  "v2:7f853c4f076c481056caadce": {
+    "notified": false,
+    "date": "10-11-2026",
+    "date_end": "25-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:7f853c4f076c481056caadce",
+    "legacy_ids": [
+      "47fd73da42068e71"
+    ],
+    "title": "Lavori di ripristino della funzionalità della nuova palestra scolastica dell'Istituto Comprensivo \"Don Peppe Diana - M.R. Imbriani\", via Pansini, a seguito degli atti vandalici accertati in data 03/07/2026. Affidamento diretto ai sensi dell'art. 50, comma 1, lett. a), del D.Lgs. 36/2023, con deroga motivata al principio di rotazione ai sensi dell'art. 49, comma 4, in favore della ditta DI.GI. Lavori S.R.L. (P.IVA 02804100648). Determina a contrarre e di affidamento. Impegno di spesa.",
+    "num_pub": "621",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "69",
+    "register_number": ""
+  },
+  "v2:b9c7beddd45db112a9b78a37": {
+    "notified": false,
+    "date": "10-11-2026",
+    "date_end": "25-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:b9c7beddd45db112a9b78a37",
+    "legacy_ids": [
+      "baf95b61e7f88212"
+    ],
+    "title": "Affidamento del Servizio di manutenzione ordinaria e assunzione dell'incarico di Terzo Responsabile delle centrali termiche a servizio dell'Istituto Comprensivo \"Don Peppe Diana - M.R. Imbriani\" e della Scuola per l'Infanzia \"M. Montessori\" - Durata 3 anni - Stagioni invernali 2026/2027 - 2027/2028 e 2028/2029 con opzione di proroga/rinnovo di altri 2 anni.",
+    "num_pub": "620",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "68",
+    "register_number": ""
+  },
+  "v2:4ff14e011bbc8cca09dd9a39": {
+    "notified": false,
+    "date": "10-11-2026",
+    "date_end": "25-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:4ff14e011bbc8cca09dd9a39",
+    "legacy_ids": [
+      "a664a2d4211c0cc0"
+    ],
+    "title": "\"REALIZZAZIONE DELLA NUOVA PALESTRA SCOLASTICA DELL'ISTITUTO COMPRENSIVO DON PEPPE DIANA -M.R. IMBRIANI.\" Missione 4 - Istruzione e Ricerca - Componente 1 - Potenziamento dell'offerta dei servizi di istruzione: dagli asili nido alle Università - Investimento 1.3 \"Piano per le infrastrutture per lo sport nelle scuole\", finanziato dall'Unione europea - Next Generation EU. CUP G11B22000730006. LIQUIDAZIONE STATO FINALE.",
+    "num_pub": "619",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "66",
+    "register_number": ""
+  },
+  "v2:a97e0477a2956bb83b86bdc2": {
+    "notified": false,
+    "date": "10-11-2026",
+    "date_end": "25-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:a97e0477a2956bb83b86bdc2",
+    "legacy_ids": [
+      "c7755abf74853446"
+    ],
+    "title": "Affidamento delle attività integrative di Progettazione e Direzione Lavori, relative all'intervento di \"Realizzazione della nuova palestra scolastica dell'Istituto Comprensivo Don Peppe Diana M.R. Imbriani\". Missione 4 - Istruzione e Ricerca Componente 1 Potenziamento dell'offerta dei servizi di istruzione: dagli asili nido alle Università. Investimento 1.3 - Piano per le infrastrutture per lo sport nelle scuole, finanziato dall'Unione europea - Next Generation EU. CUP G11B22000730006. CIG: 98873470DD (principale).\nProvvedimenti. Determina di liquidazione saldo Direzione dei Lavori.",
+    "num_pub": "618",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "65",
+    "register_number": ""
+  },
+  "v2:07c5fa97e91e7528c976030e": {
+    "notified": false,
+    "date": "10-11-2026",
+    "date_end": "25-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:07c5fa97e91e7528c976030e",
+    "legacy_ids": [
+      "ed3b2cde7ae00651"
+    ],
+    "title": "Attività di << Progettazione e Direzione Lavori >> relative all'intervento di realizzazione della nuova palestra scolastica dell'Istituto Comprensivo \"Don Peppe Diana - M.R. Imbriani\". Missione 4 - Istruzione e Ricerca - Componente 1 - Potenziamento dell'offerta dei servizi di istruzione: dagli asili nido alle Università - Investimento 1.3 \"Piano per le infrastrutture per lo sport nelle scuole\", finanziato dall'Unione europea - Next Generation EU\". CUP G11B22000730006.\nProvvedimenti. Determina di liquidazione saldo Direzione dei Lavori.",
+    "num_pub": "617",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "64",
+    "register_number": ""
+  },
+  "v2:b6ee92ba5a26950062ecef98": {
+    "notified": false,
+    "date": "10-11-2026",
+    "date_end": "25-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:b6ee92ba5a26950062ecef98",
+    "legacy_ids": [
+      "a4ad34010c699489"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"Conferimento Rifiuti Solidi Urbani\" - Ditta Irpiniambiente S.P.A. - Periodo Settembre 2026",
+    "num_pub": "616",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "61",
+    "register_number": ""
+  },
+  "v2:718f79fa60e4d7b570eca975": {
+    "notified": false,
+    "date": "10-11-2026",
+    "date_end": "25-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:718f79fa60e4d7b570eca975",
+    "legacy_ids": [
+      "11d3ee087867f100"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"SERVIZI DI SPAZZAMENTO E CURA DEL VERDE COMUNALE NEL COMUNE DI ROCCABASCERANA\" - Ditta: Partenio Service Roma Soc. Coop. - Periodo Settembre 2026",
+    "num_pub": "615",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "60",
+    "register_number": ""
+  },
+  "v2:73521087c5a93a4aabb8fa82": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:73521087c5a93a4aabb8fa82",
+    "legacy_ids": [
+      "592d0ed17d659323"
+    ],
+    "title": "Liquidazione mensa scolastica periodo 26.10.2026 - 30.10.2026",
+    "num_pub": "614",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "249",
+    "register_number": ""
+  },
+  "v2:a9f3fe3baab7a9ef07d1d7cd": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:a9f3fe3baab7a9ef07d1d7cd",
+    "legacy_ids": [
+      "88c136d1308cd1a4"
+    ],
+    "title": "Liquidazione competenze al Consorzio Matrix Cooperativa Sociale - II Acconto anno 2026 - Servizio di gestione ed organizzazione dei servizi di accoglienza SAI - SIPROIMI",
+    "num_pub": "613",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "246",
+    "register_number": ""
+  },
+  "v2:4d2ec95d54d54dc4e7af3758": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:4d2ec95d54d54dc4e7af3758",
+    "legacy_ids": [
+      "a9900f26a57c1a59"
+    ],
+    "title": "Liquidazione fattura a favore della società Edenred Italia",
+    "num_pub": "612",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "245",
+    "register_number": ""
+  },
+  "v2:2df19a4adb8a27d3b12abc06": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:2df19a4adb8a27d3b12abc06",
+    "legacy_ids": [
+      "44c96a764c4cf0f8"
+    ],
+    "title": "Asmenet quota mantenimento servizi anno 2026 - Liquidazione",
+    "num_pub": "611",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "242",
+    "register_number": ""
+  },
+  "v2:1d2721ce14b34df77b294698": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:1d2721ce14b34df77b294698",
+    "legacy_ids": [
+      "0b8fbb2fbc81f6f9"
+    ],
+    "title": "Liquidazione fattura a favore della società Edenred Italia",
+    "num_pub": "610",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "241",
+    "register_number": ""
+  },
+  "v2:47b3c03905f42331ef2b48f5": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:47b3c03905f42331ef2b48f5",
+    "legacy_ids": [
+      "07e1f03862c6c043"
+    ],
+    "title": "Collocamento presso idonea comunità di quattro minori, su disposizione del tribunale dei Minori di Napoli - Liquidazione di spesa - settembre 2026",
+    "num_pub": "609",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "239",
+    "register_number": ""
+  },
+  "v2:4d1862fe3a8291a1c11026ac": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:4d1862fe3a8291a1c11026ac",
+    "legacy_ids": [
+      "60194dc349b62288"
+    ],
+    "title": "Liquidazione fornitura materiale di ferramenta",
+    "num_pub": "608",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "230",
+    "register_number": ""
+  },
+  "v2:a148cb9a1844498ed380cbb3": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:a148cb9a1844498ed380cbb3",
+    "legacy_ids": [
+      "6fd15f539648f14d"
+    ],
+    "title": "Revisore progetto SAI SIPROIMI anno 2026 - Impegno di spesa",
+    "num_pub": "607",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "139",
+    "register_number": ""
+  },
+  "v2:46cdb9a0887325efee276dc7": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:46cdb9a0887325efee276dc7",
+    "legacy_ids": [
+      "0f2a03507bd2d0b0"
+    ],
+    "title": "Indennità di carica amministratori anno 2026",
+    "num_pub": "606",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "238",
+    "register_number": ""
+  },
+  "v2:f60cee25527b00a704d1921a": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:f60cee25527b00a704d1921a",
+    "legacy_ids": [
+      "bf1a424b05c802b2"
+    ],
+    "title": "Lavori urgenti di sistemazione della rete fognaria in prossimità della SP2. Affidamento diretto ai sensi dell'art. 50, comma 1, lett. a), del D.Lgs. 36/2023.",
+    "num_pub": "605",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "67",
+    "register_number": ""
+  },
+  "v2:fdb78686ebe62d722859d3b8": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:fdb78686ebe62d722859d3b8",
+    "legacy_ids": [
+      "559933952403d236"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"Interventi di manutenzione e ripristino tratti fognari del comune di Roccabascerana e completamento sistemazione area di accesso depuratore comunale\"",
+    "num_pub": "604",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "62",
+    "register_number": ""
+  },
+  "v2:635f045f36360a689aac15d8": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:635f045f36360a689aac15d8",
+    "legacy_ids": [
+      "170eca807b41a3ef"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"Affidamento incarico per la conduzione, manutenzione ed assunzione della funzione di \"Terzo Responsabile\" degli impianti termici del plesso scolastico Primaria - Secondaria di I grado in via Pansini di Roccabascerana e della scuola Infanzia in via Imbriani per la stagione invernale 2025/2026\"",
+    "num_pub": "603",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "58",
+    "register_number": ""
+  },
+  "v2:3dae8bc6739a021d7bcc35d2": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:3dae8bc6739a021d7bcc35d2",
+    "legacy_ids": [
+      "4c2be7b1da57470e"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"Intervento di manutenzione e ripristino automazione cancello carraio presso Centro di raccolta comunale in Roccabascerana\" con contestuale compensazione/trattenuta di pendenze tributarie TARI.",
+    "num_pub": "602",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "57",
+    "register_number": ""
+  },
+  "v2:262f940baac38b437fbfc2ba": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:262f940baac38b437fbfc2ba",
+    "legacy_ids": [
+      "83dcb8aada29885f"
+    ],
+    "title": "Autorizzazione all'utilizzo della Palestra Comunale alla frazione Squillani - ASD Arcieri del Sannio",
+    "num_pub": "601",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "56",
+    "register_number": ""
+  },
+  "v2:a2b13d9581296bf7b1c90846": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:a2b13d9581296bf7b1c90846",
+    "legacy_ids": [
+      "ae1487b4d41e95ff"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per intervento di manutenzione straordinaria caldaia \"Istituto Comprensivo Don Peppe Diana - M.R. Imbriani\" di Roccabascerana.",
+    "num_pub": "600",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "54",
+    "register_number": ""
+  },
+  "v2:bcad1994733c06366e752a28": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:bcad1994733c06366e752a28",
+    "legacy_ids": [
+      "a9174a19ce24c1b6"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"SERVIZI CIMITERIALI NEL TERRITORIO DEL COMUNE DI ROCCABASCERANA\" - Ditta: Partenio Service Roma Soc. Coop. - Periodo Settembre 2026",
+    "num_pub": "599",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "53",
+    "register_number": ""
+  },
+  "v2:3996ecb526453cea582b4293": {
+    "notified": false,
+    "date": "09-11-2026",
+    "date_end": "24-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:3996ecb526453cea582b4293",
+    "legacy_ids": [
+      "7a4f27be7dba8f2c"
+    ],
+    "title": "Liquidazione di spesa preventivamente impegnata per \"Intervento urgente di messa in sicurezza, caratterizzazione, rimozione, carico, trasporto e smaltimento di rifiuti combusti a seguito di incendio in Via Olivella\" - Ditta: S.O.G.E.S.I. s.r.l.",
+    "num_pub": "598",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "52",
+    "register_number": ""
   }
 }
