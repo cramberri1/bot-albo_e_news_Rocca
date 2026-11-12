@@ -10541,14 +10541,34 @@
     "identity_version": 2,
     "primary_id": "v2:46cdb9a0887325efee276dc7",
     "legacy_ids": [
-      "0f2a03507bd2d0b0"
+      "0f2a03507bd2d0b0",
+      "v2:46cdb9a0887325efee276dc7"
     ],
     "title": "Indennità di carica amministratori anno 2026",
     "num_pub": "606",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "238",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "9a51c63003a30c66d16972424f7e9a2ee41a97397bda445f1b1dd71416b2a5cb",
+    "revision_fingerprint": "9a51c63003a30c66d16972424f7e9a2ee41a97397bda445f1b1dd71416b2a5cb",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "238",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "82a3abdcb4f79f60e52969698bb309ea32be8b886f4a403d87cc6d19ca128aa4"
+      ],
+      "attachment_name_hashes": [
+        "66b1111c1fa2d902"
+      ]
+    },
+    "revision": 1
   },
   "v2:f60cee25527b00a704d1921a": {
     "notified": false,
