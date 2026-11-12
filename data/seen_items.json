@@ -10685,14 +10685,34 @@
     "identity_version": 2,
     "primary_id": "v2:3dae8bc6739a021d7bcc35d2",
     "legacy_ids": [
-      "4c2be7b1da57470e"
+      "4c2be7b1da57470e",
+      "v2:3dae8bc6739a021d7bcc35d2"
     ],
     "title": "Liquidazione di spesa preventivamente impegnata per \"Intervento di manutenzione e ripristino automazione cancello carraio presso Centro di raccolta comunale in Roccabascerana\" con contestuale compensazione/trattenuta di pendenze tributarie TARI.",
     "num_pub": "602",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "57",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "b70751282ef39f696d3c54ed3db3e2bd07be509fcd19b4f544a7b8644d5df436",
+    "revision_fingerprint": "b70751282ef39f696d3c54ed3db3e2bd07be509fcd19b4f544a7b8644d5df436",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "57",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "b73f0a5c661e896c10ce662bb2cf264b0c2e6d8a743a960a417e8c96cc3b4cf3"
+      ],
+      "attachment_name_hashes": [
+        "980535e1442ec921"
+      ]
+    },
+    "revision": 1
   },
   "v2:262f940baac38b437fbfc2ba": {
     "notified": false,
