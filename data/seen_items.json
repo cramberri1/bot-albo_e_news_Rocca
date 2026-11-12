@@ -10730,9 +10730,7 @@
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "56",
     "register_number": "",
-    "delivery_pending": true,
-    "pending_kind": "new",
-    "pending_version": "acfb6b9c495ef506ff5dba8f1f6a00136a523d9a6da91da5d53a80cdf891f7f8",
+    "delivery_pending": false,
     "revision_fingerprint": "acfb6b9c495ef506ff5dba8f1f6a00136a523d9a6da91da5d53a80cdf891f7f8",
     "revision_snapshot": {
       "date": "09-11-2026",
@@ -10748,7 +10746,8 @@
         "cfcac6593a95b039"
       ]
     },
-    "revision": 1
+    "revision": 1,
+    "last_revision_check_at": "2026-11-12T06:00:00Z"
   },
   "v2:a2b13d9581296bf7b1c90846": {
     "notified": false,
