@@ -9893,14 +9893,34 @@
     "identity_version": 2,
     "primary_id": "v2:80f9826aecdc3378005d1a3a",
     "legacy_ids": [
-      "75c6e4861e73d202"
+      "75c6e4861e73d202",
+      "v2:80f9826aecdc3378005d1a3a"
     ],
     "title": "Incarico di Collaudatore statico per l'intervento di realizzazione della nuova palestra scolastica dell'Istituto Comprensivo \"Don Peppe Diana M.R. Imbriani\". Missione 4 - Istruzione e Ricerca - Componente 1 - Potenziamento dell'offerta dei servizi di istruzione: dagli asili nido alle Università - Investimento 1.3 \"Piano per le infrastrutture per lo sport nelle scuole, finanziato dall'Unione europea - Next Generation EU. CUP G11B22000730006. Determina di liquidazione saldo competenze tecniche.",
     "num_pub": "624",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "73",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "4be6e61c5cb7935ce841ad0925a3d2685eef971a3ff0c8dd3c25ac98a0d7e9cd",
+    "revision_fingerprint": "4be6e61c5cb7935ce841ad0925a3d2685eef971a3ff0c8dd3c25ac98a0d7e9cd",
+    "revision_snapshot": {
+      "date": "10-11-2026",
+      "date_end": "25-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "73",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "ebc6f932148f0678e45d150803470840ee471324510354169239ef336cf96ec6"
+      ],
+      "attachment_name_hashes": [
+        "1fbfd3646ab94726"
+      ]
+    },
+    "revision": 1
   },
   "v2:7b6d82aa7420961be1da4c64": {
     "notified": false,
