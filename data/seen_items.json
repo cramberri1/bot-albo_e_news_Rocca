@@ -10181,14 +10181,34 @@
     "identity_version": 2,
     "primary_id": "v2:b6ee92ba5a26950062ecef98",
     "legacy_ids": [
-      "a4ad34010c699489"
+      "a4ad34010c699489",
+      "v2:b6ee92ba5a26950062ecef98"
     ],
     "title": "Liquidazione di spesa preventivamente impegnata per \"Conferimento Rifiuti Solidi Urbani\" - Ditta Irpiniambiente S.P.A. - Periodo Settembre 2026",
     "num_pub": "616",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "61",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "c150ce315fe58fd9b39f792c9c1e6337e8097d8a03af872dc8c4252e56c3ece1",
+    "revision_fingerprint": "c150ce315fe58fd9b39f792c9c1e6337e8097d8a03af872dc8c4252e56c3ece1",
+    "revision_snapshot": {
+      "date": "10-11-2026",
+      "date_end": "25-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "61",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "51cc1f72f9d5c76e51c66bc1317bc64d392e020a3916ac29309fe74fb770cd27"
+      ],
+      "attachment_name_hashes": [
+        "ea8ee6a4fa6c7d62"
+      ]
+    },
+    "revision": 1
   },
   "v2:718f79fa60e4d7b570eca975": {
     "notified": false,
