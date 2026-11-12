@@ -10253,14 +10253,34 @@
     "identity_version": 2,
     "primary_id": "v2:73521087c5a93a4aabb8fa82",
     "legacy_ids": [
-      "592d0ed17d659323"
+      "592d0ed17d659323",
+      "v2:73521087c5a93a4aabb8fa82"
     ],
     "title": "Liquidazione mensa scolastica periodo 26.10.2026 - 30.10.2026",
     "num_pub": "614",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "249",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "2e17f2b91dc043c6921af4a8f6b02631572f7dab3c2754d9dfd50a408d0ea3f5",
+    "revision_fingerprint": "2e17f2b91dc043c6921af4a8f6b02631572f7dab3c2754d9dfd50a408d0ea3f5",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "249",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "73a7bdd7bcb656b417a69191300f834ce762d0d5da44db022696c51898a193f4"
+      ],
+      "attachment_name_hashes": [
+        "06debf26747b5c2b"
+      ]
+    },
+    "revision": 1
   },
   "v2:a9f3fe3baab7a9ef07d1d7cd": {
     "notified": false,
