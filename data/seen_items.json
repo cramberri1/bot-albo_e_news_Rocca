@@ -10037,14 +10037,34 @@
     "identity_version": 2,
     "primary_id": "v2:b9c7beddd45db112a9b78a37",
     "legacy_ids": [
-      "baf95b61e7f88212"
+      "baf95b61e7f88212",
+      "v2:b9c7beddd45db112a9b78a37"
     ],
     "title": "Affidamento del Servizio di manutenzione ordinaria e assunzione dell'incarico di Terzo Responsabile delle centrali termiche a servizio dell'Istituto Comprensivo \"Don Peppe Diana - M.R. Imbriani\" e della Scuola per l'Infanzia \"M. Montessori\" - Durata 3 anni - Stagioni invernali 2026/2027 - 2027/2028 e 2028/2029 con opzione di proroga/rinnovo di altri 2 anni.",
     "num_pub": "620",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "68",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "497d2ba4ef5f234cf9038d1d78a8895c0c3a9cb6e8b3377ae39148a18e09e88a",
+    "revision_fingerprint": "497d2ba4ef5f234cf9038d1d78a8895c0c3a9cb6e8b3377ae39148a18e09e88a",
+    "revision_snapshot": {
+      "date": "10-11-2026",
+      "date_end": "25-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "68",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "4c1bed39b97aa529ea04cfcb1f77ebf2f73a6283351958ea76b0c58a874dade3"
+      ],
+      "attachment_name_hashes": [
+        "b499d80c6d7d1021"
+      ]
+    },
+    "revision": 1
   },
   "v2:4ff14e011bbc8cca09dd9a39": {
     "notified": false,
