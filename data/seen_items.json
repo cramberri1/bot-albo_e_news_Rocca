@@ -10901,13 +10901,33 @@
     "identity_version": 2,
     "primary_id": "v2:86dc61feb49e6f1aab9a96ec",
     "legacy_ids": [
-      "97ef40d6740c8606"
+      "97ef40d6740c8606",
+      "v2:86dc61feb49e6f1aab9a96ec"
     ],
     "title": "Iniziativa luminarie natalizie 2026",
     "num_pub": "626",
     "tipo": "DELIBERE DI GIUNTA",
     "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
     "act_number": "70",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "85f29bc0f43e2fcdc809fd8372ddb0a9fe7f226cc216da2900fd73d4106715eb",
+    "revision_fingerprint": "85f29bc0f43e2fcdc809fd8372ddb0a9fe7f226cc216da2900fd73d4106715eb",
+    "revision_snapshot": {
+      "date": "12-11-2026",
+      "date_end": "27-11-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "70",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "350b8df234783c27af6e791b7c465b964bb1e20e4a3e056cc467053da2673331"
+      ],
+      "attachment_name_hashes": [
+        "e088a011db6e2d7f"
+      ]
+    },
+    "revision": 1
   }
 }
