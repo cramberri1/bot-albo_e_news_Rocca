@@ -10649,14 +10649,34 @@
     "identity_version": 2,
     "primary_id": "v2:635f045f36360a689aac15d8",
     "legacy_ids": [
-      "170eca807b41a3ef"
+      "170eca807b41a3ef",
+      "v2:635f045f36360a689aac15d8"
     ],
     "title": "Liquidazione di spesa preventivamente impegnata per \"Affidamento incarico per la conduzione, manutenzione ed assunzione della funzione di \"Terzo Responsabile\" degli impianti termici del plesso scolastico Primaria - Secondaria di I grado in via Pansini di Roccabascerana e della scuola Infanzia in via Imbriani per la stagione invernale 2025/2026\"",
     "num_pub": "603",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "58",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "704de19dc50ad82ee42e3370a4db4a8ab3f2329b5abf43f8007792c49d8760db",
+    "revision_fingerprint": "704de19dc50ad82ee42e3370a4db4a8ab3f2329b5abf43f8007792c49d8760db",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "58",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "ffbfd6b38c55505b2ec3f96d1d014a6bc711eab4ca9fcc4e827667d4613ea349"
+      ],
+      "attachment_name_hashes": [
+        "9bc48a6e6e3fff8d"
+      ]
+    },
+    "revision": 1
   },
   "v2:3dae8bc6739a021d7bcc35d2": {
     "notified": false,
