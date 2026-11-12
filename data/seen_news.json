@@ -1057,7 +1057,7 @@
     "date": "26-10-2026",
     "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_205.html",
     "description": "Disponibili per la consultazione le diverse tipologie di menù autorizzati dall'ASL",
-    "notified": false,
+    "notified": true,
     "delivery_pending": true
   }
 }
