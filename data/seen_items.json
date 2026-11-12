@@ -10856,5 +10856,59 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-12T15:34:49Z"
+  },
+  "v2:f76e5dac9daff39e669b4833": {
+    "notified": false,
+    "date": "12-11-2026",
+    "date_end": "27-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:f76e5dac9daff39e669b4833",
+    "legacy_ids": [
+      "b9d3842ea6e95b0e",
+      "v2:f76e5dac9daff39e669b4833"
+    ],
+    "title": "Decreto n.5/2026 - Autorizzazione allo svolgimento dell'incarico professionale esterno di natura intellettuale per supporto in tema di contabilità pubblica e finanza locale.",
+    "num_pub": "627",
+    "tipo": "DECRETO SINDACALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "5",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "9269f792579791207120c353c846b9375e0e4af17ae2fc8466e89129d463e7bf",
+    "revision_fingerprint": "9269f792579791207120c353c846b9375e0e4af17ae2fc8466e89129d463e7bf",
+    "revision_snapshot": {
+      "date": "12-11-2026",
+      "date_end": "27-11-2026",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "5",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "e64f41bb2488d0e30cdf2b105c3623fec73968b94b38ebb6d8534310064112c5"
+      ],
+      "attachment_name_hashes": [
+        "2d6c468fc0252a51"
+      ]
+    },
+    "revision": 1
+  },
+  "v2:86dc61feb49e6f1aab9a96ec": {
+    "notified": false,
+    "date": "12-11-2026",
+    "date_end": "27-11-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:86dc61feb49e6f1aab9a96ec",
+    "legacy_ids": [
+      "97ef40d6740c8606"
+    ],
+    "title": "Iniziativa luminarie natalizie 2026",
+    "num_pub": "626",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "70",
+    "register_number": ""
   }
 }
