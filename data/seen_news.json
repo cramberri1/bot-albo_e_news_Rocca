@@ -1059,5 +1059,14 @@
     "description": "Disponibili per la consultazione le diverse tipologie di menù autorizzati dall'ASL",
     "notified": true,
     "delivery_pending": false
+  },
+  "208": {
+    "title": "Servizio mensa scolastica - APP Comunico",
+    "category": "Avviso",
+    "date": "10-11-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_208.html",
+    "description": "Novità per i pagamenti online",
+    "notified": false,
+    "delivery_pending": true
   }
 }
