@@ -10829,13 +10829,33 @@
     "identity_version": 2,
     "primary_id": "v2:3996ecb526453cea582b4293",
     "legacy_ids": [
-      "7a4f27be7dba8f2c"
+      "7a4f27be7dba8f2c",
+      "v2:3996ecb526453cea582b4293"
     ],
     "title": "Liquidazione di spesa preventivamente impegnata per \"Intervento urgente di messa in sicurezza, caratterizzazione, rimozione, carico, trasporto e smaltimento di rifiuti combusti a seguito di incendio in Via Olivella\" - Ditta: S.O.G.E.S.I. s.r.l.",
     "num_pub": "598",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "52",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "a00e2b4c92e404c8e4a0f0c30bb0fd464aeaf64984236417a8917b0ee9a7f823",
+    "revision_fingerprint": "a00e2b4c92e404c8e4a0f0c30bb0fd464aeaf64984236417a8917b0ee9a7f823",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "52",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "c0d57e9a28b45794fbd8358441b6ec62ec1b38333263e0cf012a518d58e1a80b"
+      ],
+      "attachment_name_hashes": [
+        "c18e23dd50c35407"
+      ]
+    },
+    "revision": 1
   }
 }
