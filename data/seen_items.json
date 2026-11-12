@@ -10397,14 +10397,34 @@
     "identity_version": 2,
     "primary_id": "v2:1d2721ce14b34df77b294698",
     "legacy_ids": [
-      "0b8fbb2fbc81f6f9"
+      "0b8fbb2fbc81f6f9",
+      "v2:1d2721ce14b34df77b294698"
     ],
     "title": "Liquidazione fattura a favore della società Edenred Italia",
     "num_pub": "610",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "241",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "76721486826083671c1b077e09a56a5118029674b1328d07945a2a6d877623aa",
+    "revision_fingerprint": "76721486826083671c1b077e09a56a5118029674b1328d07945a2a6d877623aa",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "241",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "f41a58b6d4798c483e98b5188445401784635df13484a6b899f8355d70a05790"
+      ],
+      "attachment_name_hashes": [
+        "6e437ef0980689e3"
+      ]
+    },
+    "revision": 1
   },
   "v2:47b3c03905f42331ef2b48f5": {
     "notified": false,
