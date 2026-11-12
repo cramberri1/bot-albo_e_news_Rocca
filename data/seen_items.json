@@ -10721,14 +10721,34 @@
     "identity_version": 2,
     "primary_id": "v2:262f940baac38b437fbfc2ba",
     "legacy_ids": [
-      "83dcb8aada29885f"
+      "83dcb8aada29885f",
+      "v2:262f940baac38b437fbfc2ba"
     ],
     "title": "Autorizzazione all'utilizzo della Palestra Comunale alla frazione Squillani - ASD Arcieri del Sannio",
     "num_pub": "601",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "56",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "acfb6b9c495ef506ff5dba8f1f6a00136a523d9a6da91da5d53a80cdf891f7f8",
+    "revision_fingerprint": "acfb6b9c495ef506ff5dba8f1f6a00136a523d9a6da91da5d53a80cdf891f7f8",
+    "revision_snapshot": {
+      "date": "09-11-2026",
+      "date_end": "24-11-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "56",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "ec804c415d23b4ea9425e008f08843cfe869a1d32c03fa9ed99859ae4296c8d1"
+      ],
+      "attachment_name_hashes": [
+        "cfcac6593a95b039"
+      ]
+    },
+    "revision": 1
   },
   "v2:a2b13d9581296bf7b1c90846": {
     "notified": false,
