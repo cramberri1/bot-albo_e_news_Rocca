@@ -1068,5 +1068,14 @@
     "description": "Novità per i pagamenti online",
     "notified": true,
     "delivery_pending": false
+  },
+  "210": {
+    "title": "Comunicato del Sindaco",
+    "category": "Comunicati",
+    "date": "16-11-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/comunicati_stampa/novita_210.html",
+    "description": "Mensa scolastica e riduzioni ISEE: la verità degli atti contro le polemiche strumentali",
+    "notified": false,
+    "delivery_pending": true
   }
 }
