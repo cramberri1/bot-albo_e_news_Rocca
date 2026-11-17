@@ -10930,7 +10930,7 @@
     "last_revision_check_at": "2026-11-17T08:21:59Z"
   },
   "v2:5d802b9fa3375e0b6fdd13c9": {
-    "notified": false,
+    "notified": true,
     "date": "17-11-2026",
     "date_end": "02-12-2026",
     "expired": false,
