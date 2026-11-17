@@ -10928,5 +10928,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-17T08:21:59Z"
+  },
+  "v2:5d802b9fa3375e0b6fdd13c9": {
+    "notified": false,
+    "date": "17-11-2026",
+    "date_end": "02-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:5d802b9fa3375e0b6fdd13c9",
+    "legacy_ids": [
+      "8b0a15d085524fc3",
+      "v2:5d802b9fa3375e0b6fdd13c9"
+    ],
+    "title": "Fondo politiche della famiglia attività socio-educative a favore dei minori - affidamento APS Pro Loco Roccabascerana.",
+    "num_pub": "628",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "251",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "909acf10e6b55329974f301e5e568a904befcc873503e419ce0343aed0bc4bc8",
+    "revision_fingerprint": "909acf10e6b55329974f301e5e568a904befcc873503e419ce0343aed0bc4bc8",
+    "revision_snapshot": {
+      "date": "17-11-2026",
+      "date_end": "02-12-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "251",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "9505a2c246a55445d36ec592ce01b7825f1aa6168d055625f5d865ea66ea91d0"
+      ],
+      "attachment_name_hashes": [
+        "3d885eb3c1a34da3"
+      ]
+    },
+    "revision": 1
   }
 }
