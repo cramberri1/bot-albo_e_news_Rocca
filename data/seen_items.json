@@ -11117,14 +11117,34 @@
     "identity_version": 2,
     "primary_id": "v2:1e8baacfcc1c0a617557fa9c",
     "legacy_ids": [
-      "b02cb7dc08220748"
+      "b02cb7dc08220748",
+      "v2:1e8baacfcc1c0a617557fa9c"
     ],
     "title": "Canone di concessione per attraversamento fognature sulla Strada SS 7 Appia pos. km 248.000 lato sx a favore di ANAS S.p.A. Impegno di spesa e contestuale liquidazione canone dal 01.01.2026 al 31.12.2026.",
     "num_pub": "631",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "75",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "4a439bff0a2ccd97cc715e68a638c43f22f193f6d2a66da3c7065d9da341e732",
+    "revision_fingerprint": "4a439bff0a2ccd97cc715e68a638c43f22f193f6d2a66da3c7065d9da341e732",
+    "revision_snapshot": {
+      "date": "18-11-2026",
+      "date_end": "03-12-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "75",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "5ec210d646790499776776252bb278a1b9028df674c705cda372ef771104846e"
+      ],
+      "attachment_name_hashes": [
+        "fb894d17734c5f4e"
+      ]
+    },
+    "revision": 1
   },
   "v2:2492a738a552ae8bff31ceaa": {
     "notified": false,
