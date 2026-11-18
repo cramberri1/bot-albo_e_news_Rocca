@@ -11045,14 +11045,34 @@
     "identity_version": 2,
     "primary_id": "v2:0cb40d0c129a7a091b1248d7",
     "legacy_ids": [
-      "5d409f4ef25112ab"
+      "5d409f4ef25112ab",
+      "v2:0cb40d0c129a7a091b1248d7"
     ],
     "title": "Liquidazione di spesa preventivamente impegnata per << Verifica e analisi geostrutturale della parete calcarea di Est, Sud-Est dell'abitato storico di Quascirana >> Guglia Rocciosa.",
     "num_pub": "633",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "78",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "78d3687f00d00eb092566f0fb6a76399c8c589cb12b0c1a842e41267f335298c",
+    "revision_fingerprint": "78d3687f00d00eb092566f0fb6a76399c8c589cb12b0c1a842e41267f335298c",
+    "revision_snapshot": {
+      "date": "18-11-2026",
+      "date_end": "03-12-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "78",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "d1c2fafaaad4305a7421410fdb6099987cac497e8bae91ee0a572f30bbc00603"
+      ],
+      "attachment_name_hashes": [
+        "a937be5dc03e4248"
+      ]
+    },
+    "revision": 1
   },
   "v2:c1e7d28d8677dfac53e49385": {
     "notified": false,
