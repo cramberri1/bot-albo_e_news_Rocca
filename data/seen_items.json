@@ -11110,7 +11110,7 @@
     "last_revision_check_at": "2026-11-18T13:57:19Z"
   },
   "v2:1e8baacfcc1c0a617557fa9c": {
-    "notified": false,
+    "notified": true,
     "date": "18-11-2026",
     "date_end": "03-12-2026",
     "expired": false,
