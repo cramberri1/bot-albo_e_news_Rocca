@@ -2893,7 +2893,7 @@
     "date": "30-01-2026",
     "date_end": "31-01-2027",
     "expired": false,
-    "last_revision_check_at": "2026-11-18T09:07:51Z",
+    "last_revision_check_at": "2026-11-18T14:32:08Z",
     "delivery_pending": false,
     "revision_fingerprint": "0dffd967df4bf5de1b04a968ffb6044aa2399e9fad137cb63273ca5d7dd73b38",
     "revision_snapshot": {
@@ -10459,7 +10459,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-11-18T09:07:51Z"
+    "last_revision_check_at": "2026-11-18T14:32:08Z"
   },
   "v2:4d1862fe3a8291a1c11026ac": {
     "notified": true,
@@ -10495,7 +10495,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-11-18T09:07:51Z"
+    "last_revision_check_at": "2026-11-18T14:32:08Z"
   },
   "v2:a148cb9a1844498ed380cbb3": {
     "notified": true,
