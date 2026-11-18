@@ -7734,7 +7734,7 @@
     "sender": "SINDACO COMUNE DI ROCCABASCERANA",
     "act_number": "",
     "register_number": "",
-    "last_revision_check_at": "2026-11-18T07:34:37Z",
+    "last_revision_check_at": "2026-11-18T08:37:09Z",
     "delivery_pending": false,
     "revision_fingerprint": "3bc7ee5eb95743391de5914b3aa692153d8e8cd66b4035810e9c3f5e166adc5b",
     "revision_snapshot": {
@@ -8240,7 +8240,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-11-18T07:34:37Z"
+    "last_revision_check_at": "2026-11-18T08:37:09Z"
   },
   "v2:0b8c7ad60c3682eaef6ba86a": {
     "notified": true,
@@ -9583,7 +9583,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-11-18T07:34:37Z"
+    "last_revision_check_at": "2026-11-18T08:37:09Z"
   },
   "v2:8a81b4e274e4588b89fba7ec": {
     "notified": true,
