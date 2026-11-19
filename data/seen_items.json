@@ -11234,9 +11234,7 @@
     "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
     "act_number": "254",
     "register_number": "",
-    "delivery_pending": true,
-    "pending_kind": "new",
-    "pending_version": "1e8887b227582925dca65de8a8da839851f34e12b0439559be86ea47bd2fe37c",
+    "delivery_pending": false,
     "revision_fingerprint": "1e8887b227582925dca65de8a8da839851f34e12b0439559be86ea47bd2fe37c",
     "revision_snapshot": {
       "date": "19-11-2026",
@@ -11252,6 +11250,7 @@
         "00f993dd91891610"
       ]
     },
-    "revision": 1
+    "revision": 1,
+    "last_revision_check_at": "2026-11-19T15:43:29Z"
   }
 }
