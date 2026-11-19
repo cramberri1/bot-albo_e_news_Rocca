@@ -2936,7 +2936,7 @@
     "date": "30-12-2025",
     "date_end": "31-12-2026",
     "expired": false,
-    "last_revision_check_at": "2026-11-19T13:36:36Z",
+    "last_revision_check_at": "2026-11-19T14:40:01Z",
     "delivery_pending": false,
     "revision_fingerprint": "274da7318cb2de3c4bd1835a7e1f91b0012d7f9f9925298c141f489a585bf8a0",
     "revision_snapshot": {
@@ -9691,7 +9691,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-11-19T13:36:36Z"
+    "last_revision_check_at": "2026-11-19T14:40:01Z"
   },
   "v2:2f29f666389e653841293b53": {
     "notified": true,
@@ -9727,7 +9727,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-11-19T13:36:36Z"
+    "last_revision_check_at": "2026-11-19T14:40:01Z"
   },
   "v2:4aad3fbcc54f9c781d3d1213": {
     "notified": true,
@@ -9803,7 +9803,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-11-19T13:36:36Z"
+    "last_revision_check_at": "2026-11-19T14:40:01Z"
   },
   "v2:bf40c0459d012cc8c3f60dff": {
     "notified": true,
@@ -9847,7 +9847,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-11-19T13:36:36Z"
+    "last_revision_check_at": "2026-11-19T14:40:01Z"
   },
   "v2:a4ba10a72d99f86aa77a150c": {
     "notified": true,
@@ -10279,7 +10279,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-11-19T13:36:36Z"
+    "last_revision_check_at": "2026-11-19T14:40:01Z"
   },
   "v2:a9f3fe3baab7a9ef07d1d7cd": {
     "notified": true,
@@ -10315,7 +10315,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-11-19T13:36:36Z"
+    "last_revision_check_at": "2026-11-19T14:40:01Z"
   },
   "v2:4d2ec95d54d54dc4e7af3758": {
     "notified": true,
@@ -10351,7 +10351,7 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-11-19T13:36:36Z"
+    "last_revision_check_at": "2026-11-19T14:40:01Z"
   },
   "v2:2df19a4adb8a27d3b12abc06": {
     "notified": true,
