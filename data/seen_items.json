@@ -11216,5 +11216,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-19T15:11:07Z"
+  },
+  "v2:c799c13a4222790acec30e83": {
+    "notified": false,
+    "date": "19-11-2026",
+    "date_end": "04-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:c799c13a4222790acec30e83",
+    "legacy_ids": [
+      "b78bcfe62be269b7",
+      "v2:c799c13a4222790acec30e83"
+    ],
+    "title": "BANDO DI CONCORSO PUBBLICO, PER TITOLI ED ESAMI, PER LA COPERTURA DI N. 1 POSTO DI ISRUTTORE TECNICO - A TEMPO PIENO E INDETERMINATO - INQUADRAMENTO AREA DEGLI ISTRUTTORI CON RISERVA IN VIA PRIORITARIA AI VOLONTARI DELLE FORZE ARMATE CONGEDATI SENZA DEMERITO (AI SENSI D. LGS n. 66/2010, ART. 1014, C. 4 E ART. 678 C. 9)  APPROVAZIONE GRADUATORIA E NOMINA VINCITORE",
+    "num_pub": "636",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "254",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "1e8887b227582925dca65de8a8da839851f34e12b0439559be86ea47bd2fe37c",
+    "revision_fingerprint": "1e8887b227582925dca65de8a8da839851f34e12b0439559be86ea47bd2fe37c",
+    "revision_snapshot": {
+      "date": "19-11-2026",
+      "date_end": "04-12-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "254",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "1cc02fc004b4e534325c57079d8e0d755375412969025443d6a52fd2bfe4c5ee"
+      ],
+      "attachment_name_hashes": [
+        "00f993dd91891610"
+      ]
+    },
+    "revision": 1
   }
 }
