@@ -11270,9 +11270,7 @@
     "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
     "act_number": "14",
     "register_number": "",
-    "delivery_pending": true,
-    "pending_kind": "new",
-    "pending_version": "c44248c2d8454d4fb217a9b0b56f4e9de3fc7b996268630f56fefde6454116c8",
+    "delivery_pending": false,
     "revision_fingerprint": "c44248c2d8454d4fb217a9b0b56f4e9de3fc7b996268630f56fefde6454116c8",
     "revision_snapshot": {
       "date": "20-11-2026",
@@ -11288,6 +11286,7 @@
         "b87cdfe9629d3d97"
       ]
     },
-    "revision": 1
+    "revision": 1,
+    "last_revision_check_at": "2026-11-20T07:51:57Z"
   }
 }
