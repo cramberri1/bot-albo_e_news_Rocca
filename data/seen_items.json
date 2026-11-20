@@ -11252,5 +11252,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-20T07:36:09Z"
+  },
+  "v2:693f5e33107d32882c0d0a21": {
+    "notified": false,
+    "date": "20-11-2026",
+    "date_end": "05-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:693f5e33107d32882c0d0a21",
+    "legacy_ids": [
+      "424dc4e73357254c",
+      "v2:693f5e33107d32882c0d0a21"
+    ],
+    "title": "Ordinanza Dirigenziale n.14/2026 - Ordinanza chiusura strada comunale \"Traversa interna S. Quasimodo, alla Fraz. Zolli\", divieto temporaneo di transito per lavori di rifacimento della rete idrica",
+    "num_pub": "637",
+    "tipo": "DECRETO DIRIGENZIALE",
+    "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+    "act_number": "14",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "c44248c2d8454d4fb217a9b0b56f4e9de3fc7b996268630f56fefde6454116c8",
+    "revision_fingerprint": "c44248c2d8454d4fb217a9b0b56f4e9de3fc7b996268630f56fefde6454116c8",
+    "revision_snapshot": {
+      "date": "20-11-2026",
+      "date_end": "05-12-2026",
+      "sender": "RESPONSABILE AREA TECNICA MANUTENTIVA",
+      "act_number": "14",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "f257839a803d74a68bbd8338f9319e0c6a881de3eb3087dc264b1b6f72c5c565"
+      ],
+      "attachment_name_hashes": [
+        "b87cdfe9629d3d97"
+      ]
+    },
+    "revision": 1
   }
 }
