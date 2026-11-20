@@ -11288,5 +11288,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-20T11:57:09Z"
+  },
+  "v2:a04a4b13c0a0f35082d0f028": {
+    "notified": false,
+    "date": "20-11-2026",
+    "date_end": "05-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:a04a4b13c0a0f35082d0f028",
+    "legacy_ids": [
+      "859c3f050476d52f",
+      "v2:a04a4b13c0a0f35082d0f028"
+    ],
+    "title": "PRATICA DI CONDONO EDILIZIO N. 125 (Prot. originario n. 4621/S del 26/09/1986) ? Legge 28 febbraio 1985 n. 47. Immobile sito in Roccabascerana (AV), Frazione Cassano Caudino, Via Giordano Bruno n. 160. Identificazione Catastal",
+    "num_pub": "638",
+    "tipo": "SVINCOLO IDROGEOLOGICO",
+    "sender": "MORRA VINCENZO",
+    "act_number": "",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "27706cc1dc1ec8d38e975af78c79ae94fb17d4eb4f82677783f8b1a9862aa37c",
+    "revision_fingerprint": "27706cc1dc1ec8d38e975af78c79ae94fb17d4eb4f82677783f8b1a9862aa37c",
+    "revision_snapshot": {
+      "date": "20-11-2026",
+      "date_end": "05-12-2026",
+      "sender": "MORRA VINCENZO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "5afb409ce2339eb460f59895b5dcd7bc60b38df30391651a4821ffa4136522f6"
+      ],
+      "attachment_name_hashes": [
+        "f6cc4b4cfc089266"
+      ]
+    },
+    "revision": 1
   }
 }
