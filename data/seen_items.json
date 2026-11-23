@@ -11396,5 +11396,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-23T13:00:09Z"
+  },
+  "v2:9036d86420340d2d9ac0e215": {
+    "notified": false,
+    "date": "23-11-2026",
+    "date_end": "08-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:9036d86420340d2d9ac0e215",
+    "legacy_ids": [
+      "416b3c448e8c7671",
+      "v2:9036d86420340d2d9ac0e215"
+    ],
+    "title": "Servizio di ristorazione scolastica in favore degli alunni e del personale dei plessi dell'Istituto Comprensivo Carlo Del Balzo presenti sul territorio comunale - periodo gennaio 2027 / maggio 2028. Procedura aperta sotto soglia ai sensi dell'art. 71 del d.lgs. n. 36/2023, espletata su piattaforma di approvvigionamento digitale certificata, con aggiudicazione secondo il criterio dell'offerta economicamente più vantaggiosa. Nomina della Commissione giudicatrice ai sensi dell'art. 93 del d.lgs. n. 36/2023.",
+    "num_pub": "641",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+    "act_number": "257",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "6b07c6e4c11d72afafe8274b4325137d1b2b7d38246a99f7775401386f28d73e",
+    "revision_fingerprint": "6b07c6e4c11d72afafe8274b4325137d1b2b7d38246a99f7775401386f28d73e",
+    "revision_snapshot": {
+      "date": "23-11-2026",
+      "date_end": "08-12-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "257",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "de9fedf43d20558f60c58e218feed25b3ccfafb175e44ac907d7e1e8a1307c53"
+      ],
+      "attachment_name_hashes": [
+        "d48e5c8510cb890e"
+      ]
+    },
+    "revision": 1
   }
 }
