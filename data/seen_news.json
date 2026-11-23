@@ -1077,5 +1077,14 @@
     "description": "Mensa scolastica e riduzioni ISEE: la verità degli atti contro le polemiche strumentali",
     "notified": true,
     "delivery_pending": false
+  },
+  "211": {
+    "title": "Chiusura plessi scolastici per l'interruzione dell'energia elettrica  di martedì 24 novembre 2026",
+    "category": "Comunicati",
+    "date": "23-11-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/comunicati_stampa/novita_211.html",
+    "description": "Ordinanza sindacale n.33/2026",
+    "notified": false,
+    "delivery_pending": true
   }
 }
