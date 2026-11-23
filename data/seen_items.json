@@ -11360,5 +11360,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-23T10:22:12Z"
+  },
+  "v2:580a7283363262b7a1882aca": {
+    "notified": false,
+    "date": "23-11-2026",
+    "date_end": "08-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:580a7283363262b7a1882aca",
+    "legacy_ids": [
+      "6dfaa571e7ec0fc9",
+      "v2:580a7283363262b7a1882aca"
+    ],
+    "title": "Ordinanza Sindacale 33/2026 - Chiusura dei plessi scolastici per l'interruzione programmata dell'energia elettrica di martedi 24 novembre 2026.",
+    "num_pub": "640",
+    "tipo": "ORDINANZA SINDACALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "33",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "030059c7f86fb9c378a71b91cb30185a4d7c9d69634c9a1f0e8b25a91b980516",
+    "revision_fingerprint": "030059c7f86fb9c378a71b91cb30185a4d7c9d69634c9a1f0e8b25a91b980516",
+    "revision_snapshot": {
+      "date": "23-11-2026",
+      "date_end": "08-12-2026",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "33",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "27f96d78d761b910c6b55a7d5e52185acd1afe6a9f94416b678abc9f5e08508c"
+      ],
+      "attachment_name_hashes": [
+        "48bd7027b2566bb9"
+      ]
+    },
+    "revision": 1
   }
 }
