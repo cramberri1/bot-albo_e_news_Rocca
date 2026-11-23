@@ -11324,5 +11324,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-22T15:48:46Z"
+  },
+  "v2:8555411f98c74c2e5a5a9613": {
+    "notified": false,
+    "date": "23-11-2026",
+    "date_end": "08-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:8555411f98c74c2e5a5a9613",
+    "legacy_ids": [
+      "21351f5f0917fee4",
+      "v2:8555411f98c74c2e5a5a9613"
+    ],
+    "title": "Potenziamento dei servizi educativi per la prima infanzia - Contributi (voucher) alle famiglie residenti per l'iscrizione e la frequenza di asili nido e micronidi ubicati fuori dal territorio comunale - Anno 2026 e anno educativo 2026/2027 - Atto di indirizzo.",
+    "num_pub": "639",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "71",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "162246e37cedcb5e611691cfa92187620c58d1e349c065d6d30685084a888997",
+    "revision_fingerprint": "162246e37cedcb5e611691cfa92187620c58d1e349c065d6d30685084a888997",
+    "revision_snapshot": {
+      "date": "23-11-2026",
+      "date_end": "08-12-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "71",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "a72ce7ef7d4035b3119a35d8506f683d05b52a08772197fd977f9d58c51222b0"
+      ],
+      "attachment_name_hashes": [
+        "1ef90b8250bd0b6d"
+      ]
+    },
+    "revision": 1
   }
 }
