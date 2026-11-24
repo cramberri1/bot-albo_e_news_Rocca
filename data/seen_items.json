@@ -11306,7 +11306,7 @@
     "sender": "MORRA VINCENZO",
     "act_number": "",
     "register_number": "",
-    "delivery_pending": false,
+    "delivery_pending": true,
     "revision_fingerprint": "27706cc1dc1ec8d38e975af78c79ae94fb17d4eb4f82677783f8b1a9862aa37c",
     "revision_snapshot": {
       "date": "20-11-2026",
@@ -11323,7 +11323,28 @@
       ]
     },
     "revision": 1,
-    "last_revision_check_at": "2026-11-24T10:28:25Z"
+    "last_revision_check_at": "2026-11-24T10:28:25Z",
+    "pending_kind": "revision",
+    "pending_version": "95cc47f036b6bd2c862726c5f009ee8fb871e0866a655af38abc3b0fcb8a9c88",
+    "pending_revision_changes": [
+      "allegati"
+    ],
+    "delivery_epoch": 1,
+    "pending_delivery_key": "v2:a04a4b13c0a0f35082d0f028@95cc47f036b6bd2c862726c5:1",
+    "pending_revision_snapshot": {
+      "date": "20-11-2026",
+      "date_end": "05-12-2026",
+      "sender": "MORRA VINCENZO",
+      "act_number": "",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "6d6b327f61dc7bc9a8c1aedcd39bd30788740f40fbd97f423effae5ae474b901"
+      ],
+      "attachment_name_hashes": [
+        "010274765fd3f1cf"
+      ]
+    }
   },
   "v2:8555411f98c74c2e5a5a9613": {
     "notified": true,
