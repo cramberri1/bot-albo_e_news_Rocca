@@ -11519,13 +11519,43 @@
     "identity_version": 2,
     "primary_id": "v2:93ed84083a6cb1db232f07e4",
     "legacy_ids": [
-      "5195220cb28b70a2"
+      "5195220cb28b70a2",
+      "v2:93ed84083a6cb1db232f07e4"
     ],
     "title": "Variazione urgente di bilancio ex art. 175 TUEL",
     "num_pub": "643",
     "tipo": "DELIBERE DI GIUNTA",
     "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
     "act_number": "73",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "3d8d27147d32921a0bb3a7f28e35d15b25afbcac0e3ca6de3cd58edd1c7b455b",
+    "revision_fingerprint": "3d8d27147d32921a0bb3a7f28e35d15b25afbcac0e3ca6de3cd58edd1c7b455b",
+    "revision_snapshot": {
+      "date": "24-11-2026",
+      "date_end": "09-12-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "73",
+      "register_number": "",
+      "attachment_count": 6,
+      "attachment_sha256": [
+        "159c18cfda84da9c8d555b269ea647a94e98bc16218173f8f20075018b144a51",
+        "17b7fa7318d058fc91c1d100b2e9ee9dcc7aa4571dd8140a31f30ca2dfd2d16d",
+        "3febff0e28028843aa71d74eebd533b6d63023c65eaa7603f9abe3cc793891c6",
+        "4ea9c1b0dbeab7b823a171be2c24c0d3f4748859950b18fbb544c8c20b4dca79",
+        "797459258149fc01ac7a6c97dbb6998e4f388ead96b8fca8214c7ed011c1dbef",
+        "cca2e8e4230e291543494d863103c506babf4a7e1cf99fc3cd3299ae69c41b7f"
+      ],
+      "attachment_name_hashes": [
+        "6d22bd4d0a5cd1a7",
+        "7538ac66e9f15351",
+        "9331b4f12fc636b5",
+        "a431fc5907d8dbd0",
+        "e30551f45824b785",
+        "ea583190a98b4b2a"
+      ]
+    },
+    "revision": 1
   }
 }
