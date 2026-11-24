@@ -11470,5 +11470,63 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-24T11:00:07Z"
+  },
+  "v2:0d295a6070b644d296db997d": {
+    "notified": false,
+    "date": "24-11-2026",
+    "date_end": "09-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:0d295a6070b644d296db997d",
+    "legacy_ids": [
+      "d1f01b6afcc4b70c",
+      "v2:0d295a6070b644d296db997d"
+    ],
+    "title": "Destinazione proventi Codice della Strada ex art. 142 comma 12 bis e 208 D.Lgs. n. 285/92 Anno 2027.",
+    "num_pub": "644",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "74",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "b5d3a99c7ba25cc7f59950096b015cd1b3293bc3aef3753fe4fb9e3b6b054af7",
+    "revision_fingerprint": "b5d3a99c7ba25cc7f59950096b015cd1b3293bc3aef3753fe4fb9e3b6b054af7",
+    "revision_snapshot": {
+      "date": "24-11-2026",
+      "date_end": "09-12-2026",
+      "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+      "act_number": "74",
+      "register_number": "",
+      "attachment_count": 3,
+      "attachment_sha256": [
+        "060549a7ae25dbd1d38bda796318006fbff1696b6c8808a04a49f6a35c00c31d",
+        "32d88f09da25947d3a4dba688d464488e3afe1c2e8d7f7e6a513d63ee3cf95fe",
+        "37b821aee16582810474008df2948b25eb185ed5a83438f4a82544166a152dd4"
+      ],
+      "attachment_name_hashes": [
+        "48c9cbf8be945003",
+        "7dee27618bd4367a",
+        "dd2567da8b7a2701"
+      ]
+    },
+    "revision": 1
+  },
+  "v2:93ed84083a6cb1db232f07e4": {
+    "notified": false,
+    "date": "24-11-2026",
+    "date_end": "09-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:93ed84083a6cb1db232f07e4",
+    "legacy_ids": [
+      "5195220cb28b70a2"
+    ],
+    "title": "Variazione urgente di bilancio ex art. 175 TUEL",
+    "num_pub": "643",
+    "tipo": "DELIBERE DI GIUNTA",
+    "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
+    "act_number": "73",
+    "register_number": ""
   }
 }
