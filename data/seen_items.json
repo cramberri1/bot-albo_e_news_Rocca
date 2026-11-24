@@ -11488,9 +11488,7 @@
     "sender": "SEGRETARIO COMUNALE FRANCESCO PEZZOLLA",
     "act_number": "74",
     "register_number": "",
-    "delivery_pending": true,
-    "pending_kind": "new",
-    "pending_version": "b5d3a99c7ba25cc7f59950096b015cd1b3293bc3aef3753fe4fb9e3b6b054af7",
+    "delivery_pending": false,
     "revision_fingerprint": "b5d3a99c7ba25cc7f59950096b015cd1b3293bc3aef3753fe4fb9e3b6b054af7",
     "revision_snapshot": {
       "date": "24-11-2026",
@@ -11510,7 +11508,8 @@
         "dd2567da8b7a2701"
       ]
     },
-    "revision": 1
+    "revision": 1,
+    "last_revision_check_at": "2026-11-24T17:42:53Z"
   },
   "v2:93ed84083a6cb1db232f07e4": {
     "notified": false,
