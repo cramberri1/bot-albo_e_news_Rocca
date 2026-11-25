@@ -1086,5 +1086,14 @@
     "description": "Ordinanza sindacale n.33/2026",
     "notified": true,
     "delivery_pending": false
+  },
+  "212": {
+    "title": "Guasto condotta adduttrice in agro di Roccabascerana",
+    "category": "Avviso",
+    "date": "25-11-2026",
+    "url": "https://www.comune.roccabascerana.av.it/novita/avvisi/novita_212.html",
+    "description": "Fuori Servizio del 25/11/2026",
+    "notified": false,
+    "delivery_pending": true
   }
 }
