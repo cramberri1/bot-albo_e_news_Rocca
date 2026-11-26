@@ -11597,5 +11597,59 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-26T08:21:55Z"
+  },
+  "v2:f0fd8aff53c6fb9deea3cd41": {
+    "notified": false,
+    "date": "26-11-2026",
+    "date_end": "11-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:f0fd8aff53c6fb9deea3cd41",
+    "legacy_ids": [
+      "07ff858cc41160db",
+      "v2:f0fd8aff53c6fb9deea3cd41"
+    ],
+    "title": "Affidamento attività di progettazione di idonee opere di protezione dell'abitato storico di via Castello - Guglia rocciosa di Roccabascerana. Procedura per l'affidamento diretto, ai sensi dell'art. 50, comma 1, lettera b) del D.Lgs 36/2023. Determina a contrarre, affidamento diretto.",
+    "num_pub": "647",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "83",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "8eec54bcd8e05fe887a0afa804ebd8d58f7fe186f075e72036f1c2f837d9ad64",
+    "revision_fingerprint": "8eec54bcd8e05fe887a0afa804ebd8d58f7fe186f075e72036f1c2f837d9ad64",
+    "revision_snapshot": {
+      "date": "26-11-2026",
+      "date_end": "11-12-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "83",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "efaec0754c6007a6290ac7a39603b120e238c12fc84d35760cd21c673cf2eb8b"
+      ],
+      "attachment_name_hashes": [
+        "5e887b2533307911"
+      ]
+    },
+    "revision": 1
+  },
+  "v2:1374241a52278161ed61ec2e": {
+    "notified": false,
+    "date": "26-11-2026",
+    "date_end": "11-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:1374241a52278161ed61ec2e",
+    "legacy_ids": [
+      "18d1e4694f8a810a"
+    ],
+    "title": "Affidamento del Servizio di campionamento microbiologico per la prova di potabilità delle acque e per la prevenzione del rischio di legionellosi in corrispondenza dei punti di erogazione presenti nell'Istituto Comprensivo \"Don Peppe Diana - M.R. Imbriani\" e Scuola per l'Infanzia \"M. Montessori\".",
+    "num_pub": "646",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "82",
+    "register_number": ""
   }
 }
