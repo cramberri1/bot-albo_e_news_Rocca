@@ -11642,13 +11642,33 @@
     "identity_version": 2,
     "primary_id": "v2:1374241a52278161ed61ec2e",
     "legacy_ids": [
-      "18d1e4694f8a810a"
+      "18d1e4694f8a810a",
+      "v2:1374241a52278161ed61ec2e"
     ],
     "title": "Affidamento del Servizio di campionamento microbiologico per la prova di potabilità delle acque e per la prevenzione del rischio di legionellosi in corrispondenza dei punti di erogazione presenti nell'Istituto Comprensivo \"Don Peppe Diana - M.R. Imbriani\" e Scuola per l'Infanzia \"M. Montessori\".",
     "num_pub": "646",
     "tipo": "DETERMINAZIONI",
     "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
     "act_number": "82",
-    "register_number": ""
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "ac30d71b38a24ef49786af704aefd316768c5dde83b49c71317ccb2bd8b41e93",
+    "revision_fingerprint": "ac30d71b38a24ef49786af704aefd316768c5dde83b49c71317ccb2bd8b41e93",
+    "revision_snapshot": {
+      "date": "26-11-2026",
+      "date_end": "11-12-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "82",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "e67d50dfb98d253b9df2a250e1339a59190797b5affb7a29cbe00a6882d6158b"
+      ],
+      "attachment_name_hashes": [
+        "29d7ee483d085f8f"
+      ]
+    },
+    "revision": 1
   }
 }
