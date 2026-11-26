@@ -11563,7 +11563,8 @@
     "identity_version": 2,
     "primary_id": "v2:d9a45a6b55d37c98869e9ed2",
     "legacy_ids": [
-      "2f3eb7b98f746e03"
+      "2f3eb7b98f746e03",
+      "v2:d9a45a6b55d37c98869e9ed2"
     ],
     "title": "APPROVAZIONE DI AVVISO PUBBLICO PER L'ASSEGNAZIONE DI CONTRIBUTI (VOUCHER) ALLE FAMIGLIE RESIDENTI PER L'ISCRIZIONE E LA FREQUENZA DI ASILI NIDO, MICRONIDI E SEZIONI PRIMAVERA - ANNO 2026 E ANNO EDUCATIVO 2026/2027 E DELLA RELATIVA DOMANDA DI CONTRIBUTO (VOUCHER).",
     "num_pub": "645",
@@ -11573,6 +11574,29 @@
     "register_number": "",
     "delivery_pending": true,
     "pending_kind": "new",
-    "pending_version": ""
+    "pending_version": "0d9400b6b2c34b8ef8a286e0c4fdd27af486aed14520c1ad61050c0f9888e87b",
+    "date": "26-11-2026",
+    "date_end": "11-12-2026",
+    "expired": false,
+    "revision_fingerprint": "0d9400b6b2c34b8ef8a286e0c4fdd27af486aed14520c1ad61050c0f9888e87b",
+    "revision_snapshot": {
+      "date": "26-11-2026",
+      "date_end": "11-12-2026",
+      "sender": "AREA AMMINISTRATIVA E FINANZIARIA",
+      "act_number": "261",
+      "register_number": "",
+      "attachment_count": 3,
+      "attachment_sha256": [
+        "05077411f43622cf6c174c09deebed7e1669cd2d2bfd67c6399c6e326453fd2a",
+        "469ca71107a83a41d0bc36adb7fe352db3c9d788aa741b3b8da3ad3876758fd6",
+        "63daaaa2a49115a5092e4429ed4a8a82a6923cfebd69aa80be810f9359fa3ecc"
+      ],
+      "attachment_name_hashes": [
+        "48c18d3aad2a173d",
+        "bb51505a2deefb89",
+        "e0390b94f191f6c0"
+      ]
+    },
+    "revision": 1
   }
 }
