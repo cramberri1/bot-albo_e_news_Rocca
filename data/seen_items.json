@@ -11669,5 +11669,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-26T15:30:23Z"
+  },
+  "v2:89dc2fcf08968d8e9fdea49c": {
+    "notified": false,
+    "date": "26-11-2026",
+    "date_end": "11-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:89dc2fcf08968d8e9fdea49c",
+    "legacy_ids": [
+      "3ea5d4c21e2e5ac3",
+      "v2:89dc2fcf08968d8e9fdea49c"
+    ],
+    "title": "STAZIONE UNICA APPALTANTE DELLA PROVINCIA DI AVELLINO PER I LAVORI, I SERVIZI E LE FORNITURE\n\"Fornitura di arredi didattici e innovativi per fascia di età 0-6 anni, nei comuni di Roccabascerana, Sant'Angelo a Scala, Cervinara e Pietrastornina\" - PN \"SCUOLA E COMPETENZE 2021-2027\" FONDI DI CUI AL PNRR M.4 C.1 I.1.1 \"Piano per asili nido e scuole dell'infanzia e servizi di educazione e cura per la prima infanzia\".\nIndirizzi per l'avvio della procedura di scelta del contraente - Decisione a contrarre. CUP: G44D25005770007",
+    "num_pub": "648",
+    "tipo": "DETERMINAZIONI",
+    "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+    "act_number": "87",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "d8e32b5ca90e87b44c555dac83ec15a1caa700618c30dd5965135e44b60e13ee",
+    "revision_fingerprint": "d8e32b5ca90e87b44c555dac83ec15a1caa700618c30dd5965135e44b60e13ee",
+    "revision_snapshot": {
+      "date": "26-11-2026",
+      "date_end": "11-12-2026",
+      "sender": "AREA TECNICA E DI VIGILANZA - SEDE",
+      "act_number": "87",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "64868f7883be0300fe878d3c907072fc34f45c207298199ebacd20100f42dfa6"
+      ],
+      "attachment_name_hashes": [
+        "5e984f7b9094a5d0"
+      ]
+    },
+    "revision": 1
   }
 }
