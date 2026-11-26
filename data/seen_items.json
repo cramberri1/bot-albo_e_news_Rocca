@@ -11559,7 +11559,7 @@
     "last_revision_check_at": "2026-11-26T08:04:59Z"
   },
   "v2:d9a45a6b55d37c98869e9ed2": {
-    "notified": false,
+    "notified": true,
     "identity_version": 2,
     "primary_id": "v2:d9a45a6b55d37c98869e9ed2",
     "legacy_ids": [
