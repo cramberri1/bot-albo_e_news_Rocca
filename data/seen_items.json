@@ -11705,5 +11705,42 @@
     },
     "revision": 1,
     "last_revision_check_at": "2026-11-27T10:34:32Z"
+  },
+  "v2:0cb0c5fbfc73436b66810d79": {
+    "notified": false,
+    "date": "27-11-2026",
+    "date_end": "12-12-2026",
+    "expired": false,
+    "identity_version": 2,
+    "primary_id": "v2:0cb0c5fbfc73436b66810d79",
+    "legacy_ids": [
+      "0fab80649a525a12",
+      "v2:0cb0c5fbfc73436b66810d79"
+    ],
+    "title": "Ord. Sind 34/2026 - Disciplina temporanea della circolazione veicolare su strade del centro abitato di Cassano Caudino in occasione dei festeggiamenti in onore di \"Sant'Andrea Apostolo\", in programma nel giorno 29 novembre 2026.",
+    "num_pub": "649",
+    "tipo": "ORDINANZA SINDACALE",
+    "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+    "act_number": "34",
+    "register_number": "",
+    "delivery_pending": true,
+    "pending_kind": "new",
+    "pending_version": "10b97bcb647018e55d23801c84156ce870c7d73ca475205060bfb36a55d717df",
+    "revision_fingerprint": "10b97bcb647018e55d23801c84156ce870c7d73ca475205060bfb36a55d717df",
+    "revision_snapshot": {
+      "date": "27-11-2026",
+      "date_end": "12-12-2026",
+      "sender": "SINDACO COMUNE DI ROCCABASCERANA",
+      "act_number": "34",
+      "register_number": "",
+      "attachment_count": 1,
+      "attachment_sha256": [
+        "39574069d4bde890a45f4e052cd479d79f12d51f4273027caf384a173fb4bc1a"
+      ],
+      "attachment_name_hashes": [
+        "6cef6f67abb6f04f"
+      ]
+    },
+    "revision": 1
   }
 }
